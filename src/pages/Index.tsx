@@ -37,21 +37,12 @@ const Index = () => {
 
   const handleSortChange = (value: SortOption) => {
     console.log("Sort change called with value:", value);
-    console.log("Current sortBy:", sortBy);
-    console.log("Current sortDirection:", sortDirection);
-    
-    if (value === sortBy) {
-      console.log("Same sort option selected, toggling direction");
-      setSortDirection(current => {
-        const newDirection = current === "asc" ? "desc" : "asc";
-        console.log("New direction will be:", newDirection);
-        return newDirection;
-      });
-    } else {
-      console.log("New sort option selected, setting to:", value);
-      setSortBy(value);
-      setSortDirection("asc");
-    }
+    setSortBy(value);
+  };
+
+  const toggleSortDirection = () => {
+    console.log("Toggling sort direction from:", sortDirection);
+    setSortDirection(current => current === "asc" ? "desc" : "asc");
   };
 
   const sortedAndFilteredGames = useMemo(() => {
@@ -122,7 +113,7 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="relative">
+          <div className="relative flex items-center gap-2">
             <Select 
               value={sortBy} 
               onValueChange={(value) => {
@@ -131,14 +122,7 @@ const Index = () => {
               }}
             >
               <SelectTrigger className="w-[180px]">
-                <div className="flex items-center gap-2">
-                  {sortDirection === "asc" ? (
-                    <ArrowUp className="h-4 w-4" />
-                  ) : (
-                    <ArrowDown className="h-4 w-4" />
-                  )}
-                  <SelectValue placeholder="Sort by..." />
-                </div>
+                <SelectValue placeholder="Sort by..." />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="name">Name</SelectItem>
@@ -147,6 +131,18 @@ const Index = () => {
                 <SelectItem value="replayability">Replayability</SelectItem>
               </SelectContent>
             </Select>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={toggleSortDirection}
+              className="flex items-center justify-center w-10 h-10"
+            >
+              {sortDirection === "asc" ? (
+                <ArrowUp className="h-4 w-4" />
+              ) : (
+                <ArrowDown className="h-4 w-4" />
+              )}
+            </Button>
           </div>
         </div>
         <ScrollArea className="h-[80vh]">
