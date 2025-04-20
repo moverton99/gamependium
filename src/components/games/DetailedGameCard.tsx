@@ -1,6 +1,8 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface DetailedGameCardProps {
   name: string;
@@ -31,6 +33,8 @@ export const DetailedGameCard = ({
   onClose,
   playtimeMinutes,
 }: DetailedGameCardProps) => {
+  const isMobile = useIsMobile();
+  
   const handleCategoryClick = (category: string) => {
     onClose();
     const searchParams = new URLSearchParams(window.location.search);
@@ -41,80 +45,80 @@ export const DetailedGameCard = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader className="pb-2">
           <DialogTitle className="text-2xl font-bold">{name}</DialogTitle>
         </DialogHeader>
         
-        <div className="space-y-4">
-          <div className="flex flex-col gap-2">
-            <div className="text-lg font-semibold">Description</div>
-            <p className="text-gray-700">{description}</p>
+        <ScrollArea className="flex-1 overflow-auto pr-4">
+          <div className="space-y-4 pb-4">
+            <div className="flex flex-col gap-2">
+              <div className="text-lg font-semibold">Description</div>
+              <p className="text-gray-700">{description}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-semibold">
+                  <GraduationCap className="w-5 h-5" />
+                  <span>Learning Curve</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">{learningCurveRank}/100</span>
+                  <p className="text-sm text-gray-600">{learningCurveDesc}</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-semibold">
+                  <Brain className="w-5 h-5" />
+                  <span>Strategic Depth</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">{strategicDepthRank}/100</span>
+                  <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-semibold">
+                  <Repeat className="w-5 h-5" />
+                  <span>Replayability</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">{replayabilityRank}/100</span>
+                  <p className="text-sm text-gray-600">{replayabilityDesc}</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-semibold">
+                  <Clock className="w-5 h-5" />
+                  <span>Playtime</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">{playtimeMinutes}</span>
+                  <p className="text-sm text-gray-600">minutes</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <div className="font-semibold">Categories</div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((cat) => (
+                  <span
+                    key={cat}
+                    className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
+                    onClick={() => handleCategoryClick(cat)}
+                  >
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 font-semibold">
-                <GraduationCap className="w-5 h-5" />
-                <span>Learning Curve</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold">{learningCurveRank}/100</span>
-                <p className="text-sm text-gray-600">{learningCurveDesc}</p>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 font-semibold">
-                <Brain className="w-5 h-5" />
-                <span>Strategic Depth</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold">{strategicDepthRank}/100</span>
-                <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 font-semibold">
-                <Repeat className="w-5 h-5" />
-                <span>Replayability</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold">{replayabilityRank}/100</span>
-                <p className="text-sm text-gray-600">{replayabilityDesc}</p>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 font-semibold">
-                <Clock className="w-5 h-5" />
-                <span>Playtime</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold">{playtimeMinutes}</span>
-                <p className="text-sm text-gray-600">minutes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Gameplay Style removed as requested */}
-
-          <div className="space-y-1">
-            <div className="font-semibold">Categories</div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <span
-                  key={cat}
-                  className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
-                  onClick={() => handleCategoryClick(cat)}
-                >
-                  {cat}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+        </ScrollArea>
       </DialogContent>
     </Dialog>
   );
