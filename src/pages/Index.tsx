@@ -19,30 +19,30 @@ const Index = () => {
                   <Tooltip>
                     <TooltipTrigger className="flex items-center gap-1">
                       <GraduationCap className="w-4 h-4" />
-                      <span>{game.learningCurve}</span>
+                      <span>{game.learning_curve_rank}</span>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p className="text-sm">Learning Curve: {game.learningCurveDescription}</p>
+                      <p className="text-sm">Learning Curve: {game.learning_curve_desc}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip>
                     <TooltipTrigger className="flex items-center gap-1">
                       <Brain className="w-4 h-4" />
-                      <span>{game.strategicDepth}</span>
+                      <span>{game.strategic_depth_rank}</span>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p className="text-sm">Strategic Depth: {game.strategicDepthDescription}</p>
+                      <p className="text-sm">Strategic Depth: {game.strategic_depth_desc}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip>
                     <TooltipTrigger className="flex items-center gap-1">
                       <Repeat className="w-4 h-4" />
-                      <span>{game.replayability}</span>
+                      <span>{game.replayability_rank}</span>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p className="text-sm">Replayability: {game.replayabilityDescription}</p>
+                      <p className="text-sm">Replayability: {game.replayability_desc}</p>
                     </TooltipContent>
                   </Tooltip>
                 </div>
