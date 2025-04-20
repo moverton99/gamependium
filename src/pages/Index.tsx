@@ -1,7 +1,8 @@
+
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Filter } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Filter, X } from "lucide-react";
 import { useState } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -21,16 +22,20 @@ const Index = () => {
     game.category.some(cat => selectedCategories.includes(cat))
   );
 
+  const removeCategory = (categoryToRemove: string) => {
+    setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
+  };
+
   return (
     <div className="min-h-screen p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Board Game Library</h1>
+        <h1 className="text-4xl font-bold mb-4">Board Game Library</h1>
+        <div className="flex flex-wrap items-center gap-3 mb-8">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="gap-2">
                 <Filter className="w-4 h-4" />
-                Categories
+                Filter by Category
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
@@ -51,6 +56,20 @@ const Index = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+          {selectedCategories.map((category) => (
+            <div 
+              key={category}
+              className="flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+            >
+              {category}
+              <button
+                onClick={() => removeCategory(category)}
+                className="hover:bg-primary/20 rounded-full p-1"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ))}
         </div>
         <ScrollArea className="h-[80vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
