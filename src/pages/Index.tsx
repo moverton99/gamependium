@@ -39,10 +39,10 @@ const Index = () => {
 
   const handleSortChange = (value: SortOption) => {
     if (value === sortBy) {
-      // Toggle direction if clicking the same sort option
-      setSortDirection(current => current === "asc" ? "desc" : "asc");
+      // Toggle direction if selecting the same sort option
+      setSortDirection(current => (current === "asc" ? "desc" : "asc"));
     } else {
-      // Reset to ascending when changing sort option
+      // Set new sort option and reset to ascending
       setSortBy(value);
       setSortDirection("asc");
     }
@@ -59,8 +59,10 @@ const Index = () => {
       if (sortBy === "name") {
         return multiplier * a.name.localeCompare(b.name);
       } else {
-        const valueA = Number(a[`${sortBy}_rank`]);
-        const valueB = Number(b[`${sortBy}_rank`]);
+        // Ensure we're properly accessing the right properties
+        const propertyName = `${sortBy}_rank`;
+        const valueA = a[propertyName as keyof typeof a] as number;
+        const valueB = b[propertyName as keyof typeof b] as number;
         return multiplier * (valueA - valueB);
       }
     });
@@ -111,24 +113,29 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <Select value={sortBy} onValueChange={handleSortChange}>
-            <SelectTrigger className="w-[180px]">
-              <div className="flex items-center gap-2">
-                {sortDirection === "asc" ? (
-                  <ArrowUp className="h-4 w-4" />
-                ) : (
-                  <ArrowDown className="h-4 w-4" />
-                )}
-                <SelectValue placeholder="Sort by..." />
-              </div>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="name">Name</SelectItem>
-              <SelectItem value="learning_curve">Learning Curve</SelectItem>
-              <SelectItem value="strategic_depth">Strategic Depth</SelectItem>
-              <SelectItem value="replayability">Replayability</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="relative">
+            <Select 
+              value={sortBy} 
+              onValueChange={handleSortChange}
+            >
+              <SelectTrigger className="w-[180px]">
+                <div className="flex items-center gap-2">
+                  {sortDirection === "asc" ? (
+                    <ArrowUp className="h-4 w-4" />
+                  ) : (
+                    <ArrowDown className="h-4 w-4" />
+                  )}
+                  <SelectValue placeholder="Sort by..." />
+                </div>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="name">Name</SelectItem>
+                <SelectItem value="learning_curve">Learning Curve</SelectItem>
+                <SelectItem value="strategic_depth">Strategic Depth</SelectItem>
+                <SelectItem value="replayability">Replayability</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
         <ScrollArea className="h-[80vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
