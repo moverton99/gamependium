@@ -1,3 +1,4 @@
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
 
@@ -7,7 +8,7 @@ interface Game {
   learning_curve_desc: string;
   strategic_depth_rank: number;
   strategic_depth_desc: string;
-  replayability_rank: number;
+  replayability_rank: number | string; // Updated to accept both number and string
   replayability_desc: string;
   description: string;
   category: string[];

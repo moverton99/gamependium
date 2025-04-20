@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap } from "lucide-react";
@@ -10,7 +11,7 @@ interface GameCardProps {
   learningCurveDesc: string;
   strategicDepthRank: number;
   strategicDepthDesc: string;
-  replayabilityRank: number;
+  replayabilityRank: number | string; // Updated to accept both number and string
   replayabilityDesc: string;
   description: string;
   categories: string[];

@@ -1,3 +1,4 @@
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ interface DetailedGameCardProps {
   learningCurveDesc: string;
   strategicDepthRank: number;
   strategicDepthDesc: string;
-  replayabilityRank: number;
+  replayabilityRank: number | string; // Updated to accept both number and string
   replayabilityDesc: string;
   description: string;
   categories: string[];
