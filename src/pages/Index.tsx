@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -54,12 +55,14 @@ const Index = () => {
     )
     .sort((a, b) => {
       const multiplier = sortDirection === "asc" ? 1 : -1;
+      
       if (sortBy === "name") {
         return multiplier * a.name.localeCompare(b.name);
+      } else {
+        const valueA = Number(a[`${sortBy}_rank`]);
+        const valueB = Number(b[`${sortBy}_rank`]);
+        return multiplier * (valueA - valueB);
       }
-      return multiplier * (
-        Number(a[sortBy + "_rank"]) - Number(b[sortBy + "_rank"])
-      );
     });
 
   return (
