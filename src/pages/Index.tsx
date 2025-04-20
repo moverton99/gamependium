@@ -19,7 +19,7 @@ const Index = () => {
 
   const filteredGames = games.filter(game => 
     selectedCategories.length === 0 || 
-    game.category.some(cat => selectedCategories.includes(cat))
+    selectedCategories.every(cat => game.category.includes(cat))
   );
 
   const removeCategory = (categoryToRemove: string) => {
