@@ -11,9 +11,18 @@ const Index = () => {
   const [sortBy, setSortBy] = useState<SortOption>("name");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
-  const sortedCategories = [...categories].sort((a, b) => 
-    a.name.localeCompare(b.name)
-  );
+  // Extract all unique categories from games to ensure we include all used categories
+  const allCategories = useMemo(() => {
+    const uniqueCategories = new Set<string>();
+    games.forEach(game => {
+      if (Array.isArray(game.category)) {
+        game.category.forEach(cat => uniqueCategories.add(cat));
+      }
+    });
+    
+    // Convert to array format that matches the expected structure from game_categories.json
+    return Array.from(uniqueCategories).sort().map(name => ({ name }));
+  }, []);
 
   const handleCategoryToggle = (category: string, checked: boolean) => {
     setSelectedCategories(old => 
@@ -65,7 +74,7 @@ const Index = () => {
         <h1 className="text-4xl font-bold mb-4">Game Explorer</h1>
         <div className="flex items-center gap-3 mb-8">
           <CategoryFilter
-            categories={sortedCategories}
+            categories={allCategories}
             selectedCategories={selectedCategories}
             onCategoryToggle={handleCategoryToggle}
             onCategoryRemove={removeCategory}
