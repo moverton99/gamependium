@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -61,7 +62,7 @@ const Index = () => {
   return (
     <div className="min-h-screen p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Board Game Library</h1>
+        <h1 className="text-4xl font-bold mb-4">Game Explorer</h1>
         <div className="flex items-center gap-3 mb-8">
           <CategoryFilter
             categories={sortedCategories}
