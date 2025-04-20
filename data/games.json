@@ -539,10 +539,10 @@
     },
     {
         "name": "Existence",
-        "description": "Existence is a surreal and unpredictable game where players must adapt to ever-changing rules, scenarios, and win conditions. Your character starts weak and clueless, gradually leveling up through real-life challenges like taxes, parenting, and existential dread.",
+        "description": "Existence is a ridiculously complex reality game where the rules are made up as you go along, and the manual is written in a language you don't speak. You start with a character who's still figuring out how to walk, and the first level is called 'Surviving Childhood' – complete with obstacles like broccoli and bedtime. As you level up, you encounter challenges like 'Finding a Job' and 'Adulting,' which are basically just endless loops of paying bills and pretending to be a functioning member of society. But don't worry, there are power-ups like coffee and Netflix to help you through the tough times. And just when you think you've reached the final boss, life throws you a curveball and says, 'Surprise! You're now in charge of your own mini-game called Parenting!' Good luck",
         "gameplay_style": "Classic",
         "learning_curve_rank": 100,
-        "learning_curve_desc": "Existence is a ridiculously complex reality game where the rules are made up as you go along, and the manual is written in a language you don't speak. You start with a character who's still figuring out how to walk, and the first level is called 'Surviving Childhood' – complete with obstacles like broccoli and bedtime. As you level up, you encounter challenges like 'Finding a Job' and 'Adulting,' which are basically just endless loops of paying bills and pretending to be a functioning member of society. But don't worry, there are power-ups like coffee and Netflix to help you through the tough times. And just when you think you've reached the final boss, life throws you a curveball and says, 'Surprise! You're now in charge of your own mini-game called Parenting!' Good luck",
+        "learning_curve_desc": "Life long",
         "strategic_depth_rank": 100,
         "strategic_depth_desc": "Infinite",
         "replayability_rank": "?",
