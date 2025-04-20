@@ -14,7 +14,6 @@ interface DetailedGameCardProps {
   categories: string[];
   isOpen: boolean;
   onClose: () => void;
-  gameplayStyle: string;
   playtimeMinutes: number;
 }
 
@@ -28,7 +27,6 @@ export const DetailedGameCard = ({
   replayabilityDesc,
   description,
   categories,
-  gameplayStyle,
   isOpen,
   onClose,
   playtimeMinutes,
@@ -100,10 +98,7 @@ export const DetailedGameCard = ({
             </div>
           </div>
 
-          <div className="space-y-1">
-            <div className="font-semibold">Gameplay Style</div>
-            <p className="text-gray-700">{gameplayStyle}</p>
-          </div>
+          {/* Gameplay Style removed as requested */}
 
           <div className="space-y-1">
             <div className="font-semibold">Categories</div>
