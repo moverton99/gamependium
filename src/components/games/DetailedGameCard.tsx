@@ -1,6 +1,5 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Brain, Repeat, GraduationCap, X } from "lucide-react";
+import { Brain, Repeat, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface DetailedGameCardProps {
@@ -37,9 +36,6 @@ export const DetailedGameCard = ({
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader className="flex flex-row justify-between items-start">
           <DialogTitle className="text-2xl font-bold">{name}</DialogTitle>
-          <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8">
-            <X className="h-4 w-4" />
-          </Button>
         </DialogHeader>
         
         <div className="space-y-6 py-4">
