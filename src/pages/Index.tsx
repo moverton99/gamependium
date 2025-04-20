@@ -1,6 +1,8 @@
 
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Brain, Repeat, GraduationCap } from "lucide-react";
 import games from "../../data/games.json";
 
 const Index = () => {
@@ -13,6 +15,37 @@ const Index = () => {
             {games.map((game) => (
               <Card key={game.name} className="p-6 hover:shadow-lg transition-shadow">
                 <h2 className="text-xl font-semibold mb-2">{game.name}</h2>
+                <div className="flex gap-4 mb-4 text-gray-600">
+                  <Tooltip>
+                    <TooltipTrigger className="flex items-center gap-1">
+                      <GraduationCap className="w-4 h-4" />
+                      <span>{game.learningCurve}</span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-sm">Learning Curve: {game.learningCurveDescription}</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger className="flex items-center gap-1">
+                      <Brain className="w-4 h-4" />
+                      <span>{game.strategicDepth}</span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-sm">Strategic Depth: {game.strategicDepthDescription}</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger className="flex items-center gap-1">
+                      <Repeat className="w-4 h-4" />
+                      <span>{game.replayability}</span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-sm">Replayability: {game.replayabilityDescription}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </div>
                 <p className="text-sm text-gray-600 mb-4">{game.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {game.category.map((cat) => (
@@ -34,4 +67,3 @@ const Index = () => {
 };
 
 export default Index;
-
