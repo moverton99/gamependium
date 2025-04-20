@@ -138,5 +138,29 @@
   {
     "name": "4X",
     "description": "Games that involve exploring, expanding, exploiting, and exterminating, often in a large map or galaxy."
+  },
+  {
+    "name": "Negotiation",
+    "description": "Games where players must bargain, trade, or make deals with each other to achieve their goals."
+  },
+  {
+    "name": "Resource Management",
+    "description": "Games where players must efficiently collect, spend, and convert different types of resources."
+  },
+  {
+    "name": "Card Game",
+    "description": "Games primarily played with cards as the main component, often involving hand management."
+  },
+  {
+    "name": "Set Collection",
+    "description": "Games where players gather specific combinations of items or cards to score points or achieve objectives."
+  },
+  {
+    "name": "Hand Management",
+    "description": "Games where players must strategically play and manage the cards or resources in their hand."
+  },
+  {
+    "name": "Exploration",
+    "description": "Games where players discover new territories, maps, or areas as part of the gameplay."
   }
 ]
