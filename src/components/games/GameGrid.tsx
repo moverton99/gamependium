@@ -1,4 +1,3 @@
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
 
@@ -12,6 +11,7 @@ interface Game {
   replayability_desc: string;
   description: string;
   category: string[];
+  gameplay_style: string;
 }
 
 interface GameGridProps {
@@ -34,6 +34,7 @@ export const GameGrid = ({ games }: GameGridProps) => {
             replayabilityDesc={game.replayability_desc}
             description={game.description}
             categories={game.category}
+            gameplayStyle={game.gameplay_style}
           />
         ))}
       </div>
