@@ -1,6 +1,6 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Brain, Repeat, GraduationCap } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
 
 interface DetailedGameCardProps {
   name: string;
@@ -15,6 +15,7 @@ interface DetailedGameCardProps {
   isOpen: boolean;
   onClose: () => void;
   gameplayStyle: string;
+  playtimeMinutes: number;
 }
 
 export const DetailedGameCard = ({
@@ -30,6 +31,7 @@ export const DetailedGameCard = ({
   gameplayStyle,
   isOpen,
   onClose,
+  playtimeMinutes,
 }: DetailedGameCardProps) => {
   const handleCategoryClick = (category: string) => {
     onClose();
@@ -52,7 +54,7 @@ export const DetailedGameCard = ({
             <p className="text-gray-700">{description}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="space-y-1">
               <div className="flex items-center gap-2 font-semibold">
                 <GraduationCap className="w-5 h-5" />
@@ -83,6 +85,17 @@ export const DetailedGameCard = ({
               <div className="flex flex-col">
                 <span className="text-2xl font-bold">{replayabilityRank}/100</span>
                 <p className="text-sm text-gray-600">{replayabilityDesc}</p>
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 font-semibold">
+                <Clock className="w-5 h-5" />
+                <span>Playtime</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold">{playtimeMinutes}</span>
+                <p className="text-sm text-gray-600">minutes</p>
               </div>
             </div>
           </div>

@@ -8,11 +8,12 @@ interface Game {
   learning_curve_desc: string;
   strategic_depth_rank: number;
   strategic_depth_desc: string;
-  replayability_rank: number | string; // Updated to accept both number and string
+  replayability_rank: number | string;
   replayability_desc: string;
   description: string;
   category: string[];
   gameplay_style: string;
+  playtime_minutes: number;
 }
 
 interface GameGridProps {
@@ -36,6 +37,7 @@ export const GameGrid = ({ games }: GameGridProps) => {
             description={game.description}
             categories={game.category}
             gameplayStyle={game.gameplay_style}
+            playtimeMinutes={game.playtime_minutes}
           />
         ))}
       </div>

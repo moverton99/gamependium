@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 
@@ -11,11 +11,12 @@ interface GameCardProps {
   learningCurveDesc: string;
   strategicDepthRank: number;
   strategicDepthDesc: string;
-  replayabilityRank: number | string; // Updated to accept both number and string
+  replayabilityRank: number | string;
   replayabilityDesc: string;
   description: string;
   categories: string[];
   gameplayStyle: string;
+  playtimeMinutes: number;
 }
 
 export const GameCard = ({
@@ -29,6 +30,7 @@ export const GameCard = ({
   description,
   categories,
   gameplayStyle,
+  playtimeMinutes,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
 
@@ -69,6 +71,16 @@ export const GameCard = ({
               <p className="text-sm">Replayability: {replayabilityDesc}</p>
             </TooltipContent>
           </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>{playtimeMinutes}</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-sm">Average Playtime: {playtimeMinutes} minutes</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
         <p className="text-sm text-gray-600 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
@@ -93,6 +105,7 @@ export const GameCard = ({
         description={description}
         categories={categories}
         gameplayStyle={gameplayStyle}
+        playtimeMinutes={playtimeMinutes}
       />
     </>
   );
