@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -38,10 +37,8 @@ const Index = () => {
 
   const handleSortChange = (value: SortOption) => {
     if (value === sortBy) {
-      // Toggle direction if selecting the same sort option
-      setSortDirection(current => (current === "asc" ? "desc" : "asc"));
+      setSortDirection(current => current === "asc" ? "desc" : "asc");
     } else {
-      // Set new sort option and reset to ascending
       setSortBy(value);
       setSortDirection("asc");
     }
@@ -116,7 +113,7 @@ const Index = () => {
           <div className="relative">
             <Select 
               value={sortBy} 
-              onValueChange={handleSortChange}
+              onValueChange={(value) => handleSortChange(value as SortOption)}
             >
               <SelectTrigger className="w-[180px]">
                 <div className="flex items-center gap-2">
@@ -194,4 +191,3 @@ const Index = () => {
 };
 
 export default Index;
-
