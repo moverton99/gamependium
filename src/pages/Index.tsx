@@ -1,5 +1,4 @@
-
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
 import { CategoryFilter } from "@/components/games/CategoryFilter";
@@ -24,6 +23,18 @@ const Index = () => {
   const removeCategory = (categoryToRemove: string) => {
     setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
   };
+
+  useEffect(() => {
+    const handleCategorySelected = (event: CustomEvent<string>) => {
+      setSelectedCategories([event.detail]);
+    };
+
+    window.addEventListener('categorySelected', handleCategorySelected as EventListener);
+
+    return () => {
+      window.removeEventListener('categorySelected', handleCategorySelected as EventListener);
+    };
+  }, []);
 
   const sortedAndFilteredGames = useMemo(() => {
     console.log("Recomputing sorted games with:", { sortBy, sortDirection });

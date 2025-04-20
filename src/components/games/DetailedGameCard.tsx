@@ -1,7 +1,5 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface DetailedGameCardProps {
   name: string;
@@ -9,7 +7,7 @@ interface DetailedGameCardProps {
   learningCurveDesc: string;
   strategicDepthRank: number;
   strategicDepthDesc: string;
-  replayabilityRank: number | string; // Updated to accept both number and string
+  replayabilityRank: number | string;
   replayabilityDesc: string;
   description: string;
   categories: string[];
@@ -32,6 +30,14 @@ export const DetailedGameCard = ({
   isOpen,
   onClose,
 }: DetailedGameCardProps) => {
+  const handleCategoryClick = (category: string) => {
+    onClose();
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('category', category);
+    window.history.pushState(null, '', `?${searchParams.toString()}`);
+    window.dispatchEvent(new CustomEvent('categorySelected', { detail: category }));
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -91,7 +97,8 @@ export const DetailedGameCard = ({
               {categories.map((cat) => (
                 <span
                   key={cat}
-                  className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                  className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
+                  onClick={() => handleCategoryClick(cat)}
                 >
                   {cat}
                 </span>
