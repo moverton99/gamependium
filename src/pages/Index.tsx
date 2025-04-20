@@ -59,6 +59,8 @@ const Index = () => {
         
         if (sortBy === "name") {
           return multiplier * a.name.localeCompare(b.name);
+        } else if (sortBy === "playtime") {
+          return multiplier * (a.playtime_minutes - b.playtime_minutes);
         } else {
           const propertyName = `${sortBy}_rank`;
           const valueA = a[propertyName as keyof typeof a] as number;

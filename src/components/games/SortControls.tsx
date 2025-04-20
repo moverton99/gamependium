@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import {
@@ -9,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export type SortOption = "name" | "learning_curve" | "strategic_depth" | "replayability";
+export type SortOption = "name" | "learning_curve" | "strategic_depth" | "replayability" | "playtime";
 
 interface SortControlsProps {
   sortBy: SortOption;
@@ -38,6 +37,7 @@ export const SortControls = ({
           <SelectItem value="learning_curve">Learning Curve</SelectItem>
           <SelectItem value="strategic_depth">Strategic Depth</SelectItem>
           <SelectItem value="replayability">Replayability</SelectItem>
+          <SelectItem value="playtime">Playtime</SelectItem>
         </SelectContent>
       </Select>
       <Button
