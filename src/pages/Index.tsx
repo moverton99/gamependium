@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Filter, X, ArrowUp, ArrowDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
 import { Button } from "@/components/ui/button";
@@ -25,14 +25,13 @@ type SortOption = "name" | "learning_curve" | "strategic_depth" | "replayability
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<SortOption>("name");
-  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+  const [sortBy, setSortBy] = useState<SortOption>("name"); // Default to name
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc"); // Default to ascending
 
   const removeCategory = (categoryToRemove: string) => {
     setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
   };
 
-  // Sort categories alphabetically before rendering
   const sortedCategories = [...categories].sort((a, b) => 
     a.name.localeCompare(b.name)
   );
@@ -48,24 +47,25 @@ const Index = () => {
     }
   };
 
-  const sortedAndFilteredGames = [...games]
-    .filter(game => 
-      selectedCategories.length === 0 || 
-      selectedCategories.every(cat => game.category.includes(cat))
-    )
-    .sort((a, b) => {
-      const multiplier = sortDirection === "asc" ? 1 : -1;
-      
-      if (sortBy === "name") {
-        return multiplier * a.name.localeCompare(b.name);
-      } else {
-        // Ensure we're properly accessing the right properties
-        const propertyName = `${sortBy}_rank`;
-        const valueA = a[propertyName as keyof typeof a] as number;
-        const valueB = b[propertyName as keyof typeof b] as number;
-        return multiplier * (valueA - valueB);
-      }
-    });
+  const sortedAndFilteredGames = useMemo(() => {
+    return [...games]
+      .filter(game => 
+        selectedCategories.length === 0 || 
+        selectedCategories.every(cat => game.category.includes(cat))
+      )
+      .sort((a, b) => {
+        const multiplier = sortDirection === "asc" ? 1 : -1;
+        
+        if (sortBy === "name") {
+          return multiplier * a.name.localeCompare(b.name);
+        } else {
+          const propertyName = `${sortBy}_rank`;
+          const valueA = a[propertyName as keyof typeof a] as number;
+          const valueB = b[propertyName as keyof typeof b] as number;
+          return multiplier * (valueA - valueB);
+        }
+      });
+  }, [selectedCategories, sortBy, sortDirection]);
 
   return (
     <div className="min-h-screen p-8 bg-gray-50">
@@ -194,3 +194,4 @@ const Index = () => {
 };
 
 export default Index;
+
