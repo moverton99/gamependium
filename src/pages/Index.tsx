@@ -26,6 +26,11 @@ const Index = () => {
     setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
   };
 
+  // Sort categories alphabetically before rendering
+  const sortedCategories = [...categories].sort((a, b) => 
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <div className="min-h-screen p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -39,7 +44,7 @@ const Index = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              {categories.map((category) => (
+              {sortedCategories.map((category) => (
                 <DropdownMenuCheckboxItem
                   key={category.name}
                   checked={selectedCategories.includes(category.name)}
