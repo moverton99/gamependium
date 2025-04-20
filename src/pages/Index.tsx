@@ -25,6 +25,7 @@ type SortOption = "name" | "learning_curve" | "strategic_depth" | "replayability
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>("name");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
   const removeCategory = (categoryToRemove: string) => {
     setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
@@ -35,16 +36,28 @@ const Index = () => {
     a.name.localeCompare(b.name)
   );
 
+  const handleSortChange = (value: SortOption) => {
+    if (value === sortBy) {
+      // Toggle direction if clicking the same sort option
+      setSortDirection(current => current === "asc" ? "desc" : "asc");
+    } else {
+      // Reset to ascending when changing sort option
+      setSortBy(value);
+      setSortDirection("asc");
+    }
+  };
+
   const sortedAndFilteredGames = [...games]
     .filter(game => 
       selectedCategories.length === 0 || 
       selectedCategories.every(cat => game.category.includes(cat))
     )
     .sort((a, b) => {
+      const multiplier = sortDirection === "asc" ? 1 : -1;
       if (sortBy === "name") {
-        return a.name.localeCompare(b.name);
+        return multiplier * a.name.localeCompare(b.name);
       }
-      return (
+      return multiplier * (
         Number(a[sortBy + "_rank"]) - Number(b[sortBy + "_rank"])
       );
     });
@@ -95,10 +108,10 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <Select value={sortBy} onValueChange={(value: SortOption) => setSortBy(value)}>
+          <Select value={sortBy} onValueChange={handleSortChange}>
             <SelectTrigger className="w-[180px]">
               <div className="flex items-center gap-2">
-                <ArrowUpDown className="h-4 w-4" />
+                <ArrowUpDown className={`h-4 w-4 transition-transform ${sortDirection === "desc" ? "rotate-180" : ""}`} />
                 <SelectValue placeholder="Sort by..." />
               </div>
             </SelectTrigger>
