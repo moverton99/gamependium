@@ -1,3 +1,4 @@
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap } from "lucide-react";
 
@@ -40,19 +41,19 @@ export const DetailedGameCard = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader className="flex flex-row justify-between items-start">
+      <DialogContent className="max-w-3xl">
+        <DialogHeader className="pb-2">
           <DialogTitle className="text-2xl font-bold">{name}</DialogTitle>
         </DialogHeader>
         
-        <div className="space-y-6 py-4">
-          <div className="flex flex-col gap-4">
+        <div className="space-y-4">
+          <div className="flex flex-col gap-2">
             <div className="text-lg font-semibold">Description</div>
             <p className="text-gray-700">{description}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="space-y-1">
               <div className="flex items-center gap-2 font-semibold">
                 <GraduationCap className="w-5 h-5" />
                 <span>Learning Curve</span>
@@ -63,7 +64,7 @@ export const DetailedGameCard = ({
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1">
               <div className="flex items-center gap-2 font-semibold">
                 <Brain className="w-5 h-5" />
                 <span>Strategic Depth</span>
@@ -74,7 +75,7 @@ export const DetailedGameCard = ({
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1">
               <div className="flex items-center gap-2 font-semibold">
                 <Repeat className="w-5 h-5" />
                 <span>Replayability</span>
@@ -86,12 +87,12 @@ export const DetailedGameCard = ({
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1">
             <div className="font-semibold">Gameplay Style</div>
             <p className="text-gray-700">{gameplayStyle}</p>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1">
             <div className="font-semibold">Categories</div>
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
