@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Filter, X } from "lucide-react";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuCheckboxItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -30,16 +31,21 @@ export const CategoryFilter = ({
             Filter by Category
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
-          {categories.map((category) => (
-            <DropdownMenuCheckboxItem
-              key={category.name}
-              checked={selectedCategories.includes(category.name)}
-              onCheckedChange={(checked) => onCategoryToggle(category.name, checked)}
-            >
-              {category.name}
-            </DropdownMenuCheckboxItem>
-          ))}
+        <DropdownMenuContent className="w-[500px] p-0">
+          <ScrollArea className="h-80">
+            <div className="grid grid-cols-2 gap-1 p-2">
+              {categories.map((category) => (
+                <DropdownMenuCheckboxItem
+                  key={category.name}
+                  checked={selectedCategories.includes(category.name)}
+                  onCheckedChange={(checked) => onCategoryToggle(category.name, checked)}
+                  className="p-2"
+                >
+                  {category.name}
+                </DropdownMenuCheckboxItem>
+              ))}
+            </div>
+          </ScrollArea>
         </DropdownMenuContent>
       </DropdownMenu>
       {selectedCategories.map((category) => (
