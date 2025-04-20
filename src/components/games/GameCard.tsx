@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
@@ -104,7 +103,6 @@ export const GameCard = ({
         replayabilityDesc={replayabilityDesc}
         description={description}
         categories={categories}
-        gameplayStyle={gameplayStyle}
         playtimeMinutes={playtimeMinutes}
       />
     </>
