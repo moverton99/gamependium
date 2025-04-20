@@ -46,8 +46,10 @@ export const DetailedGameCard = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
-        <DialogHeader className="pb-2">
+        {/* Make header position relative and flex with center alignment */}
+        <DialogHeader className="pb-2 relative flex items-center justify-between">
           <DialogTitle className="text-2xl font-bold">{name}</DialogTitle>
+          {/* The close button is positioned absolutely in DialogContent; no need to repeat here */}
         </DialogHeader>
         
         <ScrollArea className="flex-1 overflow-auto pr-4">
@@ -123,3 +125,4 @@ export const DetailedGameCard = ({
     </Dialog>
   );
 };
+
