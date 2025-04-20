@@ -36,15 +36,27 @@ const Index = () => {
   );
 
   const handleSortChange = (value: SortOption) => {
+    console.log("Sort change called with value:", value);
+    console.log("Current sortBy:", sortBy);
+    console.log("Current sortDirection:", sortDirection);
+    
     if (value === sortBy) {
-      setSortDirection(current => current === "asc" ? "desc" : "asc");
+      console.log("Same sort option selected, toggling direction");
+      setSortDirection(current => {
+        const newDirection = current === "asc" ? "desc" : "asc";
+        console.log("New direction will be:", newDirection);
+        return newDirection;
+      });
     } else {
+      console.log("New sort option selected, setting to:", value);
       setSortBy(value);
       setSortDirection("asc");
     }
   };
 
   const sortedAndFilteredGames = useMemo(() => {
+    console.log("Recomputing sorted games with:", { sortBy, sortDirection });
+    
     return [...games]
       .filter(game => 
         selectedCategories.length === 0 || 
@@ -113,7 +125,10 @@ const Index = () => {
           <div className="relative">
             <Select 
               value={sortBy} 
-              onValueChange={(value) => handleSortChange(value as SortOption)}
+              onValueChange={(value) => {
+                console.log("Select onValueChange called with:", value);
+                handleSortChange(value as SortOption);
+              }}
             >
               <SelectTrigger className="w-[180px]">
                 <div className="flex items-center gap-2">
