@@ -2,7 +2,7 @@
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Filter, X, ArrowUpDown } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Filter, X, ArrowUp, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -114,7 +114,11 @@ const Index = () => {
           <Select value={sortBy} onValueChange={handleSortChange}>
             <SelectTrigger className="w-[180px]">
               <div className="flex items-center gap-2">
-                <ArrowUpDown className={`h-4 w-4 transition-transform ${sortDirection === "desc" ? "rotate-180" : ""}`} />
+                {sortDirection === "asc" ? (
+                  <ArrowUp className="h-4 w-4" />
+                ) : (
+                  <ArrowDown className="h-4 w-4" />
+                )}
                 <SelectValue placeholder="Sort by..." />
               </div>
             </SelectTrigger>
