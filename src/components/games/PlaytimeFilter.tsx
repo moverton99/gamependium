@@ -5,27 +5,27 @@ const PLAYTIME_GROUPS = [
   {
     label: "All",
     value: "all",
-    description: "Show all playtimes",
+    description: "",
   },
   {
-    label: "Quick",
+    label: "Quick 0–30",
     value: "quick",
-    description: "0–30 mins — Fast-paced games, great for fillers or casual sessions.",
+    description: "",
   },
   {
-    label: "Standard",
+    label: "Standard 31–60",
     value: "standard",
-    description: "31–60 mins — Typical board game session—accessible yet satisfying.",
+    description: "",
   },
   {
-    label: "Extended",
+    label: "Extended 61–120",
     value: "extended",
-    description: "61–120 mins — Heavier strategy games or games with moderate setup.",
+    description: "",
   },
   {
-    label: "Epic",
+    label: "Epic 120+",
     value: "epic",
-    description: "120+ mins — Long-form games, often involving campaigns or deep strategy.",
+    description: "",
   },
 ];
 
@@ -36,7 +36,7 @@ interface PlaytimeFilterProps {
 
 export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => (
   <div className="flex flex-col gap-1">
-    <span className="text-sm font-medium mb-1">Filter by Playtime</span>
+    <span className="text-sm font-medium mb-1">Playtime</span>
     <Select value={selected} onValueChange={onChange}>
       <SelectTrigger className="w-64 max-w-full">
         <SelectValue placeholder="Select playtime" />
@@ -44,12 +44,7 @@ export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => (
       <SelectContent>
         {PLAYTIME_GROUPS.map((group) => (
           <SelectItem key={group.value} value={group.value}>
-            <div className="flex flex-col">
-              <span>{group.label}</span>
-              {group.value !== "all" &&
-                <span className="text-xs text-muted-foreground">{group.description}</span>
-              }
-            </div>
+            <span>{group.label}</span>
           </SelectItem>
         ))}
       </SelectContent>
@@ -58,3 +53,4 @@ export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => (
 );
 
 export { PLAYTIME_GROUPS };
+
