@@ -23,10 +23,10 @@ export const CategoryFilter = ({
   onCategoryRemove,
 }: CategoryFilterProps) => {
   return (
-    <div className="flex flex-wrap items-center gap-3 flex-grow">
+    <div className="flex flex-col md:w-64 w-full">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="gap-2">
+          <Button variant="outline" className="gap-2 w-full">
             <Filter className="w-4 h-4" />
             Filter by Category
           </Button>
@@ -48,20 +48,23 @@ export const CategoryFilter = ({
           </ScrollArea>
         </DropdownMenuContent>
       </DropdownMenu>
-      {selectedCategories.map((category) => (
-        <div
-          key={category}
-          className="flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
-        >
-          {category}
-          <button
-            onClick={() => onCategoryRemove(category)}
-            className="hover:bg-primary/20 rounded-full p-1"
+      {/* Chips under the control, wrap as needed */}
+      <div className="flex flex-wrap items-center gap-2 mt-2">
+        {selectedCategories.map((category) => (
+          <div
+            key={category}
+            className="flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
           >
-            <X className="w-3 h-3" />
-          </button>
-        </div>
-      ))}
+            {category}
+            <button
+              onClick={() => onCategoryRemove(category)}
+              className="hover:bg-primary/20 rounded-full p-1"
+            >
+              <X className="w-3 h-3" />
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
