@@ -7,6 +7,7 @@ import { SortControls, type SortOption } from "@/components/games/SortControls";
 import { GameGrid } from "@/components/games/GameGrid";
 import { PlaytimeFilter, PLAYTIME_GROUPS } from "@/components/games/PlaytimeFilter";
 import { TextSearch } from "@/components/games/TextSearch";
+import { Game } from "@/types/game";
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -88,7 +89,7 @@ const Index = () => {
         const valueB = b[propertyName as keyof typeof b] as number;
         return multiplier * (valueA - valueB);
       }
-    });
+    }) as Game[];
   }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search]);
 
   return (
