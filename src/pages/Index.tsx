@@ -109,7 +109,7 @@ const Index = () => {
             <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
           </div>
           {/* Sort Controls */}
-          <div className="flex items-end justify-start w-full md:col-start-2 md:row-start-2">
+          <div className="flex items-end justify-start md:justify-end w-full md:col-start-2 md:row-start-2">
             <SortControls
               sortBy={sortBy}
               sortDirection={sortDirection}
