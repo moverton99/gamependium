@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -58,7 +59,7 @@ const Index = () => {
   const sortedAndFilteredGames = useMemo(() => {
     console.log("Recomputing sorted games with:", { sortBy, sortDirection, selectedPlaytime, search });
 
-    return [...games]
+    let filteredGames = [...games]
       .filter(game =>
         (selectedCategories.length === 0 ||
           selectedCategories.every(cat => game.category.includes(cat)))
@@ -67,21 +68,27 @@ const Index = () => {
           search.trim() === "" ||
           game.name.toLowerCase().includes(search.toLowerCase())
         )
-      )
-      .sort((a, b) => {
-        const multiplier = sortDirection === "asc" ? 1 : -1;
+      );
 
-        if (sortBy === "name") {
-          return multiplier * a.name.localeCompare(b.name);
-        } else if (sortBy === "playtime") {
-          return multiplier * (a.playtime_minutes - b.playtime_minutes);
-        } else {
-          const propertyName = `${sortBy}_rank`;
-          const valueA = a[propertyName as keyof typeof a] as number;
-          const valueB = b[propertyName as keyof typeof b] as number;
-          return multiplier * (valueA - valueB);
-        }
-      });
+    // Remove "Existence" if sortBy is not "name"
+    if (sortBy !== "name") {
+      filteredGames = filteredGames.filter(game => game.name !== "Existence");
+    }
+
+    return filteredGames.sort((a, b) => {
+      const multiplier = sortDirection === "asc" ? 1 : -1;
+
+      if (sortBy === "name") {
+        return multiplier * a.name.localeCompare(b.name);
+      } else if (sortBy === "playtime") {
+        return multiplier * (a.playtime_minutes - b.playtime_minutes);
+      } else {
+        const propertyName = `${sortBy}_rank`;
+        const valueA = a[propertyName as keyof typeof a] as number;
+        const valueB = b[propertyName as keyof typeof b] as number;
+        return multiplier * (valueA - valueB);
+      }
+    });
   }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search]);
 
   return (
