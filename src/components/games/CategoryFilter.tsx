@@ -23,10 +23,10 @@ export const CategoryFilter = ({
   onCategoryRemove,
 }: CategoryFilterProps) => {
   return (
-    <div className="flex flex-col md:w-64 w-full">
+    <div className="flex flex-col md:w-44 w-full">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="gap-2 w-full">
+          <Button variant="outline" className="w-full flex items-center gap-2 justify-start">
             <Filter className="w-4 h-4" />
             Filter by Category
           </Button>
