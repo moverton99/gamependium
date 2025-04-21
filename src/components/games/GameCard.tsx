@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
@@ -51,7 +52,6 @@ export const GameCard = ({
 
     showWarningTriangle =
       selectedCount >= minPlayers &&
-      selectedCount <= maxPlayers &&
       selectedCount < suggestedMinPlayers;
   }
 
@@ -162,3 +162,4 @@ export const GameCard = ({
     </>
   );
 };
+
