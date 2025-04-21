@@ -1,4 +1,3 @@
-
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -66,8 +65,7 @@ const Index = () => {
         && (selectedPlaytime === "all" || isInPlaytimeGroup(game, selectedPlaytime))
         && (
           search.trim() === "" ||
-          game.name.toLowerCase().includes(search.toLowerCase()) ||
-          game.description?.toLowerCase().includes(search.toLowerCase())
+          game.name.toLowerCase().includes(search.toLowerCase())
         )
       )
       .sort((a, b) => {
