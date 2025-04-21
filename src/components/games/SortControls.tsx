@@ -28,13 +28,18 @@ export const SortControls = ({
   };
 
   return (
-    <div className="flex items-center gap-0" onClick={handleClick}>
+    <div
+      className="flex items-center md:w-64 w-full border border-input rounded-md bg-background overflow-hidden"
+      onClick={handleClick}
+    >
+      {/* Sort direction button, fixed width */}
       <button
         type="button"
         aria-label="Toggle sort direction"
         onClick={onDirectionToggle}
-        className="h-10 px-2 rounded-r-none border border-input bg-background hover:bg-accent hover:text-accent-foreground flex items-center justify-center"
-        style={{ borderRight: 0 }}
+        className="w-10 h-10 flex items-center justify-center border-0 border-r border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+        tabIndex={0}
+        style={{ borderTopLeftRadius: 'var(--radius)', borderBottomLeftRadius: 'var(--radius)' }}
       >
         {sortDirection === "asc" ? (
           <ArrowUp className="h-4 w-4" />
@@ -42,13 +47,18 @@ export const SortControls = ({
           <ArrowDown className="h-4 w-4" />
         )}
       </button>
+      {/* Select dropdown fills the rest */}
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
       >
         <SelectTrigger
-          className="w-[180px] rounded-l-none border-l-0"
           hideChevron
+          className="flex-1 w-0 h-10 border-0 border-l border-input rounded-none focus:ring-0 transition-colors"
+          style={{
+            borderTopRightRadius: 'var(--radius)',
+            borderBottomRightRadius: 'var(--radius)',
+          }}
         >
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
