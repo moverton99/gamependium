@@ -1,8 +1,10 @@
+
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
+import { categoryDescriptionMap } from "./categoryDescriptions";
 
 interface GameCardProps {
   name: string;
@@ -84,9 +86,16 @@ export const GameCard = ({
         <p className="text-sm text-gray-600 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
-            <span key={cat} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-              {cat}
-            </span>
+            <Tooltip key={cat}>
+              <TooltipTrigger asChild>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full cursor-help">
+                  {cat}
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                {categoryDescriptionMap[cat] || "No description found"}
+              </TooltipContent>
+            </Tooltip>
           ))}
         </div>
       </Card>

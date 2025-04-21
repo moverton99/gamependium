@@ -3,6 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { categoryDescriptionMap } from "./categoryDescriptions";
 
 interface DetailedGameCardProps {
   name: string;
@@ -107,13 +109,19 @@ export const DetailedGameCard = ({
               <div className="font-semibold">Categories</div>
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => (
-                  <span
-                    key={cat}
-                    className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
-                    onClick={() => handleCategoryClick(cat)}
-                  >
-                    {cat}
-                  </span>
+                  <Tooltip key={cat}>
+                    <TooltipTrigger asChild>
+                      <span
+                        className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
+                        onClick={() => handleCategoryClick(cat)}
+                      >
+                        {cat}
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      {categoryDescriptionMap[cat] || "No description found"}
+                    </TooltipContent>
+                  </Tooltip>
                 ))}
               </div>
             </div>
