@@ -1,1134 +1,1430 @@
 [
-    {
-        "name": "Agricola",
-        "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
-        "learning_curve_rank": 75,
-        "learning_curve_desc": "Complex worker placement and a multitude of rules make Agricola challenging to learn.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Deep strategic planning and engine-building elements result in very high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Deep strategic planning and varying family dynamics ensure a new experience with each play.",
-        "category": [
-            "Worker Placement",
-            "Economic"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Anachrony",
-        "description": "Command a futuristic faction facing the end of the world, using time travel to borrow resources from the future. Place workers in powered exosuits to gather supplies, build structures, and prepare for a coming cataclysm in a game where your past choices shape your survival.",
-        "learning_curve_rank": 75,
-        "learning_curve_desc": "Anachrony's innovative time-travel mechanics and resource management yield a steep learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Multiple strategic paths and the ability to borrow from the future provide high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Multiple paths, expansions, and the time travel mechanic keep each session engaging and unique.",
-        "category": [
-            "Worker Placement",
-            "Science Fiction",
-            "Engine Building"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Android: Netrunner",
-        "description": "Engage in a cyberpunk duel between a powerful corporation and a daring hacker in this asymmetrical, deck-driven game. The Corp sets traps and advances agendas while the Runner infiltrates servers and disrupts systems through tactical Deduction & Deception and card combos.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "Its asymmetrical rules and deep deck-building require significant initial investment to master.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Intricate mind games and shifting strategies yield high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Asymmetrical deck-building and variable strategies ensure a fresh challenge each time.",
-        "category": [
-            "Deckbuilding",
-            "Asymmetric",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Ark Nova",
-        "description": "Design a world-class zoo by playing cards that represent animals, sponsors, and conservation efforts. Choose from five shifting actions to build enclosures, manage resources, and create synergies in a rich engine-building experience with a nature-focused theme.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "Managing enclosures, sponsorships, and conservation projects introduces moderate complexity.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Card synergies and multiple strategic choices create a rich strategic experience.",
-        "replayability_rank": 80,
-        "replayability_desc": "A large deck and diverse paths keep each session unique and engaging.",
-        "category": [
-            "Engine Building",
-            "Economic"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Arkham Horror",
-        "description": "Team up to investigate sinister forces in a Lovecraftian world plagued by cosmic horrors. Travel across Arkham, face terrifying encounters, and close otherworldly gates using cooperative mechanics, dice rolls, and evolving narrative-driven scenarios.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "A lengthy rule set and thematic narrative result in a high learning curve.",
-        "strategic_depth_rank": 50,
-        "strategic_depth_desc": "Reliance on dice and scripted events limits strategic depth somewhat.",
-        "replayability_rank": 60,
-        "replayability_desc": "Story-driven scenarios offer replayability, but familiar narratives can reduce long-term variation.",
-        "category": [
-            "Cooperative",
-            "Horror",
-            "Adventure"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Axis & Allies",
-        "description": "Reenact World War II on a global scale by commanding military forces and managing wartime economies. Coordinate attacks, deploy units, and capture territory across continents in this grand strategy game of dice-based combat and long-term planning.",
-        "learning_curve_rank": 60,
-        "learning_curve_desc": "The multi-phase war structure and numerous unit types require moderate learning time.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Long-term economic and military planning contribute to high strategic depth.",
-        "replayability_rank": 60,
-        "replayability_desc": "Though strategically deep, repetitive board dynamics and dice combat can make repeated play feel similar.",
-        "category": [
-            "Wargame",
-            "Area Control",
-            "Historical"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Bang!",
-        "description": "Enter a Wild West shootout where players take on hidden roles like Sheriff, Outlaw, and Renegade. Use action cards to attack, dodge, and uncover your opponents' identities in this fast-paced Deduction & Deception & Deception game filled with surprise and betrayal.",
-        "learning_curve_rank": 20,
-        "learning_curve_desc": "Simple rules and secret roles allow for a quick setup and easy play.",
-        "strategic_depth_rank": 30,
-        "strategic_depth_desc": "Heavy reliance on chance keeps strategic depth relatively low.",
-        "replayability_rank": 50,
-        "replayability_desc": "Social interactions create variety, but limited strategic options can lead to repetitive sessions.",
-        "category": [
-            "Deduction & Deception",
-            "Party Games"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Battleship",
-        "description": "Secretly deploy your fleet on a hidden grid and call out coordinates to locate and sink your opponent\u2019s ships. It\u2019s a head-to-head game of Deduction & Deception and pattern recognition, where every hit brings you closer to naval victory.",
-        "learning_curve_rank": 15,
-        "learning_curve_desc": "Straightforward grid-based rules make Battleship very easy to learn.",
-        "strategic_depth_rank": 15,
-        "strategic_depth_desc": "Limited options and heavy reliance on pattern recognition yield minimal strategic depth.",
-        "replayability_rank": 15,
-        "replayability_desc": "Simple grid-based play and predictable strategies result in low replay value.",
-        "category": [
-            "Deduction & Deception",
-            "Family Games"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "Battlestar Galactica",
-        "description": "Work together to protect your fleet from threats while secretly suspecting some players are traitorous Cylons. Balance limited resources, resolve crisis cards, and manage suspicion in this tense blend of cooperation and hidden roles set in a sci-fi universe.",
-        "learning_curve_rank": 60,
-        "learning_curve_desc": "A complex mix of cooperative play and hidden roles creates a moderate learning challenge.",
-        "strategic_depth_rank": 65,
-        "strategic_depth_desc": "Crisis management and negotiation add layers of strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Variable crisis events and Deduction & Deception & Deception dynamics create different experiences in each play.",
-        "category": [
-            "Cooperative",
-            "Deduction & Deception",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Bohnanza",
-        "description": "Plant and harvest beans to earn coins, but you can\u2019t rearrange your hand\u2014so trading with other players becomes essential. Timing, negotiation, and opportunism define this lighthearted card game with a quirky economic twist.",
-        "learning_curve_rank": 20,
-        "learning_curve_desc": "The simple rules of trading and card management are easy to pick up.",
-        "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Negotiation and timing provide a modest level of strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "The trading and negotiation aspects ensure that each play feels different.",
-        "category": [
-            "Economic",
-            "Negotiation"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Brass (Lancashire)",
-        "description": "Guide your industrial empire through the canals and railways of 18th-century England. Invest in coal, iron, and cotton industries, balancing infrastructure expansion with market timing in this deep economic strategy game.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "A detailed economic simulation with multiple phases results in a high learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Long-term planning and economic management offer very high strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Diverse economic strategies and market fluctuations provide varied gameplay experiences.",
-        "category": [
-            "Economic",
-            "Network Building"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Carcassonne",
-        "description": "Draw and place tiles to build a medieval landscape of cities, roads, and fields, then deploy your followers to score points. Each tile draw offers new tactical possibilities in this quick and accessible tile-laying game.",
-        "learning_curve_rank": 15,
-        "learning_curve_desc": "Simple tile-placement rules make Carcassonne very easy to learn.",
-        "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Random tile draws and tactical placement yield moderate strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Random tile draws and an expanding board layout keep each game feeling fresh.",
-        "category": [
-            "Tile Placement",
-            "Family Games"
-        ],
-        "playtime_minutes": 35
-    },
-    {
-        "name": "Castles of Burgundy",
-        "description": "Develop a French estate by rolling dice to acquire tiles and build settlements, farms, and trade routes. Strategic timing and tile synergy drive this eurogame's engaging balance of luck and planning.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "Dice-driven tile placement and a variety of actions create a moderate learning curve.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Optimization challenges and multiple scoring avenues provide high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Multiple scoring avenues and strategic decisions yield high replayability.",
-        "category": [
-            "Tile Placement",
-            "Dice",
-            "Engine Building"
-        ],
-        "playtime_minutes": 70
-    },
-    {
-        "name": "Caylus",
-        "description": "Build a castle and surrounding village by placing workers along a path of actions that evolves with player choices. The game rewards precise timing and cutthroat planning in this classic euro-style strategy challenge.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "Intricate worker placement and timing mechanics require a steep learning curve.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Pure decision-based gameplay with little luck offers very high strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Tactical worker placement offers variety, though similar strategic patterns may develop over time.",
-        "category": [
-            "Worker Placement",
-            "Economic"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Checkers",
-        "description": "Move pieces diagonally and capture opponents by jumping in this simple, timeless abstract. Promote your pieces to kings and outmaneuver your rival in a battle of positioning and prediction.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "Extremely simple rules make Checkers very easy to pick up.",
-        "strategic_depth_rank": 30,
-        "strategic_depth_desc": "Limited strategic variety leads to modest depth compared to more complex games.",
-        "replayability_rank": 30,
-        "replayability_desc": "Limited strategic variety and quick mastery make repeated play somewhat predictable.",
-        "category": [
-            "Abstract Strategy"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "Chess",
-        "description": "Outthink your opponent in this iconic battle of kings, queens, and calculated sacrifice. Chess demands foresight, tactics, and deep positional understanding as players alternate turns to control the board and checkmate the enemy king.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Basic rules are learned quickly, though mastering the game takes years.",
-        "strategic_depth_rank": 95,
-        "strategic_depth_desc": "Endless opening variations and deep tactical play result in enormous strategic depth.",
-        "replayability_rank": 95,
-        "replayability_desc": "Endless strategic possibilities and evolving tactics ensure that no two games are ever exactly the same.",
-        "category": [
-            "Abstract Strategy"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Citadels",
-        "description": "Secretly draft roles each round to gather gold and build districts in a race to complete your city. Deduction & Deception, Deduction & Deception, and timing are key as players try to outmaneuver each other in this fast-paced game of intrigue and sabotage.",
-        "learning_curve_rank": 25,
-        "learning_curve_desc": "Simple role selection and Deduction & Deception mechanics are easy to understand.",
-        "strategic_depth_rank": 45,
-        "strategic_depth_desc": "Reading opponents and timing your moves provide moderate strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Role selection and Deduction & Deception introduce variety, though patterns may repeat in experienced groups.",
-        "category": [
-            "Deduction & Deception",
-            "Role Selection"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Clank! Legacy",
-        "description": "Explore a dungeon by building a personal deck and pushing your luck to grab loot before you're caught. As you play through a branching legacy campaign, the board and rules evolve, creating a dynamic blend of storytelling and tactical deck-building.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "Combining deck-building with a legacy system creates a moderate learning curve as rules evolve over time.",
-        "strategic_depth_rank": 60,
-        "strategic_depth_desc": "The narrative progression and evolving board state add strategic layers throughout the campaign.",
-        "replayability_rank": 75,
-        "replayability_desc": "The evolving legacy elements keep it fresh, though repeated campaigns may lose the element of surprise.",
-        "category": [
-            "Deckbuilding",
-            "Push Your Luck",
-            "Campaign/Legacy"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Concordia",
-        "description": "Expand your trade network across ancient Rome by playing cards that determine your actions and scoring. Balance short-term resource collection with long-term scoring potential in this elegant economic strategy game.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "Straightforward economic rules set in ancient Rome make Concordia accessible.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Efficient card management and map expansion provide significant strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Different maps, expansions, and strategic approaches ensure repeated enjoyment.",
-        "category": [
-            "Economic",
-            "Card Game"
-        ],
-        "playtime_minutes": 100
-    },
-    {
-        "name": "Descent: Journeys in the Dark",
-        "description": "Venture into dungeons filled with monsters, traps, and treasure as heroes or the game\u2019s overlord. Players engage in tactical combat, explore modular maps, and experience a branching story in this scenario-driven adventure.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "A moderate set of rules for dungeon crawling and miniatures combat make it accessible.",
-        "strategic_depth_rank": 55,
-        "strategic_depth_desc": "Scenario-based challenges and tactical combat yield medium strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Scenario-based campaigns offer variety, though a fixed storyline may eventually become predictable.",
-        "category": [
-            "Dungeon Crawler",
-            "Fantasy",
-            "Campaign/Legacy"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Dixit",
-        "description": "Play a beautifully illustrated card and give a cryptic clue while others try to match or mislead with their own cards. Players score by interpreting visual metaphors and reading each other's minds in this creative storytelling game.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "The game\u2019s simple, image-based rules make it extremely easy to learn.",
-        "strategic_depth_rank": 10,
-        "strategic_depth_desc": "Emphasis on creativity and storytelling results in minimal strategic depth.",
-        "replayability_rank": 60,
-        "replayability_desc": "Its creativity-driven gameplay means that different groups can produce varied, fun experiences.",
-        "category": [
-            "Party Games",
-            "Family Games"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Dominion",
-        "description": "Build your deck from a shared supply of cards to create powerful combos and economic engines. With every turn, you'll gain new abilities and refine your strategy in the game that defined the deck-building genre.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Deck-building mechanics are straightforward but require learning various card interactions.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Optimizing your deck through diverse card choices leads to high strategic depth.",
-        "replayability_rank": 85,
-        "replayability_desc": "A large card pool and diverse deck-building options yield high replay value through different combinations.",
-        "category": [
-            "Deckbuilding",
-            "Engine Building"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Dune: Imperium",
-        "description": "Control a faction from the Dune universe as you blend deck-building and worker placement to gain influence, resources, and military power. Balance intrigue and combat as you navigate a dynamic board and evolving political alliances.",
-        "learning_curve_rank": 60,
-        "learning_curve_desc": "Combines deck-building with worker placement in the Dune universe, requiring moderate learning to master its unique mechanics.",
-        "strategic_depth_rank": 75,
-        "strategic_depth_desc": "Interplay between combat, intrigue, and resource management delivers solid strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Leader abilities and card synergy create variety across multiple plays.",
-        "category": [
-            "Deckbuilding",
-            "Worker Placement",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Eclipse",
-        "description": "Explore the galaxy, build your fleet, and engage in epic battles in this 4X strategy game. Use diplomacy, technology upgrades, and resource management to forge your path to interstellar dominance.",
-        "learning_curve_rank": 65,
-        "learning_curve_desc": "Its blend of 4X exploration and economic management presents a challenging learning curve.",
-        "strategic_depth_rank": 75,
-        "strategic_depth_desc": "Multiple paths to victory and resource management yield high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Multiple paths to victory and diverse strategies ensure high replay value.",
-        "category": [
-            "4X",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 150
-    },
-    {
-        "name": "Eclipse Second Dawn",
-        "description": "A streamlined reimagining of the original Eclipse, featuring improved components and refined mechanics. Expand, exploit, and exterminate your way through a modular galaxy using faction abilities, technology, and ship customization.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "An updated version that refines the rules, resulting in a slightly higher learning curve.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Improved components and streamlined rules add further layers to its strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Multiple alien races, tech paths, and random galaxy setups keep each session distinct.",
-        "category": [
-            "4X",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 150
-    },
-    {
-        "name": "El Grande",
-        "description": "Compete for control over medieval Spain by deploying your caballeros into various regions. Use power cards and special actions to shift influence and outmaneuver opponents in this classic area control game.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Simple area control and card mechanics make it easy to learn.",
-        "strategic_depth_rank": 65,
-        "strategic_depth_desc": "Tactical maneuvering and timing considerations add a high level of strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Area control and player interactions vary each game, though similar strategies may emerge.",
-        "category": [
-            "Area Control"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Food Chain Magnate",
-        "description": "Run a vintage fast food empire by hiring staff, launching ad campaigns, and building a supply chain. Every decision impacts the market and your rivals in this brutal economic strategy game.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "A heavy economic game with intricate rules on hiring and marketing requires a steep learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Managing a fast-food empire with multiple strategic avenues provides very high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "High strategic depth and multiple paths to victory ensure strong replay value.",
-        "category": [
-            "Economic",
-            "Card Game"
-        ],
-        "playtime_minutes": 150
-    },
-    {
-        "name": "Fury of Dracula",
-        "description": "One player becomes Dracula, secretly moving across Europe, while others play hunters tracking him down. Clues, deception, and tactical skirmishes unfold in this thrilling Deduction & Deception game of predator and prey.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "The one-versus-many Deduction & Deception system is moderately challenging to learn.",
-        "strategic_depth_rank": 60,
-        "strategic_depth_desc": "Deduction & Deception and coordinated planning provide a fair degree of strategic depth.",
-        "replayability_rank": 60,
-        "replayability_desc": "Asymmetric play and variable scenarios offer some replay value, though experiences can become familiar.",
-        "category": [
-            "Deduction & Deception",
-            "Horror",
-            "Asymmetric"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Galaxy Trucker",
-        "description": "In real time, build a spaceship from spare parts, then race it through hazardous space full of debris, pirates, and malfunctions. It\u2019s chaotic, hilarious, and all about surviving with whatever cobbled-together ship you managed to assemble.",
-        "learning_curve_rank": 45,
-        "learning_curve_desc": "The real-time ship building and component functions are moderately easy to learn.",
-        "strategic_depth_rank": 30,
-        "strategic_depth_desc": "Heavy reliance on luck limits its strategic depth.",
-        "replayability_rank": 60,
-        "replayability_desc": "Random hazards and ship-building variability offer fun, though sometimes unpredictable, gameplay.",
-        "category": [
-            "Real-Time",
-            "Science Fiction",
-            "Push Your Luck"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Gaia Project",
-        "description": "Colonize a galaxy by expanding your faction\u2019s influence through terraforming, technology, and resource management. Each faction plays differently, offering deep euro-style strategy in a rich sci-fi setting.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "A space-themed successor to Terra Mystica with intricate rules and faction mechanics, resulting in a high learning curve.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Deep strategic planning with minimal luck provides very high strategic depth.",
-        "replayability_rank": 85,
-        "replayability_desc": "Varied factions and board setups provide extensive replay value for fans of complex euros.",
-        "category": [
-            "Engine Building",
-            "Science Fiction",
-            "Economic"
-        ],
-        "playtime_minutes": 150
-    },
-    {
-        "name": "Game of Thrones: The Board Game",
-        "description": "Control one of the great houses of Westeros and vie for dominance through political intrigue, military conquest, and strategic alliances. Simultaneous orders, hidden intentions, and shifting loyalties make every round a tense power struggle.",
-        "learning_curve_rank": 65,
-        "learning_curve_desc": "Complex area control with negotiation and secret orders creates a moderately high learning curve.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Diplomacy and tactical choices yield high strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Negotiation and shifting alliances add variety, but a fixed map can limit overall diversity.",
-        "category": [
-            "Area Control",
-            "Negotiation",
-            "Wargame"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Gloomhaven",
-        "description": "Take on the role of mercenaries exploring dungeons and completing story-driven missions in a persistent fantasy world. With card-driven combat, character progression, and branching scenarios, Gloomhaven offers a deeply tactical and narrative-rich campaign.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "A complex cooperative campaign with evolving rules and legacy elements makes it challenging to learn.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Tactical combat and character progression provide rich strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "A rich campaign with evolving scenarios and legacy elements provides varied experiences over multiple sessions.",
-        "category": [
-            "Dungeon Crawler",
-            "Campaign/Legacy",
-            "Fantasy"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Hanabi",
-        "description": "Work together to create a dazzling fireworks display\u2014but you can't see your own cards. Use clues, Deduction & Deception, and memory to help your teammates play cards in order without misfiring in this quiet but tense cooperative game.",
-        "learning_curve_rank": 15,
-        "learning_curve_desc": "Its cooperative rules and limited communication make Hanabi easy to pick up.",
-        "strategic_depth_rank": 45,
-        "strategic_depth_desc": "Deduction & Deception and teamwork add a moderate layer of strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Cooperative Deduction & Deception and variable team dynamics provide a fresh experience each time.",
-        "category": [
-            "Deduction & Deception",
-            "Cooperative",
-            "Memory"
-        ],
-        "playtime_minutes": 25
-    },
-    {
-        "name": "Hive",
-        "description": "Outmaneuver your opponent in a duel where every piece moves differently and there's no board\u2014just your growing hive. Surround the opposing queen bee while protecting your own in this abstract battle of positioning and foresight.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Simple movement rules and no setup make Hive easy to learn.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Pure abstract tactical play offers high strategic depth.",
-        "replayability_rank": 85,
-        "replayability_desc": "Deep abstract strategy with endless tactical possibilities ensures high replayability.",
-        "category": [
-            "Abstract Strategy"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "King of Tokyo",
-        "description": "Roll dice, smash cities, and fight off giant monsters as you battle to become the King of Tokyo. Choose between healing, attacking, or gaining powers in this chaotic and fast-paced game of monster brawling.",
-        "learning_curve_rank": 20,
-        "learning_curve_desc": "The dice mechanics and simple rules allow for rapid learning.",
-        "strategic_depth_rank": 30,
-        "strategic_depth_desc": "Limited strategic choices result in modest depth.",
-        "replayability_rank": 55,
-        "replayability_desc": "Random dice rolls and limited strategic options lower the replay value over time.",
-        "category": [
-            "Push Your Luck",
-            "Dice",
-            "Family Games"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Existence",
-        "description": "Existence is a ridiculously complex reality game where the rules are made up as you go along, and the manual is written in a language you don't speak. You start with a character who's still figuring out how to walk, and the first level is called 'Surviving Childhood' complete with obstacles like broccoli and bedtime. As you level up, you encounter challenges like 'Finding a Job' and 'Adulting,' which are basically just endless loops of paying bills and pretending to be a functioning member of society. But don't worry, there are power-ups like coffee and Netflix to help you through the tough times. And just when you think you've reached the final boss, life throws you a curveball and says, 'Surprise! You're now in charge of your own mini-game called Parenting!' Good luck",
-        "learning_curve_rank": 100,
-        "learning_curve_desc": "Lifelong",
-        "strategic_depth_rank": 100,
-        "strategic_depth_desc": "Infinite",
-        "replayability_rank": "?",
-        "replayability_desc": "Wouldn't you like to know.",
-        "category": [
-            "Adventure",
-            "Narrative"
-        ],
-        "playtime_minutes": 9999
-    },
-    {
-        "name": "Lords of Waterdeep",
-        "description": "Recruit adventurers and send them on quests to expand your influence in the city of Waterdeep. This streamlined worker placement game features hidden objectives and a fantasy setting filled with intrigue and strategy.",
-        "learning_curve_rank": 35,
-        "learning_curve_desc": "Accessible worker placement within a rich thematic setting makes it moderately easy to learn.",
-        "strategic_depth_rank": 50,
-        "strategic_depth_desc": "Balanced strategic choices through quest management yield moderate strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Diverse quests and strategic choices offer a balanced replay experience.",
-        "category": [
-            "Worker Placement",
-            "Fantasy"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Love Letter",
-        "description": "Win the princess\u2019s favor by passing secret messages while eliminating your rivals. With only a handful of cards, every decision matters in this fast and elegant Deduction & Deception game of risk and timing.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "Minimal card interactions result in a very low learning curve.",
-        "strategic_depth_rank": 20,
-        "strategic_depth_desc": "Limited strategic options lead to shallow long-term planning.",
-        "replayability_rank": 65,
-        "replayability_desc": "Short, fast rounds and random draws offer a fresh challenge in each play.",
-        "category": [
-            "Deduction & Deception"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "Mage Knight Board Game",
-        "description": "Explore, conquer, and level up as a powerful Mage Knight in a vast and modular fantasy world. Blend deck-building, area control, and tactical combat in this solo-friendly epic of deep strategic choices and character growth.",
-        "learning_curve_rank": 85,
-        "learning_curve_desc": "Notoriously steep learning curve due to multi-layered rules and extensive options.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Intricate decision-making and campaign depth provide extremely high strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Campaign progression and varied scenarios provide replay value, though long playtimes can limit repeated sessions.",
-        "category": [
-            "Deckbuilding",
-            "Fantasy",
-            "Campaign/Legacy"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Monopoly",
-        "description": "Buy properties, collect rent, and bankrupt your opponents in this iconic game of capitalism and chance. Trade, upgrade, and try not to land in jail as you race to build your empire.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Varied rules and potential house-rules yield a moderate learning curve.",
-        "strategic_depth_rank": 25,
-        "strategic_depth_desc": "Heavy reliance on chance results in low strategic depth.",
-        "replayability_rank": 40,
-        "replayability_desc": "Heavy reliance on chance and a static board setup lead to a repetitive experience over time.",
-        "category": [
-            "Economic",
-            "Family Games",
-            "Roll-and-Move"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Munchkin",
-        "description": "Kick down doors, slay monsters, and stab your friends in the back as you race to level up. This tongue-in-cheek dungeon crawler mixes simple card play with chaotic 'take-that' mechanics and absurd humor.",
-        "learning_curve_rank": 20,
-        "learning_curve_desc": "Humorous rules and parody elements make Munchkin easy to learn.",
-        "strategic_depth_rank": 20,
-        "strategic_depth_desc": "Heavy reliance on chance and 'take-that' mechanics limits its strategic depth.",
-        "replayability_rank": 55,
-        "replayability_desc": "Humor and randomness offer some variety, but repeated play can feel similar.",
-        "category": [
-            "Dungeon Crawler",
-            "Party Games"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "No Thanks!",
-        "description": "Choose to take a numbered card or pass by spending a chip, balancing risk and reward as you build your score. Simple rules hide clever decisions in this minimalist push-your-luck card game.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "A very simple push-your-luck mechanism makes it extremely easy to learn.",
-        "strategic_depth_rank": 35,
-        "strategic_depth_desc": "Risk management elements add a modest layer of strategic depth.",
-        "replayability_rank": 60,
-        "replayability_desc": "Simple mechanics with risk management yield moderate replay value.",
-        "category": [
-            "Push Your Luck",
-            "Family Games"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "Orleans",
-        "description": "Recruit followers and build your influence across medieval France by drawing tokens from your personal bag. Combining bag-building with worker placement, Orleans rewards careful planning and tactical flexibility.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "The bag-building mechanic and medieval theme present a moderate learning curve.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Recruiting followers and expanding influence create significant strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Multiple strategic paths and expansions keep each session fresh.",
-        "category": [
-            "Bag Building",
-            "Worker Placement"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Pandemic",
-        "description": "Work together to stop global disease outbreaks by traveling the world, treating infections, and discovering cures. Each player has a unique role, making cooperation essential in this tense, turn-based crisis simulator.",
-        "learning_curve_rank": 45,
-        "learning_curve_desc": "Cooperative multi-role mechanics yield a moderate learning curve.",
-        "strategic_depth_rank": 60,
-        "strategic_depth_desc": "Collective planning and resource management add moderate strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Variable roles and scenario adjustments offer decent replayability despite some fixed elements.",
-        "category": [
-            "Cooperative",
-            "Deduction & Deception"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Pax Pamir",
-        "description": "Step into 19th-century Afghanistan and navigate alliances, betrayals, and shifting political power. Use cards to influence factions and manipulate the ever-changing balance of control in this historical strategy game.",
-        "learning_curve_rank": 65,
-        "learning_curve_desc": "A historical game with intricate political and card-driven mechanics that take time to master.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Shifting alliances and tactical card play yield high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Ever-changing alliances and a dynamic card market lead to varied outcomes each play.",
-        "category": [
-            "Historical",
-            "Asymmetric"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Power Grid",
-        "description": "Build and power cities by bidding for power plants, managing resources, and expanding your network. This economic game challenges players to balance short-term gains with long-term infrastructure planning.",
-        "learning_curve_rank": 60,
-        "learning_curve_desc": "Multi-phase economic gameplay and resource market dynamics require focused learning.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Long-term planning and dynamic markets provide very high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Dynamic markets and economic decisions provide high replay value with each session feeling unique.",
-        "category": [
-            "Economic"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Puerto Rico",
-        "description": "Develop plantations, ship goods, and manage colonial roles in this classic eurogame. Carefully timed role selection and production chains drive the competition for economic dominance.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "Intricate role selection and building mechanics yield a steep learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Multiple strategic options and negotiation contribute to very high strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Diverse strategies and variable setups keep the gameplay engaging over multiple plays.",
-        "category": [
-            "Economic",
-            "Role Selection"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Race for the Galaxy",
-        "description": "Develop a space-faring civilization by playing cards that represent technologies, worlds, and developments. Simultaneous phase selection and icon-based mechanics make this a fast-paced engine-building game with deep combos.",
-        "learning_curve_rank": 50,
-        "learning_curve_desc": "Icon-heavy card play and simultaneous actions create a moderate learning curve.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Deck-building and engine optimization yield high strategic depth.",
-        "replayability_rank": 85,
-        "replayability_desc": "Diverse card interactions and multiple strategies ensure that every game feels fresh.",
-        "category": [
-            "Engine Building",
-            "Science Fiction"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Risk",
-        "description": "Command armies, conquer continents, and roll dice to determine global domination. Classic area control meets luck-driven battles in this world-spanning strategy game of alliances and betrayal.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Simple rules for global conquest make Risk relatively easy to learn.",
-        "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Dice-based combat and alliance dynamics contribute only moderate strategic depth.",
-        "replayability_rank": 50,
-        "replayability_desc": "While strategic, repeated play can follow similar patterns due to dice reliance and fixed board dynamics.",
-        "category": [
-            "Wargame",
-            "Area Control"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Rock Paper Scissors",
-        "description": "A timeless hand game where players simultaneously choose rock, paper, or scissors in a test of timing and psychology. While simple, it\u2019s often used as a fast and fair decision-maker.",
-        "learning_curve_rank": 1,
-        "learning_curve_desc": "A very simple hand game with instantly learnable rules.",
-        "strategic_depth_rank": 1,
-        "strategic_depth_desc": "Almost no strategic depth beyond spontaneous choice.",
-        "replayability_rank": 5,
-        "replayability_desc": "Its simplicity means there\u2019s little strategic variation, but its spontaneity makes it a fun, quick decision-making game.",
-        "category": [
-            "Party Games"
-        ],
-        "playtime_minutes": 2
-    },
-    {
-        "name": "Root",
-        "description": "Wage asymmetric warfare in a woodland realm where each faction plays entirely differently. From military conquest to economic engine-building, Root is a dynamic strategy game where control shifts constantly based on your unique powers.",
-        "learning_curve_rank": 45,
-        "learning_curve_desc": "Asymmetric rules and varied faction abilities create a moderate learning curve.",
-        "strategic_depth_rank": 75,
-        "strategic_depth_desc": "Dynamic faction interactions and territory control provide high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Asymmetric factions and dynamic gameplay yield high replay value, with each faction offering a distinct experience.",
-        "category": [
-            "Asymmetric",
-            "Area Control",
-            "Fantasy"
-        ],
-        "playtime_minutes": 90
-    },
-    {
-        "name": "Scrabble",
-        "description": "Use letter tiles to create words on a shared board and rack up points with clever vocabulary and board control. Strategic placement and tile management are key in this classic game of language and spatial awareness.",
-        "learning_curve_rank": 25,
-        "learning_curve_desc": "Scrabble\u2019s basic rules are easy to learn, requiring only familiarity with spelling and scoring.",
-        "strategic_depth_rank": 65,
-        "strategic_depth_desc": "Deep knowledge of vocabulary, tile management, and board control offers high strategic complexity for skilled players.",
-        "replayability_rank": 80,
-        "replayability_desc": "Endless word combinations, competitive tension, and evolving skill make Scrabble engaging over countless sessions.",
-        "category": [
-            "Word Games",
-            "Family Games"
-        ],
-        "playtime_minutes": 50
-    },
-    {
-        "name": "Settlers of Catan",
-        "description": "Expand across an uncharted island by gathering resources, building roads, and trading with other players. Smart settlement placement and negotiation drive this modern classic of modular board strategy.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Resource management and trading mechanics yield a moderate learning curve.",
-        "strategic_depth_rank": 60,
-        "strategic_depth_desc": "Dynamic board setups and negotiation add moderate strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Randomized board setups and dynamic trading provide varied experiences with each play.",
-        "category": [
-            "Economic",
-            "Negotiation",
-            "Family Games"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Small World",
-        "description": "Control fantastical races with special powers and conquer territory before fading into decline and choosing a new one. Timing when to abandon your civilization is key in this fast-paced area control game with high replay value.",
-        "learning_curve_rank": 35,
-        "learning_curve_desc": "Accessible territory control and fantasy themes yield a moderate learning curve.",
-        "strategic_depth_rank": 50,
-        "strategic_depth_desc": "Timing and selection of race/power combos create a balanced strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Varied faction combinations and board setups keep the gameplay fresh.",
-        "category": [
-            "Area Control",
-            "Fantasy"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Spirit Island",
-        "description": "Defend your island as powerful spirits working together to repel invading colonists. With unique powers and deep synergy, Spirit Island flips the colonial narrative and delivers a highly strategic cooperative experience.",
-        "learning_curve_rank": 70,
-        "learning_curve_desc": "A cooperative game with complex spirit abilities and nuanced rules, resulting in a steep learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Intricate combos and synergy among diverse powers yield very high strategic depth.",
-        "replayability_rank": 85,
-        "replayability_desc": "Unique spirits, modular boards, and adjustable difficulty keep the game fresh across many plays.",
-        "category": [
-            "Cooperative",
-            "Asymmetric",
-            "Fantasy"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Splendor",
-        "description": "Collect gems and develop cards to attract wealthy patrons in this streamlined engine-building game. With every turn, you must decide whether to gather resources or invest in cards that build toward a victory condition.",
-        "learning_curve_rank": 20,
-        "learning_curve_desc": "Simple engine-building rules make Splendor very easy to learn.",
-        "strategic_depth_rank": 45,
-        "strategic_depth_desc": "Timing and planning add a moderate layer of strategic depth.",
-        "replayability_rank": 75,
-        "replayability_desc": "Multiple paths to victory and engine-building dynamics keep the game engaging across sessions.",
-        "category": [
-            "Engine Building",
-            "Family Games"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Stone Age",
-        "description": "Assign workers to gather resources, build tools, and grow your prehistoric tribe. With dice-based worker placement and resource management, Stone Age blends luck and strategy in a welcoming format.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Straightforward worker placement and resource gathering make it moderately easy to learn.",
-        "strategic_depth_rank": 50,
-        "strategic_depth_desc": "Variable resource management and worker placement decisions yield medium strategic depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Variable resource management and worker placement decisions provide a fresh experience each game.",
-        "category": [
-            "Worker Placement",
-            "Dice",
-            "Family Games"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Summoner Wars",
-        "description": "Control a unique faction in a card-based tactical skirmish game where every unit is summoned to a grid-based battlefield. Balance offense, magic economy, and positioning to outplay your opponent in asymmetric head-to-head combat.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Grid-based tactical combat and unique faction abilities lead to a moderate learning curve.",
-        "strategic_depth_rank": 60,
-        "strategic_depth_desc": "Balancing offense and defense on a tactical grid creates medium-to-high strategic depth.",
-        "replayability_rank": 65,
-        "replayability_desc": "Tactical grid combat offers moderate replay value, though board constraints can limit variety.",
-        "category": [
-            "Asymmetric",
-            "Card Battler"
-        ],
-        "playtime_minutes": 40
-    },
-    {
-        "name": "Terra Mystica",
-        "description": "Grow your civilization by transforming terrain, building structures, and managing resources, all with minimal luck. Each faction plays differently, demanding long-term planning and careful power economy in this acclaimed eurogame.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "Faction-based territory development and resource management yield a high learning curve.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Intricate strategic decisions and varied faction abilities result in extremely high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Multiple factions and varied strategies make every game a new experience.",
-        "category": [
-            "Engine Building",
-            "Fantasy"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Terraforming Mars",
-        "description": "Lead a corporation competing to make Mars habitable by building projects that raise temperature, oxygen levels, and create oceans. Manage resources, draft cards, and develop your engine in this epic planetary development game.",
-        "learning_curve_rank": 60,
-        "learning_curve_desc": "Engine building, resource management, and board development result in a moderate learning curve.",
-        "strategic_depth_rank": 80,
-        "strategic_depth_desc": "Long-term strategic planning with multiple paths to victory yields high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Multiple paths to victory and diverse strategies keep the game engaging over many playthroughs.",
-        "category": [
-            "Engine Building",
-            "Science Fiction",
-            "Economic"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "The Crew",
-        "description": "Complete missions as a team by playing tricks and communicating with limited information. This cooperative twist on trick-taking challenges players to think together, not just outplay each other.",
-        "learning_curve_rank": 35,
-        "learning_curve_desc": "Simple trick-taking rules are enhanced by cooperative mechanics, creating a low to moderate learning curve.",
-        "strategic_depth_rank": 55,
-        "strategic_depth_desc": "Timing, Deduction & Deception, and team coordination deliver moderate strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Dozens of missions and varying difficulty levels ensure high replayability.",
-        "category": [
-            "Cooperative",
-            "Trick-Taking"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "The Mind",
-        "description": "Play cards in ascending order\u2014without speaking. The Mind turns card sequencing into a tense, cooperative experience where players rely on intuition and timing to succeed together.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "Very easy to learn, relying on basic card play and cooperative timing.",
-        "strategic_depth_rank": 10,
-        "strategic_depth_desc": "Minimal strategic decisions, relying more on rhythm and group synergy.",
-        "replayability_rank": 65,
-        "replayability_desc": "Group dynamics and timing tension keep it interesting across sessions.",
-        "category": [
-            "Cooperative",
-            "Timing"
-        ],
-        "playtime_minutes": 20
-    },
-    {
-        "name": "The Resistance",
-        "description": "Fight for freedom or crush it from within in this Deduction & Deception & Deception game of spies and deception. Players vote on missions and try to uncover (or hide) who the traitors are.",
-        "learning_curve_rank": 15,
-        "learning_curve_desc": "Simple vote and mission mechanics make it quick to learn.",
-        "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Deduction & Deception, Deduction & Deception, and social manipulation yield moderate depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Deception-based gameplay changes with every group, offering high replay value.",
-        "category": [
-            "Deduction & Deception"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "The Search for Planet X",
-        "description": "Use logic, Deduction & Deception, and a shared sky map to find a hidden planet before your rivals. A companion app manages the clues and changing conditions in this solo or competitive brain-burning puzzle.",
-        "learning_curve_rank": 30,
-        "learning_curve_desc": "Straightforward rules with a logical framework make it easy to grasp.",
-        "strategic_depth_rank": 65,
-        "strategic_depth_desc": "Layered Deduction & Deception and timing create a satisfying level of depth.",
-        "replayability_rank": 70,
-        "replayability_desc": "Randomized setups and competitive Deduction & Deception yield strong replayability.",
-        "category": [
-            "Deduction & Deception",
-            "Logic"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Ticket to Ride",
-        "description": "Collect cards and claim train routes across North America in this accessible gateway game. Block opponents, complete destination tickets, and build the longest rail network to win.",
-        "learning_curve_rank": 15,
-        "learning_curve_desc": "Simple rules and familiar gameplay make it easy for beginners.",
-        "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Moderate strategic depth through route planning and blocking.",
-        "replayability_rank": 70,
-        "replayability_desc": "Variable destination cards and multiple maps keep it engaging.",
-        "category": [
-            "Route Building",
-            "Family Games"
-        ],
-        "playtime_minutes": 45
-    },
-    {
-        "name": "Twilight Imperium",
-        "description": "Control a galactic empire in an epic space opera where politics, warfare, trade, and negotiation collide. With asymmetric factions and endless options, Twilight Imperium is the ultimate 4X experience.",
-        "learning_curve_rank": 95,
-        "learning_curve_desc": "Massive rulebook and sprawling systems make it one of the hardest games to learn.",
-        "strategic_depth_rank": 95,
-        "strategic_depth_desc": "Deep diplomacy, military, and tech trees offer immense strategic depth.",
-        "replayability_rank": 90,
-        "replayability_desc": "Vast possibilities from factions, politics, and objectives ensure unmatched replay value.",
-        "category": [
-            "4X",
-            "Science Fiction",
-            "Asymmetric"
-        ],
-        "playtime_minutes": 360
-    },
-    {
-        "name": "Twilight Struggle",
-        "description": "Relive the Cold War as the U.S. or USSR in a tense, card-driven tug-of-war for global influence. Timing events, managing defcon status, and planning coups are all key to historical domination.",
-        "learning_curve_rank": 65,
-        "learning_curve_desc": "Card-driven strategy with historical context creates a moderate learning curve.",
-        "strategic_depth_rank": 85,
-        "strategic_depth_desc": "Complex decision-making and timing offer high strategic depth.",
-        "replayability_rank": 80,
-        "replayability_desc": "Historical events and card interplay ensure strong replayability.",
-        "category": [
-            "Card Driven",
-            "Historical"
-        ],
-        "playtime_minutes": 120
-    },
-    {
-        "name": "Unlock!",
-        "description": "Simulate the escape room experience using cards and a companion app. Solve puzzles, find clues, and race the clock through themed scenarios that test your logic and creativity.",
-        "learning_curve_rank": 10,
-        "learning_curve_desc": "Puzzle-solving format with guided app support makes it easy to jump into.",
-        "strategic_depth_rank": 35,
-        "strategic_depth_desc": "Problem-solving and logic are more central than traditional strategy.",
-        "replayability_rank": 40,
-        "replayability_desc": "Once solved, scenarios lose replay value unless new content is added.",
-        "category": [
-            "Puzzle",
-            "Cooperative"
-        ],
-        "playtime_minutes": 60
-    },
-    {
-        "name": "Uno",
-        "description": "Play matching colors or numbers and use action cards to sabotage opponents in this quick, family-friendly card game. The goal? Be the first to run out of cards\u2014but don\u2019t forget to say 'Uno!'",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "Very easy to learn, with rules understood in minutes.",
-        "strategic_depth_rank": 10,
-        "strategic_depth_desc": "Light gameplay with minimal strategic complexity.",
-        "replayability_rank": 60,
-        "replayability_desc": "Fast rounds and chaotic fun give it staying power in casual settings.",
-        "category": [
-            "Family Games",
-            "Push Your Luck"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "War of the Ring",
-        "description": "Control the Free Peoples or the Shadow Armies in an epic battle for Middle-earth. Play cards, move armies, and follow narrative arcs as you relive or rewrite the fate of the One Ring.",
-        "learning_curve_rank": 80,
-        "learning_curve_desc": "A detailed narrative strategy game that requires familiarity with multiple systems.",
-        "strategic_depth_rank": 90,
-        "strategic_depth_desc": "Asymmetric roles and thematic decisions create intense strategic tension.",
-        "replayability_rank": 85,
-        "replayability_desc": "Variable storytelling and deep asymmetry lead to great replay value.",
-        "category": [
-            "Wargame",
-            "Fantasy",
-            "Asymmetric"
-        ],
-        "playtime_minutes": 180
-    },
-    {
-        "name": "Wavelength",
-        "description": "Try to read your teammate\u2019s mind by guessing where on a hidden spectrum their clue points. It\u2019s a party game of perception, discussion, and shared intuition.",
-        "learning_curve_rank": 5,
-        "learning_curve_desc": "Party game with near-zero setup and intuitive rules.",
-        "strategic_depth_rank": 15,
-        "strategic_depth_desc": "Relies more on social insight than traditional strategy.",
-        "replayability_rank": 70,
-        "replayability_desc": "Unique discussions and group dynamics offer high replay value.",
-        "category": [
-            "Party Games",
-            "Deduction & Deception"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Wingspan",
-        "description": "Build a wildlife preserve by playing bird cards, laying eggs, and triggering abilities in carefully planned sequences. With an elegant engine-building system and beautiful design, Wingspan rewards both tactical moves and long-term vision.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Simple actions with layered card effects make it easy to start, hard to master.",
-        "strategic_depth_rank": 70,
-        "strategic_depth_desc": "Synergy among birds and resources creates meaningful decision space.",
-        "replayability_rank": 80,
-        "replayability_desc": "Variety of bird cards and shifting goals keep each game fresh.",
-        "category": [
-            "Engine Building",
-            "Card Drafting",
-            "Family Games"
-        ],
-        "playtime_minutes": 70
-    },
-    {
-        "name": "Yahtzee",
-        "description": "Roll dice and try to fill your score sheet with the best combinations, from full houses to the elusive Yahtzee. It\u2019s a classic game of probability, luck, and a little math.",
-        "learning_curve_rank": 10,
-        "learning_curve_desc": "Very easy to pick up, focused around dice combinations and score tracking.",
-        "strategic_depth_rank": 20,
-        "strategic_depth_desc": "Simple decision-making, though probability adds some tactical layers.",
-        "replayability_rank": 50,
-        "replayability_desc": "Luck-driven but satisfying, especially in short or casual sessions.",
-        "category": [
-            "Dice",
-            "Push Your Luck",
-            "Family Games"
-        ],
-        "playtime_minutes": 30
-    },
-    {
-        "name": "Zombicide",
-        "description": "Team up to survive waves of undead in this cooperative, dice-chucking miniatures game. Level up, gear up, and clear the board as you face mission-based scenarios filled with relentless zombie spawns.",
-        "learning_curve_rank": 40,
-        "learning_curve_desc": "Easy to pick up thanks to straightforward rules and scenarios.",
-        "strategic_depth_rank": 45,
-        "strategic_depth_desc": "Moderate strategy emerges from gear choices, teamwork, and spawn control.",
-        "replayability_rank": 75,
-        "replayability_desc": "Numerous missions and modular boards make for varied zombie-slaying fun.",
-        "category": [
-            "Cooperative",
-            "Dungeon Crawler",
-            "Horror"
-        ],
-        "playtime_minutes": 90
-    },
+  {
+    "name": "Agricola",
+    "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
+    "learning_curve_rank": 75,
+    "learning_curve_desc": "Complex worker placement and a multitude of rules make Agricola challenging to learn.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Deep strategic planning and engine-building elements result in very high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Deep strategic planning and varying family dynamics ensure a new experience with each play.",
+    "category": [
+      "Worker Placement",
+      "Economic"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 1,
+    "max_players": 5,
+    "suggested_min_players": 2,
+    "players_desc": "Agricola has a solid solo mode and scales well up to 5, but really shines with at least 2 players for interaction and competition."
+  },
+  {
+    "name": "Anachrony",
+    "description": "Command a futuristic faction facing the end of the world, using time travel to borrow resources from the future. Place workers in powered exosuits to gather supplies, build structures, and prepare for a coming cataclysm in a game where your past choices shape your survival.",
+    "learning_curve_rank": 75,
+    "learning_curve_desc": "Anachrony's innovative time-travel mechanics and resource management yield a steep learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Multiple strategic paths and the ability to borrow from the future provide high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Multiple paths, expansions, and the time travel mechanic keep each session engaging and unique.",
+    "category": [
+      "Worker Placement",
+      "Science Fiction",
+      "Engine Building"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "It includes a solo mode and works well with 2+, though more players introduce strategic tension over action spaces."
+  },
+  {
+    "name": "Android: Netrunner",
+    "description": "Engage in a cyberpunk duel between a powerful corporation and a daring hacker in this asymmetrical, deck-driven game. The Corp sets traps and advances agendas while the Runner infiltrates servers and disrupts systems through tactical Deduction & Deception and card combos.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "Its asymmetrical rules and deep deck-building require significant initial investment to master.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Intricate mind games and shifting strategies yield high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Asymmetrical deck-building and variable strategies ensure a fresh challenge each time.",
+    "category": [
+      "Deckbuilding",
+      "Asymmetric",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "This is a strictly two-player asymmetrical game — 2 players is both the minimum and optimal count."
+  },
+  {
+    "name": "Ark Nova",
+    "description": "Design a world-class zoo by playing cards that represent animals, sponsors, and conservation efforts. Choose from five shifting actions to build enclosures, manage resources, and create synergies in a rich engine-building experience with a nature-focused theme.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "Managing enclosures, sponsorships, and conservation projects introduces moderate complexity.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Card synergies and multiple strategic choices create a rich strategic experience.",
+    "replayability_rank": 80,
+    "replayability_desc": "A large deck and diverse paths keep each session unique and engaging.",
+    "category": [
+      "Engine Building",
+      "Economic"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "The game plays well solo or with more, but head-to-head zoo competition starts feeling more dynamic at 2+."
+  },
+  {
+    "name": "Arkham Horror",
+    "description": "Team up to investigate sinister forces in a Lovecraftian world plagued by cosmic horrors. Travel across Arkham, face terrifying encounters, and close otherworldly gates using cooperative mechanics, dice rolls, and evolving narrative-driven scenarios.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "A lengthy rule set and thematic narrative result in a high learning curve.",
+    "strategic_depth_rank": 50,
+    "strategic_depth_desc": "Reliance on dice and scripted events limits strategic depth somewhat.",
+    "replayability_rank": 60,
+    "replayability_desc": "Story-driven scenarios offer replayability, but familiar narratives can reduce long-term variation.",
+    "category": [
+      "Cooperative",
+      "Horror",
+      "Adventure"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 1,
+    "max_players": 8,
+    "suggested_min_players": 3,
+    "players_desc": "It can technically be played solo or with 2, but cooperative decision-making and story elements are more engaging with 3 or more players."
+  },
+  {
+    "name": "Axis & Allies",
+    "description": "Reenact World War II on a global scale by commanding military forces and managing wartime economies. Coordinate attacks, deploy units, and capture territory across continents in this grand strategy game of dice-based combat and long-term planning.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "The multi-phase war structure and numerous unit types require moderate learning time.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Long-term economic and military planning contribute to high strategic depth.",
+    "replayability_rank": 60,
+    "replayability_desc": "Though strategically deep, repetitive board dynamics and dice combat can make repeated play feel similar.",
+    "category": [
+      "Wargame",
+      "Area Control",
+      "Historical"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 4,
+    "players_desc": "Best with 4–5 players to fully experience global conflict and strategic alliances."
+  },
+  {
+    "name": "Bang!",
+    "description": "Enter a Wild West shootout where players take on hidden roles like Sheriff, Outlaw, and Renegade. Use action cards to attack, dodge, and uncover your opponents' identities in this fast-paced Deduction & Deception & Deception game filled with surprise and betrayal.",
+    "learning_curve_rank": 20,
+    "learning_curve_desc": "Simple rules and secret roles allow for a quick setup and easy play.",
+    "strategic_depth_rank": 30,
+    "strategic_depth_desc": "Heavy reliance on chance keeps strategic depth relatively low.",
+    "replayability_rank": 50,
+    "replayability_desc": "Social interactions create variety, but limited strategic options can lead to repetitive sessions.",
+    "category": [
+      "Deduction & Deception",
+      "Party Games"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 3,
+    "max_players": 8,
+    "suggested_min_players": 5,
+    "players_desc": "Playable with fewer, but shines with 5–7 players when social deduction and role guessing are most dynamic."
+  },
+  {
+    "name": "Battleship",
+    "description": "Secretly deploy your fleet on a hidden grid and call out coordinates to locate and sink your opponent’s ships. It’s a head-to-head game of Deduction & Deception and pattern recognition, where every hit brings you closer to naval victory.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Straightforward grid-based rules make Battleship very easy to learn.",
+    "strategic_depth_rank": 15,
+    "strategic_depth_desc": "Limited options and heavy reliance on pattern recognition yield minimal strategic depth.",
+    "replayability_rank": 15,
+    "replayability_desc": "Simple grid-based play and predictable strategies result in low replay value.",
+    "category": [
+      "Deduction & Deception",
+      "Family Games"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "Battleship is strictly a 2-player game, ideal for quick head-to-head matches."
+  },
+  {
+    "name": "Battlestar Galactica",
+    "description": "Work together to protect your fleet from threats while secretly suspecting some players are traitorous Cylons. Balance limited resources, resolve crisis cards, and manage suspicion in this tense blend of cooperation and hidden roles set in a sci-fi universe.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "A complex mix of cooperative play and hidden roles creates a moderate learning challenge.",
+    "strategic_depth_rank": 65,
+    "strategic_depth_desc": "Crisis management and negotiation add layers of strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Variable crisis events and Deduction & Deception & Deception dynamics create different experiences in each play.",
+    "category": [
+      "Cooperative",
+      "Deduction & Deception",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 3,
+    "max_players": 6,
+    "suggested_min_players": 5,
+    "players_desc": "The hidden traitor dynamic and negotiation feel most tense with 5–6 players."
+  },
+  {
+    "name": "Bohnanza",
+    "description": "Plant and harvest beans to earn coins, but you can’t rearrange your hand—so trading with other players becomes essential. Timing, negotiation, and opportunism define this lighthearted card game with a quirky economic twist.",
+    "learning_curve_rank": 20,
+    "learning_curve_desc": "The simple rules of trading and card management are easy to pick up.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Negotiation and timing provide a modest level of strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "The trading and negotiation aspects ensure that each play feels different.",
+    "category": [
+      "Economic",
+      "Negotiation"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 3,
+    "max_players": 5,
+    "suggested_min_players": 4,
+    "players_desc": "While possible with 3, trading and negotiation are best with 4 or more players."
+  },
+  {
+    "name": "Brass (Lancashire)",
+    "description": "Guide your industrial empire through the canals and railways of 18th-century England. Invest in coal, iron, and cotton industries, balancing infrastructure expansion with market timing in this deep economic strategy game.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "A detailed economic simulation with multiple phases results in a high learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Long-term planning and economic management offer very high strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Diverse economic strategies and market fluctuations provide varied gameplay experiences.",
+    "category": [
+      "Economic",
+      "Network Building"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Optimal with 3–4 to keep competition fierce while allowing room for strategic planning."
+  },
+  {
+    "name": "Carcassonne",
+    "description": "Draw and place tiles to build a medieval landscape of cities, roads, and fields, then deploy your followers to score points. Each tile draw offers new tactical possibilities in this quick and accessible tile-laying game.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Simple tile-placement rules make Carcassonne very easy to learn.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Random tile draws and tactical placement yield moderate strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Random tile draws and an expanding board layout keep each game feeling fresh.",
+    "category": [
+      "Tile Placement",
+      "Family Games"
+    ],
+    "playtime_minutes": 35,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "More players increase tile competition and scoring opportunities, enhancing gameplay depth."
+  },
+  {
+    "name": "Castles of Burgundy",
+    "description": "Develop a French estate by rolling dice to acquire tiles and build settlements, farms, and trade routes. Strategic timing and tile synergy drive this eurogame's engaging balance of luck and planning.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "Dice-driven tile placement and a variety of actions create a moderate learning curve.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Optimization challenges and multiple scoring avenues provide high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Multiple scoring avenues and strategic decisions yield high replayability.",
+    "category": [
+      "Tile Placement",
+      "Dice",
+      "Engine Building"
+    ],
+    "playtime_minutes": 70,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Plays well with 2, but interaction grows richer with 3 or 4 players."
+  },
+  {
+    "name": "Caylus",
+    "description": "Build a castle and surrounding village by placing workers along a path of actions that evolves with player choices. The game rewards precise timing and cutthroat planning in this classic euro-style strategy challenge.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "Intricate worker placement and timing mechanics require a steep learning curve.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Pure decision-based gameplay with little luck offers very high strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Tactical worker placement offers variety, though similar strategic patterns may develop over time.",
+    "category": [
+      "Worker Placement",
+      "Economic"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Game tension and unpredictability shine with 3–5 players."
+  },
+  {
+    "name": "Checkers",
+    "description": "Move pieces diagonally and capture opponents by jumping in this simple, timeless abstract. Promote your pieces to kings and outmaneuver your rival in a battle of positioning and prediction.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "Extremely simple rules make Checkers very easy to pick up.",
+    "strategic_depth_rank": 30,
+    "strategic_depth_desc": "Limited strategic variety leads to modest depth compared to more complex games.",
+    "replayability_rank": 30,
+    "replayability_desc": "Limited strategic variety and quick mastery make repeated play somewhat predictable.",
+    "category": [
+      "Abstract Strategy"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "This worker placement game is tightly balanced for 2, but plays just as well up to 4."
+  },
+  {
+    "name": "Chess",
+    "description": "Outthink your opponent in this iconic battle of kings, queens, and calculated sacrifice. Chess demands foresight, tactics, and deep positional understanding as players alternate turns to control the board and checkmate the enemy king.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Basic rules are learned quickly, though mastering the game takes years.",
+    "strategic_depth_rank": 95,
+    "strategic_depth_desc": "Endless opening variations and deep tactical play result in enormous strategic depth.",
+    "replayability_rank": 95,
+    "replayability_desc": "Endless strategic possibilities and evolving tactics ensure that no two games are ever exactly the same.",
+    "category": [
+      "Abstract Strategy"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "Checkers is a strictly 2-player abstract game—fast, simple, and strategic."
+  },
+  {
+    "name": "Citadels",
+    "description": "Secretly draft roles each round to gather gold and build districts in a race to complete your city. Deduction & Deception, Deduction & Deception, and timing are key as players try to outmaneuver each other in this fast-paced game of intrigue and sabotage.",
+    "learning_curve_rank": 25,
+    "learning_curve_desc": "Simple role selection and Deduction & Deception mechanics are easy to understand.",
+    "strategic_depth_rank": 45,
+    "strategic_depth_desc": "Reading opponents and timing your moves provide moderate strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Role selection and Deduction & Deception introduce variety, though patterns may repeat in experienced groups.",
+    "category": [
+      "Deduction & Deception",
+      "Role Selection"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "Chess is a pure 2-player strategic battle with universal appeal."
+  },
+  {
+    "name": "Clank! Legacy",
+    "description": "Explore a dungeon by building a personal deck and pushing your luck to grab loot before you're caught. As you play through a branching legacy campaign, the board and rules evolve, creating a dynamic blend of storytelling and tactical deck-building.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "Combining deck-building with a legacy system creates a moderate learning curve as rules evolve over time.",
+    "strategic_depth_rank": 60,
+    "strategic_depth_desc": "The narrative progression and evolving board state add strategic layers throughout the campaign.",
+    "replayability_rank": 75,
+    "replayability_desc": "The evolving legacy elements keep it fresh, though repeated campaigns may lose the element of surprise.",
+    "category": [
+      "Deckbuilding",
+      "Push Your Luck",
+      "Campaign/Legacy"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 8,
+    "suggested_min_players": 4,
+    "players_desc": "While 2 can play, Citadels is far more engaging with 4+ players to create layers of bluffing and timing."
+  },
+  {
+    "name": "Concordia",
+    "description": "Expand your trade network across ancient Rome by playing cards that determine your actions and scoring. Balance short-term resource collection with long-term scoring potential in this elegant economic strategy game.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "Straightforward economic rules set in ancient Rome make Concordia accessible.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Efficient card management and map expansion provide significant strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Different maps, expansions, and strategic approaches ensure repeated enjoyment.",
+    "category": [
+      "Economic",
+      "Card Game"
+    ],
+    "playtime_minutes": 100,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Deck-building and legacy storylines play smoothly from 2 up to 4 players."
+  },
+  {
+    "name": "Descent: Journeys in the Dark",
+    "description": "Venture into dungeons filled with monsters, traps, and treasure as heroes or the game’s overlord. Players engage in tactical combat, explore modular maps, and experience a branching story in this scenario-driven adventure.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "A moderate set of rules for dungeon crawling and miniatures combat make it accessible.",
+    "strategic_depth_rank": 55,
+    "strategic_depth_desc": "Scenario-based challenges and tactical combat yield medium strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Scenario-based campaigns offer variety, though a fixed storyline may eventually become predictable.",
+    "category": [
+      "Dungeon Crawler",
+      "Fantasy",
+      "Campaign/Legacy"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Best with 3–5 to keep competition tight while preserving strategic breathing room."
+  },
+  {
+    "name": "Dixit",
+    "description": "Play a beautifully illustrated card and give a cryptic clue while others try to match or mislead with their own cards. Players score by interpreting visual metaphors and reading each other's minds in this creative storytelling game.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "The game’s simple, image-based rules make it extremely easy to learn.",
+    "strategic_depth_rank": 10,
+    "strategic_depth_desc": "Emphasis on creativity and storytelling results in minimal strategic depth.",
+    "replayability_rank": 60,
+    "replayability_desc": "Its creativity-driven gameplay means that different groups can produce varied, fun experiences.",
+    "category": [
+      "Party Games",
+      "Family Games"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Scales well from 2 to 5 players; more players enrich tactical dungeon play."
+  },
+  {
+    "name": "Dominion",
+    "description": "Build your deck from a shared supply of cards to create powerful combos and economic engines. With every turn, you'll gain new abilities and refine your strategy in the game that defined the deck-building genre.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Deck-building mechanics are straightforward but require learning various card interactions.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Optimizing your deck through diverse card choices leads to high strategic depth.",
+    "replayability_rank": 85,
+    "replayability_desc": "A large card pool and diverse deck-building options yield high replay value through different combinations.",
+    "category": [
+      "Deckbuilding",
+      "Engine Building"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 3,
+    "max_players": 6,
+    "suggested_min_players": 4,
+    "players_desc": "The storytelling and bluffing dynamic flourish best with 4 or more imaginative players."
+  },
+  {
+    "name": "Dune: Imperium",
+    "description": "Control a faction from the Dune universe as you blend deck-building and worker placement to gain influence, resources, and military power. Balance intrigue and combat as you navigate a dynamic board and evolving political alliances.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "Combines deck-building with worker placement in the Dune universe, requiring moderate learning to master its unique mechanics.",
+    "strategic_depth_rank": 75,
+    "strategic_depth_desc": "Interplay between combat, intrigue, and resource management delivers solid strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Leader abilities and card synergy create variety across multiple plays.",
+    "category": [
+      "Deckbuilding",
+      "Worker Placement",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Quick setup and deck variation make it fun for all counts, but 2-player is the standard."
+  },
+  {
+    "name": "Eclipse",
+    "description": "Explore the galaxy, build your fleet, and engage in epic battles in this 4X strategy game. Use diplomacy, technology upgrades, and resource management to forge your path to interstellar dominance.",
+    "learning_curve_rank": 65,
+    "learning_curve_desc": "Its blend of 4X exploration and economic management presents a challenging learning curve.",
+    "strategic_depth_rank": 75,
+    "strategic_depth_desc": "Multiple paths to victory and resource management yield high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Multiple paths to victory and diverse strategies ensure high replay value.",
+    "category": [
+      "4X",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 150,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Playable solo but shines with multiple players who balance strategy and competition."
+  },
+  {
+    "name": "Eclipse Second Dawn",
+    "description": "A streamlined reimagining of the original Eclipse, featuring improved components and refined mechanics. Expand, exploit, and exterminate your way through a modular galaxy using faction abilities, technology, and ship customization.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "An updated version that refines the rules, resulting in a slightly higher learning curve.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Improved components and streamlined rules add further layers to its strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Multiple alien races, tech paths, and random galaxy setups keep each session distinct.",
+    "category": [
+      "4X",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 150,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "Area control and tactical deployment reach their full potential with 3 or more players."
+  },
+  {
+    "name": "El Grande",
+    "description": "Compete for control over medieval Spain by deploying your caballeros into various regions. Use power cards and special actions to shift influence and outmaneuver opponents in this classic area control game.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Simple area control and card mechanics make it easy to learn.",
+    "strategic_depth_rank": 65,
+    "strategic_depth_desc": "Tactical maneuvering and timing considerations add a high level of strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Area control and player interactions vary each game, though similar strategies may emerge.",
+    "category": [
+      "Area Control"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Ideal with 3 or more players to allow for deeper negotiation and strategic interference."
+  },
+  {
+    "name": "Food Chain Magnate",
+    "description": "Run a vintage fast food empire by hiring staff, launching ad campaigns, and building a supply chain. Every decision impacts the market and your rivals in this brutal economic strategy game.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "A heavy economic game with intricate rules on hiring and marketing requires a steep learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Managing a fast-food empire with multiple strategic avenues provides very high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "High strategic depth and multiple paths to victory ensure strong replay value.",
+    "category": [
+      "Economic",
+      "Card Game"
+    ],
+    "playtime_minutes": 150,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Works with 2, but a 3–4 player count creates more interaction and tension."
+  },
+  {
+    "name": "Fury of Dracula",
+    "description": "One player becomes Dracula, secretly moving across Europe, while others play hunters tracking him down. Clues, deception, and tactical skirmishes unfold in this thrilling Deduction & Deception game of predator and prey.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "The one-versus-many Deduction & Deception system is moderately challenging to learn.",
+    "strategic_depth_rank": 60,
+    "strategic_depth_desc": "Deduction & Deception and coordinated planning provide a fair degree of strategic depth.",
+    "replayability_rank": 60,
+    "replayability_desc": "Asymmetric play and variable scenarios offer some replay value, though experiences can become familiar.",
+    "category": [
+      "Deduction & Deception",
+      "Horror",
+      "Asymmetric"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Excels with 3+ players where interaction and tile competition grow stronger."
+  },
+  {
+    "name": "Galaxy Trucker",
+    "description": "In real time, build a spaceship from spare parts, then race it through hazardous space full of debris, pirates, and malfunctions. It’s chaotic, hilarious, and all about surviving with whatever cobbled-together ship you managed to assemble.",
+    "learning_curve_rank": 45,
+    "learning_curve_desc": "The real-time ship building and component functions are moderately easy to learn.",
+    "strategic_depth_rank": 30,
+    "strategic_depth_desc": "Heavy reliance on luck limits its strategic depth.",
+    "replayability_rank": 60,
+    "replayability_desc": "Random hazards and ship-building variability offer fun, though sometimes unpredictable, gameplay.",
+    "category": [
+      "Real-Time",
+      "Science Fiction",
+      "Push Your Luck"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "More players enhance worker placement competition and tile access."
+  },
+  {
+    "name": "Gaia Project",
+    "description": "Colonize a galaxy by expanding your faction’s influence through terraforming, technology, and resource management. Each faction plays differently, offering deep euro-style strategy in a rich sci-fi setting.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "A space-themed successor to Terra Mystica with intricate rules and faction mechanics, resulting in a high learning curve.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Deep strategic planning with minimal luck provides very high strategic depth.",
+    "replayability_rank": 85,
+    "replayability_desc": "Varied factions and board setups provide extensive replay value for fans of complex euros.",
+    "category": [
+      "Engine Building",
+      "Science Fiction",
+      "Economic"
+    ],
+    "playtime_minutes": 150,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "A classic abstract game that is designed exclusively for 2 players."
+  },
+  {
+    "name": "Game of Thrones: The Board Game",
+    "description": "Control one of the great houses of Westeros and vie for dominance through political intrigue, military conquest, and strategic alliances. Simultaneous orders, hidden intentions, and shifting loyalties make every round a tense power struggle.",
+    "learning_curve_rank": 65,
+    "learning_curve_desc": "Complex area control with negotiation and secret orders creates a moderately high learning curve.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Diplomacy and tactical choices yield high strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Negotiation and shifting alliances add variety, but a fixed map can limit overall diversity.",
+    "category": [
+      "Area Control",
+      "Negotiation",
+      "Wargame"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "Chess is a quintessential 2-player game focused on pure strategy."
+  },
+  {
+    "name": "Gloomhaven",
+    "description": "Take on the role of mercenaries exploring dungeons and completing story-driven missions in a persistent fantasy world. With card-driven combat, character progression, and branching scenarios, Gloomhaven offers a deeply tactical and narrative-rich campaign.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "A complex cooperative campaign with evolving rules and legacy elements makes it challenging to learn.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Tactical combat and character progression provide rich strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "A rich campaign with evolving scenarios and legacy elements provides varied experiences over multiple sessions.",
+    "category": [
+      "Dungeon Crawler",
+      "Campaign/Legacy",
+      "Fantasy"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 8,
+    "suggested_min_players": 4,
+    "players_desc": "Best with 4–6 players to create layers of bluffing, blocking, and shifting strategies."
+  },
+  {
+    "name": "Hanabi",
+    "description": "Work together to create a dazzling fireworks display—but you can't see your own cards. Use clues, Deduction & Deception, and memory to help your teammates play cards in order without misfiring in this quiet but tense cooperative game.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Its cooperative rules and limited communication make Hanabi easy to pick up.",
+    "strategic_depth_rank": 45,
+    "strategic_depth_desc": "Deduction & Deception and teamwork add a moderate layer of strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Cooperative Deduction & Deception and variable team dynamics provide a fresh experience each time.",
+    "category": [
+      "Deduction & Deception",
+      "Cooperative",
+      "Memory"
+    ],
+    "playtime_minutes": 25,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Great with 2 but shines with more players to increase interaction and choices."
+  },
+  {
+    "name": "Hive",
+    "description": "Outmaneuver your opponent in a duel where every piece moves differently and there's no board—just your growing hive. Surround the opposing queen bee while protecting your own in this abstract battle of positioning and foresight.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Simple movement rules and no setup make Hive easy to learn.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Pure abstract tactical play offers high strategic depth.",
+    "replayability_rank": 85,
+    "replayability_desc": "Deep abstract strategy with endless tactical possibilities ensures high replayability.",
+    "category": [
+      "Abstract Strategy"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Engaging with all player counts, but more players add to the tension and competition."
+  },
+  {
+    "name": "King of Tokyo",
+    "description": "Roll dice, smash cities, and fight off giant monsters as you battle to become the King of Tokyo. Choose between healing, attacking, or gaining powers in this chaotic and fast-paced game of monster brawling.",
+    "learning_curve_rank": 20,
+    "learning_curve_desc": "The dice mechanics and simple rules allow for rapid learning.",
+    "strategic_depth_rank": 30,
+    "strategic_depth_desc": "Limited strategic choices result in modest depth.",
+    "replayability_rank": 55,
+    "replayability_desc": "Random dice rolls and limited strategic options lower the replay value over time.",
+    "category": [
+      "Push Your Luck",
+      "Dice",
+      "Family Games"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Best with 3 or 4 to fully explore bag-building mechanics and competition."
+  },
+  {
+    "name": "Existence",
+    "description": "Existence is a ridiculously complex reality game where the rules are made up as you go along, and the manual is written in a language you don't speak. You start with a character who's still figuring out how to walk, and the first level is called 'Surviving Childhood' complete with obstacles like broccoli and bedtime. As you level up, you encounter challenges like 'Finding a Job' and 'Adulting,' which are basically just endless loops of paying bills and pretending to be a functioning member of society. But don't worry, there are power-ups like coffee and Netflix to help you through the tough times. And just when you think you've reached the final boss, life throws you a curveball and says, 'Surprise! You're now in charge of your own mini-game called Parenting!' Good luck",
+    "learning_curve_rank": 100,
+    "learning_curve_desc": "Lifelong",
+    "strategic_depth_rank": 100,
+    "strategic_depth_desc": "Infinite",
+    "replayability_rank": "?",
+    "replayability_desc": "Wouldn't you like to know.",
+    "category": [
+      "Adventure",
+      "Narrative"
+    ],
+    "playtime_minutes": 9999,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Cooperation works well at all counts, but strategic tension is balanced at 2 or 3."
+  },
+  {
+    "name": "Lords of Waterdeep",
+    "description": "Recruit adventurers and send them on quests to expand your influence in the city of Waterdeep. This streamlined worker placement game features hidden objectives and a fantasy setting filled with intrigue and strategy.",
+    "learning_curve_rank": 35,
+    "learning_curve_desc": "Accessible worker placement within a rich thematic setting makes it moderately easy to learn.",
+    "strategic_depth_rank": 50,
+    "strategic_depth_desc": "Balanced strategic choices through quest management yield moderate strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Diverse quests and strategic choices offer a balanced replay experience.",
+    "category": [
+      "Worker Placement",
+      "Fantasy"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Plays quickly with 2, but dynamic alliances and risk-taking flourish with 3 or more."
+  },
+  {
+    "name": "Love Letter",
+    "description": "Win the princess’s favor by passing secret messages while eliminating your rivals. With only a handful of cards, every decision matters in this fast and elegant Deduction & Deception game of risk and timing.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "Minimal card interactions result in a very low learning curve.",
+    "strategic_depth_rank": 20,
+    "strategic_depth_desc": "Limited strategic options lead to shallow long-term planning.",
+    "replayability_rank": 65,
+    "replayability_desc": "Short, fast rounds and random draws offer a fresh challenge in each play.",
+    "category": [
+      "Deduction & Deception"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Though designed for 2, extra factions and maps allow 3–4 players to enjoy chaotic strategy."
+  },
+  {
+    "name": "Mage Knight Board Game",
+    "description": "Explore, conquer, and level up as a powerful Mage Knight in a vast and modular fantasy world. Blend deck-building, area control, and tactical combat in this solo-friendly epic of deep strategic choices and character growth.",
+    "learning_curve_rank": 85,
+    "learning_curve_desc": "Notoriously steep learning curve due to multi-layered rules and extensive options.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Intricate decision-making and campaign depth provide extremely high strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Campaign progression and varied scenarios provide replay value, though long playtimes can limit repeated sessions.",
+    "category": [
+      "Deckbuilding",
+      "Fantasy",
+      "Campaign/Legacy"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Solo works well, but more players improve the strategic and competitive feel."
+  },
+  {
+    "name": "Monopoly",
+    "description": "Buy properties, collect rent, and bankrupt your opponents in this iconic game of capitalism and chance. Trade, upgrade, and try not to land in jail as you race to build your empire.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Varied rules and potential house-rules yield a moderate learning curve.",
+    "strategic_depth_rank": 25,
+    "strategic_depth_desc": "Heavy reliance on chance results in low strategic depth.",
+    "replayability_rank": 40,
+    "replayability_desc": "Heavy reliance on chance and a static board setup lead to a repetitive experience over time.",
+    "category": [
+      "Economic",
+      "Family Games",
+      "Roll-and-Move"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 3,
+    "max_players": 5,
+    "suggested_min_players": 4,
+    "players_desc": "Bluffing and hidden roles come alive with at least 4 players."
+  },
+  {
+    "name": "Munchkin",
+    "description": "Kick down doors, slay monsters, and stab your friends in the back as you race to level up. This tongue-in-cheek dungeon crawler mixes simple card play with chaotic 'take-that' mechanics and absurd humor.",
+    "learning_curve_rank": 20,
+    "learning_curve_desc": "Humorous rules and parody elements make Munchkin easy to learn.",
+    "strategic_depth_rank": 20,
+    "strategic_depth_desc": "Heavy reliance on chance and 'take-that' mechanics limits its strategic depth.",
+    "replayability_rank": 55,
+    "replayability_desc": "Humor and randomness offer some variety, but repeated play can feel similar.",
+    "category": [
+      "Dungeon Crawler",
+      "Party Games"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Game scales well for all player counts; 2-player duels are tight and fast."
+  },
+  {
+    "name": "No Thanks!",
+    "description": "Choose to take a numbered card or pass by spending a chip, balancing risk and reward as you build your score. Simple rules hide clever decisions in this minimalist push-your-luck card game.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "A very simple push-your-luck mechanism makes it extremely easy to learn.",
+    "strategic_depth_rank": 35,
+    "strategic_depth_desc": "Risk management elements add a modest layer of strategic depth.",
+    "replayability_rank": 60,
+    "replayability_desc": "Simple mechanics with risk management yield moderate replay value.",
+    "category": [
+      "Push Your Luck",
+      "Family Games"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 1,
+    "max_players": 5,
+    "suggested_min_players": 2,
+    "players_desc": "Best enjoyed with others, though solo puzzle-solving is solid."
+  },
+  {
+    "name": "Orleans",
+    "description": "Recruit followers and build your influence across medieval France by drawing tokens from your personal bag. Combining bag-building with worker placement, Orleans rewards careful planning and tactical flexibility.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "The bag-building mechanic and medieval theme present a moderate learning curve.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Recruiting followers and expanding influence create significant strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Multiple strategic paths and expansions keep each session fresh.",
+    "category": [
+      "Bag Building",
+      "Worker Placement"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Classic economic competition thrives with 3–5 players to affect turn order and market dynamics."
+  },
+  {
+    "name": "Pandemic",
+    "description": "Work together to stop global disease outbreaks by traveling the world, treating infections, and discovering cures. Each player has a unique role, making cooperation essential in this tense, turn-based crisis simulator.",
+    "learning_curve_rank": 45,
+    "learning_curve_desc": "Cooperative multi-role mechanics yield a moderate learning curve.",
+    "strategic_depth_rank": 60,
+    "strategic_depth_desc": "Collective planning and resource management add moderate strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Variable roles and scenario adjustments offer decent replayability despite some fixed elements.",
+    "category": [
+      "Cooperative",
+      "Deduction & Deception"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "More players bring variety to trading, building strategies, and interaction."
+  },
+  {
+    "name": "Pax Pamir",
+    "description": "Step into 19th-century Afghanistan and navigate alliances, betrayals, and shifting political power. Use cards to influence factions and manipulate the ever-changing balance of control in this historical strategy game.",
+    "learning_curve_rank": 65,
+    "learning_curve_desc": "A historical game with intricate political and card-driven mechanics that take time to master.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Shifting alliances and tactical card play yield high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Ever-changing alliances and a dynamic card market lead to varied outcomes each play.",
+    "category": [
+      "Historical",
+      "Asymmetric"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Two-player games are fast and tactical, but more players add complexity and interaction."
+  },
+  {
+    "name": "Power Grid",
+    "description": "Build and power cities by bidding for power plants, managing resources, and expanding your network. This economic game challenges players to balance short-term gains with long-term infrastructure planning.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "Multi-phase economic gameplay and resource market dynamics require focused learning.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Long-term planning and dynamic markets provide very high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Dynamic markets and economic decisions provide high replay value with each session feeling unique.",
+    "category": [
+      "Economic"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "Area control and faction dynamics are best with 3 or more players for map contention."
+  },
+  {
+    "name": "Puerto Rico",
+    "description": "Develop plantations, ship goods, and manage colonial roles in this classic eurogame. Carefully timed role selection and production chains drive the competition for economic dominance.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "Intricate role selection and building mechanics yield a steep learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Multiple strategic options and negotiation contribute to very high strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Diverse strategies and variable setups keep the gameplay engaging over multiple plays.",
+    "category": [
+      "Economic",
+      "Role Selection"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Classic word game designed for 2–4 players, scaling well across all counts."
+  },
+  {
+    "name": "Race for the Galaxy",
+    "description": "Develop a space-faring civilization by playing cards that represent technologies, worlds, and developments. Simultaneous phase selection and icon-based mechanics make this a fast-paced engine-building game with deep combos.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "Icon-heavy card play and simultaneous actions create a moderate learning curve.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Deck-building and engine optimization yield high strategic depth.",
+    "replayability_rank": 85,
+    "replayability_desc": "Diverse card interactions and multiple strategies ensure that every game feels fresh.",
+    "category": [
+      "Engine Building",
+      "Science Fiction"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 3,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Best with 3 or 4 for trade, negotiation, and competitive expansion dynamics."
+  },
+  {
+    "name": "Risk",
+    "description": "Command armies, conquer continents, and roll dice to determine global domination. Classic area control meets luck-driven battles in this world-spanning strategy game of alliances and betrayal.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Simple rules for global conquest make Risk relatively easy to learn.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Dice-based combat and alliance dynamics contribute only moderate strategic depth.",
+    "replayability_rank": 50,
+    "replayability_desc": "While strategic, repeated play can follow similar patterns due to dice reliance and fixed board dynamics.",
+    "category": [
+      "Wargame",
+      "Area Control"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Power balancing and combos become more dynamic with 3–4 players."
+  },
+  {
+    "name": "Rock Paper Scissors",
+    "description": "A timeless hand game where players simultaneously choose rock, paper, or scissors in a test of timing and psychology. While simple, it’s often used as a fast and fair decision-maker.",
+    "learning_curve_rank": 1,
+    "learning_curve_desc": "A very simple hand game with instantly learnable rules.",
+    "strategic_depth_rank": 1,
+    "strategic_depth_desc": "Almost no strategic depth beyond spontaneous choice.",
+    "replayability_rank": 5,
+    "replayability_desc": "Its simplicity means there’s little strategic variation, but its spontaneity makes it a fun, quick decision-making game.",
+    "category": [
+      "Party Games"
+    ],
+    "playtime_minutes": 2,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Highly strategic solo or multiplayer game; best with 2–3 for tight planning and minimal downtime."
+  },
+  {
+    "name": "Root",
+    "description": "Wage asymmetric warfare in a woodland realm where each faction plays entirely differently. From military conquest to economic engine-building, Root is a dynamic strategy game where control shifts constantly based on your unique powers.",
+    "learning_curve_rank": 45,
+    "learning_curve_desc": "Asymmetric rules and varied faction abilities create a moderate learning curve.",
+    "strategic_depth_rank": 75,
+    "strategic_depth_desc": "Dynamic faction interactions and territory control provide high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Asymmetric factions and dynamic gameplay yield high replay value, with each faction offering a distinct experience.",
+    "category": [
+      "Asymmetric",
+      "Area Control",
+      "Fantasy"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Variable market and price manipulation grow more dynamic with 3 or more players."
+  },
+  {
+    "name": "Scrabble",
+    "description": "Use letter tiles to create words on a shared board and rack up points with clever vocabulary and board control. Strategic placement and tile management are key in this classic game of language and spatial awareness.",
+    "learning_curve_rank": 25,
+    "learning_curve_desc": "Scrabble’s basic rules are easy to learn, requiring only familiarity with spelling and scoring.",
+    "strategic_depth_rank": 65,
+    "strategic_depth_desc": "Deep knowledge of vocabulary, tile management, and board control offers high strategic complexity for skilled players.",
+    "replayability_rank": 80,
+    "replayability_desc": "Endless word combinations, competitive tension, and evolving skill make Scrabble engaging over countless sessions.",
+    "category": [
+      "Word Games",
+      "Family Games"
+    ],
+    "playtime_minutes": 50,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Though the board stays the same, player negotiation and role timing add depth at higher counts."
+  },
+  {
+    "name": "Settlers of Catan",
+    "description": "Expand across an uncharted island by gathering resources, building roads, and trading with other players. Smart settlement placement and negotiation drive this modern classic of modular board strategy.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Resource management and trading mechanics yield a moderate learning curve.",
+    "strategic_depth_rank": 60,
+    "strategic_depth_desc": "Dynamic board setups and negotiation add moderate strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Randomized board setups and dynamic trading provide varied experiences with each play.",
+    "category": [
+      "Economic",
+      "Negotiation",
+      "Family Games"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Supports a variety of player counts; 2-player duels are fast-paced and strategic."
+  },
+  {
+    "name": "Small World",
+    "description": "Control fantastical races with special powers and conquer territory before fading into decline and choosing a new one. Timing when to abandon your civilization is key in this fast-paced area control game with high replay value.",
+    "learning_curve_rank": 35,
+    "learning_curve_desc": "Accessible territory control and fantasy themes yield a moderate learning curve.",
+    "strategic_depth_rank": 50,
+    "strategic_depth_desc": "Timing and selection of race/power combos create a balanced strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Varied faction combinations and board setups keep the gameplay fresh.",
+    "category": [
+      "Area Control",
+      "Fantasy"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 3,
+    "max_players": 6,
+    "suggested_min_players": 4,
+    "players_desc": "Plays best with 4 or more where the alliance and bluffing aspects truly shine."
+  },
+  {
+    "name": "Spirit Island",
+    "description": "Defend your island as powerful spirits working together to repel invading colonists. With unique powers and deep synergy, Spirit Island flips the colonial narrative and delivers a highly strategic cooperative experience.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "A cooperative game with complex spirit abilities and nuanced rules, resulting in a steep learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Intricate combos and synergy among diverse powers yield very high strategic depth.",
+    "replayability_rank": 85,
+    "replayability_desc": "Unique spirits, modular boards, and adjustable difficulty keep the game fresh across many plays.",
+    "category": [
+      "Cooperative",
+      "Asymmetric",
+      "Fantasy"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Supports solo or group play; best with 2–3 for cooperative decision-making balance."
+  },
+  {
+    "name": "Splendor",
+    "description": "Collect gems and develop cards to attract wealthy patrons in this streamlined engine-building game. With every turn, you must decide whether to gather resources or invest in cards that build toward a victory condition.",
+    "learning_curve_rank": 20,
+    "learning_curve_desc": "Simple engine-building rules make Splendor very easy to learn.",
+    "strategic_depth_rank": 45,
+    "strategic_depth_desc": "Timing and planning add a moderate layer of strategic depth.",
+    "replayability_rank": 75,
+    "replayability_desc": "Multiple paths to victory and engine-building dynamics keep the game engaging across sessions.",
+    "category": [
+      "Engine Building",
+      "Family Games"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Tactical grid combat thrives in head-to-head battles, though multiple players increase replay value."
+  },
+  {
+    "name": "Stone Age",
+    "description": "Assign workers to gather resources, build tools, and grow your prehistoric tribe. With dice-based worker placement and resource management, Stone Age blends luck and strategy in a welcoming format.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Straightforward worker placement and resource gathering make it moderately easy to learn.",
+    "strategic_depth_rank": 50,
+    "strategic_depth_desc": "Variable resource management and worker placement decisions yield medium strategic depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Variable resource management and worker placement decisions provide a fresh experience each game.",
+    "category": [
+      "Worker Placement",
+      "Dice",
+      "Family Games"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 3,
+    "players_desc": "Multiple factions and tight space make 3–4 players the sweet spot for challenge and interaction."
+  },
+  {
+    "name": "Summoner Wars",
+    "description": "Control a unique faction in a card-based tactical skirmish game where every unit is summoned to a grid-based battlefield. Balance offense, magic economy, and positioning to outplay your opponent in asymmetric head-to-head combat.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Grid-based tactical combat and unique faction abilities lead to a moderate learning curve.",
+    "strategic_depth_rank": 60,
+    "strategic_depth_desc": "Balancing offense and defense on a tactical grid creates medium-to-high strategic depth.",
+    "replayability_rank": 65,
+    "replayability_desc": "Tactical grid combat offers moderate replay value, though board constraints can limit variety.",
+    "category": [
+      "Asymmetric",
+      "Card Battler"
+    ],
+    "playtime_minutes": 40,
+    "min_players": 1,
+    "max_players": 5,
+    "suggested_min_players": 2,
+    "players_desc": "Game offers engaging solo and team play, though interaction deepens with 2+ players."
+  },
+  {
+    "name": "Terra Mystica",
+    "description": "Grow your civilization by transforming terrain, building structures, and managing resources, all with minimal luck. Each faction plays differently, demanding long-term planning and careful power economy in this acclaimed eurogame.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "Faction-based territory development and resource management yield a high learning curve.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Intricate strategic decisions and varied faction abilities result in extremely high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Multiple factions and varied strategies make every game a new experience.",
+    "category": [
+      "Engine Building",
+      "Fantasy"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 3,
+    "max_players": 5,
+    "suggested_min_players": 4,
+    "players_desc": "Resistance-style gameplay shines with 4–5 for deception, deduction, and misdirection."
+  },
+  {
+    "name": "Terraforming Mars",
+    "description": "Lead a corporation competing to make Mars habitable by building projects that raise temperature, oxygen levels, and create oceans. Manage resources, draft cards, and develop your engine in this epic planetary development game.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "Engine building, resource management, and board development result in a moderate learning curve.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Long-term strategic planning with multiple paths to victory yields high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Multiple paths to victory and diverse strategies keep the game engaging over many playthroughs.",
+    "category": [
+      "Engine Building",
+      "Science Fiction",
+      "Economic"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Great for solo puzzling or competitive deduction; works well across all player counts."
+  },
+  {
+    "name": "The Crew",
+    "description": "Complete missions as a team by playing tricks and communicating with limited information. This cooperative twist on trick-taking challenges players to think together, not just outplay each other.",
+    "learning_curve_rank": 35,
+    "learning_curve_desc": "Simple trick-taking rules are enhanced by cooperative mechanics, creating a low to moderate learning curve.",
+    "strategic_depth_rank": 55,
+    "strategic_depth_desc": "Timing, Deduction & Deception, and team coordination deliver moderate strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Dozens of missions and varying difficulty levels ensure high replayability.",
+    "category": [
+      "Cooperative",
+      "Trick-Taking"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 5,
+    "suggested_min_players": 2,
+    "players_desc": "Family-friendly and flexible with a variety of maps; works well from 2–5 players."
+  },
+  {
+    "name": "The Mind",
+    "description": "Play cards in ascending order—without speaking. The Mind turns card sequencing into a tense, cooperative experience where players rely on intuition and timing to succeed together.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "Very easy to learn, relying on basic card play and cooperative timing.",
+    "strategic_depth_rank": 10,
+    "strategic_depth_desc": "Minimal strategic decisions, relying more on rhythm and group synergy.",
+    "replayability_rank": 65,
+    "replayability_desc": "Group dynamics and timing tension keep it interesting across sessions.",
+    "category": [
+      "Cooperative",
+      "Timing"
+    ],
+    "playtime_minutes": 20,
+    "min_players": 3,
+    "max_players": 6,
+    "suggested_min_players": 4,
+    "players_desc": "Epic in scale, the game thrives with 4–6 players to experience full strategy, politics, and drama."
+  },
+  {
+    "name": "The Resistance",
+    "description": "Fight for freedom or crush it from within in this Deduction & Deception & Deception game of spies and deception. Players vote on missions and try to uncover (or hide) who the traitors are.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Simple vote and mission mechanics make it quick to learn.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Deduction & Deception, Deduction & Deception, and social manipulation yield moderate depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Deception-based gameplay changes with every group, offering high replay value.",
+    "category": [
+      "Deduction & Deception"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 2,
+    "suggested_min_players": 2,
+    "players_desc": "Strictly a 2-player game, delivering a focused, competitive Cold War experience."
+  },
+  {
+    "name": "The Search for Planet X",
+    "description": "Use logic, Deduction & Deception, and a shared sky map to find a hidden planet before your rivals. A companion app manages the clues and changing conditions in this solo or competitive brain-burning puzzle.",
+    "learning_curve_rank": 30,
+    "learning_curve_desc": "Straightforward rules with a logical framework make it easy to grasp.",
+    "strategic_depth_rank": 65,
+    "strategic_depth_desc": "Layered Deduction & Deception and timing create a satisfying level of depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Randomized setups and competitive Deduction & Deception yield strong replayability.",
+    "category": [
+      "Deduction & Deception",
+      "Logic"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 2,
+    "players_desc": "Scenarios are best on first playthrough, regardless of player count. Works well from 2–6."
+  },
+  {
+    "name": "Ticket to Ride",
+    "description": "Collect cards and claim train routes across North America in this accessible gateway game. Block opponents, complete destination tickets, and build the longest rail network to win.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Simple rules and familiar gameplay make it easy for beginners.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Moderate strategic depth through route planning and blocking.",
+    "replayability_rank": 70,
+    "replayability_desc": "Variable destination cards and multiple maps keep it engaging.",
+    "category": [
+      "Route Building",
+      "Family Games"
+    ],
+    "playtime_minutes": 45,
+    "min_players": 2,
+    "max_players": 10,
+    "suggested_min_players": 3,
+    "players_desc": "Quick-paced and accessible, Uno plays well with all counts, though chaos rises with 5+."
+  },
+  {
+    "name": "Twilight Imperium",
+    "description": "Control a galactic empire in an epic space opera where politics, warfare, trade, and negotiation collide. With asymmetric factions and endless options, Twilight Imperium is the ultimate 4X experience.",
+    "learning_curve_rank": 95,
+    "learning_curve_desc": "Massive rulebook and sprawling systems make it one of the hardest games to learn.",
+    "strategic_depth_rank": 95,
+    "strategic_depth_desc": "Deep diplomacy, military, and tech trees offer immense strategic depth.",
+    "replayability_rank": 90,
+    "replayability_desc": "Vast possibilities from factions, politics, and objectives ensure unmatched replay value.",
+    "category": [
+      "4X",
+      "Science Fiction",
+      "Asymmetric"
+    ],
+    "playtime_minutes": 360,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Rich in narrative and asymmetric powers, this game thrives with 3–4 players."
+  },
+  {
+    "name": "Twilight Struggle",
+    "description": "Relive the Cold War as the U.S. or USSR in a tense, card-driven tug-of-war for global influence. Timing events, managing defcon status, and planning coups are all key to historical domination.",
+    "learning_curve_rank": 65,
+    "learning_curve_desc": "Card-driven strategy with historical context creates a moderate learning curve.",
+    "strategic_depth_rank": 85,
+    "strategic_depth_desc": "Complex decision-making and timing offer high strategic depth.",
+    "replayability_rank": 80,
+    "replayability_desc": "Historical events and card interplay ensure strong replayability.",
+    "category": [
+      "Card Driven",
+      "Historical"
+    ],
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "Long but satisfying with 3+, the game’s cinematic conflict grows with more participants."
+  },
+  {
+    "name": "Unlock!",
+    "description": "Simulate the escape room experience using cards and a companion app. Solve puzzles, find clues, and race the clock through themed scenarios that test your logic and creativity.",
+    "learning_curve_rank": 10,
+    "learning_curve_desc": "Puzzle-solving format with guided app support makes it easy to jump into.",
+    "strategic_depth_rank": 35,
+    "strategic_depth_desc": "Problem-solving and logic are more central than traditional strategy.",
+    "replayability_rank": 40,
+    "replayability_desc": "Once solved, scenarios lose replay value unless new content is added.",
+    "category": [
+      "Puzzle",
+      "Cooperative"
+    ],
+    "playtime_minutes": 60,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Simple yet fun, works well at any count but shines with competitive pair play."
+  },
+  {
+    "name": "Uno",
+    "description": "Play matching colors or numbers and use action cards to sabotage opponents in this quick, family-friendly card game. The goal? Be the first to run out of cards—but don’t forget to say 'Uno!'",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "Very easy to learn, with rules understood in minutes.",
+    "strategic_depth_rank": 10,
+    "strategic_depth_desc": "Light gameplay with minimal strategic complexity.",
+    "replayability_rank": 60,
+    "replayability_desc": "Fast rounds and chaotic fun give it staying power in casual settings.",
+    "category": [
+      "Family Games",
+      "Push Your Luck"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "With higher counts, the board gets more competitive and offers deeper conflict."
+  },
+  {
+    "name": "War of the Ring",
+    "description": "Control the Free Peoples or the Shadow Armies in an epic battle for Middle-earth. Play cards, move armies, and follow narrative arcs as you relive or rewrite the fate of the One Ring.",
+    "learning_curve_rank": 80,
+    "learning_curve_desc": "A detailed narrative strategy game that requires familiarity with multiple systems.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Asymmetric roles and thematic decisions create intense strategic tension.",
+    "replayability_rank": 85,
+    "replayability_desc": "Variable storytelling and deep asymmetry lead to great replay value.",
+    "category": [
+      "Wargame",
+      "Fantasy",
+      "Asymmetric"
+    ],
+    "playtime_minutes": 180,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Great solo or cooperative game, but more players add layers to spirit synergy."
+  },
+  {
+    "name": "Wavelength",
+    "description": "Try to read your teammate’s mind by guessing where on a hidden spectrum their clue points. It’s a party game of perception, discussion, and shared intuition.",
+    "learning_curve_rank": 5,
+    "learning_curve_desc": "Party game with near-zero setup and intuitive rules.",
+    "strategic_depth_rank": 15,
+    "strategic_depth_desc": "Relies more on social insight than traditional strategy.",
+    "replayability_rank": 70,
+    "replayability_desc": "Unique discussions and group dynamics offer high replay value.",
+    "category": [
+      "Party Games",
+      "Deduction & Deception"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Engine building and card flow feel tight and strategic at all player counts."
+  },
+  {
+    "name": "Wingspan",
+    "description": "Build a wildlife preserve by playing bird cards, laying eggs, and triggering abilities in carefully planned sequences. With an elegant engine-building system and beautiful design, Wingspan rewards both tactical moves and long-term vision.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Simple actions with layered card effects make it easy to start, hard to master.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Synergy among birds and resources creates meaningful decision space.",
+    "replayability_rank": 80,
+    "replayability_desc": "Variety of bird cards and shifting goals keep each game fresh.",
+    "category": [
+      "Engine Building",
+      "Card Drafting",
+      "Family Games"
+    ],
+    "playtime_minutes": 70,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "While soloable, plays best with multiple adventurers to tackle varied challenges."
+  },
+  {
+    "name": "Yahtzee",
+    "description": "Roll dice and try to fill your score sheet with the best combinations, from full houses to the elusive Yahtzee. It’s a classic game of probability, luck, and a little math.",
+    "learning_curve_rank": 10,
+    "learning_curve_desc": "Very easy to pick up, focused around dice combinations and score tracking.",
+    "strategic_depth_rank": 20,
+    "strategic_depth_desc": "Simple decision-making, though probability adds some tactical layers.",
+    "replayability_rank": 50,
+    "replayability_desc": "Luck-driven but satisfying, especially in short or casual sessions.",
+    "category": [
+      "Dice",
+      "Push Your Luck",
+      "Family Games"
+    ],
+    "playtime_minutes": 30,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Tactical dueling shines at 2 players, but multiplayer adds chaotic fun."
+  },
+  {
+    "name": "Zombicide",
+    "description": "Team up to survive waves of undead in this cooperative, dice-chucking miniatures game. Level up, gear up, and clear the board as you face mission-based scenarios filled with relentless zombie spawns.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Easy to pick up thanks to straightforward rules and scenarios.",
+    "strategic_depth_rank": 45,
+    "strategic_depth_desc": "Moderate strategy emerges from gear choices, teamwork, and spawn control.",
+    "replayability_rank": 75,
+    "replayability_desc": "Numerous missions and modular boards make for varied zombie-slaying fun.",
+    "category": [
+      "Cooperative",
+      "Dungeon Crawler",
+      "Horror"
+    ],
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "Route blocking and goal strategy are most satisfying with 3 or more players."
+  },
   {
     "name": "Star Realms",
     "description": "Engage in fast-paced space combat by acquiring ships and bases to outmaneuver and overwhelm your opponent. Star Realms blends deck-building with direct conflict as players compete to reduce each other’s authority to zero using card synergies and faction-based combos.",
@@ -1139,12 +1435,16 @@
     "replayability_rank": 80,
     "replayability_desc": "Frequent card draws, randomized markets, and expansions make each game feel fresh.",
     "category": [
-        "Deckbuilding",
-        "Card Game",
-        "Science Fiction"
+      "Deckbuilding",
+      "Card Game",
+      "Science Fiction"
     ],
-    "playtime_minutes": 20
-},
+    "playtime_minutes": 20,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Simple and fun for pairs, but more players add energy and variation."
+  },
   {
     "name": "Cat in the Box",
     "description": "Play a quantum trick-taking game where suits don’t exist until you declare them. In Cat in the Box, players navigate paradoxes and shared uncertainty, placing tokens on a communal research board to track suit declarations while avoiding logical contradictions that collapse reality.",
@@ -1155,12 +1455,16 @@
     "replayability_rank": 85,
     "replayability_desc": "Unpredictable decisions and shifting dynamics ensure a fresh experience each play.",
     "category": [
-        "Trick-Taking",
-        "Abstract Strategy",
-        "Science Fiction"
+      "Trick-Taking",
+      "Abstract Strategy",
+      "Science Fiction"
     ],
-    "playtime_minutes": 30
-},
+    "playtime_minutes": 30,
+    "min_players": 4,
+    "max_players": 10,
+    "suggested_min_players": 5,
+    "players_desc": "Requires at least 5 to enable hidden traitor dynamics and meaningful deduction."
+  },
   {
     "name": "Skull",
     "description": "Bluff, bid, and dare your way through a game of hidden traps and bold challenges. In Skull, players place face-down cards—roses or skulls—and then wager how many roses they can reveal without hitting a skull, creating tense showdowns of nerve and deception.",
@@ -1171,12 +1475,16 @@
     "replayability_rank": 70,
     "replayability_desc": "Quick rounds and psychological tension offer high replayability, especially with different groups.",
     "category": [
-        "Deduction & Deception",
-        "Party Games"
+      "Deduction & Deception",
+      "Party Games"
     ],
-    "playtime_minutes": 30
-},
-{
+    "playtime_minutes": 30,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Best played cooperatively in small teams; solo is possible but less interactive."
+  },
+  {
     "name": "Brass: Birmingham",
     "description": "Build an industrial empire in 19th-century England by developing canals, railways, and a network of coal, iron, and beer. Brass: Birmingham challenges players to optimize economic timing, manage fluctuating markets, and outmaneuver rivals in a richly strategic game of resource and infrastructure planning.",
     "learning_curve_rank": 70,
@@ -1186,11 +1494,15 @@
     "replayability_rank": 80,
     "replayability_desc": "Multiple strategies, variable setup, and tight player interaction make each session feel distinct.",
     "category": [
-        "Economic",
-        "Network Building"
+      "Economic",
+      "Network Building"
     ],
-    "playtime_minutes": 120
-},
+    "playtime_minutes": 120,
+    "min_players": 2,
+    "max_players": 6,
+    "suggested_min_players": 3,
+    "players_desc": "Perfectly scalable, but more players mean more zombies, chaos, and fun."
+  },
   {
     "name": "Lost Ruins of Arnak",
     "description": "Lead an expedition to a mysterious island, combining deck-building and worker placement to gather artifacts, research ancient secrets, and overcome guardians. Every turn offers tense choices as you balance exploration, resource management, and strategic card play in a lush, adventure-filled setting.",
@@ -1201,12 +1513,16 @@
     "replayability_rank": 80,
     "replayability_desc": "Variable research tracks, item decks, and site discoveries keep each game feeling fresh.",
     "category": [
-        "Worker Placement",
-        "Deckbuilding",
-        "Adventure"
+      "Worker Placement",
+      "Deckbuilding",
+      "Adventure"
     ],
-    "playtime_minutes": 90
-},
+    "playtime_minutes": 90,
+    "min_players": 1,
+    "max_players": 4,
+    "suggested_min_players": 2,
+    "players_desc": "Solo mode is solid, but the game shines with 2–3 players balancing worker competition and exploration."
+  },
   {
     "name": "Distilled",
     "description": "Craft spirits in a thematic blend of resource management and push-your-luck mechanics. In Distilled, players acquire ingredients, build recipes, and distill batches in a volatile process where careful planning can still result in surprising outcomes—just like real distilling.",
@@ -1217,12 +1533,16 @@
     "replayability_rank": 75,
     "replayability_desc": "Different spirit types, player goals, and variable markets provide strong replay variety.",
     "category": [
-        "Economic",
-        "Push Your Luck",
-        "Card Game"
+      "Economic",
+      "Push Your Luck",
+      "Card Game"
     ],
-    "playtime_minutes": 60
-},
+    "playtime_minutes": 60,
+    "min_players": 1,
+    "max_players": 5,
+    "suggested_min_players": 2,
+    "players_desc": "Playable solo, but the market and distilling pressure feel more strategic with 2 or more."
+  },
   {
     "name": "City of the Great Machine",
     "description": "In a steampunk city governed by a tyrannical AI, players take on the roles of revolutionaries or the Great Machine itself in a game of hidden movement, asymmetric powers, and strategic sabotage. Use guile, gadgets, and coordination to outwit your opponent in this cat-and-mouse battle of shifting priorities and urban control.",
@@ -1233,13 +1553,17 @@
     "replayability_rank": 80,
     "replayability_desc": "Asymmetric play, modular city setup, and evolving goals ensure diverse scenarios across sessions.",
     "category": [
-        "Asymmetric",
-        "Deduction & Deception",
-        "Science Fiction"
+      "Asymmetric",
+      "Deduction & Deception",
+      "Science Fiction"
     ],
-    "playtime_minutes": 90
-},
-{
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Hidden movement and asymmetric roles are best experienced with 3 or more players."
+  },
+  {
     "name": "Arcs",
     "description": "Command a fading galactic empire in this fast-paced 4X game that blends political intrigue, tactical battles, and modular storytelling. In Arcs, players shape the unfolding narrative through branching campaigns or one-shot scenarios, with asymmetric powers and evolving goals that reshape the space opera every session.",
     "learning_curve_rank": 65,
@@ -1249,11 +1573,14 @@
     "replayability_rank": 85,
     "replayability_desc": "Variable campaigns, faction asymmetry, and branching stories ensure lasting variety and engagement.",
     "category": [
-        "4X",
-        "Asymmetric",
-        "Campaign/Legacy"
+      "4X",
+      "Asymmetric",
+      "Campaign/Legacy"
     ],
-    "playtime_minutes": 90
-}
-
+    "playtime_minutes": 90,
+    "min_players": 2,
+    "max_players": 4,
+    "suggested_min_players": 3,
+    "players_desc": "Though it works with 2, the political and tactical dynamics flourish with 3–4 players."
+  }
 ]
