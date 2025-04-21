@@ -5,6 +5,7 @@ import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucid
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 import { categoryDescriptionMap } from "./categoryDescriptions";
+import { PlayerCountOption } from "./PlayerCountFilter";
 
 interface GameCardProps {
   name: string;
@@ -21,6 +22,7 @@ interface GameCardProps {
   maxPlayers: number;
   suggestedMinPlayers: number;
   playersDesc: string;
+  selectedPlayerCount: PlayerCountOption;
 }
 
 export const GameCard = ({
@@ -38,9 +40,9 @@ export const GameCard = ({
   maxPlayers,
   suggestedMinPlayers,
   playersDesc,
+  selectedPlayerCount,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
-  const selectedPlayerCount = window.selectedPlayerCount || "any";
   
   let showWarningTriangle = false;
 
@@ -162,4 +164,3 @@ export const GameCard = ({
     </>
   );
 };
-
