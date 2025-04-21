@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import {
@@ -23,8 +24,12 @@ export const SortControls = ({
   onSortChange,
   onDirectionToggle,
 }: SortControlsProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" onClick={handleClick}>
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
@@ -43,7 +48,10 @@ export const SortControls = ({
       <Button
         variant="outline"
         size="icon"
-        onClick={onDirectionToggle}
+        onClick={(e) => {
+          e.stopPropagation();
+          onDirectionToggle();
+        }}
         className="flex items-center justify-center w-10 h-10"
       >
         {sortDirection === "asc" ? (
