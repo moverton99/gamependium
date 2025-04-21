@@ -21,6 +21,10 @@ export const GameGrid = ({ games }: GameGridProps) => {
             description={game.description}
             categories={game.category}
             playtimeMinutes={game.playtime_minutes}
+            minPlayers={game.min_players}
+            maxPlayers={game.max_players}
+            suggestedMinPlayers={game.suggested_min_players}
+            playersDesc={game.players_desc}
           />
         ))}
       </div>

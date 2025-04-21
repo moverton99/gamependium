@@ -1,6 +1,6 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -19,6 +19,10 @@ interface DetailedGameCardProps {
   isOpen: boolean;
   onClose: () => void;
   playtimeMinutes: number;
+  minPlayers: number;
+  maxPlayers: number;
+  suggestedMinPlayers: number;
+  playersDesc: string;
 }
 
 export const DetailedGameCard = ({
@@ -34,6 +38,10 @@ export const DetailedGameCard = ({
   isOpen,
   onClose,
   playtimeMinutes,
+  minPlayers,
+  maxPlayers,
+  suggestedMinPlayers,
+  playersDesc,
 }: DetailedGameCardProps) => {
   const isMobile = useIsMobile();
   
@@ -59,7 +67,7 @@ export const DetailedGameCard = ({
               <p className="text-gray-700">{description}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2 font-semibold">
                   <GraduationCap className="w-5 h-5" />
@@ -101,6 +109,18 @@ export const DetailedGameCard = ({
                 <div className="flex flex-col">
                   <span className="text-2xl font-bold">{playtimeMinutes}</span>
                   <p className="text-sm text-gray-600">minutes</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-semibold">
+                  <Users className="w-5 h-5" />
+                  <span>Players</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">{minPlayers}-{maxPlayers}</span>
+                  <p className="text-sm text-gray-600">Suggested min: {suggestedMinPlayers}</p>
+                  <p className="text-xs text-gray-500">{playersDesc}</p>
                 </div>
               </div>
             </div>

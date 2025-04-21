@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Clock } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 import { categoryDescriptionMap } from "./categoryDescriptions";
@@ -17,6 +17,10 @@ interface GameCardProps {
   description: string;
   categories: string[];
   playtimeMinutes: number;
+  minPlayers: number;
+  maxPlayers: number;
+  suggestedMinPlayers: number;
+  playersDesc: string;
 }
 
 export const GameCard = ({
@@ -30,6 +34,10 @@ export const GameCard = ({
   description,
   categories,
   playtimeMinutes,
+  minPlayers,
+  maxPlayers,
+  suggestedMinPlayers,
+  playersDesc,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
 
@@ -80,6 +88,16 @@ export const GameCard = ({
               <p className="text-sm">Average Playtime: {playtimeMinutes} minutes</p>
             </TooltipContent>
           </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger className="flex items-center gap-1">
+              <Users className="w-4 h-4" />
+              <span>{minPlayers}-{maxPlayers}</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-sm">Players: {minPlayers} to {maxPlayers}</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
         <p className="text-sm text-gray-600 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
@@ -111,6 +129,10 @@ export const GameCard = ({
         description={description}
         categories={categories}
         playtimeMinutes={playtimeMinutes}
+        minPlayers={minPlayers}
+        maxPlayers={maxPlayers}
+        suggestedMinPlayers={suggestedMinPlayers}
+        playersDesc={playersDesc}
       />
     </>
   );
