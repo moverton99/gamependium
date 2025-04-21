@@ -29,11 +29,27 @@ export const SortControls = ({
 
   return (
     <div className="flex items-center gap-0" onClick={handleClick}>
+      <button
+        type="button"
+        aria-label="Toggle sort direction"
+        onClick={onDirectionToggle}
+        className="h-10 px-2 rounded-r-none border border-input bg-background hover:bg-accent hover:text-accent-foreground flex items-center justify-center"
+        style={{ borderRight: 0 }}
+      >
+        {sortDirection === "asc" ? (
+          <ArrowUp className="h-4 w-4" />
+        ) : (
+          <ArrowDown className="h-4 w-4" />
+        )}
+      </button>
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
       >
-        <SelectTrigger className="w-[180px] rounded-r-none border-r-0">
+        <SelectTrigger
+          className="w-[180px] rounded-l-none border-l-0"
+          hideChevron
+        >
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
         <SelectContent>
@@ -44,18 +60,6 @@ export const SortControls = ({
           <SelectItem value="playtime">Playtime</SelectItem>
         </SelectContent>
       </Select>
-      <button
-        type="button"
-        aria-label="Toggle sort direction"
-        onClick={onDirectionToggle}
-        className="h-10 px-2 rounded-l-none border border-input bg-background hover:bg-accent hover:text-accent-foreground flex items-center justify-center"
-      >
-        {sortDirection === "asc" ? (
-          <ArrowUp className="h-4 w-4" />
-        ) : (
-          <ArrowDown className="h-4 w-4" />
-        )}
-      </button>
     </div>
   );
 };
