@@ -1128,5 +1128,22 @@
             "Horror"
         ],
         "playtime_minutes": 90
-    }
+    },
+  {
+    "name": "Star Realms",
+    "description": "Engage in fast-paced space combat by acquiring ships and bases to outmaneuver and overwhelm your opponent. Star Realms blends deck-building with direct conflict as players compete to reduce each other’s authority to zero using card synergies and faction-based combos.",
+    "learning_curve_rank": 25,
+    "learning_curve_desc": "Simple deck-building rules and a compact rule set make it quick to learn.",
+    "strategic_depth_rank": 55,
+    "strategic_depth_desc": "Faction combos and timing create meaningful tactical decisions within a streamlined format.",
+    "replayability_rank": 80,
+    "replayability_desc": "Frequent card draws, randomized markets, and expansions make each game feel fresh.",
+    "category": [
+        "Deckbuilding",
+        "Card Game",
+        "Science Fiction"
+    ],
+    "playtime_minutes": 20
+}
+
 ]
