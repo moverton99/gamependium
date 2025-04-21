@@ -16,7 +16,6 @@ interface GameCardProps {
   replayabilityDesc: string;
   description: string;
   categories: string[];
-  gameplayStyle: string;
   playtimeMinutes: number;
 }
 
@@ -30,7 +29,6 @@ export const GameCard = ({
   replayabilityDesc,
   description,
   categories,
-  gameplayStyle,
   playtimeMinutes,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);

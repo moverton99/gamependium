@@ -20,7 +20,6 @@ export const GameGrid = ({ games }: GameGridProps) => {
             replayabilityDesc={game.replayability_desc}
             description={game.description}
             categories={game.category}
-            gameplayStyle={game.gameplay_style || ""}
             playtimeMinutes={game.playtime_minutes}
           />
         ))}
