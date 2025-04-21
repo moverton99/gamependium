@@ -1144,6 +1144,21 @@
         "Science Fiction"
     ],
     "playtime_minutes": 20
+},
+  {
+    "name": "Cat in the Box",
+    "description": "Play a quantum trick-taking game where suits don’t exist until you declare them. In Cat in the Box, players navigate paradoxes and shared uncertainty, placing tokens on a communal research board to track suit declarations while avoiding logical contradictions that collapse reality.",
+    "learning_curve_rank": 40,
+    "learning_curve_desc": "Traditional trick-taking familiarity helps, but the unique quantum mechanics introduce a moderate learning curve.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Managing uncertainty, paradox avoidance, and spatial control on the research board create deep, unconventional strategy.",
+    "replayability_rank": 85,
+    "replayability_desc": "Unpredictable decisions and shifting dynamics ensure a fresh experience each play.",
+    "category": [
+        "Trick-Taking",
+        "Abstract Strategy",
+        "Science Fiction"
+    ],
+    "playtime_minutes": 30
 }
-
 ]
