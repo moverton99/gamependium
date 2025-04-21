@@ -1,4 +1,3 @@
-
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -101,7 +100,7 @@ const Index = () => {
             />
           </div>
           {/* Text Search */}
-          <div className="flex items-center justify-start w-full md:col-start-2 md:row-start-1">
+          <div className="flex items-center justify-start w-full md:justify-end md:col-start-2 md:row-start-1">
             <TextSearch value={search} onChange={setSearch} />
           </div>
           {/* Playtime */}
@@ -127,4 +126,3 @@ const Index = () => {
 };
 
 export default Index;
-
