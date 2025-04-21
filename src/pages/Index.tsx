@@ -9,12 +9,6 @@ import { TextSearch } from "@/components/games/TextSearch";
 import { Game } from "@/types/game";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 
-declare global {
-  interface Window {
-    selectedPlayerCount: PlayerCountOption;
-  }
-}
-
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>("name");
@@ -22,10 +16,6 @@ const Index = () => {
   const [selectedPlaytime, setSelectedPlaytime] = useState<string>("all");
   const [search, setSearch] = useState<string>(""); 
   const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
-
-  useEffect(() => {
-    window.selectedPlayerCount = selectedPlayerCount;
-  }, [selectedPlayerCount]);
 
   const allCategories = useMemo(() => {
     const uniqueCategories = new Set<string>();
@@ -139,7 +129,7 @@ const Index = () => {
             />
           </div>
         </div>
-        <GameGrid games={sortedAndFilteredGames} />
+        <GameGrid games={sortedAndFilteredGames} selectedPlayerCount={selectedPlayerCount} />
       </div>
     </div>
   );

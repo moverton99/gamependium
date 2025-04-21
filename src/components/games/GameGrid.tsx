@@ -3,8 +3,13 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
 import { Game } from "@/types/game";
 import { GameGridProps } from "./GameGrid.d";
+import { PlayerCountOption } from "./PlayerCountFilter";
 
-export const GameGrid = ({ games }: GameGridProps) => {
+interface ExtendedGameGridProps extends GameGridProps {
+  selectedPlayerCount: PlayerCountOption;
+}
+
+export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) => {
   return (
     <ScrollArea className="h-[80vh]">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,6 +30,7 @@ export const GameGrid = ({ games }: GameGridProps) => {
             maxPlayers={game.max_players}
             suggestedMinPlayers={game.suggested_min_players}
             playersDesc={game.players_desc}
+            selectedPlayerCount={selectedPlayerCount}
           />
         ))}
       </div>
