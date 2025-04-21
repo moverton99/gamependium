@@ -954,9 +954,9 @@
     "category": [
       "Party Games"
     ],
-    "playtime_minutes": 2,
-    "min_players": 1,
-    "max_players": 4,
+    "playtime_minutes": 1,
+    "min_players": 2,
+    "max_players": 2,
     "suggested_min_players": 2,
     "players_desc": "Highly strategic solo or multiplayer game; best with 2–3 for tight planning and minimal downtime."
   },
@@ -1582,24 +1582,5 @@
     "max_players": 4,
     "suggested_min_players": 3,
     "players_desc": "Though it works with 2, the political and tactical dynamics flourish with 3–4 players."
-  },
-  {
-  "name": "Solitaire",
-  "description": "Arrange a shuffled deck of cards into ordered stacks by alternating colors and descending values, with the goal of sorting each suit from Ace to King. Solitaire is a solo challenge of foresight and decision-making, where every move affects your path to victory and reshuffling is not an option.",
-  "learning_curve_rank": 10,
-  "learning_curve_desc": "Simple mechanics and familiar cards make it easy to learn for most players.",
-  "strategic_depth_rank": 25,
-  "strategic_depth_desc": "Moderate planning and sequencing are needed, though the randomness of the shuffle limits depth.",
-  "replayability_rank": 50,
-  "replayability_desc": "The core experience remains the same, but shuffled setups add variety across plays.",
-  "category": [
-    "Card Game",
-    "Abstract Strategy"
-  ],
-  "playtime_minutes": 15,
-  "min_players": 1,
-  "max_players": 1,
-  "suggested_min_players": 1,
-  "players_desc": "A strictly solo game, Solitaire is designed for individual play and does not support multiple players."
-}
+  }
 ]
