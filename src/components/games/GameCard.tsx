@@ -41,12 +41,19 @@ export const GameCard = ({
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
   const selectedPlayerCount = window.selectedPlayerCount || "any";
   
-  const showWarningTriangle = 
-    selectedPlayerCount !== "any" && 
-    selectedPlayerCount !== "5+" &&
-    parseInt(selectedPlayerCount) >= minPlayers &&
-    parseInt(selectedPlayerCount) <= maxPlayers &&
-    parseInt(selectedPlayerCount) < suggestedMinPlayers;
+  let showWarningTriangle = false;
+
+  if (
+    selectedPlayerCount !== "any" &&
+    selectedPlayerCount !== "5+"
+  ) {
+    const selectedCount = parseInt(selectedPlayerCount);
+
+    showWarningTriangle =
+      selectedCount >= minPlayers &&
+      selectedCount <= maxPlayers &&
+      selectedCount < suggestedMinPlayers;
+  }
 
   return (
     <>
