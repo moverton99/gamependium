@@ -4,7 +4,7 @@ import { Clock } from "lucide-react";
 
 const PLAYTIME_GROUPS = [
   {
-    label: "Playtime: All",
+    label: "All Playtimes",
     value: "all",
     description: "",
   },
@@ -56,3 +56,4 @@ export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => (
 );
 
 export { PLAYTIME_GROUPS };
+
