@@ -1,5 +1,5 @@
 
-import { ChevronDown, ArrowUp, ArrowDown } from "lucide-react";
+import { ArrowUp, ArrowDown } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -23,7 +23,6 @@ export const SortControls = ({
   onSortChange,
   onDirectionToggle,
 }: SortControlsProps) => {
-  // Stop propagation to prevent unwanted clicks bubbling
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
@@ -34,9 +33,7 @@ export const SortControls = ({
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
       >
-        <SelectTrigger className="w-[180px] rounded-r-none border-r-0 flex items-center gap-2">
-          {/* Move ChevronDown icon to the left */}
-          <ChevronDown className="h-4 w-4 opacity-50" />
+        <SelectTrigger className="w-[180px] rounded-r-none border-r-0">
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
         <SelectContent>
