@@ -101,7 +101,7 @@ const Index = () => {
             />
           </div>
           {/* Text Search */}
-          <div className="flex items-center justify-end w-full md:col-start-2 md:row-start-1">
+          <div className="flex items-center justify-start w-full md:col-start-2 md:row-start-1">
             <TextSearch value={search} onChange={setSearch} />
           </div>
           {/* Playtime */}
@@ -109,7 +109,7 @@ const Index = () => {
             <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
           </div>
           {/* Sort Controls */}
-          <div className="flex items-end justify-end w-full md:col-start-2 md:row-start-2">
+          <div className="flex items-end justify-start w-full md:col-start-2 md:row-start-2">
             <SortControls
               sortBy={sortBy}
               sortDirection={sortDirection}
@@ -127,3 +127,4 @@ const Index = () => {
 };
 
 export default Index;
+
