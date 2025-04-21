@@ -2,7 +2,6 @@
     {
         "name": "Agricola",
         "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 75,
         "learning_curve_desc": "Complex worker placement and a multitude of rules make Agricola challenging to learn.",
         "strategic_depth_rank": 85,
@@ -18,7 +17,6 @@
     {
         "name": "Anachrony",
         "description": "Command a futuristic faction facing the end of the world, using time travel to borrow resources from the future. Place workers in powered exosuits to gather supplies, build structures, and prepare for a coming cataclysm in a game where your past choices shape your survival.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 75,
         "learning_curve_desc": "Anachrony's innovative time-travel mechanics and resource management yield a steep learning curve.",
         "strategic_depth_rank": 85,
@@ -34,8 +32,7 @@
     },
     {
         "name": "Android: Netrunner",
-        "description": "Engage in a cyberpunk duel between a powerful corporation and a daring hacker in this asymmetrical, deck-driven game. The Corp sets traps and advances agendas while the Runner infiltrates servers and disrupts systems through tactical bluffing and card combos.",
-        "gameplay_style": "Abstract",
+        "description": "Engage in a cyberpunk duel between a powerful corporation and a daring hacker in this asymmetrical, deck-driven game. The Corp sets traps and advances agendas while the Runner infiltrates servers and disrupts systems through tactical Deduction & Deception and card combos.",
         "learning_curve_rank": 80,
         "learning_curve_desc": "Its asymmetrical rules and deep deck-building require significant initial investment to master.",
         "strategic_depth_rank": 90,
@@ -43,7 +40,7 @@
         "replayability_rank": 80,
         "replayability_desc": "Asymmetrical deck-building and variable strategies ensure a fresh challenge each time.",
         "category": [
-            "Deck Construction",
+            "Deckbuilding",
             "Asymmetric",
             "Science Fiction"
         ],
@@ -52,7 +49,6 @@
     {
         "name": "Ark Nova",
         "description": "Design a world-class zoo by playing cards that represent animals, sponsors, and conservation efforts. Choose from five shifting actions to build enclosures, manage resources, and create synergies in a rich engine-building experience with a nature-focused theme.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 70,
         "learning_curve_desc": "Managing enclosures, sponsorships, and conservation projects introduces moderate complexity.",
         "strategic_depth_rank": 80,
@@ -68,7 +64,6 @@
     {
         "name": "Arkham Horror",
         "description": "Team up to investigate sinister forces in a Lovecraftian world plagued by cosmic horrors. Travel across Arkham, face terrifying encounters, and close otherworldly gates using cooperative mechanics, dice rolls, and evolving narrative-driven scenarios.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 80,
         "learning_curve_desc": "A lengthy rule set and thematic narrative result in a high learning curve.",
         "strategic_depth_rank": 50,
@@ -85,7 +80,6 @@
     {
         "name": "Axis & Allies",
         "description": "Reenact World War II on a global scale by commanding military forces and managing wartime economies. Coordinate attacks, deploy units, and capture territory across continents in this grand strategy game of dice-based combat and long-term planning.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 60,
         "learning_curve_desc": "The multi-phase war structure and numerous unit types require moderate learning time.",
         "strategic_depth_rank": 70,
@@ -101,8 +95,7 @@
     },
     {
         "name": "Bang!",
-        "description": "Enter a Wild West shootout where players take on hidden roles like Sheriff, Outlaw, and Renegade. Use action cards to attack, dodge, and uncover your opponents' identities in this fast-paced social deduction game filled with surprise and betrayal.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Enter a Wild West shootout where players take on hidden roles like Sheriff, Outlaw, and Renegade. Use action cards to attack, dodge, and uncover your opponents' identities in this fast-paced Deduction & Deception & Deception game filled with surprise and betrayal.",
         "learning_curve_rank": 20,
         "learning_curve_desc": "Simple rules and secret roles allow for a quick setup and easy play.",
         "strategic_depth_rank": 30,
@@ -110,16 +103,14 @@
         "replayability_rank": 50,
         "replayability_desc": "Social interactions create variety, but limited strategic options can lead to repetitive sessions.",
         "category": [
-            "Social Deduction",
-            "Bluffing",
+            "Deduction & Deception",
             "Party Games"
         ],
         "playtime_minutes": 30
     },
     {
         "name": "Battleship",
-        "description": "Secretly deploy your fleet on a hidden grid and call out coordinates to locate and sink your opponent’s ships. It’s a head-to-head game of deduction and pattern recognition, where every hit brings you closer to naval victory.",
-        "gameplay_style": "Classic",
+        "description": "Secretly deploy your fleet on a hidden grid and call out coordinates to locate and sink your opponent\u2019s ships. It\u2019s a head-to-head game of Deduction & Deception and pattern recognition, where every hit brings you closer to naval victory.",
         "learning_curve_rank": 15,
         "learning_curve_desc": "Straightforward grid-based rules make Battleship very easy to learn.",
         "strategic_depth_rank": 15,
@@ -127,7 +118,7 @@
         "replayability_rank": 15,
         "replayability_desc": "Simple grid-based play and predictable strategies result in low replay value.",
         "category": [
-            "Deduction",
+            "Deduction & Deception",
             "Family Games"
         ],
         "playtime_minutes": 20
@@ -135,24 +126,22 @@
     {
         "name": "Battlestar Galactica",
         "description": "Work together to protect your fleet from threats while secretly suspecting some players are traitorous Cylons. Balance limited resources, resolve crisis cards, and manage suspicion in this tense blend of cooperation and hidden roles set in a sci-fi universe.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 60,
         "learning_curve_desc": "A complex mix of cooperative play and hidden roles creates a moderate learning challenge.",
         "strategic_depth_rank": 65,
         "strategic_depth_desc": "Crisis management and negotiation add layers of strategic depth.",
         "replayability_rank": 70,
-        "replayability_desc": "Variable crisis events and social deduction dynamics create different experiences in each play.",
+        "replayability_desc": "Variable crisis events and Deduction & Deception & Deception dynamics create different experiences in each play.",
         "category": [
             "Cooperative",
-            "Social Deduction",
+            "Deduction & Deception",
             "Science Fiction"
         ],
         "playtime_minutes": 180
     },
     {
         "name": "Bohnanza",
-        "description": "Plant and harvest beans to earn coins, but you can’t rearrange your hand—so trading with other players becomes essential. Timing, negotiation, and opportunism define this lighthearted card game with a quirky economic twist.",
-        "gameplay_style": "Abstract",
+        "description": "Plant and harvest beans to earn coins, but you can\u2019t rearrange your hand\u2014so trading with other players becomes essential. Timing, negotiation, and opportunism define this lighthearted card game with a quirky economic twist.",
         "learning_curve_rank": 20,
         "learning_curve_desc": "The simple rules of trading and card management are easy to pick up.",
         "strategic_depth_rank": 40,
@@ -168,7 +157,6 @@
     {
         "name": "Brass (Lancashire)",
         "description": "Guide your industrial empire through the canals and railways of 18th-century England. Invest in coal, iron, and cotton industries, balancing infrastructure expansion with market timing in this deep economic strategy game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 70,
         "learning_curve_desc": "A detailed economic simulation with multiple phases results in a high learning curve.",
         "strategic_depth_rank": 85,
@@ -184,7 +172,6 @@
     {
         "name": "Carcassonne",
         "description": "Draw and place tiles to build a medieval landscape of cities, roads, and fields, then deploy your followers to score points. Each tile draw offers new tactical possibilities in this quick and accessible tile-laying game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 15,
         "learning_curve_desc": "Simple tile-placement rules make Carcassonne very easy to learn.",
         "strategic_depth_rank": 40,
@@ -200,7 +187,6 @@
     {
         "name": "Castles of Burgundy",
         "description": "Develop a French estate by rolling dice to acquire tiles and build settlements, farms, and trade routes. Strategic timing and tile synergy drive this eurogame's engaging balance of luck and planning.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 50,
         "learning_curve_desc": "Dice-driven tile placement and a variety of actions create a moderate learning curve.",
         "strategic_depth_rank": 70,
@@ -217,7 +203,6 @@
     {
         "name": "Caylus",
         "description": "Build a castle and surrounding village by placing workers along a path of actions that evolves with player choices. The game rewards precise timing and cutthroat planning in this classic euro-style strategy challenge.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 70,
         "learning_curve_desc": "Intricate worker placement and timing mechanics require a steep learning curve.",
         "strategic_depth_rank": 80,
@@ -233,7 +218,6 @@
     {
         "name": "Checkers",
         "description": "Move pieces diagonally and capture opponents by jumping in this simple, timeless abstract. Promote your pieces to kings and outmaneuver your rival in a battle of positioning and prediction.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 5,
         "learning_curve_desc": "Extremely simple rules make Checkers very easy to pick up.",
         "strategic_depth_rank": 30,
@@ -248,7 +232,6 @@
     {
         "name": "Chess",
         "description": "Outthink your opponent in this iconic battle of kings, queens, and calculated sacrifice. Chess demands foresight, tactics, and deep positional understanding as players alternate turns to control the board and checkmate the enemy king.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Basic rules are learned quickly, though mastering the game takes years.",
         "strategic_depth_rank": 95,
@@ -262,16 +245,15 @@
     },
     {
         "name": "Citadels",
-        "description": "Secretly draft roles each round to gather gold and build districts in a race to complete your city. Bluffing, deduction, and timing are key as players try to outmaneuver each other in this fast-paced game of intrigue and sabotage.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
+        "description": "Secretly draft roles each round to gather gold and build districts in a race to complete your city. Deduction & Deception, Deduction & Deception, and timing are key as players try to outmaneuver each other in this fast-paced game of intrigue and sabotage.",
         "learning_curve_rank": 25,
-        "learning_curve_desc": "Simple role selection and bluffing mechanics are easy to understand.",
+        "learning_curve_desc": "Simple role selection and Deduction & Deception mechanics are easy to understand.",
         "strategic_depth_rank": 45,
         "strategic_depth_desc": "Reading opponents and timing your moves provide moderate strategic depth.",
         "replayability_rank": 65,
-        "replayability_desc": "Role selection and bluffing introduce variety, though patterns may repeat in experienced groups.",
+        "replayability_desc": "Role selection and Deduction & Deception introduce variety, though patterns may repeat in experienced groups.",
         "category": [
-            "Bluffing",
+            "Deduction & Deception",
             "Role Selection"
         ],
         "playtime_minutes": 45
@@ -279,7 +261,6 @@
     {
         "name": "Clank! Legacy",
         "description": "Explore a dungeon by building a personal deck and pushing your luck to grab loot before you're caught. As you play through a branching legacy campaign, the board and rules evolve, creating a dynamic blend of storytelling and tactical deck-building.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 50,
         "learning_curve_desc": "Combining deck-building with a legacy system creates a moderate learning curve as rules evolve over time.",
         "strategic_depth_rank": 60,
@@ -296,7 +277,6 @@
     {
         "name": "Concordia",
         "description": "Expand your trade network across ancient Rome by playing cards that determine your actions and scoring. Balance short-term resource collection with long-term scoring potential in this elegant economic strategy game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 50,
         "learning_curve_desc": "Straightforward economic rules set in ancient Rome make Concordia accessible.",
         "strategic_depth_rank": 70,
@@ -305,14 +285,13 @@
         "replayability_desc": "Different maps, expansions, and strategic approaches ensure repeated enjoyment.",
         "category": [
             "Economic",
-            "Hand Management"
+            "Card Game"
         ],
         "playtime_minutes": 100
     },
     {
         "name": "Descent: Journeys in the Dark",
-        "description": "Venture into dungeons filled with monsters, traps, and treasure as heroes or the game’s overlord. Players engage in tactical combat, explore modular maps, and experience a branching story in this scenario-driven adventure.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Venture into dungeons filled with monsters, traps, and treasure as heroes or the game\u2019s overlord. Players engage in tactical combat, explore modular maps, and experience a branching story in this scenario-driven adventure.",
         "learning_curve_rank": 50,
         "learning_curve_desc": "A moderate set of rules for dungeon crawling and miniatures combat make it accessible.",
         "strategic_depth_rank": 55,
@@ -329,9 +308,8 @@
     {
         "name": "Dixit",
         "description": "Play a beautifully illustrated card and give a cryptic clue while others try to match or mislead with their own cards. Players score by interpreting visual metaphors and reading each other's minds in this creative storytelling game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 5,
-        "learning_curve_desc": "The game’s simple, image-based rules make it extremely easy to learn.",
+        "learning_curve_desc": "The game\u2019s simple, image-based rules make it extremely easy to learn.",
         "strategic_depth_rank": 10,
         "strategic_depth_desc": "Emphasis on creativity and storytelling results in minimal strategic depth.",
         "replayability_rank": 60,
@@ -345,7 +323,6 @@
     {
         "name": "Dominion",
         "description": "Build your deck from a shared supply of cards to create powerful combos and economic engines. With every turn, you'll gain new abilities and refine your strategy in the game that defined the deck-building genre.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Deck-building mechanics are straightforward but require learning various card interactions.",
         "strategic_depth_rank": 70,
@@ -361,7 +338,6 @@
     {
         "name": "Dune: Imperium",
         "description": "Control a faction from the Dune universe as you blend deck-building and worker placement to gain influence, resources, and military power. Balance intrigue and combat as you navigate a dynamic board and evolving political alliances.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 60,
         "learning_curve_desc": "Combines deck-building with worker placement in the Dune universe, requiring moderate learning to master its unique mechanics.",
         "strategic_depth_rank": 75,
@@ -378,7 +354,6 @@
     {
         "name": "Eclipse",
         "description": "Explore the galaxy, build your fleet, and engage in epic battles in this 4X strategy game. Use diplomacy, technology upgrades, and resource management to forge your path to interstellar dominance.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 65,
         "learning_curve_desc": "Its blend of 4X exploration and economic management presents a challenging learning curve.",
         "strategic_depth_rank": 75,
@@ -394,7 +369,6 @@
     {
         "name": "Eclipse Second Dawn",
         "description": "A streamlined reimagining of the original Eclipse, featuring improved components and refined mechanics. Expand, exploit, and exterminate your way through a modular galaxy using faction abilities, technology, and ship customization.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 70,
         "learning_curve_desc": "An updated version that refines the rules, resulting in a slightly higher learning curve.",
         "strategic_depth_rank": 80,
@@ -410,7 +384,6 @@
     {
         "name": "El Grande",
         "description": "Compete for control over medieval Spain by deploying your caballeros into various regions. Use power cards and special actions to shift influence and outmaneuver opponents in this classic area control game.",
-        "gameplay_style": "Area Control & Wargames",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Simple area control and card mechanics make it easy to learn.",
         "strategic_depth_rank": 65,
@@ -425,7 +398,6 @@
     {
         "name": "Food Chain Magnate",
         "description": "Run a vintage fast food empire by hiring staff, launching ad campaigns, and building a supply chain. Every decision impacts the market and your rivals in this brutal economic strategy game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 80,
         "learning_curve_desc": "A heavy economic game with intricate rules on hiring and marketing requires a steep learning curve.",
         "strategic_depth_rank": 85,
@@ -434,22 +406,21 @@
         "replayability_desc": "High strategic depth and multiple paths to victory ensure strong replay value.",
         "category": [
             "Economic",
-            "Hand Management"
+            "Card Game"
         ],
         "playtime_minutes": 150
     },
     {
         "name": "Fury of Dracula",
-        "description": "One player becomes Dracula, secretly moving across Europe, while others play hunters tracking him down. Clues, deception, and tactical skirmishes unfold in this thrilling hidden movement game of predator and prey.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "One player becomes Dracula, secretly moving across Europe, while others play hunters tracking him down. Clues, deception, and tactical skirmishes unfold in this thrilling Deduction & Deception game of predator and prey.",
         "learning_curve_rank": 50,
-        "learning_curve_desc": "The one-versus-many hidden movement system is moderately challenging to learn.",
+        "learning_curve_desc": "The one-versus-many Deduction & Deception system is moderately challenging to learn.",
         "strategic_depth_rank": 60,
-        "strategic_depth_desc": "Bluffing and coordinated planning provide a fair degree of strategic depth.",
+        "strategic_depth_desc": "Deduction & Deception and coordinated planning provide a fair degree of strategic depth.",
         "replayability_rank": 60,
         "replayability_desc": "Asymmetric play and variable scenarios offer some replay value, though experiences can become familiar.",
         "category": [
-            "Hidden Movement",
+            "Deduction & Deception",
             "Horror",
             "Asymmetric"
         ],
@@ -457,8 +428,7 @@
     },
     {
         "name": "Galaxy Trucker",
-        "description": "In real time, build a spaceship from spare parts, then race it through hazardous space full of debris, pirates, and malfunctions. It’s chaotic, hilarious, and all about surviving with whatever cobbled-together ship you managed to assemble.",
-        "gameplay_style": "Abstract",
+        "description": "In real time, build a spaceship from spare parts, then race it through hazardous space full of debris, pirates, and malfunctions. It\u2019s chaotic, hilarious, and all about surviving with whatever cobbled-together ship you managed to assemble.",
         "learning_curve_rank": 45,
         "learning_curve_desc": "The real-time ship building and component functions are moderately easy to learn.",
         "strategic_depth_rank": 30,
@@ -474,8 +444,7 @@
     },
     {
         "name": "Gaia Project",
-        "description": "Colonize a galaxy by expanding your faction’s influence through terraforming, technology, and resource management. Each faction plays differently, offering deep euro-style strategy in a rich sci-fi setting.",
-        "gameplay_style": "Abstract",
+        "description": "Colonize a galaxy by expanding your faction\u2019s influence through terraforming, technology, and resource management. Each faction plays differently, offering deep euro-style strategy in a rich sci-fi setting.",
         "learning_curve_rank": 80,
         "learning_curve_desc": "A space-themed successor to Terra Mystica with intricate rules and faction mechanics, resulting in a high learning curve.",
         "strategic_depth_rank": 90,
@@ -492,7 +461,6 @@
     {
         "name": "Game of Thrones: The Board Game",
         "description": "Control one of the great houses of Westeros and vie for dominance through political intrigue, military conquest, and strategic alliances. Simultaneous orders, hidden intentions, and shifting loyalties make every round a tense power struggle.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 65,
         "learning_curve_desc": "Complex area control with negotiation and secret orders creates a moderately high learning curve.",
         "strategic_depth_rank": 80,
@@ -509,7 +477,6 @@
     {
         "name": "Gloomhaven",
         "description": "Take on the role of mercenaries exploring dungeons and completing story-driven missions in a persistent fantasy world. With card-driven combat, character progression, and branching scenarios, Gloomhaven offers a deeply tactical and narrative-rich campaign.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 80,
         "learning_curve_desc": "A complex cooperative campaign with evolving rules and legacy elements makes it challenging to learn.",
         "strategic_depth_rank": 90,
@@ -525,16 +492,15 @@
     },
     {
         "name": "Hanabi",
-        "description": "Work together to create a dazzling fireworks display—but you can't see your own cards. Use clues, deduction, and memory to help your teammates play cards in order without misfiring in this quiet but tense cooperative game.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Work together to create a dazzling fireworks display\u2014but you can't see your own cards. Use clues, Deduction & Deception, and memory to help your teammates play cards in order without misfiring in this quiet but tense cooperative game.",
         "learning_curve_rank": 15,
         "learning_curve_desc": "Its cooperative rules and limited communication make Hanabi easy to pick up.",
         "strategic_depth_rank": 45,
-        "strategic_depth_desc": "Deduction and teamwork add a moderate layer of strategic depth.",
+        "strategic_depth_desc": "Deduction & Deception and teamwork add a moderate layer of strategic depth.",
         "replayability_rank": 70,
-        "replayability_desc": "Cooperative deduction and variable team dynamics provide a fresh experience each time.",
+        "replayability_desc": "Cooperative Deduction & Deception and variable team dynamics provide a fresh experience each time.",
         "category": [
-            "Deduction",
+            "Deduction & Deception",
             "Cooperative",
             "Memory"
         ],
@@ -542,8 +508,7 @@
     },
     {
         "name": "Hive",
-        "description": "Outmaneuver your opponent in a duel where every piece moves differently and there's no board—just your growing hive. Surround the opposing queen bee while protecting your own in this abstract battle of positioning and foresight.",
-        "gameplay_style": "Abstract",
+        "description": "Outmaneuver your opponent in a duel where every piece moves differently and there's no board\u2014just your growing hive. Surround the opposing queen bee while protecting your own in this abstract battle of positioning and foresight.",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Simple movement rules and no setup make Hive easy to learn.",
         "strategic_depth_rank": 70,
@@ -558,7 +523,6 @@
     {
         "name": "King of Tokyo",
         "description": "Roll dice, smash cities, and fight off giant monsters as you battle to become the King of Tokyo. Choose between healing, attacking, or gaining powers in this chaotic and fast-paced game of monster brawling.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 20,
         "learning_curve_desc": "The dice mechanics and simple rules allow for rapid learning.",
         "strategic_depth_rank": 30,
@@ -575,7 +539,6 @@
     {
         "name": "Existence",
         "description": "Existence is a ridiculously complex reality game where the rules are made up as you go along, and the manual is written in a language you don't speak. You start with a character who's still figuring out how to walk, and the first level is called 'Surviving Childhood' complete with obstacles like broccoli and bedtime. As you level up, you encounter challenges like 'Finding a Job' and 'Adulting,' which are basically just endless loops of paying bills and pretending to be a functioning member of society. But don't worry, there are power-ups like coffee and Netflix to help you through the tough times. And just when you think you've reached the final boss, life throws you a curveball and says, 'Surprise! You're now in charge of your own mini-game called Parenting!' Good luck",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 100,
         "learning_curve_desc": "Lifelong",
         "strategic_depth_rank": 100,
@@ -586,12 +549,11 @@
             "Adventure",
             "Narrative"
         ],
-        "playtime_minutes": 39998160
+        "playtime_minutes": 9999
     },
     {
         "name": "Lords of Waterdeep",
         "description": "Recruit adventurers and send them on quests to expand your influence in the city of Waterdeep. This streamlined worker placement game features hidden objectives and a fantasy setting filled with intrigue and strategy.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 35,
         "learning_curve_desc": "Accessible worker placement within a rich thematic setting makes it moderately easy to learn.",
         "strategic_depth_rank": 50,
@@ -606,8 +568,7 @@
     },
     {
         "name": "Love Letter",
-        "description": "Win the princess’s favor by passing secret messages while eliminating your rivals. With only a handful of cards, every decision matters in this fast and elegant deduction game of risk and timing.",
-        "gameplay_style": "Abstract",
+        "description": "Win the princess\u2019s favor by passing secret messages while eliminating your rivals. With only a handful of cards, every decision matters in this fast and elegant Deduction & Deception game of risk and timing.",
         "learning_curve_rank": 5,
         "learning_curve_desc": "Minimal card interactions result in a very low learning curve.",
         "strategic_depth_rank": 20,
@@ -615,15 +576,13 @@
         "replayability_rank": 65,
         "replayability_desc": "Short, fast rounds and random draws offer a fresh challenge in each play.",
         "category": [
-            "Deduction",
-            "Bluffing"
+            "Deduction & Deception"
         ],
         "playtime_minutes": 20
     },
     {
         "name": "Mage Knight Board Game",
         "description": "Explore, conquer, and level up as a powerful Mage Knight in a vast and modular fantasy world. Blend deck-building, area control, and tactical combat in this solo-friendly epic of deep strategic choices and character growth.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 85,
         "learning_curve_desc": "Notoriously steep learning curve due to multi-layered rules and extensive options.",
         "strategic_depth_rank": 90,
@@ -640,7 +599,6 @@
     {
         "name": "Monopoly",
         "description": "Buy properties, collect rent, and bankrupt your opponents in this iconic game of capitalism and chance. Trade, upgrade, and try not to land in jail as you race to build your empire.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Varied rules and potential house-rules yield a moderate learning curve.",
         "strategic_depth_rank": 25,
@@ -657,7 +615,6 @@
     {
         "name": "Munchkin",
         "description": "Kick down doors, slay monsters, and stab your friends in the back as you race to level up. This tongue-in-cheek dungeon crawler mixes simple card play with chaotic 'take-that' mechanics and absurd humor.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 20,
         "learning_curve_desc": "Humorous rules and parody elements make Munchkin easy to learn.",
         "strategic_depth_rank": 20,
@@ -673,7 +630,6 @@
     {
         "name": "No Thanks!",
         "description": "Choose to take a numbered card or pass by spending a chip, balancing risk and reward as you build your score. Simple rules hide clever decisions in this minimalist push-your-luck card game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 5,
         "learning_curve_desc": "A very simple push-your-luck mechanism makes it extremely easy to learn.",
         "strategic_depth_rank": 35,
@@ -689,7 +645,6 @@
     {
         "name": "Orleans",
         "description": "Recruit followers and build your influence across medieval France by drawing tokens from your personal bag. Combining bag-building with worker placement, Orleans rewards careful planning and tactical flexibility.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 50,
         "learning_curve_desc": "The bag-building mechanic and medieval theme present a moderate learning curve.",
         "strategic_depth_rank": 70,
@@ -705,7 +660,6 @@
     {
         "name": "Pandemic",
         "description": "Work together to stop global disease outbreaks by traveling the world, treating infections, and discovering cures. Each player has a unique role, making cooperation essential in this tense, turn-based crisis simulator.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 45,
         "learning_curve_desc": "Cooperative multi-role mechanics yield a moderate learning curve.",
         "strategic_depth_rank": 60,
@@ -714,14 +668,13 @@
         "replayability_desc": "Variable roles and scenario adjustments offer decent replayability despite some fixed elements.",
         "category": [
             "Cooperative",
-            "Deduction"
+            "Deduction & Deception"
         ],
         "playtime_minutes": 45
     },
     {
         "name": "Pax Pamir",
         "description": "Step into 19th-century Afghanistan and navigate alliances, betrayals, and shifting political power. Use cards to influence factions and manipulate the ever-changing balance of control in this historical strategy game.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 65,
         "learning_curve_desc": "A historical game with intricate political and card-driven mechanics that take time to master.",
         "strategic_depth_rank": 80,
@@ -737,7 +690,6 @@
     {
         "name": "Power Grid",
         "description": "Build and power cities by bidding for power plants, managing resources, and expanding your network. This economic game challenges players to balance short-term gains with long-term infrastructure planning.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 60,
         "learning_curve_desc": "Multi-phase economic gameplay and resource market dynamics require focused learning.",
         "strategic_depth_rank": 80,
@@ -745,15 +697,13 @@
         "replayability_rank": 80,
         "replayability_desc": "Dynamic markets and economic decisions provide high replay value with each session feeling unique.",
         "category": [
-            "Economic",
-            "Auction/Bidding"
+            "Economic"
         ],
         "playtime_minutes": 120
     },
     {
         "name": "Puerto Rico",
         "description": "Develop plantations, ship goods, and manage colonial roles in this classic eurogame. Carefully timed role selection and production chains drive the competition for economic dominance.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 70,
         "learning_curve_desc": "Intricate role selection and building mechanics yield a steep learning curve.",
         "strategic_depth_rank": 85,
@@ -769,7 +719,6 @@
     {
         "name": "Race for the Galaxy",
         "description": "Develop a space-faring civilization by playing cards that represent technologies, worlds, and developments. Simultaneous phase selection and icon-based mechanics make this a fast-paced engine-building game with deep combos.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 50,
         "learning_curve_desc": "Icon-heavy card play and simultaneous actions create a moderate learning curve.",
         "strategic_depth_rank": 80,
@@ -785,7 +734,6 @@
     {
         "name": "Risk",
         "description": "Command armies, conquer continents, and roll dice to determine global domination. Classic area control meets luck-driven battles in this world-spanning strategy game of alliances and betrayal.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Simple rules for global conquest make Risk relatively easy to learn.",
         "strategic_depth_rank": 40,
@@ -800,14 +748,13 @@
     },
     {
         "name": "Rock Paper Scissors",
-        "description": "A timeless hand game where players simultaneously choose rock, paper, or scissors in a test of timing and psychology. While simple, it’s often used as a fast and fair decision-maker.",
-        "gameplay_style": "Classic",
+        "description": "A timeless hand game where players simultaneously choose rock, paper, or scissors in a test of timing and psychology. While simple, it\u2019s often used as a fast and fair decision-maker.",
         "learning_curve_rank": 1,
         "learning_curve_desc": "A very simple hand game with instantly learnable rules.",
         "strategic_depth_rank": 1,
         "strategic_depth_desc": "Almost no strategic depth beyond spontaneous choice.",
         "replayability_rank": 5,
-        "replayability_desc": "Its simplicity means there’s little strategic variation, but its spontaneity makes it a fun, quick decision-making game.",
+        "replayability_desc": "Its simplicity means there\u2019s little strategic variation, but its spontaneity makes it a fun, quick decision-making game.",
         "category": [
             "Party Games"
         ],
@@ -816,7 +763,6 @@
     {
         "name": "Root",
         "description": "Wage asymmetric warfare in a woodland realm where each faction plays entirely differently. From military conquest to economic engine-building, Root is a dynamic strategy game where control shifts constantly based on your unique powers.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 45,
         "learning_curve_desc": "Asymmetric rules and varied faction abilities create a moderate learning curve.",
         "strategic_depth_rank": 75,
@@ -833,9 +779,8 @@
     {
         "name": "Scrabble",
         "description": "Use letter tiles to create words on a shared board and rack up points with clever vocabulary and board control. Strategic placement and tile management are key in this classic game of language and spatial awareness.",
-        "gameplay_style": "Classic",
         "learning_curve_rank": 25,
-        "learning_curve_desc": "Scrabble’s basic rules are easy to learn, requiring only familiarity with spelling and scoring.",
+        "learning_curve_desc": "Scrabble\u2019s basic rules are easy to learn, requiring only familiarity with spelling and scoring.",
         "strategic_depth_rank": 65,
         "strategic_depth_desc": "Deep knowledge of vocabulary, tile management, and board control offers high strategic complexity for skilled players.",
         "replayability_rank": 80,
@@ -849,7 +794,6 @@
     {
         "name": "Settlers of Catan",
         "description": "Expand across an uncharted island by gathering resources, building roads, and trading with other players. Smart settlement placement and negotiation drive this modern classic of modular board strategy.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Resource management and trading mechanics yield a moderate learning curve.",
         "strategic_depth_rank": 60,
@@ -866,7 +810,6 @@
     {
         "name": "Small World",
         "description": "Control fantastical races with special powers and conquer territory before fading into decline and choosing a new one. Timing when to abandon your civilization is key in this fast-paced area control game with high replay value.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 35,
         "learning_curve_desc": "Accessible territory control and fantasy themes yield a moderate learning curve.",
         "strategic_depth_rank": 50,
@@ -882,7 +825,6 @@
     {
         "name": "Spirit Island",
         "description": "Defend your island as powerful spirits working together to repel invading colonists. With unique powers and deep synergy, Spirit Island flips the colonial narrative and delivers a highly strategic cooperative experience.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 70,
         "learning_curve_desc": "A cooperative game with complex spirit abilities and nuanced rules, resulting in a steep learning curve.",
         "strategic_depth_rank": 85,
@@ -899,7 +841,6 @@
     {
         "name": "Splendor",
         "description": "Collect gems and develop cards to attract wealthy patrons in this streamlined engine-building game. With every turn, you must decide whether to gather resources or invest in cards that build toward a victory condition.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 20,
         "learning_curve_desc": "Simple engine-building rules make Splendor very easy to learn.",
         "strategic_depth_rank": 45,
@@ -915,7 +856,6 @@
     {
         "name": "Stone Age",
         "description": "Assign workers to gather resources, build tools, and grow your prehistoric tribe. With dice-based worker placement and resource management, Stone Age blends luck and strategy in a welcoming format.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Straightforward worker placement and resource gathering make it moderately easy to learn.",
         "strategic_depth_rank": 50,
@@ -932,7 +872,6 @@
     {
         "name": "Summoner Wars",
         "description": "Control a unique faction in a card-based tactical skirmish game where every unit is summoned to a grid-based battlefield. Balance offense, magic economy, and positioning to outplay your opponent in asymmetric head-to-head combat.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Grid-based tactical combat and unique faction abilities lead to a moderate learning curve.",
         "strategic_depth_rank": 60,
@@ -948,7 +887,6 @@
     {
         "name": "Terra Mystica",
         "description": "Grow your civilization by transforming terrain, building structures, and managing resources, all with minimal luck. Each faction plays differently, demanding long-term planning and careful power economy in this acclaimed eurogame.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 80,
         "learning_curve_desc": "Faction-based territory development and resource management yield a high learning curve.",
         "strategic_depth_rank": 90,
@@ -964,7 +902,6 @@
     {
         "name": "Terraforming Mars",
         "description": "Lead a corporation competing to make Mars habitable by building projects that raise temperature, oxygen levels, and create oceans. Manage resources, draft cards, and develop your engine in this epic planetary development game.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 60,
         "learning_curve_desc": "Engine building, resource management, and board development result in a moderate learning curve.",
         "strategic_depth_rank": 80,
@@ -981,11 +918,10 @@
     {
         "name": "The Crew",
         "description": "Complete missions as a team by playing tricks and communicating with limited information. This cooperative twist on trick-taking challenges players to think together, not just outplay each other.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 35,
         "learning_curve_desc": "Simple trick-taking rules are enhanced by cooperative mechanics, creating a low to moderate learning curve.",
         "strategic_depth_rank": 55,
-        "strategic_depth_desc": "Timing, deduction, and team coordination deliver moderate strategic depth.",
+        "strategic_depth_desc": "Timing, Deduction & Deception, and team coordination deliver moderate strategic depth.",
         "replayability_rank": 80,
         "replayability_desc": "Dozens of missions and varying difficulty levels ensure high replayability.",
         "category": [
@@ -996,8 +932,7 @@
     },
     {
         "name": "The Mind",
-        "description": "Play cards in ascending order—without speaking. The Mind turns card sequencing into a tense, cooperative experience where players rely on intuition and timing to succeed together.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Play cards in ascending order\u2014without speaking. The Mind turns card sequencing into a tense, cooperative experience where players rely on intuition and timing to succeed together.",
         "learning_curve_rank": 5,
         "learning_curve_desc": "Very easy to learn, relying on basic card play and cooperative timing.",
         "strategic_depth_rank": 10,
@@ -1012,32 +947,29 @@
     },
     {
         "name": "The Resistance",
-        "description": "Fight for freedom or crush it from within in this social deduction game of spies and deception. Players vote on missions and try to uncover (or hide) who the traitors are.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Fight for freedom or crush it from within in this Deduction & Deception & Deception game of spies and deception. Players vote on missions and try to uncover (or hide) who the traitors are.",
         "learning_curve_rank": 15,
         "learning_curve_desc": "Simple vote and mission mechanics make it quick to learn.",
         "strategic_depth_rank": 40,
-        "strategic_depth_desc": "Bluffing, deduction, and social manipulation yield moderate depth.",
+        "strategic_depth_desc": "Deduction & Deception, Deduction & Deception, and social manipulation yield moderate depth.",
         "replayability_rank": 70,
         "replayability_desc": "Deception-based gameplay changes with every group, offering high replay value.",
         "category": [
-            "Social Deduction",
-            "Bluffing"
+            "Deduction & Deception"
         ],
         "playtime_minutes": 30
     },
     {
         "name": "The Search for Planet X",
-        "description": "Use logic, deduction, and a shared sky map to find a hidden planet before your rivals. A companion app manages the clues and changing conditions in this solo or competitive brain-burning puzzle.",
-        "gameplay_style": "Abstract",
+        "description": "Use logic, Deduction & Deception, and a shared sky map to find a hidden planet before your rivals. A companion app manages the clues and changing conditions in this solo or competitive brain-burning puzzle.",
         "learning_curve_rank": 30,
         "learning_curve_desc": "Straightforward rules with a logical framework make it easy to grasp.",
         "strategic_depth_rank": 65,
-        "strategic_depth_desc": "Layered deduction and timing create a satisfying level of depth.",
+        "strategic_depth_desc": "Layered Deduction & Deception and timing create a satisfying level of depth.",
         "replayability_rank": 70,
-        "replayability_desc": "Randomized setups and competitive deduction yield strong replayability.",
+        "replayability_desc": "Randomized setups and competitive Deduction & Deception yield strong replayability.",
         "category": [
-            "Deduction",
+            "Deduction & Deception",
             "Logic"
         ],
         "playtime_minutes": 60
@@ -1045,7 +977,6 @@
     {
         "name": "Ticket to Ride",
         "description": "Collect cards and claim train routes across North America in this accessible gateway game. Block opponents, complete destination tickets, and build the longest rail network to win.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 15,
         "learning_curve_desc": "Simple rules and familiar gameplay make it easy for beginners.",
         "strategic_depth_rank": 40,
@@ -1061,7 +992,6 @@
     {
         "name": "Twilight Imperium",
         "description": "Control a galactic empire in an epic space opera where politics, warfare, trade, and negotiation collide. With asymmetric factions and endless options, Twilight Imperium is the ultimate 4X experience.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 95,
         "learning_curve_desc": "Massive rulebook and sprawling systems make it one of the hardest games to learn.",
         "strategic_depth_rank": 95,
@@ -1078,7 +1008,6 @@
     {
         "name": "Twilight Struggle",
         "description": "Relive the Cold War as the U.S. or USSR in a tense, card-driven tug-of-war for global influence. Timing events, managing defcon status, and planning coups are all key to historical domination.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 65,
         "learning_curve_desc": "Card-driven strategy with historical context creates a moderate learning curve.",
         "strategic_depth_rank": 85,
@@ -1094,7 +1023,6 @@
     {
         "name": "Unlock!",
         "description": "Simulate the escape room experience using cards and a companion app. Solve puzzles, find clues, and race the clock through themed scenarios that test your logic and creativity.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 10,
         "learning_curve_desc": "Puzzle-solving format with guided app support makes it easy to jump into.",
         "strategic_depth_rank": 35,
@@ -1109,8 +1037,7 @@
     },
     {
         "name": "Uno",
-        "description": "Play matching colors or numbers and use action cards to sabotage opponents in this quick, family-friendly card game. The goal? Be the first to run out of cards—but don’t forget to say 'Uno!'",
-        "gameplay_style": "Classic",
+        "description": "Play matching colors or numbers and use action cards to sabotage opponents in this quick, family-friendly card game. The goal? Be the first to run out of cards\u2014but don\u2019t forget to say 'Uno!'",
         "learning_curve_rank": 5,
         "learning_curve_desc": "Very easy to learn, with rules understood in minutes.",
         "strategic_depth_rank": 10,
@@ -1126,7 +1053,6 @@
     {
         "name": "War of the Ring",
         "description": "Control the Free Peoples or the Shadow Armies in an epic battle for Middle-earth. Play cards, move armies, and follow narrative arcs as you relive or rewrite the fate of the One Ring.",
-        "gameplay_style": "Asymmetric / Faction-Based Games",
         "learning_curve_rank": 80,
         "learning_curve_desc": "A detailed narrative strategy game that requires familiarity with multiple systems.",
         "strategic_depth_rank": 90,
@@ -1142,8 +1068,7 @@
     },
     {
         "name": "Wavelength",
-        "description": "Try to read your teammate’s mind by guessing where on a hidden spectrum their clue points. It’s a party game of perception, discussion, and shared intuition.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
+        "description": "Try to read your teammate\u2019s mind by guessing where on a hidden spectrum their clue points. It\u2019s a party game of perception, discussion, and shared intuition.",
         "learning_curve_rank": 5,
         "learning_curve_desc": "Party game with near-zero setup and intuitive rules.",
         "strategic_depth_rank": 15,
@@ -1152,14 +1077,13 @@
         "replayability_desc": "Unique discussions and group dynamics offer high replay value.",
         "category": [
             "Party Games",
-            "Social Deduction"
+            "Deduction & Deception"
         ],
         "playtime_minutes": 30
     },
     {
         "name": "Wingspan",
         "description": "Build a wildlife preserve by playing bird cards, laying eggs, and triggering abilities in carefully planned sequences. With an elegant engine-building system and beautiful design, Wingspan rewards both tactical moves and long-term vision.",
-        "gameplay_style": "Abstract",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Simple actions with layered card effects make it easy to start, hard to master.",
         "strategic_depth_rank": 70,
@@ -1175,8 +1099,7 @@
     },
     {
         "name": "Yahtzee",
-        "description": "Roll dice and try to fill your score sheet with the best combinations, from full houses to the elusive Yahtzee. It’s a classic game of probability, luck, and a little math.",
-        "gameplay_style": "Classic",
+        "description": "Roll dice and try to fill your score sheet with the best combinations, from full houses to the elusive Yahtzee. It\u2019s a classic game of probability, luck, and a little math.",
         "learning_curve_rank": 10,
         "learning_curve_desc": "Very easy to pick up, focused around dice combinations and score tracking.",
         "strategic_depth_rank": 20,
@@ -1193,7 +1116,6 @@
     {
         "name": "Zombicide",
         "description": "Team up to survive waves of undead in this cooperative, dice-chucking miniatures game. Level up, gear up, and clear the board as you face mission-based scenarios filled with relentless zombie spawns.",
-        "gameplay_style": "Cooperative & Social Deduction Games",
         "learning_curve_rank": 40,
         "learning_curve_desc": "Easy to pick up thanks to straightforward rules and scenarios.",
         "strategic_depth_rank": 45,
