@@ -21,7 +21,7 @@ export const PlayerCountFilter = ({ selected, onChange }: PlayerCountFilterProps
     <div className="flex items-center gap-2">
       <Users className="w-4 h-4" />
       <Select value={selected} onValueChange={onChange}>
-        <SelectTrigger className="w-[140px]">
+        <SelectTrigger className="w-[100px]">
           <SelectValue placeholder="Any players" />
         </SelectTrigger>
         <SelectContent>
