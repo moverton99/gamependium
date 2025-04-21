@@ -1,5 +1,4 @@
 
-import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import {
   Select,
@@ -29,13 +28,29 @@ export const SortControls = ({
   };
 
   return (
-    <div className="flex items-center gap-2" onClick={handleClick}>
+    <div className="flex flex-col w-[180px] relative" onClick={handleClick}>
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-full pr-12">
           <SelectValue placeholder="Sort by..." />
+          <button
+            type="button"
+            aria-label="Toggle sort direction"
+            onClick={(e) => {
+              e.stopPropagation();
+              onDirectionToggle();
+            }}
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md p-1 hover:bg-muted text-muted-foreground transition-colors"
+            tabIndex={-1}
+          >
+            {sortDirection === "asc" ? (
+              <ArrowUp className="h-4 w-4" />
+            ) : (
+              <ArrowDown className="h-4 w-4" />
+            )}
+          </button>
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="name">Name</SelectItem>
@@ -45,21 +60,7 @@ export const SortControls = ({
           <SelectItem value="playtime">Playtime</SelectItem>
         </SelectContent>
       </Select>
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={(e) => {
-          e.stopPropagation();
-          onDirectionToggle();
-        }}
-        className="flex items-center justify-center w-10 h-10"
-      >
-        {sortDirection === "asc" ? (
-          <ArrowUp className="h-4 w-4" />
-        ) : (
-          <ArrowDown className="h-4 w-4" />
-        )}
-      </Button>
     </div>
   );
 };
+
