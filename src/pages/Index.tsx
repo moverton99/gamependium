@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -85,45 +86,38 @@ const Index = () => {
   }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search]);
 
   return (
-    <div className="min-h-screen p-8 bg-gray-50">
+    <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Game Explorer</h1>
-        <div className="flex justify-center mb-8">
-          <div
-            className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-6xl"
-            style={{
-              gridTemplateColumns: "1fr 1fr",
-              gridTemplateRows: "auto auto",
-            }}
-          >
-            {/* Top Left: Category */}
-            <div className="flex items-start justify-start col-start-1 row-start-1">
-              <CategoryFilter
-                categories={allCategories}
-                selectedCategories={selectedCategories}
-                onCategoryToggle={handleCategoryToggle}
-                onCategoryRemove={removeCategory}
-              />
-            </div>
-            {/* Top Right: Text Search */}
-            <div className="flex items-center justify-end col-start-2 row-start-1">
-              <TextSearch value={search} onChange={setSearch} />
-            </div>
-            {/* Bottom Left: Playtime */}
-            <div className="flex items-end justify-start col-start-1 row-start-2">
-              <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
-            </div>
-            {/* Bottom Right: Sort Controls */}
-            <div className="flex items-end justify-end col-start-2 row-start-2">
-              <SortControls
-                sortBy={sortBy}
-                sortDirection={sortDirection}
-                onSortChange={setSortBy}
-                onDirectionToggle={() =>
-                  setSortDirection((current) => (current === "asc" ? "desc" : "asc"))
-                }
-              />
-            </div>
+        {/* Controls Container */}
+        <div className="flex flex-col gap-4 mb-8 md:mb-8 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 w-full max-w-6xl">
+          {/* Category */}
+          <div className="flex items-start justify-start w-full md:col-start-1 md:row-start-1">
+            <CategoryFilter
+              categories={allCategories}
+              selectedCategories={selectedCategories}
+              onCategoryToggle={handleCategoryToggle}
+              onCategoryRemove={removeCategory}
+            />
+          </div>
+          {/* Text Search */}
+          <div className="flex items-center justify-end w-full md:col-start-2 md:row-start-1">
+            <TextSearch value={search} onChange={setSearch} />
+          </div>
+          {/* Playtime */}
+          <div className="flex items-end justify-start w-full md:col-start-1 md:row-start-2">
+            <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
+          </div>
+          {/* Sort Controls */}
+          <div className="flex items-end justify-end w-full md:col-start-2 md:row-start-2">
+            <SortControls
+              sortBy={sortBy}
+              sortDirection={sortDirection}
+              onSortChange={setSortBy}
+              onDirectionToggle={() =>
+                setSortDirection((current) => (current === "asc" ? "desc" : "asc"))
+              }
+            />
           </div>
         </div>
         <GameGrid games={sortedAndFilteredGames} />
