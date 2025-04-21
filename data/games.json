@@ -1160,5 +1160,21 @@
         "Science Fiction"
     ],
     "playtime_minutes": 30
+},
+  {
+    "name": "Skull",
+    "description": "Bluff, bid, and dare your way through a game of hidden traps and bold challenges. In Skull, players place face-down cards—roses or skulls—and then wager how many roses they can reveal without hitting a skull, creating tense showdowns of nerve and deception.",
+    "learning_curve_rank": 15,
+    "learning_curve_desc": "Very few rules and minimal setup make Skull exceptionally easy to learn.",
+    "strategic_depth_rank": 40,
+    "strategic_depth_desc": "Strategic bluffing and reading opponents create engaging but light tactical depth.",
+    "replayability_rank": 70,
+    "replayability_desc": "Quick rounds and psychological tension offer high replayability, especially with different groups.",
+    "category": [
+        "Deduction & Deception",
+        "Party Games"
+    ],
+    "playtime_minutes": 30
 }
+
 ]
