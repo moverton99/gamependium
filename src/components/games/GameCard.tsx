@@ -1,7 +1,6 @@
-
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 import { categoryDescriptionMap } from "./categoryDescriptions";
@@ -93,9 +92,20 @@ export const GameCard = ({
             <TooltipTrigger className="flex items-center gap-1">
               <Users className="w-4 h-4" />
               <span>{minPlayers}-{maxPlayers}</span>
+              {suggestedMinPlayers > minPlayers && (
+                <Tooltip>
+                  <TooltipTrigger>
+                    <AlertTriangle className="w-4 h-4 text-red-500 ml-1" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-sm">Suggested minimum: {suggestedMinPlayers} players</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
             </TooltipTrigger>
             <TooltipContent>
               <p className="text-sm">Players: {minPlayers} to {maxPlayers}</p>
+              <p className="text-sm text-gray-500">{playersDesc}</p>
             </TooltipContent>
           </Tooltip>
         </div>

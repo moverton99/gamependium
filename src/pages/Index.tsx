@@ -1,4 +1,3 @@
-
 import { useState, useMemo, useEffect } from "react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
@@ -8,13 +7,15 @@ import { GameGrid } from "@/components/games/GameGrid";
 import { PlaytimeFilter, PLAYTIME_GROUPS } from "@/components/games/PlaytimeFilter";
 import { TextSearch } from "@/components/games/TextSearch";
 import { Game } from "@/types/game";
+import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>("name");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [selectedPlaytime, setSelectedPlaytime] = useState<string>("all");
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState<string>(""); 
+  const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
 
   const allCategories = useMemo(() => {
     const uniqueCategories = new Set<string>();
@@ -57,18 +58,24 @@ const Index = () => {
     return true; // For "all"
   }
 
+  function meetsPlayerCount(game: Game, count: PlayerCountOption): boolean {
+    if (count === "any") return true;
+    if (count === "5+") return game.max_players >= 5;
+    const numPlayers = parseInt(count);
+    return numPlayers >= game.min_players && numPlayers <= game.max_players;
+  }
+
   const sortedAndFilteredGames = useMemo(() => {
-    console.log("Recomputing sorted games with:", { sortBy, sortDirection, selectedPlaytime, search });
+    console.log("Recomputing sorted games with:", { sortBy, sortDirection, selectedPlaytime, search, selectedPlayerCount });
 
     let filteredGames = [...games]
       .filter(game =>
         (selectedCategories.length === 0 ||
           selectedCategories.every(cat => game.category.includes(cat)))
         && (selectedPlaytime === "all" || isInPlaytimeGroup(game, selectedPlaytime))
-        && (
-          search.trim() === "" ||
-          game.name.toLowerCase().includes(search.toLowerCase())
-        )
+        && (search.trim() === "" ||
+          game.name.toLowerCase().includes(search.toLowerCase()))
+        && (selectedPlayerCount === "any" || meetsPlayerCount(game, selectedPlayerCount))
       );
 
     // Remove "Existence" if sortBy is not "name"
@@ -90,7 +97,7 @@ const Index = () => {
         return multiplier * (valueA - valueB);
       }
     }) as Game[];
-  }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search]);
+  }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount]);
 
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
@@ -111,9 +118,10 @@ const Index = () => {
           <div className="flex items-center justify-start w-full md:justify-end md:col-start-2 md:row-start-1">
             <TextSearch value={search} onChange={setSearch} />
           </div>
-          {/* Playtime */}
-          <div className="flex items-end justify-start w-full md:col-start-1 md:row-start-2">
+          {/* Playtime and Players */}
+          <div className="flex items-end justify-start w-full md:col-start-1 md:row-start-2 gap-4">
             <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
+            <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
           </div>
           {/* Sort Controls */}
           <div className="flex items-end justify-start md:justify-end w-full md:col-start-2 md:row-start-2">
