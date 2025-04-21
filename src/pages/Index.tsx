@@ -1,4 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { RefreshCw } from "lucide-react";
 import games from "../../data/games.json";
 import categories from "../../data/game_categories.json";
 import { CategoryFilter } from "@/components/games/CategoryFilter";
@@ -65,6 +67,13 @@ const Index = () => {
     return numPlayers >= game.min_players && numPlayers <= game.max_players;
   }
 
+  const resetFilters = () => {
+    setSelectedCategories([]);
+    setSelectedPlaytime("all");
+    setSearch("");
+    setSelectedPlayerCount("any");
+  };
+
   const sortedAndFilteredGames = useMemo(() => {
     console.log("Recomputing sorted games with:", { sortBy, sortDirection, selectedPlaytime, search, selectedPlayerCount });
 
@@ -101,7 +110,18 @@ const Index = () => {
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Game Explorer</h1>
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="text-4xl font-bold">Game Explorer</h1>
+          <Button 
+            variant="outline" 
+            onClick={resetFilters}
+            className="gap-2"
+          >
+            <RefreshCw className="w-4 h-4" />
+            Reset Filters
+          </Button>
+        </div>
+        
         <div className="flex flex-col gap-4 mb-8 md:mb-8 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 w-full max-w-6xl">
           <div className="flex items-start justify-start w-full md:col-start-1 md:row-start-1">
             <CategoryFilter
