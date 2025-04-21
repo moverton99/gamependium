@@ -1175,6 +1175,85 @@
         "Party Games"
     ],
     "playtime_minutes": 30
+},
+{
+    "name": "Brass: Birmingham",
+    "description": "Build an industrial empire in 19th-century England by developing canals, railways, and a network of coal, iron, and beer. Brass: Birmingham challenges players to optimize economic timing, manage fluctuating markets, and outmaneuver rivals in a richly strategic game of resource and infrastructure planning.",
+    "learning_curve_rank": 70,
+    "learning_curve_desc": "Interconnected economic systems and multi-step planning present a steep learning curve.",
+    "strategic_depth_rank": 90,
+    "strategic_depth_desc": "Highly strategic with timing, network building, and dynamic market interactions requiring deep foresight.",
+    "replayability_rank": 80,
+    "replayability_desc": "Multiple strategies, variable setup, and tight player interaction make each session feel distinct.",
+    "category": [
+        "Economic",
+        "Network Building"
+    ],
+    "playtime_minutes": 120
+},
+  {
+    "name": "Lost Ruins of Arnak",
+    "description": "Lead an expedition to a mysterious island, combining deck-building and worker placement to gather artifacts, research ancient secrets, and overcome guardians. Every turn offers tense choices as you balance exploration, resource management, and strategic card play in a lush, adventure-filled setting.",
+    "learning_curve_rank": 50,
+    "learning_curve_desc": "The fusion of worker placement with light deck-building creates a moderate learning curve.",
+    "strategic_depth_rank": 70,
+    "strategic_depth_desc": "Balancing multiple resource types and competing objectives yields strong tactical decisions.",
+    "replayability_rank": 80,
+    "replayability_desc": "Variable research tracks, item decks, and site discoveries keep each game feeling fresh.",
+    "category": [
+        "Worker Placement",
+        "Deckbuilding",
+        "Adventure"
+    ],
+    "playtime_minutes": 90
+},
+  {
+    "name": "Distilled",
+    "description": "Craft spirits in a thematic blend of resource management and push-your-luck mechanics. In Distilled, players acquire ingredients, build recipes, and distill batches in a volatile process where careful planning can still result in surprising outcomes—just like real distilling.",
+    "learning_curve_rank": 45,
+    "learning_curve_desc": "Familiar mechanics and thematic clarity make it approachable, though recipe nuances add some complexity.",
+    "strategic_depth_rank": 65,
+    "strategic_depth_desc": "Balancing recipe timing, upgrades, and risk adds depth to each distillation round.",
+    "replayability_rank": 75,
+    "replayability_desc": "Different spirit types, player goals, and variable markets provide strong replay variety.",
+    "category": [
+        "Economic",
+        "Push Your Luck",
+        "Card Game"
+    ],
+    "playtime_minutes": 60
+},
+  {
+    "name": "City of the Great Machine",
+    "description": "In a steampunk city governed by a tyrannical AI, players take on the roles of revolutionaries or the Great Machine itself in a game of hidden movement, asymmetric powers, and strategic sabotage. Use guile, gadgets, and coordination to outwit your opponent in this cat-and-mouse battle of shifting priorities and urban control.",
+    "learning_curve_rank": 60,
+    "learning_curve_desc": "Asymmetric roles and hidden movement require players to learn distinct mechanics and strategies.",
+    "strategic_depth_rank": 75,
+    "strategic_depth_desc": "Bluffing, movement prediction, and long-term planning create layered strategic tension.",
+    "replayability_rank": 80,
+    "replayability_desc": "Asymmetric play, modular city setup, and evolving goals ensure diverse scenarios across sessions.",
+    "category": [
+        "Asymmetric",
+        "Deduction & Deception",
+        "Science Fiction"
+    ],
+    "playtime_minutes": 90
+},
+{
+    "name": "Arcs",
+    "description": "Command a fading galactic empire in this fast-paced 4X game that blends political intrigue, tactical battles, and modular storytelling. In Arcs, players shape the unfolding narrative through branching campaigns or one-shot scenarios, with asymmetric powers and evolving goals that reshape the space opera every session.",
+    "learning_curve_rank": 65,
+    "learning_curve_desc": "Modular campaign mechanics and asymmetric factions require players to learn dynamic systems.",
+    "strategic_depth_rank": 80,
+    "strategic_depth_desc": "Faction powers, evolving storylines, and action timing create rich layers of strategic decision-making.",
+    "replayability_rank": 85,
+    "replayability_desc": "Variable campaigns, faction asymmetry, and branching stories ensure lasting variety and engagement.",
+    "category": [
+        "4X",
+        "Asymmetric",
+        "Campaign/Legacy"
+    ],
+    "playtime_minutes": 90
 }
 
 ]
