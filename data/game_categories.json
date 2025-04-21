@@ -1,166 +1,106 @@
 [
-  {
-    "name": "Abstract Strategy",
-    "description": "Games with minimal luck and no hidden information, focusing purely on player strategy and tactics."
-  },
-  {
-    "name": "Area Control",
-    "description": "Players compete to dominate specific areas on the board, often through strategic placement or combat."
-  },
-  {
-    "name": "Campaign/Legacy",
-    "description": "Games that evolve over multiple sessions, with changes carrying over from game to game."
-  },
-  {
-    "name": "Deckbuilding",
-    "description": "Players build a deck of cards during gameplay to gain more powerful combinations and abilities."
-  },
-  {
-    "name": "Deck Construction",
-    "description": "Players construct a deck before the game from a pool of cards, often for competitive play."
-  },
-  {
-    "name": "Dexterity",
-    "description": "Games that require physical skill such as flicking, stacking, or balancing components."
-  },
-  {
-    "name": "Dungeon Crawler",
-    "description": "Players explore maps, fight monsters, and gather loot, often in a fantasy setting."
-  },
-  {
-    "name": "Worker Placement",
-    "description": "Players place workers on limited action spaces to gain resources or perform tasks."
-  },
-  {
-    "name": "Tile Placement",
-    "description": "Players place tiles to build or expand a map or territory in strategic ways."
-  },
-  {
-    "name": "Roll-and-Write",
-    "description": "Players roll dice and write results on a scoresheet, aiming to optimize outcomes."
-  },
-  {
-    "name": "Economic",
-    "description": "Games focused on money management, markets, and resource optimization."
-  },
-  {
-    "name": "Engine Building",
-    "description": "Players develop combinations of components that generate increasing returns over time."
-  },
-  {
-    "name": "Auction/Bidding",
-    "description": "Players bid resources against each other to acquire items or advantages."
-  },
-  {
-    "name": "Pick-up and Deliver",
-    "description": "Players transport goods from one location to another to fulfill objectives."
-  },
-  {
-    "name": "Programming",
-    "description": "Players pre-plan and lock in a sequence of actions that resolve in a specific order."
-  },
-  {
-    "name": "Social Deduction",
-    "description": "Players use discussion and reasoning to identify hidden roles or allegiances."
-  },
-  {
-    "name": "Bluffing",
-    "description": "Games where deception and misdirection play a key role in winning."
-  },
-  {
-    "name": "Deduction",
-    "description": "Games that involve logically determining hidden information based on clues."
-  },
-  {
-    "name": "Memory",
-    "description": "Games that challenge players to remember previously revealed or hidden information."
-  },
-  {
-    "name": "Trivia",
-    "description": "Games that test players' general knowledge or expertise in specific areas."
-  },
-  {
-    "name": "Party Games",
-    "description": "Games designed for large groups, emphasizing fun, interaction, and humor over strategy."
-  },
-  {
-    "name": "Family Games",
-    "description": "Accessible games suitable for all ages, often easy to learn and quick to play."
-  },
-  {
-    "name": "Word Games",
-    "description": "Games that involve vocabulary, spelling, or wordplay as core mechanics."
-  },
-  {
-    "name": "Real-Time",
-    "description": "Games where players act simultaneously or under time pressure without turns."
-  },
-  {
-    "name": "Push Your Luck",
-    "description": "Players decide how far to push their advantage, risking loss for greater reward."
-  },
-  {
-    "name": "Adventure",
-    "description": "Narrative-driven games where players explore, encounter events, and progress through a story."
-  },
-  {
-    "name": "Horror",
-    "description": "Games designed to evoke fear, suspense, or survival themes, often with dramatic tension."
-  },
-  {
-    "name": "Miniatures",
-    "description": "Games featuring detailed figures and tactical movement, often used in combat or skirmish settings."
-  },
-  {
-    "name": "Asymmetric",
-    "description": "Players have different abilities, roles, or objectives, often creating uneven starting positions."
-  },
-  {
-    "name": "Cooperative",
-    "description": "Players work together toward a shared goal, winning or losing as a team."
-  },
-  {
-    "name": "Science Fiction",
-    "description": "Games set in futuristic or space-based settings, often involving technology or interstellar conflict."
-  },
-  {
-    "name": "Fantasy",
-    "description": "Games set in magical or mythical worlds with fantastical creatures or powers."
-  },
-  {
-    "name": "Historical",
-    "description": "Games based on or inspired by real historical events, settings, or figures."
-  },
-  {
-    "name": "Wargame",
-    "description": "Games focused on military conflict, tactics, and battlefield control."
-  },
-  {
-    "name": "4X",
-    "description": "Games that involve exploring, expanding, exploiting, and exterminating, often in a large map or galaxy."
-  },
-  {
-    "name": "Negotiation",
-    "description": "Games where players must bargain, trade, or make deals with each other to achieve their goals."
-  },
-  {
-    "name": "Resource Management",
-    "description": "Games where players must efficiently collect, spend, and convert different types of resources."
-  },
-  {
-    "name": "Card Game",
-    "description": "Games primarily played with cards as the main component, often involving hand management."
-  },
-  {
-    "name": "Set Collection",
-    "description": "Games where players gather specific combinations of items or cards to score points or achieve objectives."
-  },
-  {
-    "name": "Hand Management",
-    "description": "Games where players must strategically play and manage the cards or resources in their hand."
-  },
-  {
-    "name": "Exploration",
-    "description": "Games where players discover new territories, maps, or areas as part of the gameplay."
-  }
+    {
+        "name": "Abstract Strategy",
+        "description": "Games with minimal luck and no hidden information, focusing purely on player strategy and tactics."
+    },
+    {
+        "name": "Area Control",
+        "description": "Players compete to dominate specific areas on the board, often through strategic placement or combat."
+    },
+    {
+        "name": "Campaign/Legacy",
+        "description": "Games that evolve over multiple sessions, with changes carrying over from game to game."
+    },
+    {
+        "name": "Deckbuilding",
+        "description": "Players build a deck of cards during gameplay to gain more powerful combinations and abilities."
+    },
+    {
+        "name": "Dungeon Crawler",
+        "description": "Players explore maps, fight monsters, and gather loot, often in a fantasy setting."
+    },
+    {
+        "name": "Worker Placement",
+        "description": "Players place workers on limited action spaces to gain resources or perform tasks."
+    },
+    {
+        "name": "Tile Placement",
+        "description": "Players place tiles to build or expand a map or territory in strategic ways."
+    },
+    {
+        "name": "Economic",
+        "description": "Games focused on money management, markets, and resource optimization."
+    },
+    {
+        "name": "Engine Building",
+        "description": "Players develop combinations of components that generate increasing returns over time."
+    },
+    {
+        "name": "Memory",
+        "description": "Games that challenge players to remember previously revealed or hidden information."
+    },
+    {
+        "name": "Party Games",
+        "description": "Games designed for large groups, emphasizing fun, interaction, and humor over strategy."
+    },
+    {
+        "name": "Family Games",
+        "description": "Accessible games suitable for all ages, often easy to learn and quick to play."
+    },
+    {
+        "name": "Word Games",
+        "description": "Games that involve vocabulary, spelling, or wordplay as core mechanics."
+    },
+    {
+        "name": "Real-Time",
+        "description": "Games where players act simultaneously or under time pressure without turns."
+    },
+    {
+        "name": "Push Your Luck",
+        "description": "Players decide how far to push their advantage, risking loss for greater reward."
+    },
+    {
+        "name": "Adventure",
+        "description": "Narrative-driven games where players explore, encounter events, and progress through a story."
+    },
+    {
+        "name": "Horror",
+        "description": "Games designed to evoke fear, suspense, or survival themes, often with dramatic tension."
+    },
+    {
+        "name": "Asymmetric",
+        "description": "Players have different abilities, roles, or objectives, often creating uneven starting positions."
+    },
+    {
+        "name": "Cooperative",
+        "description": "Players work together toward a shared goal, winning or losing as a team."
+    },
+    {
+        "name": "Science Fiction",
+        "description": "Games set in futuristic or space-based settings, often involving technology or interstellar conflict."
+    },
+    {
+        "name": "Fantasy",
+        "description": "Games set in magical or mythical worlds with fantastical creatures or powers."
+    },
+    {
+        "name": "Historical",
+        "description": "Games based on or inspired by real historical events, settings, or figures."
+    },
+    {
+        "name": "Wargame",
+        "description": "Games focused on military conflict, tactics, and battlefield control."
+    },
+    {
+        "name": "4X",
+        "description": "Games that involve exploring, expanding, exploiting, and exterminating, often in a large map or galaxy."
+    },
+    {
+        "name": "Negotiation",
+        "description": "Games where players must bargain, trade, or make deals with each other to achieve their goals."
+    },
+    {
+        "name": "Card Game",
+        "description": "Games primarily played with cards as the main component, often involving hand management."
+    }
 ]
