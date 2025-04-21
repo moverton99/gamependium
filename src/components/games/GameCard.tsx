@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
@@ -42,12 +41,12 @@ export const GameCard = ({
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
   const selectedPlayerCount = window.selectedPlayerCount || "any";
   
-  // Fix: Only show warning if selectedPlayerCount is a number (not "any" or "5+")
-  // and if that number is less than suggestedMinPlayers
   const showWarningTriangle = 
     selectedPlayerCount !== "any" && 
     selectedPlayerCount !== "5+" &&
-    suggestedMinPlayers > parseInt(selectedPlayerCount);
+    parseInt(selectedPlayerCount) >= minPlayers &&
+    parseInt(selectedPlayerCount) <= maxPlayers &&
+    parseInt(selectedPlayerCount) < suggestedMinPlayers;
 
   return (
     <>
