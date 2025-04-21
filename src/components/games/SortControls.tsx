@@ -27,6 +27,12 @@ export const SortControls = ({
     e.stopPropagation();
   };
 
+  const handleDirectionToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault(); // Prevent the dropdown from opening
+    onDirectionToggle();
+  };
+
   return (
     <div className="flex flex-col w-[180px] relative" onClick={handleClick}>
       <Select
@@ -38,10 +44,7 @@ export const SortControls = ({
           <button
             type="button"
             aria-label="Toggle sort direction"
-            onClick={(e) => {
-              e.stopPropagation();
-              onDirectionToggle();
-            }}
+            onClick={handleDirectionToggle}
             className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md p-1 hover:bg-muted text-muted-foreground transition-colors"
             tabIndex={-1}
           >
@@ -63,4 +66,3 @@ export const SortControls = ({
     </div>
   );
 };
-
