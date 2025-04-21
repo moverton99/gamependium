@@ -27,33 +27,14 @@ export const SortControls = ({
     e.stopPropagation();
   };
 
-  const handleDirectionToggle = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault(); // Prevent the dropdown from opening
-    onDirectionToggle();
-  };
-
   return (
-    <div className="flex flex-col w-[180px] relative" onClick={handleClick}>
+    <div className="flex items-center gap-0" onClick={handleClick}>
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}
       >
-        <SelectTrigger className="w-full pr-12">
+        <SelectTrigger className="w-[180px] rounded-r-none border-r-0">
           <SelectValue placeholder="Sort by..." />
-          <button
-            type="button"
-            aria-label="Toggle sort direction"
-            onClick={handleDirectionToggle}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md p-1 hover:bg-muted text-muted-foreground transition-colors"
-            tabIndex={-1}
-          >
-            {sortDirection === "asc" ? (
-              <ArrowUp className="h-4 w-4" />
-            ) : (
-              <ArrowDown className="h-4 w-4" />
-            )}
-          </button>
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="name">Name</SelectItem>
@@ -63,6 +44,18 @@ export const SortControls = ({
           <SelectItem value="playtime">Playtime</SelectItem>
         </SelectContent>
       </Select>
+      <button
+        type="button"
+        aria-label="Toggle sort direction"
+        onClick={onDirectionToggle}
+        className="h-10 px-2 rounded-l-none border border-input bg-background hover:bg-accent hover:text-accent-foreground flex items-center justify-center"
+      >
+        {sortDirection === "asc" ? (
+          <ArrowUp className="h-4 w-4" />
+        ) : (
+          <ArrowDown className="h-4 w-4" />
+        )}
+      </button>
     </div>
   );
 };
