@@ -1,24 +1,8 @@
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
-
-interface Game {
-  name: string;
-  learning_curve_rank: number;
-  learning_curve_desc: string;
-  strategic_depth_rank: number;
-  strategic_depth_desc: string;
-  replayability_rank: number | string;
-  replayability_desc: string;
-  description: string;
-  category: string[];
-  gameplay_style: string;
-  playtime_minutes: number;
-}
-
-interface GameGridProps {
-  games: Game[];
-}
+import { Game } from "@/types/game";
+import type { GameGridProps } from "./GameGrid.d.ts";
 
 export const GameGrid = ({ games }: GameGridProps) => {
   return (
@@ -36,7 +20,7 @@ export const GameGrid = ({ games }: GameGridProps) => {
             replayabilityDesc={game.replayability_desc}
             description={game.description}
             categories={game.category}
-            gameplayStyle={game.gameplay_style}
+            gameplayStyle={game.gameplay_style || ""}
             playtimeMinutes={game.playtime_minutes}
           />
         ))}

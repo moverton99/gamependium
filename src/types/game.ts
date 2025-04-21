@@ -10,4 +10,5 @@ export interface Game {
   replayability_desc: string;
   category: string[];
   playtime_minutes: number;
+  gameplay_style?: string; // Added this property as optional with '?'
 }
