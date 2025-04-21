@@ -9,6 +9,12 @@ import { TextSearch } from "@/components/games/TextSearch";
 import { Game } from "@/types/game";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 
+declare global {
+  interface Window {
+    selectedPlayerCount: PlayerCountOption;
+  }
+}
+
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>("name");
@@ -16,6 +22,10 @@ const Index = () => {
   const [selectedPlaytime, setSelectedPlaytime] = useState<string>("all");
   const [search, setSearch] = useState<string>(""); 
   const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
+
+  useEffect(() => {
+    window.selectedPlayerCount = selectedPlayerCount;
+  }, [selectedPlayerCount]);
 
   const allCategories = useMemo(() => {
     const uniqueCategories = new Set<string>();
@@ -78,7 +88,6 @@ const Index = () => {
         && (selectedPlayerCount === "any" || meetsPlayerCount(game, selectedPlayerCount))
       );
 
-    // Remove "Existence" if sortBy is not "name"
     if (sortBy !== "name") {
       filteredGames = filteredGames.filter(game => game.name !== "Existence");
     }
@@ -103,9 +112,7 @@ const Index = () => {
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Game Explorer</h1>
-        {/* Controls Container */}
         <div className="flex flex-col gap-4 mb-8 md:mb-8 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 w-full max-w-6xl">
-          {/* Category */}
           <div className="flex items-start justify-start w-full md:col-start-1 md:row-start-1">
             <CategoryFilter
               categories={allCategories}
@@ -114,16 +121,13 @@ const Index = () => {
               onCategoryRemove={removeCategory}
             />
           </div>
-          {/* Text Search */}
           <div className="flex items-center justify-start w-full md:justify-end md:col-start-2 md:row-start-1">
             <TextSearch value={search} onChange={setSearch} />
           </div>
-          {/* Playtime and Players */}
           <div className="flex items-end justify-start w-full md:col-start-1 md:row-start-2 gap-4">
             <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
             <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
           </div>
-          {/* Sort Controls */}
           <div className="flex items-end justify-start md:justify-end w-full md:col-start-2 md:row-start-2">
             <SortControls
               sortBy={sortBy}

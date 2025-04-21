@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
@@ -39,6 +40,10 @@ export const GameCard = ({
   playersDesc,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
+  const selectedPlayerCount = window.selectedPlayerCount || "any";
+  const showWarningTriangle = selectedPlayerCount !== "any" && 
+    suggestedMinPlayers > minPlayers && 
+    parseInt(selectedPlayerCount) < suggestedMinPlayers;
 
   return (
     <>
@@ -92,7 +97,7 @@ export const GameCard = ({
             <TooltipTrigger className="flex items-center gap-1">
               <Users className="w-4 h-4" />
               <span>{minPlayers}-{maxPlayers}</span>
-              {suggestedMinPlayers > minPlayers && (
+              {showWarningTriangle && (
                 <Tooltip>
                   <TooltipTrigger>
                     <AlertTriangle className="w-4 h-4 text-red-500 ml-1" />
