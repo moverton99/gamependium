@@ -2,7 +2,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
 import { Game } from "@/types/game";
-import type { GameGridProps } from "./GameGrid.d.ts";
+import { GameGridProps } from "./GameGrid.d";
 
 export const GameGrid = ({ games }: GameGridProps) => {
   return (
