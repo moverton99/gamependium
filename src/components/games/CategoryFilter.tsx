@@ -23,7 +23,7 @@ export const CategoryFilter = ({
   onCategoryRemove,
 }: CategoryFilterProps) => {
   return (
-    <div className="flex flex-col md:w-44 w-full">
+    <div className="flex flex-col w-full md:w-64 max-w-full">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="w-full flex items-center gap-2 justify-start">
@@ -48,7 +48,6 @@ export const CategoryFilter = ({
           </ScrollArea>
         </DropdownMenuContent>
       </DropdownMenu>
-      {/* Chips under the control, wrap as needed */}
       <div className="flex flex-wrap items-center gap-2 mt-2">
         {selectedCategories.map((category) => (
           <div

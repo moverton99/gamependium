@@ -29,10 +29,9 @@ export const SortControls = ({
 
   return (
     <div
-      className="flex items-center md:w-64 w-full border border-input rounded-md bg-background overflow-hidden"
+      className="flex items-center w-full md:w-64 max-w-full border border-input rounded-md bg-background overflow-hidden"
       onClick={handleClick}
     >
-      {/* Sort direction button, fixed width */}
       <button
         type="button"
         aria-label="Toggle sort direction"
@@ -47,7 +46,6 @@ export const SortControls = ({
           <ArrowDown className="h-4 w-4" />
         )}
       </button>
-      {/* Select dropdown fills the rest */}
       <Select
         value={sortBy}
         onValueChange={(value) => onSortChange(value as SortOption)}

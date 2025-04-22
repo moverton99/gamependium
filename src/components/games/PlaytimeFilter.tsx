@@ -41,9 +41,9 @@ export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => {
   };
 
   return (
-    <div className="flex flex-col w-40 md:w-48" onClick={handleClick}>
+    <div className="flex flex-col w-full md:w-64 max-w-full" onClick={handleClick}>
       <Select value={selected} onValueChange={onChange}>
-        <SelectTrigger className="w-40 md:w-48 max-w-full pl-10 relative">
+        <SelectTrigger className="w-full md:w-64 max-w-full pl-10 relative">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
             <Clock className="w-4 h-4 text-muted-foreground" />
           </span>

@@ -18,20 +18,22 @@ interface PlayerCountFilterProps {
 
 export const PlayerCountFilter = ({ selected, onChange }: PlayerCountFilterProps) => {
   return (
-    <div className="flex items-center gap-2">
-      <Users className="w-4 h-4" />
-      <Select value={selected} onValueChange={onChange}>
-        <SelectTrigger className="w-[100px]">
-          <SelectValue placeholder="Any players" />
-        </SelectTrigger>
-        <SelectContent>
-          {PLAYER_COUNT_OPTIONS.map((option) => (
-            <SelectItem key={option} value={option}>
-              {option === "any" ? "Any players" : option === "5+" ? "5 or more" : `${option} players`}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+    <div className="flex flex-col w-full md:w-64 max-w-full">
+      <div className="flex items-center gap-2">
+        <Users className="w-4 h-4" />
+        <Select value={selected} onValueChange={onChange}>
+          <SelectTrigger className="w-full md:w-64 max-w-full">
+            <SelectValue placeholder="Any players" />
+          </SelectTrigger>
+          <SelectContent>
+            {PLAYER_COUNT_OPTIONS.map((option) => (
+              <SelectItem key={option} value={option}>
+                {option === "any" ? "Any players" : option === "5+" ? "5 or more" : `${option} players`}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
     </div>
   );
 };

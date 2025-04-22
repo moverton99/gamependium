@@ -111,41 +111,52 @@ const Index = () => {
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        {/* 3-column grid: Left, Center, Right columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 w-full max-w-6xl items-start">
           {/* Left column: Search and Category */}
-          <div className="flex flex-col gap-4">
-            <TextSearch value={search} onChange={setSearch} />
-            <CategoryFilter
-              categories={allCategories}
-              selectedCategories={selectedCategories}
-              onCategoryToggle={handleCategoryToggle}
-              onCategoryRemove={removeCategory}
-            />
+          <div className="flex flex-col gap-4 items-start">
+            <div className="w-full md:w-64 max-w-full">
+              <TextSearch value={search} onChange={setSearch} />
+            </div>
+            <div className="w-full md:w-64 max-w-full">
+              <CategoryFilter
+                categories={allCategories}
+                selectedCategories={selectedCategories}
+                onCategoryToggle={handleCategoryToggle}
+                onCategoryRemove={removeCategory}
+              />
+            </div>
           </div>
           {/* Center column: Playtime and Player Count */}
-          <div className="flex flex-col gap-4 items-center">
-            <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
-            <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
+          <div className="flex flex-col gap-4 items-start">
+            <div className="w-full md:w-64 max-w-full">
+              <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
+            </div>
+            <div className="w-full md:w-64 max-w-full">
+              <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
+            </div>
           </div>
           {/* Right column: Reset Filters + Sort */}
-          <div className="flex flex-col gap-4 items-end">
-            <Button 
-              variant="outline" 
-              onClick={resetFilters}
-              className="gap-2 w-full md:w-auto"
-            >
-              <RefreshCw className="w-4 h-4" />
-              Reset Filters
-            </Button>
-            <SortControls
-              sortBy={sortBy}
-              sortDirection={sortDirection}
-              onSortChange={setSortBy}
-              onDirectionToggle={() =>
-                setSortDirection((current) => (current === "asc" ? "desc" : "asc"))
-              }
-            />
+          <div className="flex flex-col gap-4 items-start">
+            <div className="w-full md:w-64 max-w-full">
+              <Button 
+                variant="outline" 
+                onClick={resetFilters}
+                className="gap-2 w-full"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Reset Filters
+              </Button>
+            </div>
+            <div className="w-full md:w-64 max-w-full">
+              <SortControls
+                sortBy={sortBy}
+                sortDirection={sortDirection}
+                onSortChange={setSortBy}
+                onDirectionToggle={() =>
+                  setSortDirection((current) => (current === "asc" ? "desc" : "asc"))
+                }
+              />
+            </div>
           </div>
         </div>
         <GameGrid games={sortedAndFilteredGames} selectedPlayerCount={selectedPlayerCount} />

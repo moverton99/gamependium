@@ -9,7 +9,6 @@ interface TextSearchProps {
 
 export const TextSearch = ({ value, onChange }: TextSearchProps) => (
   <div className="relative w-full md:w-64 max-w-full">
-    {/* Left search icon */}
     <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center">
       <Search className="w-4 h-4 text-muted-foreground" />
     </span>
@@ -21,7 +20,6 @@ export const TextSearch = ({ value, onChange }: TextSearchProps) => (
       onChange={(e) => onChange(e.target.value)}
       autoComplete="off"
     />
-    {/* Clear button appears only if there is some value */}
     {value && (
       <button
         type="button"
@@ -35,4 +33,3 @@ export const TextSearch = ({ value, onChange }: TextSearchProps) => (
     )}
   </div>
 );
-
