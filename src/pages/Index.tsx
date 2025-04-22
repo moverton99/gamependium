@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -110,8 +111,7 @@ const Index = () => {
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-4xl font-bold">Game Explorer</h1>
+        <div className="flex justify-end items-center mb-4">
           <Button 
             variant="outline" 
             onClick={resetFilters}
