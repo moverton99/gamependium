@@ -1,6 +1,7 @@
 
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Clock } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const PLAYTIME_GROUPS = [
   {
@@ -41,7 +42,7 @@ export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => {
       <div className="flex items-center gap-2">
         <Clock className="w-4 h-4" />
         <Select value={selected} onValueChange={onChange}>
-          <SelectTrigger className="w-full md:w-64 max-w-full">
+          <SelectTrigger className={cn("w-full md:w-64 max-w-full", "font-medium")}>
             <SelectValue placeholder="Select playtime" />
           </SelectTrigger>
           <SelectContent>

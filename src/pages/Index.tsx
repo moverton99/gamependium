@@ -1,4 +1,3 @@
-
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -11,6 +10,7 @@ import { PlaytimeFilter, PLAYTIME_GROUPS } from "@/components/games/PlaytimeFilt
 import { TextSearch } from "@/components/games/TextSearch";
 import { Game } from "@/types/game";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -141,7 +141,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 onClick={resetFilters}
-                className="gap-2 w-full justify-start"
+                className={cn("gap-2 w-full justify-start", "font-medium")}
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Reset Filters

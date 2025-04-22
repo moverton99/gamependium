@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const PLAYER_COUNT_OPTIONS = ["any", "1", "2", "3", "4", "5+"] as const;
 export type PlayerCountOption = (typeof PLAYER_COUNT_OPTIONS)[number];
@@ -22,7 +23,7 @@ export const PlayerCountFilter = ({ selected, onChange }: PlayerCountFilterProps
       <div className="flex items-center gap-2">
         <Users className="w-4 h-4" />
         <Select value={selected} onValueChange={onChange}>
-          <SelectTrigger className="w-full md:w-64 max-w-full">
+          <SelectTrigger className={cn("w-full md:w-64 max-w-full", "font-medium")}>
             <SelectValue placeholder="Any players" />
           </SelectTrigger>
           <SelectContent>
