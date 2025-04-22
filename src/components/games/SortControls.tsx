@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 
 export type SortOption = "name" | "learning_curve" | "strategic_depth" | "replayability" | "playtime";
 
@@ -36,9 +37,12 @@ export const SortControls = ({
         type="button"
         aria-label="Toggle sort direction"
         onClick={onDirectionToggle}
-        className="w-10 h-10 flex items-center justify-center border-0 border-r border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+        className={cn(
+          "w-10 h-10 flex items-center justify-center border-0 border-r border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors font-medium", 
+          // Added font-medium to match bold styling
+          "border-r border-input rounded-l-md"
+        )}
         tabIndex={0}
-        style={{ borderTopLeftRadius: 'var(--radius)', borderBottomLeftRadius: 'var(--radius)' }}
       >
         {sortDirection === "asc" ? (
           <ArrowUp className="h-4 w-4" />
@@ -52,11 +56,11 @@ export const SortControls = ({
       >
         <SelectTrigger
           hideChevron
-          className="flex-1 w-0 h-10 border-0 border-l border-input rounded-none focus:ring-0 transition-colors"
-          style={{
-            borderTopRightRadius: 'var(--radius)',
-            borderBottomRightRadius: 'var(--radius)',
-          }}
+          className={cn(
+            "flex-1 w-0 h-10 border-0 border-l border-input rounded-none focus:ring-0 transition-colors font-medium",
+            // Added font-medium to match bold styling
+            "rounded-r-md"
+          )}
         >
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
