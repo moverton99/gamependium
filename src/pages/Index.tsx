@@ -109,11 +109,11 @@ const Index = () => {
   }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount]);
 
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-gray-50">
+    <div className="min-h-screen p-2 md:p-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 w-full max-w-6xl items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4 w-full max-w-6xl items-start">
           {/* Left column: Search and Category */}
-          <div className="flex flex-col gap-4 items-start">
+          <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
               <TextSearch value={search} onChange={setSearch} />
             </div>
@@ -127,7 +127,7 @@ const Index = () => {
             </div>
           </div>
           {/* Center column: Playtime and Player Count */}
-          <div className="flex flex-col gap-4 items-start">
+          <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
               <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
             </div>
@@ -136,7 +136,7 @@ const Index = () => {
             </div>
           </div>
           {/* Right column: Reset Filters + Sort */}
-          <div className="flex flex-col gap-4 items-start">
+          <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
               <Button 
                 variant="outline" 
