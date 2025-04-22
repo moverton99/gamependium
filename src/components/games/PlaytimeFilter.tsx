@@ -36,27 +36,23 @@ interface PlaytimeFilterProps {
 }
 
 export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => {
-  const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
-
   return (
-    <div className="flex flex-col w-full md:w-64 max-w-full" onClick={handleClick}>
-      <Select value={selected} onValueChange={onChange}>
-        <SelectTrigger className="w-full md:w-64 max-w-full pl-10 relative">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
-            <Clock className="w-4 h-4 text-muted-foreground" />
-          </span>
-          <SelectValue placeholder="Select playtime" />
-        </SelectTrigger>
-        <SelectContent>
-          {PLAYTIME_GROUPS.map((group) => (
-            <SelectItem key={group.value} value={group.value}>
-              <span>{group.label}</span>
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+    <div className="flex flex-col w-full md:w-64 max-w-full">
+      <div className="flex items-center gap-2">
+        <Clock className="w-4 h-4" />
+        <Select value={selected} onValueChange={onChange}>
+          <SelectTrigger className="w-full md:w-64 max-w-full">
+            <SelectValue placeholder="Select playtime" />
+          </SelectTrigger>
+          <SelectContent>
+            {PLAYTIME_GROUPS.map((group) => (
+              <SelectItem key={group.value} value={group.value}>
+                {group.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
     </div>
   );
 };
