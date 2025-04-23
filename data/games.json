@@ -1585,7 +1585,7 @@
     },
     {
         "name": "Magic: The Gathering",
-        "description": "Build custom decks and battle opponents using creatures, spells, and strategic combos in this iconic trading card game. Players choose a color or combination of colors, each with unique mechanics and themes, and try to reduce their opponent’s life total to zero. With formats ranging from casual to competitive, Magic offers deep strategy, bluffing, and ever-evolving gameplay across countless expansions.",
+        "description": "Build custom decks and battle opponents using creatures, spells, and strategic combos in this iconic trading card game. Players choose a color or combination of colors, each with unique mechanics and themes, and try to reduce their opponent’s life total to zero. With formats ranging from casual to competitive, Magic offers deep strategy and ever-evolving gameplay across countless expansions.",
         "learning_curve_rank": 65,
         "learning_curve_desc": "Basic gameplay is simple, but complex card interactions and tournament rules add significant depth.",
         "strategic_depth_rank": 90,
@@ -1597,11 +1597,11 @@
             "Card Game",
             "Fantasy"
         ],
-        "playtime_minutes": 25,
+        "playtime_minutes": 30,
         "min_players": 2,
-        "max_players": 6,
+        "max_players": 4,
         "suggested_min_players": 2,
-        "players_desc": "Designed for 1v1 duels, but also supports multiplayer formats like Commander. Scales well with group size and play style."
+        "players_desc": "Designed for 1v1 duels, but also supports multiplayer formats like Commander. "
     },
     {
         "name": "Warhammer 40,000",
