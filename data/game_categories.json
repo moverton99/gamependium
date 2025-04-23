@@ -102,5 +102,16 @@
     {
         "name": "Card Game",
         "description": "Games primarily played with cards as the main component, often involving hand management."
-    }
-]
+    },
+  {
+  "name": "Miniatures",
+  "description": "Games centered around painted or unpainted miniature figures, often involving measuring movement and detailed combat on terrain-based maps."
+},
+{
+  "name": "Trivia",
+  "description": "Games that challenge players’ knowledge of facts and general information, typically through questions and answers."
+},
+{
+  "name": "Social",
+  "description": "Games driven by conversation, personality, or improvisation, often emphasizing interaction over traditional mechanics."
+}

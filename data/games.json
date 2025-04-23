@@ -1582,5 +1582,200 @@
     "max_players": 4,
     "suggested_min_players": 3,
     "players_desc": "Though it works with 2, the political and tactical dynamics flourish with 3–4 players."
-  }
+  },
+  {
+  "name": "Magic: The Gathering",
+  "description": "Build custom decks and battle opponents using creatures, spells, and strategic combos in this iconic trading card game. Players choose a color or combination of colors, each with unique mechanics and themes, and try to reduce their opponent’s life total to zero. With formats ranging from casual to competitive, Magic offers deep strategy, bluffing, and ever-evolving gameplay across countless expansions.",
+  "learning_curve_rank": 65,
+  "learning_curve_desc": "Basic gameplay is simple, but complex card interactions and tournament rules add significant depth.",
+  "strategic_depth_rank": 90,
+  "strategic_depth_desc": "Deck construction, meta-reading, and in-game decision-making offer vast strategic depth.",
+  "replayability_rank": 95,
+  "replayability_desc": "Constantly updated card sets, diverse formats, and community play styles make replayability virtually limitless.",
+  "category": [
+    "Deckbuilding",
+    "Card Game",
+    "Fantasy"
+  ],
+  "playtime_minutes": 25,
+  "min_players": 2,
+  "max_players": 6,
+  "suggested_min_players": 2,
+  "players_desc": "Designed for 1v1 duels, but also supports multiplayer formats like Commander. Scales well with group size and play style."
+},
+{
+  "name": "Warhammer 40,000",
+  "description": "Command futuristic armies in brutal tabletop warfare set in a grimdark sci-fi universe. Players assemble and paint miniatures, then deploy them in strategic battles involving movement, dice-based combat, and tactical objectives. With faction-specific rules and expansive lore, Warhammer 40k blends hobby craftsmanship with deep, customizable gameplay.",
+  "learning_curve_rank": 85,
+  "learning_curve_desc": "Complex rulebooks, faction-specific mechanics, and hobby elements make it challenging to learn.",
+  "strategic_depth_rank": 90,
+  "strategic_depth_desc": "Army building, terrain usage, and tactical decision-making offer immense strategic depth.",
+  "replayability_rank": 90,
+  "replayability_desc": "Dozens of factions, custom armies, and ever-evolving rules provide nearly endless replay value.",
+  "category": [
+    "Wargame",
+    "Miniatures",
+    "Science Fiction"
+  ],
+  "playtime_minutes": 180,
+  "min_players": 2,
+  "max_players": 4,
+  "suggested_min_players": 2,
+  "players_desc": "Primarily a 2-player game, though larger narrative or team battles can accommodate more with added complexity."
+},
+{
+  "name": "Marvel: Crisis Protocol",
+  "description": "Assemble a team of iconic Marvel heroes and villains in this skirmish miniatures game of cinematic battles. Players build rosters, choose objectives, and use terrain and superpowers to outmaneuver opponents on a 3D battlefield. With dynamic scenarios and a focus on movement, positioning, and teamwork, Crisis Protocol delivers fast-paced tactical action in the Marvel Universe.",
+  "learning_curve_rank": 60,
+  "learning_curve_desc": "Moderate rules complexity with unique character abilities and terrain rules, but intuitive for miniatures players.",
+  "strategic_depth_rank": 70,
+  "strategic_depth_desc": "Team synergy, scenario control, and action economy reward thoughtful planning and adaptation.",
+  "replayability_rank": 85,
+  "replayability_desc": "Roster building, scenario variety, and regular character releases keep gameplay fresh and varied.",
+  "category": [
+    "Miniatures",
+    "Wargame",
+    "Science Fiction"
+  ],
+  "playtime_minutes": 90,
+  "min_players": 2,
+  "max_players": 2,
+  "suggested_min_players": 2,
+  "players_desc": "Strictly a 2-player game, built for head-to-head tactical skirmishes with cinematic flair."
+},
+{
+  "name": "Codenames",
+  "description": "Two teams compete to identify their secret agents based on one-word clues given by their spymaster. Players must think laterally, avoiding innocent bystanders and the dreaded assassin while interpreting clues that link multiple words. Codenames blends deduction, word association, and teamwork in a fast, clever party game.",
+  "learning_curve_rank": 10,
+  "learning_curve_desc": "Simple rules and setup make it accessible to new players in minutes.",
+  "strategic_depth_rank": 40,
+  "strategic_depth_desc": "Clue-giving and word association offer moderate depth, especially with experienced groups.",
+  "replayability_rank": 85,
+  "replayability_desc": "Randomized word grids and ever-changing clues keep the gameplay fresh and engaging across sessions.",
+  "category": [
+    "Word Games",
+    "Deduction & Deception",
+    "Party Games"
+  ],
+  "playtime_minutes": 20,
+  "min_players": 2,
+  "max_players": 8,
+  "suggested_min_players": 4,
+  "players_desc": "Playable with 2 or 3, but shines with 4 or more where team roles and guessing dynamics fully come alive."
+},
+{
+  "name": "Cards Against Humanity",
+  "description": "Fill in the blanks of outrageous prompts using the funniest or most offensive cards in your hand. One player acts as judge each round, picking the card combination that delivers the biggest laugh (or groan). This irreverent party game thrives on shock value, inside jokes, and group chemistry.",
+  "learning_curve_rank": 5,
+  "learning_curve_desc": "Extremely easy to learn with simple mechanics and no strategy required.",
+  "strategic_depth_rank": 5,
+  "strategic_depth_desc": "Minimal strategy; gameplay revolves around humor and timing rather than tactics.",
+  "replayability_rank": 70,
+  "replayability_desc": "Large card pool and group-driven humor keep the game fresh, though repeated plays can rely on the same jokes.",
+  "category": [
+    "Party Games",
+    "Card Game"
+  ],
+  "playtime_minutes": 30,
+  "min_players": 3,
+  "max_players": 10,
+  "suggested_min_players": 4,
+  "players_desc": "Works best with 4 or more to generate varied humor and group reactions; too few players can feel flat."
+},
+{
+  "name": "Bridge",
+  "description": "Partner up and compete in this classic trick-taking card game known for its depth and precision. Bridge involves bidding to determine the contract, then playing out hands with strategic communication, deduction, and memory. Played by millions worldwide in both casual and tournament formats, it's a game of logic, trust, and timing.",
+  "learning_curve_rank": 70,
+  "learning_curve_desc": "The bidding system and communication conventions make it difficult for beginners to master.",
+  "strategic_depth_rank": 90,
+  "strategic_depth_desc": "Requires long-term planning, partnership coordination, and careful inference based on limited information.",
+  "replayability_rank": 85,
+  "replayability_desc": "Endless hand combinations, competitive formats, and the partnership dynamic ensure lasting replay value.",
+  "category": [
+    "Card Game",
+    "Trick-Taking"
+  ],
+  "playtime_minutes": 60,
+  "min_players": 4,
+  "max_players": 4,
+  "suggested_min_players": 4,
+  "players_desc": "Strictly a 4-player game played in fixed partnerships, where coordination and teamwork are essential."
+},
+{
+  "name": "Go",
+  "description": "Compete for territory in this ancient abstract game of infinite depth and subtlety. Players take turns placing stones on a grid, surrounding territory and capturing opponents’ pieces through encirclement. Go is renowned for its elegant rules, vast decision space, and emphasis on balance, timing, and intuition.",
+  "learning_curve_rank": 35,
+  "learning_curve_desc": "Rules are simple to learn, but mastering the game's strategic depth takes a lifetime.",
+  "strategic_depth_rank": 100,
+  "strategic_depth_desc": "Unmatched strategic depth with long-term planning, whole-board thinking, and deep positional judgment.",
+  "replayability_rank": 95,
+  "replayability_desc": "No two games are ever the same, with infinite board states and evolving playstyles over a lifetime of study.",
+  "category": [
+    "Abstract Strategy"
+  ],
+  "playtime_minutes": 60,
+  "min_players": 2,
+  "max_players": 2,
+  "suggested_min_players": 2,
+  "players_desc": "Strictly a 2-player game, where deep concentration and head-to-head reading of moves define the experience."
+},
+{
+  "name": "Trivial Pursuit",
+  "description": "Answer questions across a range of categories to collect colored wedges and complete your trivia wheel. Players move around the board by rolling dice and testing their knowledge of subjects like history, science, pop culture, and more. Trivial Pursuit is a classic quiz game that rewards broad general knowledge and recall under pressure.",
+  "learning_curve_rank": 10,
+  "learning_curve_desc": "Extremely simple rules—players just roll, move, and answer questions.",
+  "strategic_depth_rank": 15,
+  "strategic_depth_desc": "Success depends more on knowledge than strategy, with some decision-making in movement and category selection.",
+  "replayability_rank": 60,
+  "replayability_desc": "Replayability depends on the size of the question bank—repeats can reduce the challenge over time.",
+  "category": [
+    "Party Games",
+    "Trivia"
+  ],
+  "playtime_minutes": 60,
+  "min_players": 2,
+  "max_players": 6,
+  "suggested_min_players": 3,
+  "players_desc": "Playable with 2, but shines with 3 or more where team dynamics and competitive pacing create a more engaging experience."
+},
+{
+  "name": "Quizzo",
+  "description": "A team-based pub quiz game where players collaborate to answer rounds of general knowledge questions. Typically played in bars or social settings, Quizzo emphasizes teamwork, broad knowledge, and quick thinking across diverse topics like history, sports, pop culture, and science. It’s a flexible format designed for fun, competition, and social engagement.",
+  "learning_curve_rank": 5,
+  "learning_curve_desc": "Very easy to understand—players just listen and write down answers as a team.",
+  "strategic_depth_rank": 10,
+  "strategic_depth_desc": "Focus is on collective knowledge and deduction rather than complex strategy.",
+  "replayability_rank": 80,
+  "replayability_desc": "High variety from changing questions, themes, and group dynamics keeps each game fresh.",
+  "category": [
+    "Trivia",
+    "Party Games"
+  ],
+  "playtime_minutes": 90,
+  "min_players": 4,
+  "max_players": 40,
+  "suggested_min_players": 6,
+  "players_desc": "Best with large teams for lively competition; small groups work but reduce the variety of knowledge sources."
+}
+{
+  "name": "The Dating Game",
+  "description": "One contestant questions three hidden suitors in this social deduction-style game based on charm, wit, and intuition. Inspired by the classic TV show, players take turns as the chooser, trying to select their ideal match through clever answers and personality-driven banter. It’s all about reading tone, asking the right questions, and making the final pick without ever seeing the other players.",
+  "learning_curve_rank": 5,
+  "learning_curve_desc": "Roleplay-style format with simple rules and rotating roles makes it easy to pick up.",
+  "strategic_depth_rank": 10,
+  "strategic_depth_desc": "Minimal strategic planning; the game focuses on humor, social cues, and improvisation.",
+  "replayability_rank": 65,
+  "replayability_desc": "Each round feels different based on players' personalities, humor, and question choices.",
+  "category": [
+    "Party Games",
+    "Deduction & Deception",
+    "Social"
+  ],
+  "playtime_minutes": 30,
+  "min_players": 4,
+  "max_players": 10,
+  "suggested_min_players": 5,
+  "players_desc": "Works best with 5 or more so there's enough variety between the questioner and contestants to create engaging dynamics."
+}
+
 ]
