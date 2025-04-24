@@ -97,6 +97,22 @@
   }
 
   body {
-    @apply bg-black text-white; /* Changed from bg-background to bg-black */
+    @apply bg-black text-white;
   }
 }
+
+/* Ensure scroll area has dark background */
+.scrollbar-track {
+  @apply bg-black;
+}
+
+/* Remove any background from the main container */
+#root {
+  @apply bg-transparent;
+}
+
+/* Style the content container */
+.content-container {
+  @apply bg-transparent;
+}
+
