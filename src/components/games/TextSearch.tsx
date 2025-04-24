@@ -10,10 +10,10 @@ interface TextSearchProps {
 export const TextSearch = ({ value, onChange }: TextSearchProps) => (
   <div className="relative w-full md:w-64 max-w-full">
     <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center">
-      <Search className="w-4 h-4 text-muted-foreground" />
+      <Search className="w-4 h-4 text-white" />
     </span>
     <Input
-      className="w-full pl-10 pr-8"
+      className="w-full pl-10 pr-8 text-white border-white/20"
       type="text"
       placeholder="Search games..."
       value={value}
@@ -28,7 +28,7 @@ export const TextSearch = ({ value, onChange }: TextSearchProps) => (
         tabIndex={-1}
         aria-label="Clear search"
       >
-        <X className="w-4 h-4 text-muted-foreground" />
+        <X className="w-4 h-4 text-white" />
       </button>
     )}
   </div>

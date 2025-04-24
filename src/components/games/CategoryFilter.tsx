@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { cn } from "@/lib/utils";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -26,8 +27,11 @@ export const CategoryFilter = ({
     <div className="flex flex-col w-full md:w-64 max-w-full">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="w-full flex items-center gap-2 justify-start">
-            <Filter className="w-4 h-4" />
+          <Button 
+            variant="outline" 
+            className="w-full flex items-center gap-2 justify-start text-white border-white/20"
+          >
+            <Filter className="w-4 h-4 text-white" />
             Category
           </Button>
         </DropdownMenuTrigger>

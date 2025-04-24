@@ -30,7 +30,7 @@ export const SortControls = ({
 
   return (
     <div
-      className="flex items-center w-full md:w-64 max-w-full border border-input rounded-md bg-background overflow-hidden"
+      className="flex items-center w-full md:w-64 max-w-full border border-white/20 rounded-md bg-background overflow-hidden"
       onClick={handleClick}
     >
       <button
@@ -38,9 +38,8 @@ export const SortControls = ({
         aria-label="Toggle sort direction"
         onClick={onDirectionToggle}
         className={cn(
-          "w-10 h-10 flex items-center justify-center border-0 border-r border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors font-medium", 
-          // Added font-medium to match bold styling
-          "border-r border-input rounded-l-md"
+          "w-10 h-10 flex items-center justify-center border-0 border-r border-white/20 bg-background hover:bg-accent hover:text-accent-foreground transition-colors font-medium text-white", 
+          "border-r border-white/20 rounded-l-md"
         )}
         tabIndex={0}
       >
@@ -57,8 +56,7 @@ export const SortControls = ({
         <SelectTrigger
           hideChevron
           className={cn(
-            "flex-1 w-0 h-10 border-0 border-l border-input rounded-none focus:ring-0 transition-colors font-medium",
-            // Added font-medium to match bold styling
+            "flex-1 w-0 h-10 border-0 border-l border-white/20 rounded-none focus:ring-0 transition-colors font-medium text-white",
             "rounded-r-md"
           )}
         >

@@ -21,9 +21,9 @@ export const PlayerCountFilter = ({ selected, onChange }: PlayerCountFilterProps
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
       <div className="flex items-center gap-2">
-        <Users className="w-4 h-4" />
+        <Users className="w-4 h-4 text-white" />
         <Select value={selected} onValueChange={onChange}>
-          <SelectTrigger className={cn("w-full md:w-64 max-w-full", "font-medium")}>
+          <SelectTrigger className={cn("w-full md:w-64 max-w-full text-white border-white/20", "font-medium")}>
             <SelectValue placeholder="Any players" />
           </SelectTrigger>
           <SelectContent>

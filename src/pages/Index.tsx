@@ -142,9 +142,9 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 onClick={resetFilters}
-                className={cn("gap-2 w-full justify-start", "font-medium")}
+                className={cn("gap-2 w-full justify-start", "font-medium text-white border-white/20")}
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="w-4 h-4 mr-2 text-white" />
                 Reset Filters
               </Button>
             </div>
