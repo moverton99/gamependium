@@ -20,10 +20,10 @@ interface PlayerCountFilterProps {
 export const PlayerCountFilter = ({ selected, onChange }: PlayerCountFilterProps) => {
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 bg-white/90 rounded-md px-3 py-2 border border-gray-300">
         <Users className="w-4 h-4 text-black" />
         <Select value={selected} onValueChange={onChange}>
-          <SelectTrigger className={cn("w-full md:w-64 max-w-full text-black border-gray-300 bg-white/90", "font-medium")}>
+          <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}>
             <SelectValue placeholder="Any players" />
           </SelectTrigger>
           <SelectContent>
