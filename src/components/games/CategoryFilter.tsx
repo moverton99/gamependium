@@ -29,9 +29,9 @@ export const CategoryFilter = ({
         <DropdownMenuTrigger asChild>
           <Button 
             variant="outline" 
-            className="w-full flex items-center gap-2 justify-start text-white border-white/20"
+            className="w-full flex items-center gap-2 justify-start text-black border-gray-300 bg-white/90"
           >
-            <Filter className="w-4 h-4 text-white" />
+            <Filter className="w-4 h-4 text-black" />
             Category
           </Button>
         </DropdownMenuTrigger>

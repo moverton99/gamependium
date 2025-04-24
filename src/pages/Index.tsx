@@ -1,4 +1,3 @@
-
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -142,9 +141,9 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 onClick={resetFilters}
-                className={cn("gap-2 w-full justify-start", "font-medium text-white border-white/20")}
+                className={cn("gap-2 w-full justify-start", "font-medium text-black border-gray-300 bg-white/90")}
               >
-                <RefreshCw className="w-4 h-4 mr-2 text-white" />
+                <RefreshCw className="w-4 h-4 mr-2 text-black" />
                 Reset Filters
               </Button>
             </div>
