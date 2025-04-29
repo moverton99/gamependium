@@ -23,16 +23,21 @@ export const CategoryFilter = ({
   onCategoryToggle,
   onCategoryRemove,
 }: CategoryFilterProps) => {
+  // Determine button text based on selected categories
+  const buttonText = selectedCategories.length === 1 
+    ? selectedCategories[0] 
+    : "Category";
+
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
             variant="outline" 
-            className="w-full flex items-center gap-2 justify-start text-black border-gray-300 bg-white/90"
+            className="w-full flex items-center gap-2 justify-start text-black border-gray-300 bg-white/90 text-ellipsis overflow-hidden"
           >
-            <Filter className="w-4 h-4 text-black" />
-            Category
+            <Filter className="w-4 h-4 text-black flex-shrink-0" />
+            <span className="truncate">{buttonText}</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-[500px] p-0">
