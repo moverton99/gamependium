@@ -55,7 +55,10 @@ export const DetailedGameCard = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col bg-white text-black">
+      <DialogContent 
+        className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col bg-white text-black top-[15%] translate-y-0"
+        style={{ position: 'fixed', top: '15%', transform: 'translateX(-50%)' }}
+      >
         <DialogHeader className="pb-2">
           <DialogTitle className="text-2xl font-bold text-black">{name}</DialogTitle>
         </DialogHeader>
