@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -31,25 +32,31 @@ const Index = () => {
   }, []);
 
   const handleCategoryToggle = (category: string, checked: boolean) => {
-    console.log("Toggling category:", category, "checked:", checked);
+    console.log("handleCategoryToggle called with:", category, "checked:", checked);
+    
     setSelectedCategories(prevCategories => {
-      if (checked) {
-        return [...prevCategories, category];
-      } else {
-        return prevCategories.filter(cat => cat !== category);
-      }
+      const newCategories = checked 
+        ? [...prevCategories, category] 
+        : prevCategories.filter(cat => cat !== category);
+      
+      console.log("Setting selected categories:", newCategories);
+      return newCategories;
     });
   };
 
   const removeCategory = (categoryToRemove: string) => {
-    console.log("Removing category:", categoryToRemove);
-    setSelectedCategories(prevCategories => 
-      prevCategories.filter(cat => cat !== categoryToRemove)
-    );
+    console.log("removeCategory called with:", categoryToRemove);
+    
+    setSelectedCategories(prevCategories => {
+      const newCategories = prevCategories.filter(cat => cat !== categoryToRemove);
+      console.log("After removal, categories:", newCategories);
+      return newCategories;
+    });
   };
 
   useEffect(() => {
     const handleCategorySelected = (event: CustomEvent<string>) => {
+      console.log("categorySelected event received with:", event.detail);
       setSelectedCategories([event.detail]);
     };
 
@@ -60,9 +67,9 @@ const Index = () => {
     };
   }, []);
 
-  // Add console log to track state changes
+  // Add detailed console log to track state changes
   useEffect(() => {
-    console.log("Selected categories updated:", selectedCategories);
+    console.log("Selected categories state updated:", selectedCategories);
   }, [selectedCategories]);
 
   function isInPlaytimeGroup(game: typeof games[0], group: string) {
@@ -95,7 +102,7 @@ const Index = () => {
       selectedPlaytime, 
       search, 
       selectedPlayerCount,
-      selectedCategories  // Added to help debug the issue
+      selectedCategories  // For debugging
     });
 
     let filteredGames = [...games]
@@ -112,6 +119,8 @@ const Index = () => {
       filteredGames = filteredGames.filter(game => game.name !== "Existence");
     }
 
+    console.log(`Filtered games count: ${filteredGames.length}`);
+    
     return filteredGames.sort((a, b) => {
       const multiplier = sortDirection === "asc" ? 1 : -1;
 

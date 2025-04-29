@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -27,6 +28,11 @@ export const CategoryFilter = ({
   const buttonText = selectedCategories.length === 1 
     ? selectedCategories[0] 
     : "Category";
+    
+  // Log when props change
+  useEffect(() => {
+    console.log("CategoryFilter received selectedCategories:", selectedCategories);
+  }, [selectedCategories]);
 
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
@@ -40,7 +46,7 @@ export const CategoryFilter = ({
             <span className="truncate">{buttonText}</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-[500px] p-0">
+        <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
             <div className="grid grid-cols-2 gap-1 p-2">
               {categories.map((category) => (
@@ -50,9 +56,11 @@ export const CategoryFilter = ({
                   onSelect={(e) => {
                     // Prevent the default selection behavior which might be causing the issue
                     e.preventDefault();
+                    const willBeChecked = !selectedCategories.includes(category.name);
+                    console.log(`Selecting category: ${category.name}, will be checked: ${willBeChecked}`);
                     onCategoryToggle(
                       category.name, 
-                      !selectedCategories.includes(category.name)
+                      willBeChecked
                     );
                   }}
                   className="p-2"
