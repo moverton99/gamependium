@@ -25,9 +25,12 @@ export const CategoryFilter = ({
   onCategoryRemove,
 }: CategoryFilterProps) => {
   // Determine button text based on selected categories
-  const buttonText = selectedCategories.length === 1 
-    ? selectedCategories[0] 
-    : "Category";
+  const buttonText = selectedCategories.length === 0
+    ? "Category"
+    : selectedCategories.length === 1
+      ? selectedCategories[0]
+      : selectedCategories.slice(0, 2).join(", ") + 
+        (selectedCategories.length > 2 ? `, +${selectedCategories.length - 2}` : "");
     
   // Log when props change
   useEffect(() => {
@@ -49,10 +52,12 @@ export const CategoryFilter = ({
         <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
             <div className="grid grid-cols-2 gap-1 p-2">
-              {categories.map((category) => (
+              {categories.map((category) => {
+                const isSelected = selectedCategories.includes(category.name);
+                return (
                 <DropdownMenuCheckboxItem
                   key={category.name}
-                  checked={selectedCategories.includes(category.name)}
+                  checked={isSelected}
                   onSelect={(e) => {
                     // Prevent the default selection behavior which might be causing the issue
                     e.preventDefault();
@@ -63,11 +68,18 @@ export const CategoryFilter = ({
                       willBeChecked
                     );
                   }}
-                  className="p-2"
+                  className={cn(
+                    "p-2",
+                    isSelected && "bg-primary/10 font-medium"
+                  )}
                 >
-                  {category.name}
+                  <div className="pl-6 relative">
+                    {/* Ensure text doesn't overlap with the checkbox */}
+                    {category.name}
+                  </div>
                 </DropdownMenuCheckboxItem>
-              ))}
+                );
+              })}
             </div>
           </ScrollArea>
         </DropdownMenuContent>
