@@ -47,7 +47,14 @@ export const CategoryFilter = ({
                 <DropdownMenuCheckboxItem
                   key={category.name}
                   checked={selectedCategories.includes(category.name)}
-                  onCheckedChange={(checked) => onCategoryToggle(category.name, checked)}
+                  onSelect={(e) => {
+                    // Prevent the default selection behavior which might be causing the issue
+                    e.preventDefault();
+                    onCategoryToggle(
+                      category.name, 
+                      !selectedCategories.includes(category.name)
+                    );
+                  }}
                   className="p-2"
                 >
                   {category.name}

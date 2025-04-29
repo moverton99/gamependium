@@ -31,13 +31,21 @@ const Index = () => {
   }, []);
 
   const handleCategoryToggle = (category: string, checked: boolean) => {
-    setSelectedCategories(old => 
-      checked ? [...old, category] : old.filter(cat => cat !== category)
-    );
+    console.log("Toggling category:", category, "checked:", checked);
+    setSelectedCategories(prevCategories => {
+      if (checked) {
+        return [...prevCategories, category];
+      } else {
+        return prevCategories.filter(cat => cat !== category);
+      }
+    });
   };
 
   const removeCategory = (categoryToRemove: string) => {
-    setSelectedCategories(old => old.filter(cat => cat !== categoryToRemove));
+    console.log("Removing category:", categoryToRemove);
+    setSelectedCategories(prevCategories => 
+      prevCategories.filter(cat => cat !== categoryToRemove)
+    );
   };
 
   useEffect(() => {
@@ -51,6 +59,11 @@ const Index = () => {
       window.removeEventListener('categorySelected', handleCategorySelected as EventListener);
     };
   }, []);
+
+  // Add console log to track state changes
+  useEffect(() => {
+    console.log("Selected categories updated:", selectedCategories);
+  }, [selectedCategories]);
 
   function isInPlaytimeGroup(game: typeof games[0], group: string) {
     const pt = game.playtime_minutes ?? 0;
@@ -76,7 +89,14 @@ const Index = () => {
   };
 
   const sortedAndFilteredGames = useMemo(() => {
-    console.log("Recomputing sorted games with:", { sortBy, sortDirection, selectedPlaytime, search, selectedPlayerCount });
+    console.log("Recomputing sorted games with:", { 
+      sortBy, 
+      sortDirection, 
+      selectedPlaytime, 
+      search, 
+      selectedPlayerCount,
+      selectedCategories  // Added to help debug the issue
+    });
 
     let filteredGames = [...games]
       .filter(game =>
