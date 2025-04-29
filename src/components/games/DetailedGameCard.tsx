@@ -55,70 +55,70 @@ export const DetailedGameCard = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col bg-white text-black">
         <DialogHeader className="pb-2">
-          <DialogTitle className="text-2xl font-bold">{name}</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-black">{name}</DialogTitle>
         </DialogHeader>
         
         <ScrollArea className="flex-1 overflow-auto pr-4">
           <div className="space-y-4 pb-4">
             <div className="flex flex-col gap-2">
-              <div className="text-lg font-semibold">Description</div>
+              <div className="text-lg font-semibold text-black">Description</div>
               <p className="text-gray-700">{description}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold">
+                <div className="flex items-center gap-2 font-semibold text-black">
                   <GraduationCap className="w-5 h-5" />
                   <span>Learning Curve</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">{learningCurveRank}/100</span>
+                  <span className="text-2xl font-bold text-black">{learningCurveRank}/100</span>
                   <p className="text-sm text-gray-600">{learningCurveDesc}</p>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold">
+                <div className="flex items-center gap-2 font-semibold text-black">
                   <Brain className="w-5 h-5" />
                   <span>Strategic Depth</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">{strategicDepthRank}/100</span>
+                  <span className="text-2xl font-bold text-black">{strategicDepthRank}/100</span>
                   <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold">
+                <div className="flex items-center gap-2 font-semibold text-black">
                   <Repeat className="w-5 h-5" />
                   <span>Replayability</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">{replayabilityRank}/100</span>
+                  <span className="text-2xl font-bold text-black">{replayabilityRank}/100</span>
                   <p className="text-sm text-gray-600">{replayabilityDesc}</p>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold">
+                <div className="flex items-center gap-2 font-semibold text-black">
                   <Clock className="w-5 h-5" />
                   <span>Playtime</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">{playtimeMinutes}</span>
+                  <span className="text-2xl font-bold text-black">{playtimeMinutes}</span>
                   <p className="text-sm text-gray-600">minutes</p>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold">
+                <div className="flex items-center gap-2 font-semibold text-black">
                   <Users className="w-5 h-5" />
                   <span>Players</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">{minPlayers}-{maxPlayers}</span>
+                  <span className="text-2xl font-bold text-black">{minPlayers}-{maxPlayers}</span>
                   <p className="text-sm text-gray-600">Suggested min: {suggestedMinPlayers}</p>
                   <p className="text-xs text-gray-500">{playersDesc}</p>
                 </div>
@@ -126,7 +126,7 @@ export const DetailedGameCard = ({
             </div>
 
             <div className="space-y-1">
-              <div className="font-semibold">Categories</div>
+              <div className="font-semibold text-black">Categories</div>
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => (
                   <Tooltip key={cat}>
