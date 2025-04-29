@@ -1,5 +1,5 @@
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -56,15 +56,23 @@ export const DetailedGameCard = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col bg-white text-black top-[15%] translate-y-0"
-        style={{ position: 'fixed', top: '15%', transform: 'translateX(-50%)' }}
+        className={`max-w-3xl bg-white text-black ${isMobile ? 'h-[85vh]' : 'max-h-[90vh]'}`}
+        style={{ 
+          position: 'fixed', 
+          top: isMobile ? '8%' : '15%', 
+          transform: 'translateX(-50%)',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
       >
         <DialogHeader className="pb-2">
           <DialogTitle className="text-2xl font-bold text-black">{name}</DialogTitle>
+          <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
-        <ScrollArea className="flex-1 overflow-auto pr-4">
-          <div className="space-y-4 pb-4">
+        <ScrollArea className="flex-grow overflow-auto pr-4">
+          <div className="space-y-4 pb-6">
             <div className="flex flex-col gap-2">
               <div className="text-lg font-semibold text-black">Description</div>
               <p className="text-gray-700">{description}</p>
@@ -130,7 +138,7 @@ export const DetailedGameCard = ({
 
             <div className="space-y-1">
               <div className="font-semibold text-black">Categories</div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 pb-2">
                 {categories.map((cat) => (
                   <Tooltip key={cat}>
                     <TooltipTrigger asChild>
