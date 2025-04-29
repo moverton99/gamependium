@@ -6,6 +6,8 @@ import {
   DropdownMenuContent,
   DropdownMenuCheckboxItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
@@ -37,6 +39,14 @@ export const CategoryFilter = ({
     console.log("CategoryFilter received selectedCategories:", selectedCategories);
   }, [selectedCategories]);
 
+  const clearAllSelections = () => {
+    console.log("Clearing all category selections");
+    // Remove all selected categories
+    selectedCategories.forEach(category => {
+      onCategoryRemove(category);
+    });
+  };
+
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
       <DropdownMenu>
@@ -51,6 +61,16 @@ export const CategoryFilter = ({
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
+            {/* Add "All" option at the top */}
+            <DropdownMenuItem
+              className="p-2 hover:bg-primary/10 font-medium"
+              onClick={clearAllSelections}
+            >
+              <div className="px-6">All (Clear Selections)</div>
+            </DropdownMenuItem>
+            
+            <DropdownMenuSeparator className="my-1" />
+            
             <div className="grid grid-cols-2 gap-1 p-2">
               {categories.map((category) => {
                 const isSelected = selectedCategories.includes(category.name);
