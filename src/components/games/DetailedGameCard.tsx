@@ -56,14 +56,16 @@ export const DetailedGameCard = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className={`max-w-3xl bg-white text-black ${isMobile ? 'h-[85vh]' : 'max-h-[90vh]'}`}
+        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[80vh]' : 'max-h-[90vh]'}`}
         style={{ 
           position: 'fixed', 
-          top: isMobile ? '8%' : '15%', 
+          top: isMobile ? '5%' : '15%', 
           transform: 'translateX(-50%)',
           overflow: 'hidden',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          height: 'auto',
+          maxHeight: isMobile ? '90vh' : '90vh'
         }}
       >
         <DialogHeader className="pb-2">
@@ -71,93 +73,95 @@ export const DetailedGameCard = ({
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
-        <ScrollArea className="flex-grow overflow-auto pr-4">
-          <div className="space-y-4 pb-6">
-            <div className="flex flex-col gap-2">
-              <div className="text-lg font-semibold text-black">Description</div>
-              <p className="text-gray-700">{description}</p>
+        <div className="flex-grow overflow-auto">
+          <ScrollArea className="h-full w-full pr-4">
+            <div className="space-y-4 pb-8 px-1">
+              <div className="flex flex-col gap-2">
+                <div className="text-lg font-semibold text-black">Description</div>
+                <p className="text-gray-700">{description}</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-black">
+                    <GraduationCap className="w-5 h-5" />
+                    <span>Learning Curve</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-black">{learningCurveRank}/100</span>
+                    <p className="text-sm text-gray-600">{learningCurveDesc}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-black">
+                    <Brain className="w-5 h-5" />
+                    <span>Strategic Depth</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-black">{strategicDepthRank}/100</span>
+                    <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-black">
+                    <Repeat className="w-5 h-5" />
+                    <span>Replayability</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-black">{replayabilityRank}/100</span>
+                    <p className="text-sm text-gray-600">{replayabilityDesc}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-black">
+                    <Clock className="w-5 h-5" />
+                    <span>Playtime</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-black">{playtimeMinutes}</span>
+                    <p className="text-sm text-gray-600">minutes</p>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-black">
+                    <Users className="w-5 h-5" />
+                    <span>Players</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-black">{minPlayers}-{maxPlayers}</span>
+                    <p className="text-sm text-gray-600">Suggested min: {suggestedMinPlayers}</p>
+                    <p className="text-xs text-gray-500">{playersDesc}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-1 pb-4">
+                <div className="font-semibold text-black">Categories</div>
+                <div className="flex flex-wrap gap-2 pb-6">
+                  {categories.map((cat) => (
+                    <Tooltip key={cat}>
+                      <TooltipTrigger asChild>
+                        <span
+                          className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
+                          onClick={() => handleCategoryClick(cat)}
+                        >
+                          {cat}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        {categoryDescriptionMap[cat] || "No description found"}
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold text-black">
-                  <GraduationCap className="w-5 h-5" />
-                  <span>Learning Curve</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-black">{learningCurveRank}/100</span>
-                  <p className="text-sm text-gray-600">{learningCurveDesc}</p>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold text-black">
-                  <Brain className="w-5 h-5" />
-                  <span>Strategic Depth</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-black">{strategicDepthRank}/100</span>
-                  <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold text-black">
-                  <Repeat className="w-5 h-5" />
-                  <span>Replayability</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-black">{replayabilityRank}/100</span>
-                  <p className="text-sm text-gray-600">{replayabilityDesc}</p>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold text-black">
-                  <Clock className="w-5 h-5" />
-                  <span>Playtime</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-black">{playtimeMinutes}</span>
-                  <p className="text-sm text-gray-600">minutes</p>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 font-semibold text-black">
-                  <Users className="w-5 h-5" />
-                  <span>Players</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-black">{minPlayers}-{maxPlayers}</span>
-                  <p className="text-sm text-gray-600">Suggested min: {suggestedMinPlayers}</p>
-                  <p className="text-xs text-gray-500">{playersDesc}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="font-semibold text-black">Categories</div>
-              <div className="flex flex-wrap gap-2 pb-2">
-                {categories.map((cat) => (
-                  <Tooltip key={cat}>
-                    <TooltipTrigger asChild>
-                      <span
-                        className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
-                        onClick={() => handleCategoryClick(cat)}
-                      >
-                        {cat}
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      {categoryDescriptionMap[cat] || "No description found"}
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </div>
-          </div>
-        </ScrollArea>
+          </ScrollArea>
+        </div>
       </DialogContent>
     </Dialog>
   );
