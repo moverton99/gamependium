@@ -18,6 +18,7 @@ interface CategoryFilterProps {
   selectedCategories: string[];
   onCategoryToggle: (category: string, checked: boolean) => void;
   onCategoryRemove: (category: string) => void;
+  active?: boolean;
 }
 
 export const CategoryFilter = ({
@@ -25,6 +26,7 @@ export const CategoryFilter = ({
   selectedCategories,
   onCategoryToggle,
   onCategoryRemove,
+  active = false,
 }: CategoryFilterProps) => {
   // Determine button text based on selected categories
   const buttonText = selectedCategories.length === 0
@@ -53,7 +55,10 @@ export const CategoryFilter = ({
         <DropdownMenuTrigger asChild>
           <Button 
             variant="outline" 
-            className="w-full flex items-center gap-2 justify-start text-black border-gray-300 bg-white/90 text-ellipsis overflow-hidden"
+            className={cn(
+              "w-full flex items-center gap-2 justify-start text-black border-gray-300 text-ellipsis overflow-hidden",
+              active ? "bg-[#bcd8f7]" : "bg-white/90"
+            )}
           >
             <Filter className="w-4 h-4 text-black flex-shrink-0" />
             <span className="truncate">{buttonText}</span>

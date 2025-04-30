@@ -46,6 +46,12 @@ export const FilterBar = ({
 }: FilterBarProps) => {
   const isMobile = useIsMobile();
 
+  // Determine background colors for active filters
+  const hasCategoryFilter = selectedCategories.length > 0;
+  const hasSearchFilter = search.trim() !== "";
+  const hasPlaytimeFilter = selectedPlaytime !== "all";
+  const hasPlayerCountFilter = selectedPlayerCount !== "any";
+
   return (
     <>
       {/* Mobile: vertical stack with consistent spacing */}
@@ -53,7 +59,7 @@ export const FilterBar = ({
         <div className="flex flex-col gap-3 mb-3 w-full max-w-6xl">
           {/* Search */}
           <div className="w-full">
-            <TextSearch value={search} onChange={onSearchChange} />
+            <TextSearch value={search} onChange={onSearchChange} active={hasSearchFilter} />
           </div>
           
           {/* Category */}
@@ -63,17 +69,18 @@ export const FilterBar = ({
               selectedCategories={selectedCategories}
               onCategoryToggle={onCategoryToggle}
               onCategoryRemove={onCategoryRemove}
+              active={hasCategoryFilter}
             />
           </div>
           
           {/* Playtime */}
           <div className="w-full">
-            <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} />
+            <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} active={hasPlaytimeFilter} />
           </div>
           
           {/* Player Count */}
           <div className="w-full">
-            <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} />
+            <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} active={hasPlayerCountFilter} />
           </div>
           
           {/* Reset Filters */}
@@ -82,6 +89,7 @@ export const FilterBar = ({
               variant="outline" 
               onClick={onResetFilters}
               className={cn("gap-2 w-full justify-start", "font-medium text-black border-gray-300 bg-white/90")}
+              disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
             >
               <RefreshCw className="w-4 h-4 mr-2 text-black" />
               Reset Filters
@@ -95,6 +103,7 @@ export const FilterBar = ({
               sortDirection={sortDirection}
               onSortChange={onSortChange}
               onDirectionToggle={onSortDirectionToggle}
+              active={sortBy !== "name" || sortDirection !== "asc"}
             />
           </div>
         </div>
@@ -104,7 +113,7 @@ export const FilterBar = ({
           {/* Left column: Search and Category */}
           <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
-              <TextSearch value={search} onChange={onSearchChange} />
+              <TextSearch value={search} onChange={onSearchChange} active={hasSearchFilter} />
             </div>
             <div className="w-full md:w-64 max-w-full">
               <CategoryFilter
@@ -112,16 +121,17 @@ export const FilterBar = ({
                 selectedCategories={selectedCategories}
                 onCategoryToggle={onCategoryToggle}
                 onCategoryRemove={onCategoryRemove}
+                active={hasCategoryFilter}
               />
             </div>
           </div>
           {/* Center column: Playtime and Player Count */}
           <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
-              <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} />
+              <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} active={hasPlaytimeFilter} />
             </div>
             <div className="w-full md:w-64 max-w-full">
-              <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} />
+              <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} active={hasPlayerCountFilter} />
             </div>
           </div>
           {/* Right column: Reset Filters + Sort */}
@@ -131,6 +141,7 @@ export const FilterBar = ({
                 variant="outline" 
                 onClick={onResetFilters}
                 className={cn("gap-2 w-full justify-start", "font-medium text-black border-gray-300 bg-white/90")}
+                disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
               >
                 <RefreshCw className="w-4 h-4 mr-2 text-black" />
                 Reset Filters
@@ -142,6 +153,7 @@ export const FilterBar = ({
                 sortDirection={sortDirection}
                 onSortChange={onSortChange}
                 onDirectionToggle={onSortDirectionToggle}
+                active={sortBy !== "name" || sortDirection !== "asc"}
               />
             </div>
           </div>

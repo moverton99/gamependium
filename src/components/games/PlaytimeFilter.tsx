@@ -34,12 +34,16 @@ const PLAYTIME_GROUPS = [
 interface PlaytimeFilterProps {
   selected: string;
   onChange: (value: string) => void;
+  active?: boolean;
 }
 
-export const PlaytimeFilter = ({ selected, onChange }: PlaytimeFilterProps) => {
+export const PlaytimeFilter = ({ selected, onChange, active = false }: PlaytimeFilterProps) => {
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
-      <div className="flex items-center gap-2 bg-white/90 rounded-md px-3 py-2 border border-gray-300">
+      <div className={cn(
+        "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
+        active ? "bg-[#bcd8f7]" : "bg-white/90"
+      )}>
         <Clock className="w-4 h-4 text-black" />
         <Select value={selected} onValueChange={onChange}>
           <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}>

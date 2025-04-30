@@ -16,6 +16,7 @@ interface SortControlsProps {
   sortDirection: "asc" | "desc";
   onSortChange: (value: SortOption) => void;
   onDirectionToggle: () => void;
+  active?: boolean;
 }
 
 export const SortControls = ({
@@ -23,6 +24,7 @@ export const SortControls = ({
   sortDirection,
   onSortChange,
   onDirectionToggle,
+  active = false,
 }: SortControlsProps) => {
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -30,7 +32,10 @@ export const SortControls = ({
 
   return (
     <div
-      className="flex items-center w-full md:w-64 max-w-full border border-gray-300 rounded-md bg-white/90 overflow-hidden"
+      className={cn(
+        "flex items-center w-full md:w-64 max-w-full border border-gray-300 rounded-md overflow-hidden",
+        active ? "bg-[#bcd8f7]" : "bg-white/90"
+      )}
       onClick={handleClick}
     >
       <button
