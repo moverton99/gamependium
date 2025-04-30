@@ -88,29 +88,36 @@ export const CategoryFilter = ({
                 <div className="px-6">All (Clear Selections)</div>
               </DropdownMenuItem>
               
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="ghost" className="h-8 w-8 p-0" onClick={(e) => e.stopPropagation()}>
-                    <Info className="h-4 w-4" />
-                    <span className="sr-only">Category Info</span>
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto">
-                  <DialogHeader>
-                    <DialogTitle>Category Descriptions</DialogTitle>
-                  </DialogHeader>
-                  <ScrollArea className="h-[60vh] pr-4">
-                    <div className="space-y-4">
-                      {categories.map((category) => (
-                        <div key={category.name} className="border-b pb-2 last:border-0">
-                          <h4 className="font-medium">{category.name}</h4>
-                          <p className="text-sm text-muted-foreground">{categoryDescriptionMap[category.name] || "No description available"}</p>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="ghost" className="h-12 w-12 p-0" onClick={(e) => e.stopPropagation()}>
+                        <Info className="h-6 w-6" />
+                        <span className="sr-only">Category Info</span>
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle>Category Descriptions</DialogTitle>
+                      </DialogHeader>
+                      <ScrollArea className="h-[60vh] pr-4">
+                        <div className="space-y-4">
+                          {categories.map((category) => (
+                            <div key={category.name} className="border-b pb-2 last:border-0">
+                              <h4 className="font-medium">{category.name}</h4>
+                              <p className="text-sm text-muted-foreground">{categoryDescriptionMap[category.name] || "No description available"}</p>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </ScrollArea>
-                </DialogContent>
-              </Dialog>
+                      </ScrollArea>
+                    </DialogContent>
+                  </Dialog>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Show descriptions
+                </TooltipContent>
+              </Tooltip>
             </div>
             
             <DropdownMenuSeparator className="my-1" />
