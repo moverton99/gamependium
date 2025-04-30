@@ -38,20 +38,31 @@ interface PlaytimeFilterProps {
 }
 
 export const PlaytimeFilter = ({ selected, onChange, active = false }: PlaytimeFilterProps) => {
+  // Handler to stop event propagation on any click within the component
+  const handleContainerClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="flex flex-col w-full md:w-64 max-w-full">
+    <div className="flex flex-col w-full md:w-64 max-w-full" onClick={handleContainerClick}>
       <div className={cn(
         "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
         active ? "bg-[#bcd8f7]" : "bg-white/90"
       )}>
         <Clock className="w-4 h-4 text-black" />
-        <Select value={selected} onValueChange={onChange}>
+        <Select value={selected} onValueChange={(value) => {
+          // Ensure propagation is stopped when changing values
+          onChange(value);
+        }}>
           <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}>
             <SelectValue placeholder="Select playtime" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white" onClick={(e) => {
+            // Extra protection for click events inside content
+            e.stopPropagation();
+          }}>
             {PLAYTIME_GROUPS.map((group) => (
-              <SelectItem key={group.value} value={group.value}>
+              <SelectItem key={group.value} value={group.value} className="cursor-pointer">
                 {group.label}
               </SelectItem>
             ))}
