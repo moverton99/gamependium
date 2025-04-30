@@ -51,6 +51,8 @@ export const FilterBar = ({
   const hasSearchFilter = search.trim() !== "";
   const hasPlaytimeFilter = selectedPlaytime !== "all";
   const hasPlayerCountFilter = selectedPlayerCount !== "any";
+  const hasSortFilter = sortBy !== "name" || sortDirection !== "asc";
+  const hasAnyFilter = hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter || hasSortFilter;
 
   return (
     <>
@@ -85,18 +87,20 @@ export const FilterBar = ({
           
           {/* Reset Filters */}
           <div className="w-full">
-            <Button 
-              variant="outline" 
-              onClick={onResetFilters}
-              className={cn(
-                "gap-2 w-full justify-start", 
-                "font-medium text-black border-gray-300 bg-white/90"
-              )}
-              disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
-            >
-              <RefreshCw className="w-4 h-4 mr-2 text-black" />
-              Reset Filters
-            </Button>
+            <div className={cn(
+              "flex items-center w-full border border-gray-300 rounded-md overflow-hidden",
+              hasAnyFilter ? "bg-[#bcd8f7]" : "bg-white/90"
+            )}>
+              <Button 
+                variant="ghost" 
+                onClick={onResetFilters}
+                className="gap-2 w-full justify-start font-medium text-black h-10 px-3"
+                disabled={!hasAnyFilter}
+              >
+                <RefreshCw className="w-4 h-4 text-black" />
+                Reset Filters
+              </Button>
+            </div>
           </div>
           
           {/* Sort Controls */}
@@ -106,7 +110,7 @@ export const FilterBar = ({
               sortDirection={sortDirection}
               onSortChange={onSortChange}
               onDirectionToggle={onSortDirectionToggle}
-              active={sortBy !== "name" || sortDirection !== "asc"}
+              active={hasSortFilter}
             />
           </div>
         </div>
@@ -140,18 +144,20 @@ export const FilterBar = ({
           {/* Right column: Reset Filters + Sort */}
           <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
-              <Button 
-                variant="outline" 
-                onClick={onResetFilters}
-                className={cn(
-                  "gap-2 w-full justify-start", 
-                  "font-medium text-black border-gray-300 bg-white/90"
-                )}
-                disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
-              >
-                <RefreshCw className="w-4 h-4 mr-2 text-black" />
-                Reset Filters
-              </Button>
+              <div className={cn(
+                "flex items-center w-full border border-gray-300 rounded-md overflow-hidden",
+                hasAnyFilter ? "bg-[#bcd8f7]" : "bg-white/90"
+              )}>
+                <Button 
+                  variant="ghost" 
+                  onClick={onResetFilters}
+                  className="gap-2 w-full justify-start font-medium text-black h-10 px-3"
+                  disabled={!hasAnyFilter}
+                >
+                  <RefreshCw className="w-4 h-4 text-black" />
+                  Reset Filters
+                </Button>
+              </div>
             </div>
             <div className="w-full md:w-64 max-w-full">
               <SortControls
@@ -159,7 +165,7 @@ export const FilterBar = ({
                 sortDirection={sortDirection}
                 onSortChange={onSortChange}
                 onDirectionToggle={onSortDirectionToggle}
-                active={sortBy !== "name" || sortDirection !== "asc"}
+                active={hasSortFilter}
               />
             </div>
           </div>
@@ -168,4 +174,3 @@ export const FilterBar = ({
     </>
   );
 };
-

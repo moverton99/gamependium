@@ -42,10 +42,7 @@ export const SortControls = ({
         type="button"
         aria-label="Toggle sort direction"
         onClick={onDirectionToggle}
-        className={cn(
-          "w-10 h-10 flex items-center justify-center border-0 border-r border-gray-300 bg-transparent hover:bg-gray-100 transition-colors font-medium text-black", 
-          "border-r border-gray-300 rounded-l-md"
-        )}
+        className="w-10 h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 transition-colors font-medium text-black border-r border-gray-300 rounded-l-md"
         tabIndex={0}
       >
         {sortDirection === "asc" ? (
@@ -60,10 +57,7 @@ export const SortControls = ({
       >
         <SelectTrigger
           hideChevron
-          className={cn(
-            "flex-1 w-0 h-10 border-0 border-l border-gray-300 rounded-none focus:ring-0 transition-colors font-medium text-black bg-transparent",
-            "rounded-r-md"
-          )}
+          className="flex-1 w-0 h-10 border-0 rounded-none focus:ring-0 transition-colors font-medium text-black bg-transparent rounded-r-md"
         >
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
