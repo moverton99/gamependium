@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Filter, X, Info } from "lucide-react";
 import {
@@ -98,15 +99,15 @@ export const CategoryFilter = ({
                           <span className="sr-only">Category Info</span>
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto">
+                      <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto bg-white text-black">
                         <DialogHeader>
-                          <DialogTitle>Category Descriptions</DialogTitle>
+                          <DialogTitle className="text-black">Category Descriptions</DialogTitle>
                         </DialogHeader>
                         <ScrollArea className="h-[60vh] pr-4">
                           <div className="space-y-2">
                             {categories.map((category) => (
                               <div key={category.name} className="border-b pb-1 last:border-0">
-                                <p className="text-sm">
+                                <p className="text-sm text-black">
                                   <span className="font-bold">{category.name}: </span>
                                   {categoryDescriptionMap[category.name] || "No description available"}
                                 </p>
