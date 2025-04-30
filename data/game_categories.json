@@ -114,5 +114,37 @@
     {
         "name": "Social",
         "description": "Games driven by conversation, personality, or improvisation, often emphasizing interaction over traditional mechanics."
-    }
+    },
+  {
+    "name": "Role Selection",
+    "description": "Games where players choose or are assigned different roles with unique abilities or effects, often influencing gameplay strategy and interactions."
+  },
+  {
+    "name": "Logic",
+    "description": "Games that emphasize deductive reasoning, inference, and the application of logical rules to solve puzzles or reach conclusions."
+  },
+  {
+    "name": "Racing",
+    "description": "Games where players compete to be the first to reach a finish line or complete a sequence of objectives, often involving movement and timing."
+  },
+  {
+    "name": "Timing",
+    "description": "Games that require precise timing or synchronization, often involving action windows, rhythm, or real-time coordination."
+  },
+  {
+    "name": "Set Collection",
+    "description": "Games where players gather specific groups of items or cards to score points or trigger effects based on matching traits or patterns."
+  },
+  {
+    "name": "Puzzle",
+    "description": "Games focused on solving structured problems or challenges, often involving pattern recognition, spatial arrangement, or sequencing."
+  },
+  {
+    "name": "Narrative",
+    "description": "Games that center around storytelling, where player decisions impact the progression and outcome of an overarching plot."
+  },
+  {
+    "name": "Deduction & Deception",
+    "description": "Games that rely on bluffing, hidden information, and logical reasoning to uncover truth or mislead others."
+  }
 ]
