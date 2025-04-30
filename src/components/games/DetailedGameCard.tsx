@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { categoryDescriptionMap } from "./categoryDescriptions";
+import { useEffect } from "react";
 
 interface DetailedGameCardProps {
   name: string;
@@ -53,19 +54,37 @@ export const DetailedGameCard = ({
     window.dispatchEvent(new CustomEvent('categorySelected', { detail: category }));
   };
 
+  // Fix for iOS momentum scrolling issues
+  useEffect(() => {
+    if (isOpen) {
+      // Prevent body scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+      
+      // Add momentum scrolling for iOS
+      const contentElement = document.querySelector('.detailed-game-content');
+      if (contentElement) {
+        contentElement.setAttribute('style', '-webkit-overflow-scrolling: touch;');
+      }
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[80vh]' : 'max-h-[90vh]'}`}
+        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[85vh]' : 'max-h-[90vh]'}`}
         style={{ 
           position: 'fixed', 
           top: isMobile ? '5%' : '15%', 
           transform: 'translateX(-50%)',
-          overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
           height: 'auto',
-          maxHeight: isMobile ? '90vh' : '90vh'
+          maxHeight: isMobile ? '90vh' : '90vh',
+          overflow: 'hidden',
         }}
       >
         <DialogHeader className="pb-2">
@@ -73,9 +92,10 @@ export const DetailedGameCard = ({
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
-        <div className="flex-grow overflow-auto">
-          <ScrollArea className="h-full w-full pr-4">
-            <div className="space-y-4 pb-8 px-1">
+        <div className="flex-grow h-full overflow-hidden">
+          {/* Replace ScrollArea with a native scrolling div for better iOS compatibility */}
+          <div className="detailed-game-content h-full overflow-y-auto pb-4 px-4 pt-2">
+            <div className="space-y-4 pb-8">
               <div className="flex flex-col gap-2">
                 <div className="text-lg font-semibold text-black">Description</div>
                 <p className="text-gray-700">{description}</p>
@@ -160,7 +180,7 @@ export const DetailedGameCard = ({
                 </div>
               </div>
             </div>
-          </ScrollArea>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
