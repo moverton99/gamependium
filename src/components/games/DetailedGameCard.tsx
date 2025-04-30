@@ -73,35 +73,44 @@ export const DetailedGameCard = ({
     };
   }, [isOpen]);
 
-  // Calculate heights with 30% more scroll area (by reducing header height)
-  const headerHeight = isMobile ? 40 : 60; // Reduced by ~30%
+  // Calculate heights with additional 20% reduction from current header height (further reduced)
+  const headerHeight = isMobile ? 32 : 48; // Reduced by another 20% from previous values (40->32, 60->48)
   const paddingHeight = 20; // Account for padding
   const maxContentHeight = isMobile ? 
     `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` : 
     `calc(90vh - ${headerHeight}px - ${paddingHeight}px)`;
 
+  // Handle manual close to ensure it works on iOS
+  const handleClose = () => {
+    // Ensure we call onClose directly
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent 
         className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
         style={{ 
           position: 'fixed', 
-          top: isMobile ? '5%' : '10%', // Moved up slightly
+          top: isMobile ? '5%' : '10%',
           transform: 'translateX(-50%)',
           display: 'flex',
           flexDirection: 'column',
           height: 'auto',
           maxHeight: isMobile ? '90vh' : '90vh',
+          WebkitTapHighlightColor: 'transparent', // Fix for iOS tap highlight issues
         }}
       >
-        <DialogHeader className="pb-1"> {/* Reduced padding */}
-          <DialogTitle className="text-xl font-bold text-black">{name}</DialogTitle> {/* Smaller title */}
+        <DialogHeader className="pb-0.5"> {/* Further reduced padding */}
+          <DialogTitle className="text-lg font-bold text-black">{name}</DialogTitle> {/* Further reduced title size */}
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
         <div className="flex-grow overflow-hidden">
           <div 
-            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-1" 
+            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-0.5" 
             style={{ 
               WebkitOverflowScrolling: 'touch',
               maxHeight: maxContentHeight,
