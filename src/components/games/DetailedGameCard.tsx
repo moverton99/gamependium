@@ -1,7 +1,6 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { categoryDescriptionMap } from "./categoryDescriptions";
@@ -74,13 +73,20 @@ export const DetailedGameCard = ({
     };
   }, [isOpen]);
 
+  // Calculate heights with 30% more scroll area (by reducing header height)
+  const headerHeight = isMobile ? 40 : 60; // Reduced by ~30%
+  const paddingHeight = 20; // Account for padding
+  const maxContentHeight = isMobile ? 
+    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` : 
+    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)`;
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[85vh]' : 'max-h-[90vh]'}`}
+        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
         style={{ 
           position: 'fixed', 
-          top: isMobile ? '5%' : '15%', 
+          top: isMobile ? '5%' : '10%', // Moved up slightly
           transform: 'translateX(-50%)',
           display: 'flex',
           flexDirection: 'column',
@@ -88,17 +94,18 @@ export const DetailedGameCard = ({
           maxHeight: isMobile ? '90vh' : '90vh',
         }}
       >
-        <DialogHeader className="pb-2">
-          <DialogTitle className="text-2xl font-bold text-black">{name}</DialogTitle>
+        <DialogHeader className="pb-1"> {/* Reduced padding */}
+          <DialogTitle className="text-xl font-bold text-black">{name}</DialogTitle> {/* Smaller title */}
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
         <div className="flex-grow overflow-hidden">
           <div 
-            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-2" 
+            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-1" 
             style={{ 
               WebkitOverflowScrolling: 'touch',
-              maxHeight: isMobile ? 'calc(85vh - 80px)' : 'calc(90vh - 80px)'
+              maxHeight: maxContentHeight,
+              paddingBottom: '60px', // Add extra padding at the bottom to ensure content is visible
             }}
           >
             <div className="space-y-4 pb-8">
