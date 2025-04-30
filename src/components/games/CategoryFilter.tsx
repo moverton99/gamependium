@@ -12,6 +12,12 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
+import { categoryDescriptionMap } from "./categoryDescriptions";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -79,30 +85,38 @@ export const CategoryFilter = ({
             <div className="grid grid-cols-2 gap-1 p-2">
               {categories.map((category) => {
                 const isSelected = selectedCategories.includes(category.name);
+                const description = categoryDescriptionMap[category.name] || "No description available";
+                
                 return (
-                <DropdownMenuCheckboxItem
-                  key={category.name}
-                  checked={isSelected}
-                  onSelect={(e) => {
-                    // Prevent the default selection behavior which might be causing the issue
-                    e.preventDefault();
-                    const willBeChecked = !selectedCategories.includes(category.name);
-                    console.log(`Selecting category: ${category.name}, will be checked: ${willBeChecked}`);
-                    onCategoryToggle(
-                      category.name, 
-                      willBeChecked
-                    );
-                  }}
-                  className={cn(
-                    "p-2",
-                    isSelected && "bg-primary/10 font-medium"
-                  )}
-                >
-                  <div className="pl-6 relative">
-                    {/* Ensure text doesn't overlap with the checkbox */}
-                    {category.name}
-                  </div>
-                </DropdownMenuCheckboxItem>
+                <Tooltip key={category.name} delayDuration={300}>
+                  <TooltipTrigger asChild>
+                    <DropdownMenuCheckboxItem
+                      checked={isSelected}
+                      onSelect={(e) => {
+                        // Prevent the default selection behavior which might be causing the issue
+                        e.preventDefault();
+                        const willBeChecked = !selectedCategories.includes(category.name);
+                        console.log(`Selecting category: ${category.name}, will be checked: ${willBeChecked}`);
+                        onCategoryToggle(
+                          category.name, 
+                          willBeChecked
+                        );
+                      }}
+                      className={cn(
+                        "p-2",
+                        isSelected && "bg-primary/10 font-medium"
+                      )}
+                    >
+                      <div className="pl-6 relative">
+                        {/* Ensure text doesn't overlap with the checkbox */}
+                        {category.name}
+                      </div>
+                    </DropdownMenuCheckboxItem>
+                  </TooltipTrigger>
+                  <TooltipContent side="right" className="max-w-xs bg-white text-black border border-gray-200">
+                    {description}
+                  </TooltipContent>
+                </Tooltip>
                 );
               })}
             </div>
