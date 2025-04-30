@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -152,16 +153,16 @@ const Index = () => {
       isInIframe ? "max-h-screen h-screen overflow-hidden" : ""
     )}>
       <div className="mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-4 h-full flex flex-col">
-        <div className={cn(
-          "grid gap-2 mb-4 w-full max-w-6xl items-start",
-          isMobile ? "grid-cols-1 gap-2" : "md:grid-cols-3 gap-2"
-        )}>
-          {/* Left column: Search and Category */}
-          <div className="flex flex-col gap-2 items-start">
-            <div className="w-full md:w-64 max-w-full">
+        {/* Mobile: vertical stack with consistent spacing */}
+        {isMobile ? (
+          <div className="flex flex-col gap-4 mb-4 w-full max-w-6xl">
+            {/* Search */}
+            <div className="w-full">
               <TextSearch value={search} onChange={setSearch} />
             </div>
-            <div className="w-full md:w-64 max-w-full">
+            
+            {/* Category */}
+            <div className="w-full">
               <CategoryFilter
                 categories={allCategories}
                 selectedCategories={selectedCategories}
@@ -169,19 +170,19 @@ const Index = () => {
                 onCategoryRemove={removeCategory}
               />
             </div>
-          </div>
-          {/* Center column: Playtime and Player Count */}
-          <div className="flex flex-col gap-2 items-start">
-            <div className="w-full md:w-64 max-w-full">
+            
+            {/* Playtime */}
+            <div className="w-full">
               <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
             </div>
-            <div className="w-full md:w-64 max-w-full">
+            
+            {/* Player Count */}
+            <div className="w-full">
               <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
             </div>
-          </div>
-          {/* Right column: Reset Filters + Sort */}
-          <div className="flex flex-col gap-2 items-start">
-            <div className="w-full md:w-64 max-w-full">
+            
+            {/* Reset Filters */}
+            <div className="w-full">
               <Button 
                 variant="outline" 
                 onClick={resetFilters}
@@ -191,7 +192,9 @@ const Index = () => {
                 Reset Filters
               </Button>
             </div>
-            <div className="w-full md:w-64 max-w-full">
+            
+            {/* Sort Controls */}
+            <div className="w-full">
               <SortControls
                 sortBy={sortBy}
                 sortDirection={sortDirection}
@@ -202,7 +205,58 @@ const Index = () => {
               />
             </div>
           </div>
-        </div>
+        ) : (
+          /* Desktop: 3-column layout */
+          <div className="grid grid-cols-3 gap-2 mb-4 w-full max-w-6xl items-start">
+            {/* Left column: Search and Category */}
+            <div className="flex flex-col gap-2 items-start">
+              <div className="w-full md:w-64 max-w-full">
+                <TextSearch value={search} onChange={setSearch} />
+              </div>
+              <div className="w-full md:w-64 max-w-full">
+                <CategoryFilter
+                  categories={allCategories}
+                  selectedCategories={selectedCategories}
+                  onCategoryToggle={handleCategoryToggle}
+                  onCategoryRemove={removeCategory}
+                />
+              </div>
+            </div>
+            {/* Center column: Playtime and Player Count */}
+            <div className="flex flex-col gap-2 items-start">
+              <div className="w-full md:w-64 max-w-full">
+                <PlaytimeFilter selected={selectedPlaytime} onChange={setSelectedPlaytime} />
+              </div>
+              <div className="w-full md:w-64 max-w-full">
+                <PlayerCountFilter selected={selectedPlayerCount} onChange={setSelectedPlayerCount} />
+              </div>
+            </div>
+            {/* Right column: Reset Filters + Sort */}
+            <div className="flex flex-col gap-2 items-start">
+              <div className="w-full md:w-64 max-w-full">
+                <Button 
+                  variant="outline" 
+                  onClick={resetFilters}
+                  className={cn("gap-2 w-full justify-start", "font-medium text-black border-gray-300 bg-white/90")}
+                >
+                  <RefreshCw className="w-4 h-4 mr-2 text-black" />
+                  Reset Filters
+                </Button>
+              </div>
+              <div className="w-full md:w-64 max-w-full">
+                <SortControls
+                  sortBy={sortBy}
+                  sortDirection={sortDirection}
+                  onSortChange={setSortBy}
+                  onDirectionToggle={() =>
+                    setSortDirection((current) => (current === "asc" ? "desc" : "asc"))
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        )}
+        
         <div className={cn(
           "flex-grow overflow-hidden", 
           isInIframe ? "max-h-[calc(100vh-250px)]" : ""
