@@ -1,7 +1,5 @@
 
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { GameCard } from "./GameCard";
-import { Game } from "@/types/game";
 import { GameGridProps } from "./GameGrid.d";
 import { PlayerCountOption } from "./PlayerCountFilter";
 
@@ -11,8 +9,8 @@ interface ExtendedGameGridProps extends GameGridProps {
 
 export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) => {
   return (
-    <div className="h-[calc(100vh-200px)] overflow-y-auto pr-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+    <div className="h-full w-full overflow-y-auto pb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 pb-8">
         {games.map((game) => (
           <GameCard
             key={game.name}

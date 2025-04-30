@@ -94,6 +94,14 @@ const Index = () => {
     setSelectedPlayerCount("any");
   };
 
+  const isInIframe = useMemo(() => {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+      return true;
+    }
+  }, []);
+
   const sortedAndFilteredGames = useMemo(() => {
     console.log("Recomputing sorted games with:", { 
       sortBy, 
@@ -137,7 +145,10 @@ const Index = () => {
   }, [selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount]);
 
   return (
-    <div className="min-h-screen p-2 md:p-4 bg-black">
+    <div className={cn(
+      "min-h-screen p-2 md:p-4 bg-black",
+      isInIframe ? "max-h-screen h-screen overflow-hidden" : ""
+    )}>
       <div className="mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-4 h-full flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4 w-full max-w-6xl items-start">
           {/* Left column: Search and Category */}
@@ -187,7 +198,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="flex-grow overflow-hidden">
+        <div className={cn(
+          "flex-grow overflow-hidden", 
+          isInIframe ? "max-h-[calc(100vh-250px)]" : ""
+        )}>
           <GameGrid games={sortedAndFilteredGames} selectedPlayerCount={selectedPlayerCount} />
         </div>
       </div>
