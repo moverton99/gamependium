@@ -210,5 +210,9 @@
     {
         "name": "Social",
         "description": "Games that prioritize interaction, roleplay, and player dynamics over rigid mechanics, often best with large groups."
+    },
+    {
+        "name": "Dice Manipulation",
+        "description": "Games where dice are not only rolled but also strategically modified, assigned, or used to trigger actions. Players often influence dice outcomes through rerolling, bonuses, placement, or conversion."
     }
 ]
