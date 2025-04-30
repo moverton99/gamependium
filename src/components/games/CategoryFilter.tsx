@@ -26,6 +26,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -42,6 +43,8 @@ export const CategoryFilter = ({
   onCategoryRemove,
   active = false,
 }: CategoryFilterProps) => {
+  const isMobile = useIsMobile();
+  
   // Determine button text based on selected categories
   const buttonText = selectedCategories.length === 0
     ? "Category"
@@ -94,8 +97,12 @@ export const CategoryFilter = ({
                   <TooltipTrigger asChild>
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="ghost" className="h-12 w-12 p-0" onClick={(e) => e.stopPropagation()}>
-                          <Info className="h-[15px] w-[15px]" />
+                        <Button 
+                          variant="ghost" 
+                          className="h-12 w-12 p-0 flex items-center justify-center" 
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Info className="h-[15px] w-[15px] block" />
                           <span className="sr-only">Category Info</span>
                         </Button>
                       </DialogTrigger>
@@ -104,7 +111,7 @@ export const CategoryFilter = ({
                           <DialogTitle className="text-black">Category Descriptions</DialogTitle>
                         </DialogHeader>
                         <ScrollArea className="h-[60vh] pr-4">
-                          <div className="space-y-2">
+                          <div className="space-y-1">
                             {categories.map((category) => (
                               <div key={category.name} className="border-b pb-1 last:border-0">
                                 <p className="text-sm text-black">
