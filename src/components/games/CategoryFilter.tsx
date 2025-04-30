@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Filter, X } from "lucide-react";
+import { Filter, X, Info } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +18,13 @@ import {
   TooltipTrigger 
 } from "@/components/ui/tooltip";
 import { categoryDescriptionMap } from "./categoryDescriptions";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
@@ -72,13 +79,39 @@ export const CategoryFilter = ({
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
-            {/* Add "All" option at the top */}
-            <DropdownMenuItem
-              className="p-2 hover:bg-primary/10 font-medium"
-              onClick={clearAllSelections}
-            >
-              <div className="px-6">All (Clear Selections)</div>
-            </DropdownMenuItem>
+            {/* Header with All button and Info button */}
+            <div className="flex items-center justify-between p-2">
+              <DropdownMenuItem
+                className="p-2 hover:bg-primary/10 font-medium flex-1"
+                onClick={clearAllSelections}
+              >
+                <div className="px-6">All (Clear Selections)</div>
+              </DropdownMenuItem>
+              
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="ghost" className="h-8 w-8 p-0" onClick={(e) => e.stopPropagation()}>
+                    <Info className="h-4 w-4" />
+                    <span className="sr-only">Category Info</span>
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Category Descriptions</DialogTitle>
+                  </DialogHeader>
+                  <ScrollArea className="h-[60vh] pr-4">
+                    <div className="space-y-4">
+                      {categories.map((category) => (
+                        <div key={category.name} className="border-b pb-2 last:border-0">
+                          <h4 className="font-medium">{category.name}</h4>
+                          <p className="text-sm text-muted-foreground">{categoryDescriptionMap[category.name] || "No description available"}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </ScrollArea>
+                </DialogContent>
+              </Dialog>
+            </div>
             
             <DropdownMenuSeparator className="my-1" />
             
