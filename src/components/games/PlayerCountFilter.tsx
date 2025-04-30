@@ -19,15 +19,34 @@ interface PlayerCountFilterProps {
 }
 
 export const PlayerCountFilter = ({ selected, onChange, active = false }: PlayerCountFilterProps) => {
+  // Handler to stop event propagation on any click/touch within the component
+  const handleContainerClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
-    <div className="flex flex-col w-full md:w-64 max-w-full">
-      <div className={cn(
-        "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
-        active ? "bg-[#bcd8f7]" : "bg-white/90"
-      )}>
+    <div 
+      className="flex flex-col w-full md:w-64 max-w-full"
+      onClick={handleContainerClick}
+      onTouchStart={(e) => e.stopPropagation()}
+      onTouchEnd={(e) => e.stopPropagation()}
+    >
+      <div 
+        className={cn(
+          "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
+          active ? "bg-[#bcd8f7]" : "bg-white/90"
+        )}
+      >
         <Users className="w-4 h-4 text-black" />
-        <Select value={selected} onValueChange={onChange}>
-          <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}>
+        <Select 
+          value={selected} 
+          onValueChange={onChange}
+        >
+          <SelectTrigger 
+            className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}
+            onClick={(e) => e.stopPropagation()}
+          >
             <SelectValue placeholder="Any players" />
           </SelectTrigger>
           <SelectContent>
