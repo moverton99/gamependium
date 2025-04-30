@@ -115,36 +115,100 @@
         "name": "Social",
         "description": "Games driven by conversation, personality, or improvisation, often emphasizing interaction over traditional mechanics."
     },
-  {
-    "name": "Role Selection",
-    "description": "Games where players choose or are assigned different roles with unique abilities or effects, often influencing gameplay strategy and interactions."
-  },
-  {
-    "name": "Logic",
-    "description": "Games that emphasize deductive reasoning, inference, and the application of logical rules to solve puzzles or reach conclusions."
-  },
-  {
-    "name": "Racing",
-    "description": "Games where players compete to be the first to reach a finish line or complete a sequence of objectives, often involving movement and timing."
-  },
-  {
-    "name": "Timing",
-    "description": "Games that require precise timing or synchronization, often involving action windows, rhythm, or real-time coordination."
-  },
-  {
-    "name": "Set Collection",
-    "description": "Games where players gather specific groups of items or cards to score points or trigger effects based on matching traits or patterns."
-  },
-  {
-    "name": "Puzzle",
-    "description": "Games focused on solving structured problems or challenges, often involving pattern recognition, spatial arrangement, or sequencing."
-  },
-  {
-    "name": "Narrative",
-    "description": "Games that center around storytelling, where player decisions impact the progression and outcome of an overarching plot."
-  },
-  {
-    "name": "Deduction & Deception",
-    "description": "Games that rely on bluffing, hidden information, and logical reasoning to uncover truth or mislead others."
-  }
+    {
+        "name": "Role Selection",
+        "description": "Games where players choose or are assigned different roles with unique abilities or effects, often influencing gameplay strategy and interactions."
+    },
+    {
+        "name": "Logic",
+        "description": "Games that emphasize deductive reasoning, inference, and the application of logical rules to solve puzzles or reach conclusions."
+    },
+    {
+        "name": "Racing",
+        "description": "Games where players compete to be the first to reach a finish line or complete a sequence of objectives, often involving movement and timing."
+    },
+    {
+        "name": "Timing",
+        "description": "Games that require precise timing or synchronization, often involving action windows, rhythm, or real-time coordination."
+    },
+    {
+        "name": "Set Collection",
+        "description": "Games where players gather specific groups of items or cards to score points or trigger effects based on matching traits or patterns."
+    },
+    {
+        "name": "Puzzle",
+        "description": "Games focused on solving structured problems or challenges, often involving pattern recognition, spatial arrangement, or sequencing."
+    },
+    {
+        "name": "Narrative",
+        "description": "Games that center around storytelling, where player decisions impact the progression and outcome of an overarching plot."
+    },
+    {
+        "name": "Deduction & Deception",
+        "description": "Games that rely on bluffing, hidden information, and logical reasoning to uncover truth or mislead others."
+    },
+    {
+        "name": "Role Selection",
+        "description": "Players choose or are assigned unique roles that grant different abilities or actions, creating dynamic shifts in strategy."
+    },
+    {
+        "name": "Logic",
+        "description": "Games where players apply deduction, inference, and reasoning to solve puzzles or identify hidden elements."
+    },
+    {
+        "name": "Racing",
+        "description": "Games where players compete to reach a finish line or goal first, often involving movement mechanics and positional tactics."
+    },
+    {
+        "name": "Timing",
+        "description": "Games where precise timing of actions or coordinated plays is essential to success, often under real-time or turn-pressure constraints."
+    },
+    {
+        "name": "Set Collection",
+        "description": "Players gather specific combinations of items or cards to complete goals or earn points based on patterns or themes."
+    },
+    {
+        "name": "Puzzle",
+        "description": "Games that challenge players to solve structured problems involving spatial, logical, or procedural elements."
+    },
+    {
+        "name": "Narrative",
+        "description": "Story-driven games where player choices impact the unfolding of an ongoing plot or character development."
+    },
+    {
+        "name": "Deduction & Deception",
+        "description": "Games that involve hidden information, bluffing, and logical reasoning to uncover truths or mislead others."
+    },
+    {
+        "name": "Card Battler",
+        "description": "Games focused on head-to-head battles using cards representing units, actions, or abilities, often with direct player conflict."
+    },
+    {
+        "name": "Card Drafting",
+        "description": "Players select cards from a limited pool, usually in rounds, to build hands or strategies while denying options to opponents."
+    },
+    {
+        "name": "Route Building",
+        "description": "Games where players construct networks or paths to connect locations, often optimizing for efficiency or coverage."
+    },
+    {
+        "name": "Roll-and-Move",
+        "description": "Games that use dice or spinners to determine movement around a board, often with random progression and events."
+    },
+    {
+        "name": "Bag Building",
+        "description": "Players add tokens to a personal bag and draw from it during gameplay, creating a randomized engine they can shape over time."
+    },
+    {
+        "name": "Network Building",
+        "description": "Games that focus on establishing and expanding a system of interconnected nodes or structures, often for resource or point efficiency."
+    },
+    {
+        "name": "Trick-Taking",
+        "description": "Card games where players play one card per round (a trick) and aim to win based on suit or value rules."
+    },
+    {
+        "name": "Social",
+        "description": "Games that prioritize interaction, roleplay, and player dynamics over rigid mechanics, often best with large groups."
+    }
 ]
