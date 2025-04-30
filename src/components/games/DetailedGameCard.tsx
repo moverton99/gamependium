@@ -54,17 +54,19 @@ export const DetailedGameCard = ({
     window.dispatchEvent(new CustomEvent('categorySelected', { detail: category }));
   };
 
-  // Fix for iOS momentum scrolling issues
+  // Fix for iOS scrolling issues
   useEffect(() => {
     if (isOpen) {
-      // Prevent body scrolling when modal is open
       document.body.style.overflow = 'hidden';
       
-      // Add momentum scrolling for iOS
-      const contentElement = document.querySelector('.detailed-game-content');
-      if (contentElement) {
-        contentElement.setAttribute('style', '-webkit-overflow-scrolling: touch;');
-      }
+      // Force layout recalculation on iOS to help with scroll initialization
+      setTimeout(() => {
+        const scrollContainer = document.querySelector('.scroll-container');
+        if (scrollContainer) {
+          scrollContainer.scrollTop = 0;
+          scrollContainer.scrollTop = 1;
+        }
+      }, 100);
     }
     
     return () => {
@@ -84,7 +86,6 @@ export const DetailedGameCard = ({
           flexDirection: 'column',
           height: 'auto',
           maxHeight: isMobile ? '90vh' : '90vh',
-          overflow: 'hidden',
         }}
       >
         <DialogHeader className="pb-2">
@@ -92,9 +93,14 @@ export const DetailedGameCard = ({
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
-        <div className="flex-grow h-full overflow-hidden">
-          {/* Replace ScrollArea with a native scrolling div for better iOS compatibility */}
-          <div className="detailed-game-content h-full overflow-y-auto pb-4 px-4 pt-2">
+        <div className="flex-grow overflow-hidden">
+          <div 
+            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-2" 
+            style={{ 
+              WebkitOverflowScrolling: 'touch',
+              maxHeight: isMobile ? 'calc(85vh - 80px)' : 'calc(90vh - 80px)'
+            }}
+          >
             <div className="space-y-4 pb-8">
               <div className="flex flex-col gap-2">
                 <div className="text-lg font-semibold text-black">Description</div>
