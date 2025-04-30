@@ -25,6 +25,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -83,10 +84,10 @@ export const CategoryFilter = ({
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
-            {/* Header with All button and Info button - fixed layout */}
+            {/* Header with All button and Info button - fixed layout with border */}
             <div className="flex items-center justify-between p-2 border-b">
-              {/* All button - fixed width on mobile */}
-              <div className={isMobile ? "flex-grow max-w-[80%]" : "flex-1"}>
+              {/* All button with fixed width */}
+              <div className="flex-1 max-w-[75%]">
                 <DropdownMenuItem
                   className="p-2 hover:bg-primary/10 font-medium"
                   onClick={clearAllSelections}
@@ -95,23 +96,26 @@ export const CategoryFilter = ({
                 </DropdownMenuItem>
               </div>
               
-              {/* Info button - minimum width and visible on all devices */}
-              <div className="flex-shrink-0 min-w-[48px] flex items-center justify-center">
+              {/* Info button - ensuring it's visible on mobile */}
+              <div className="flex items-center justify-center w-10 h-10">
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button 
                       variant="ghost" 
                       size="icon"
-                      className="h-9 w-9 rounded-full p-0 flex items-center justify-center bg-gray-100 hover:bg-gray-200" 
+                      className="h-9 w-9 rounded-full p-0 flex items-center justify-center bg-gray-200 hover:bg-gray-300 border border-gray-300" 
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Info className="h-4 w-4 text-black" />
+                      <Info className="h-5 w-5 text-black block" />
                       <span className="sr-only">Category Info</span>
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto bg-white text-black">
                     <DialogHeader>
                       <DialogTitle className="text-black">Category Descriptions</DialogTitle>
+                      <DialogDescription className="text-gray-500">
+                        Browse game categories and their descriptions
+                      </DialogDescription>
                     </DialogHeader>
                     <ScrollArea className="h-[60vh] pr-4">
                       <div className="space-y-1">
