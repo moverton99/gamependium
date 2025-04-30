@@ -1,4 +1,17 @@
 [
+   	{
+		"name": "Monopoly Deal",
+		"description": "Monopoly Deal is a fast-paced card game where players race to collect three full property sets while sabotaging each other with action cards. Unlike classic Monopoly, the focus is on quick card play, strategic theft, and clever manipulation of rent, swaps, and debt.",
+		"learning_curve_rank": 15,
+		"learning_curve_desc": "Simple rules and familiar property names make it easy to learn in just a few minutes.",
+		"strategic_depth_rank": 35,
+		"strategic_depth_desc": "Strategic timing of action cards and managing limited resources offer light tactical depth.",
+		"replayability_rank": 70,
+		"replayability_desc": "Random draws and unpredictable player interaction keep each game feeling fresh and competitive.",
+		"category": [
+			"Card Game",
+			"Family Games"
+	],
     {
         "name": "Agricola",
         "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
