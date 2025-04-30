@@ -67,8 +67,43 @@ export const CategoryFilter = ({
     });
   };
 
+  // Separate Dialog for Info button - will be displayed outside DropdownMenu
+  const renderInfoDialog = () => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button
+          variant="outline"
+          className="h-10 w-full px-4 py-2 bg-gray-200 hover:bg-gray-300 border border-gray-300 flex items-center justify-center gap-2"
+        >
+          <Info className="h-5 w-5 text-black" />
+          <span className="text-black">Show Descriptions</span>
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto bg-white text-black">
+        <DialogHeader>
+          <DialogTitle className="text-black">Category Descriptions</DialogTitle>
+          <DialogDescription className="text-gray-500">
+            Browse game categories and their descriptions
+          </DialogDescription>
+        </DialogHeader>
+        <ScrollArea className="h-[60vh] pr-4">
+          <div className="space-y-1">
+            {categories.map((category) => (
+              <div key={category.name} className="border-b pb-1 last:border-0">
+                <p className="text-sm text-black">
+                  <span className="font-bold">{category.name}: </span>
+                  {categoryDescriptionMap[category.name] || "No description available"}
+                </p>
+              </div>
+            ))}
+          </div>
+        </ScrollArea>
+      </DialogContent>
+    </Dialog>
+  );
+
   return (
-    <div className="flex flex-col w-full md:w-64 max-w-full">
+    <div className="flex flex-col w-full md:w-64 max-w-full gap-2">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
@@ -84,54 +119,14 @@ export const CategoryFilter = ({
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-[500px] p-0 bg-white">
           <ScrollArea className="h-80">
-            {/* Header with All button and Info button - fixed layout with border */}
-            <div className="flex items-center justify-between p-2 border-b">
-              {/* All button with fixed width */}
-              <div className="flex-1 max-w-[75%]">
-                <DropdownMenuItem
-                  className="p-2 hover:bg-primary/10 font-medium"
-                  onClick={clearAllSelections}
-                >
-                  <span className="px-2">All (Clear Selections)</span>
-                </DropdownMenuItem>
-              </div>
-              
-              {/* Info button - ensuring it's visible on mobile */}
-              <div className="flex items-center justify-center w-10 h-10">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      size="icon"
-                      className="h-9 w-9 rounded-full p-0 flex items-center justify-center bg-gray-200 hover:bg-gray-300 border border-gray-300" 
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Info className="h-5 w-5 text-black block" />
-                      <span className="sr-only">Category Info</span>
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-[600px] max-h-[80vh] overflow-y-auto bg-white text-black">
-                    <DialogHeader>
-                      <DialogTitle className="text-black">Category Descriptions</DialogTitle>
-                      <DialogDescription className="text-gray-500">
-                        Browse game categories and their descriptions
-                      </DialogDescription>
-                    </DialogHeader>
-                    <ScrollArea className="h-[60vh] pr-4">
-                      <div className="space-y-1">
-                        {categories.map((category) => (
-                          <div key={category.name} className="border-b pb-1 last:border-0">
-                            <p className="text-sm text-black">
-                              <span className="font-bold">{category.name}: </span>
-                              {categoryDescriptionMap[category.name] || "No description available"}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </ScrollArea>
-                  </DialogContent>
-                </Dialog>
-              </div>
+            {/* Header with All button - simpler layout */}
+            <div className="p-2 border-b">
+              <DropdownMenuItem
+                className="p-2 hover:bg-primary/10 font-medium"
+                onClick={clearAllSelections}
+              >
+                All (Clear Selections)
+              </DropdownMenuItem>
             </div>
             
             <div className="grid grid-cols-2 gap-1 p-2">
@@ -175,6 +170,10 @@ export const CategoryFilter = ({
           </ScrollArea>
         </DropdownMenuContent>
       </DropdownMenu>
+
+      {/* Render Info button as a separate button outside dropdown */}
+      {renderInfoDialog()}
+      
       <div className="flex flex-wrap items-center gap-2 mt-2">
         {selectedCategories.map((category) => (
           <div
