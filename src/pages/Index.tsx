@@ -11,6 +11,7 @@ import { TextSearch } from "@/components/games/TextSearch";
 import { Game } from "@/types/game";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -19,6 +20,7 @@ const Index = () => {
   const [selectedPlaytime, setSelectedPlaytime] = useState<string>("all");
   const [search, setSearch] = useState<string>(""); 
   const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
+  const isMobile = useIsMobile();
 
   const allCategories = useMemo(() => {
     const uniqueCategories = new Set<string>();
@@ -150,7 +152,10 @@ const Index = () => {
       isInIframe ? "max-h-screen h-screen overflow-hidden" : ""
     )}>
       <div className="mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-4 h-full flex flex-col">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4 w-full max-w-6xl items-start">
+        <div className={cn(
+          "grid gap-2 mb-4 w-full max-w-6xl items-start",
+          isMobile ? "grid-cols-1 gap-2" : "md:grid-cols-3 gap-2"
+        )}>
           {/* Left column: Search and Category */}
           <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
