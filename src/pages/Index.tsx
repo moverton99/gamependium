@@ -155,7 +155,7 @@ const Index = () => {
       <div className="mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-4 h-full flex flex-col">
         {/* Mobile: vertical stack with consistent spacing */}
         {isMobile ? (
-          <div className="flex flex-col gap-4 mb-4 w-full max-w-6xl">
+          <div className="flex flex-col gap-3 mb-3 w-full max-w-6xl">
             {/* Search */}
             <div className="w-full">
               <TextSearch value={search} onChange={setSearch} />
