@@ -90,8 +90,7 @@ export const FilterBar = ({
               onClick={onResetFilters}
               className={cn(
                 "gap-2 w-full justify-start", 
-                "font-medium text-black border-gray-300",
-                (hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter) ? "bg-[#bcd8f7]" : "bg-white/90"
+                "font-medium text-black border-gray-300 bg-white/90"
               )}
               disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
             >
@@ -146,8 +145,7 @@ export const FilterBar = ({
                 onClick={onResetFilters}
                 className={cn(
                   "gap-2 w-full justify-start", 
-                  "font-medium text-black border-gray-300",
-                  (hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter) ? "bg-[#bcd8f7]" : "bg-white/90"
+                  "font-medium text-black border-gray-300 bg-white/90"
                 )}
                 disabled={!hasCategoryFilter && !hasSearchFilter && !hasPlaytimeFilter && !hasPlayerCountFilter}
               >
@@ -170,3 +168,4 @@ export const FilterBar = ({
     </>
   );
 };
+
