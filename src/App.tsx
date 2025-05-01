@@ -15,12 +15,12 @@ const App = () => (
       <div className="min-h-screen bg-black">
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
       </div>
     </TooltipProvider>
   </QueryClientProvider>
