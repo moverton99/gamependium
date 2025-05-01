@@ -60,11 +60,11 @@ export const GameCard = ({
   return (
     <>
       <Card 
-        className="p-6 hover:shadow-lg transition-shadow cursor-pointer" 
+        className="p-6 bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))] hover:shadow-lg transition-shadow cursor-pointer"
         onClick={() => setIsDetailedViewOpen(true)}
       >
         <h2 className="text-xl font-semibold mb-2">{name}</h2>
-        <div className="flex gap-4 mb-4 text-gray-600">
+        <div className="flex gap-4 mb-4 text-[hsl(var(--brand-light))]">
           <Tooltip>
             <TooltipTrigger className="flex items-center gap-1">
               <GraduationCap className="w-4 h-4" />
@@ -126,17 +126,17 @@ export const GameCard = ({
             </TooltipContent>
           </Tooltip>
         </div>
-        <p className="text-sm text-gray-600 mb-4">{description}</p>
+        <p className="text-sm mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
             <Tooltip key={cat}>
               <TooltipTrigger asChild>
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full cursor-help">
+                <span className="px-2 py-1 bg-[hsl(var(--brand-mustard))] text-[hsl(var(--brand-light))] text-sm rounded-full cursor-help"                >
                   {cat}
                 </span>
               </TooltipTrigger>
               <TooltipContent>
-                {categoryDescriptionMap[cat] || "No description found"}
+                {categoryDescriptionMap[cat] || "Who knows?"}
               </TooltipContent>
             </Tooltip>
           ))}

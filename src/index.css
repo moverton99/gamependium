@@ -5,6 +5,14 @@
 
 @layer base {
   :root {
+    --brand-dark: 188 38% 18%;       /* #1E3D40 */
+    --brand-mustard: 38 65% 47%;     /* #C88828 */
+    --brand-orange: 18 60% 44%;      /* #B5562E */
+    --brand-green: 101 18% 34%;      /* #4F6747 */
+    --brand-darkGreen: 164 25% 22%;  /* #2B463F */
+    --brand-gold: 40 65% 57%;        /* #D6A54C */
+    --brand-light: 60 27% 97%;       /* #F1F1E6 */
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -56,8 +64,8 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 10% 18%;
+    --card-foreground: 45 100% 85%;
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;

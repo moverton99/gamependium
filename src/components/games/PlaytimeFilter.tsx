@@ -46,18 +46,20 @@ export const PlaytimeFilter = ({ selected, onChange, active = false }: PlaytimeF
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full" onClick={handleContainerClick}>
       <div className={cn(
-        "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
-        active ? "bg-[#bcd8f7]" : "bg-white/90"
+        "flex items-center gap-2 rounded-md px-3 py-2 border border-brand-orange",
+        active
+      ? "bg-[hsl(var(--brand-orange))]"
+      : "bg-[hsl(var(--brand-darkGreen))]"
       )}>
-        <Clock className="w-4 h-4 text-black" />
+        <Clock className="w-4 h-4 text-brand-light" />
         <Select value={selected} onValueChange={(value) => {
           // Ensure propagation is stopped when changing values
           onChange(value);
         }}>
-          <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}>
+          <SelectTrigger className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-brand-light", "font-medium")}>
             <SelectValue placeholder="Select playtime" />
           </SelectTrigger>
-          <SelectContent className="bg-white" onClick={(e) => {
+          <SelectContent className="bg-brand-darkGreen" onClick={(e) => {
             // Extra protection for click events inside content
             e.stopPropagation();
           }}>

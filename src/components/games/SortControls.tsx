@@ -33,8 +33,10 @@ export const SortControls = ({
   return (
     <div
       className={cn(
-        "flex items-center w-full md:w-64 max-w-full border border-gray-300 rounded-md overflow-hidden",
-        active ? "bg-[#bcd8f7]" : "bg-white/90"
+        "flex items-center w-full md:w-64 max-w-full border border-brand-orange rounded-md overflow-hidden",
+        active
+      ? "bg-[hsl(var(--brand-orange))]"
+      : "bg-[hsl(var(--brand-darkGreen))]",
       )}
       onClick={handleClick}
     >
@@ -42,7 +44,7 @@ export const SortControls = ({
         type="button"
         aria-label="Toggle sort direction"
         onClick={onDirectionToggle}
-        className="w-10 h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 transition-colors font-medium text-black border-r border-gray-300 rounded-l-md"
+        className="w-10 h-10 flex items-center justify-center bg-transparent hover:bg-brand-orange transition-colors font-medium text-brand-light border-r border-brand-orange rounded-l-md"
         tabIndex={0}
       >
         {sortDirection === "asc" ? (
@@ -57,7 +59,7 @@ export const SortControls = ({
       >
         <SelectTrigger
           hideChevron
-          className="flex-1 w-0 h-10 border-0 rounded-none focus:ring-0 transition-colors font-medium text-black bg-transparent rounded-r-md"
+          className="flex-1 w-0 h-10 border-0 rounded-none focus:ring-0 transition-colors font-medium text-brand-light bg-transparent rounded-r-md"
         >
           <SelectValue placeholder="Sort by..." />
         </SelectTrigger>
