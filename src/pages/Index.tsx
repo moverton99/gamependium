@@ -32,7 +32,7 @@ const Index = () => {
       "min-h-screen p-2 md:p-4 bg-black",
       isInIframe ? "max-h-screen h-screen overflow-hidden" : ""
     )}>
-      <div className="mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-4 h-full flex flex-col">
+      <div className="mx-auto p-4 h-full flex flex-col">
         <FilterBar
           selectedCategories={filterState.selectedCategories}
           sortBy={filterState.sortBy}
