@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import games from "../../data/games.json";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { FilterBar } from "@/components/ui/FilterBar";
+import { FilterBar } from "@/components/games/FilterBar";
 import { GameContainer } from "@/components/ui/GameContainer";
 import { useGameFiltering } from "@/hooks/useGameFiltering";
 import { useCategorySelection } from "@/hooks/useCategorySelection";

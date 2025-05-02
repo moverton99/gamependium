@@ -2,13 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { CategoryFilter } from "@/components/ui/CategoryFilter";
+import { CategoryFilter } from "@/components/games/CategoryFilter";
 import { SortControls, type SortOption } from "@/components/games/SortControls";
 import { PlaytimeFilter } from "@/components/games/PlaytimeFilter";
 import { TextSearch } from "@/components/games/TextSearch";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { FilterButton } from "@/components/ui/FilterButton";
+import { FilterButton } from "@/components/games/FilterButton";
 
 interface FilterBarProps {
   selectedCategories: string[];
@@ -96,7 +96,6 @@ export const FilterBar = ({
               active={hasAnyFilter}
             />
           </div>
-
 
           {/* Sort Controls */}
           <div className="w-full">

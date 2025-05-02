@@ -17,7 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger 
 } from "@/components/ui/tooltip";
-import { categoryDescriptionMap } from "../games/categoryDescriptions";
+import { categoryDescriptionMap } from "./categoryDescriptions";
 import {
   Dialog,
   DialogContent,
@@ -65,12 +65,13 @@ export const CategoryFilter = ({
 
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
+      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
             variant="outline" 
             className={cn(
-              "w-full flex items-center gap-2 justify-start border border-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))]",
+              "overflow-hidden w-full flex items-center justify-start border border-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))]",
               active && "bg-[hsl(var(--brand-orange))] text-[hsl(var(--brand-darkGreen))]"
             )}
           >

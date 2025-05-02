@@ -73,8 +73,7 @@ export const DetailedGameCard = ({
     };
   }, [isOpen]);
 
-  // Calculate heights with additional 20% reduction from current header height (further reduced)
-  const headerHeight = isMobile ? 32 : 48; // Reduced by another 20% from previous values (40->32, 60->48)
+    const headerHeight = isMobile ? 32 : 48; 
   const paddingHeight = 20; // Account for padding
   const maxContentHeight = isMobile ? 
     `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` : 
@@ -91,7 +90,7 @@ export const DetailedGameCard = ({
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent 
-        className={`max-w-3xl bg-white text-black ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
+        className={`max-w-3xl bg-brand-darkGreen text-brand-light ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
         style={{ 
           position: 'fixed', 
           top: isMobile ? '5%' : '10%',
@@ -104,7 +103,7 @@ export const DetailedGameCard = ({
         }}
       >
         <DialogHeader className="pb-0.5"> {/* Further reduced padding */}
-          <DialogTitle className="text-lg font-bold text-black">{name}</DialogTitle> {/* Further reduced title size */}
+          <DialogTitle className="text-2xl font-bold text-brand-light">{name}</DialogTitle> {/* Further reduced title size */}
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
         
@@ -119,76 +118,77 @@ export const DetailedGameCard = ({
           >
             <div className="space-y-4 pb-8">
               <div className="flex flex-col gap-2">
-                <div className="text-lg font-semibold text-black">Description</div>
-                <p className="text-gray-700">{description}</p>
+                <div className="text-lg font-semibold text-brand-light">Description</div>
+                <p className="text-brand-light">{description}</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2 font-semibold text-black">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
                     <GraduationCap className="w-5 h-5" />
                     <span>Learning Curve</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-black">{learningCurveRank}/100</span>
-                    <p className="text-sm text-gray-600">{learningCurveDesc}</p>
+                    <span className="text-2xl font-bold text-brand-light">{learningCurveRank}/100</span>
+                    <p className="text-sm text-brand-light">{learningCurveDesc}</p>
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2 font-semibold text-black">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
                     <Brain className="w-5 h-5" />
                     <span>Strategic Depth</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-black">{strategicDepthRank}/100</span>
-                    <p className="text-sm text-gray-600">{strategicDepthDesc}</p>
+                    <span className="text-2xl font-bold text-brand-light">{strategicDepthRank}/100</span>
+                    <p className="text-sm text-brand-light">{strategicDepthDesc}</p>
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2 font-semibold text-black">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
                     <Repeat className="w-5 h-5" />
                     <span>Replayability</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-black">{replayabilityRank}/100</span>
-                    <p className="text-sm text-gray-600">{replayabilityDesc}</p>
+                    <span className="text-2xl font-bold text-brand-light">{replayabilityRank}/100</span>
+                    <p className="text-sm text-brand-light">{replayabilityDesc}</p>
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2 font-semibold text-black">
-                    <Clock className="w-5 h-5" />
-                    <span>Playtime</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-black">{playtimeMinutes}</span>
-                    <p className="text-sm text-gray-600">minutes</p>
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2 font-semibold text-black">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
                     <Users className="w-5 h-5" />
                     <span>Players</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-black">{minPlayers}-{maxPlayers}</span>
-                    <p className="text-sm text-gray-600">Suggested min: {suggestedMinPlayers}</p>
-                    <p className="text-xs text-gray-500">{playersDesc}</p>
+                    <span className="text-2xl font-bold text-brand-light">{minPlayers}-{maxPlayers}</span>
+                    <p className="text-sm text-brand-light">Suggested min: {suggestedMinPlayers}</p>
+                    <p className="text-xs text-brand-light">{playersDesc}</p>
                   </div>
                 </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
+                    <Clock className="w-5 h-5" />
+                    <span>Playtime</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-brand-light">{playtimeMinutes}</span>
+                    <p className="text-sm text-brand-light">minutes</p>
+                  </div>
+                </div>
+
               </div>
 
               <div className="space-y-1 pb-4">
-                <div className="font-semibold text-black">Categories</div>
+                <div className="font-semibold text-brand-light">Categories</div>
                 <div className="flex flex-wrap gap-2 pb-6">
                   {categories.map((cat) => (
                     <Tooltip key={cat}>
                       <TooltipTrigger asChild>
                         <span
-                          className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
+                          className="px-3 py-1 bg-brand-mustard text-brand-light rounded-full text-sm cursor-pointer hover:bg-purple-200 transition-colors"
                           onClick={() => handleCategoryClick(cat)}
                         >
                           {cat}

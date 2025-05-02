@@ -43,8 +43,14 @@ const DialogContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-8 top-8 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-black">
-        <X className="h-4 w-4 text-black" />
+      
+      <DialogPrimitive.Close
+        className="absolute right-8 top-8 rounded-sm opacity-70 transition-opacity hover:opacity-100
+             focus:outline-none focus:ring-2 focus:ring-[hsl(var(--brand-orange))] focus:ring-offset-2 focus:ring-offset-[hsl(var(--brand-darkGreen))]
+             disabled:pointer-events-none
+             data-[state=open]:bg-accent data-[state=open]:text-brand-white"
+      >
+        <X className="h-8 w-8 text-[hsl(var(--brand-light))]" />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
@@ -87,7 +93,7 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight text-black",
+      "text-lg font-semibold leading-none tracking-tight text-brand-white",
       className
     )}
     {...props}

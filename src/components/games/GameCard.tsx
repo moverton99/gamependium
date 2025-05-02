@@ -131,7 +131,7 @@ export const GameCard = ({
           {categories.map((cat) => (
             <Tooltip key={cat}>
               <TooltipTrigger asChild>
-                <span className="px-2 py-1 bg-[hsl(var(--brand-mustard))] text-[hsl(var(--brand-light))] text-sm rounded-full cursor-help"                >
+                <span className="px-2 py-1 bg-brand-mustard text-brand-light text-sm rounded-full cursor-help"                >
                   {cat}
                 </span>
               </TooltipTrigger>
