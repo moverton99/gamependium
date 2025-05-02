@@ -2,12 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { CategoryFilter } from "@/components/games/CategoryFilter";
+import { CategoryFilter } from "@/components/ui/CategoryFilter";
 import { SortControls, type SortOption } from "@/components/games/SortControls";
 import { PlaytimeFilter } from "@/components/games/PlaytimeFilter";
 import { TextSearch } from "@/components/games/TextSearch";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { FilterButton } from "@/components/ui/FilterButton";
 
 interface FilterBarProps {
   selectedCategories: string[];
@@ -63,7 +64,7 @@ export const FilterBar = ({
           <div className="w-full">
             <TextSearch value={search} onChange={onSearchChange} active={hasSearchFilter} />
           </div>
-          
+
           {/* Category */}
           <div className="w-full">
             <CategoryFilter
@@ -74,35 +75,29 @@ export const FilterBar = ({
               active={hasCategoryFilter}
             />
           </div>
-          
+
           {/* Playtime */}
           <div className="w-full">
             <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} active={hasPlaytimeFilter} />
           </div>
-          
+
           {/* Player Count */}
           <div className="w-full">
             <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} active={hasPlayerCountFilter} />
           </div>
-          
+
           {/* Reset Filters */}
           <div className="w-full">
-            <div className={cn(
-              "flex items-center w-full border border-gray-300 rounded-md overflow-hidden",
-              hasAnyFilter ? "bg-[#bcd8f7]" : "bg-white/90"
-            )}>
-              <Button 
-                variant="ghost" 
-                onClick={onResetFilters}
-                className="gap-2 w-full justify-start font-medium text-black h-10 px-3"
-                disabled={!hasAnyFilter}
-              >
-                <RefreshCw className="w-4 h-4 text-black" />
-                Reset Filters
-              </Button>
-            </div>
+            <FilterButton
+              label="Reset Filters"
+              icon={<RefreshCw className="w-4 h-4 text-[hsl(var(--brand-light))]" />}
+              onClick={onResetFilters}
+              disabled={!hasAnyFilter}
+              active={hasAnyFilter}
+            />
           </div>
-          
+
+
           {/* Sort Controls */}
           <div className="w-full">
             <SortControls
@@ -143,22 +138,14 @@ export const FilterBar = ({
           </div>
           {/* Right column: Reset Filters + Sort */}
           <div className="flex flex-col gap-2 items-start">
-            <div className="w-full md:w-64 max-w-full">
-              <div className={cn(
-                "flex items-center w-full border border-gray-300 rounded-md overflow-hidden",
-                hasAnyFilter ? "bg-[#bcd8f7]" : "bg-white/90"
-              )}>
-                <Button 
-                  variant="ghost" 
-                  onClick={onResetFilters}
-                  className="gap-2 w-full justify-start font-medium text-black h-10 px-3"
-                  disabled={!hasAnyFilter}
-                >
-                  <RefreshCw className="w-4 h-4 text-black" />
-                  Reset Filters
-                </Button>
-              </div>
-            </div>
+            <FilterButton
+              label="Reset Filters"
+              icon={<RefreshCw className="w-4 h-4 text-[hsl(var(--brand-light))]" />}
+              onClick={onResetFilters}
+              disabled={!hasAnyFilter}
+              active={hasAnyFilter}
+            />
+
             <div className="w-full md:w-64 max-w-full">
               <SortControls
                 sortBy={sortBy}

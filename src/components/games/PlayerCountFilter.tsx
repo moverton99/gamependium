@@ -34,17 +34,19 @@ export const PlayerCountFilter = ({ selected, onChange, active = false }: Player
     >
       <div 
         className={cn(
-          "flex items-center gap-2 rounded-md px-3 py-2 border border-gray-300",
-          active ? "bg-[#bcd8f7]" : "bg-white/90"
+          "flex items-center gap-2 rounded-md px-3 py-2 border border-brand-orange",
+          active
+      ? "bg-[hsl(var(--brand-orange))]"
+      : "bg-[hsl(var(--brand-darkGreen))]"
         )}
       >
-        <Users className="w-4 h-4 text-black" />
+        <Users className="w-4 h-4 text-brand-light" />
         <Select 
           value={selected} 
           onValueChange={onChange}
         >
           <SelectTrigger 
-            className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-black", "font-medium")}
+            className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-brand-light", "font-medium")}
             onClick={(e) => e.stopPropagation()}
           >
             <SelectValue placeholder="Any players" />

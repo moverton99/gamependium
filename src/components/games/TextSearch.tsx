@@ -1,4 +1,3 @@
-
 import { Input } from "@/components/ui/input";
 import { Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -12,12 +11,14 @@ interface TextSearchProps {
 export const TextSearch = ({ value, onChange, active = false }: TextSearchProps) => (
   <div className="relative w-full md:w-64 max-w-full">
     <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center">
-      <Search className="w-4 h-4 text-black" />
+      <Search className="w-4 h-4 text-[hsl(var(--brand-light))]" />
     </span>
     <Input
       className={cn(
-        "w-full pl-10 pr-8 text-black border-gray-300 placeholder:text-gray-500",
-        active ? "bg-[#bcd8f7]" : "bg-white/90"
+        "w-full pl-10 pr-8 text-[hsl(var(--brand-light))] border-[hsl(var(--brand-orange))] placeholder:text-[hsl(var(--brand-light))]/70",
+        active
+        ? "bg-[hsl(var(--brand-orange))]"
+        : "bg-[hsl(var(--brand-darkGreen))]"      
       )}
       type="text"
       placeholder="Search games..."
@@ -28,12 +29,12 @@ export const TextSearch = ({ value, onChange, active = false }: TextSearchProps)
     {value && (
       <button
         type="button"
-        className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center p-1 rounded hover:bg-gray-200 transition"
+        className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center p-1 rounded hover:bg-[hsl(var(--brand-orange))]/20 transition"
         onClick={() => onChange("")}
         tabIndex={-1}
         aria-label="Clear search"
       >
-        <X className="w-4 h-4 text-gray-600" />
+        <X className="w-4 h-4 text-[hsl(var(--brand-light))]" />
       </button>
     )}
   </div>
