@@ -3,8 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { categoryDescriptionMap } from "./categoryDescriptions";
 import { useEffect } from "react";
+import { useData } from "@/contexts/DataContext";
 
 interface DetailedGameCardProps {
   name: string;
@@ -44,7 +44,8 @@ export const DetailedGameCard = ({
   playersDesc,
 }: DetailedGameCardProps) => {
   const isMobile = useIsMobile();
-  
+  const { categoryDescriptionMap } = useData();
+
   const handleCategoryClick = (category: string) => {
     onClose();
     const searchParams = new URLSearchParams(window.location.search);
@@ -57,7 +58,7 @@ export const DetailedGameCard = ({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      
+
       // Force layout recalculation on iOS to help with scroll initialization
       setTimeout(() => {
         const scrollContainer = document.querySelector('.scroll-container');
@@ -67,16 +68,16 @@ export const DetailedGameCard = ({
         }
       }, 100);
     }
-    
+
     return () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
 
-    const headerHeight = isMobile ? 32 : 48; 
+  const headerHeight = isMobile ? 32 : 48;
   const paddingHeight = 20; // Account for padding
-  const maxContentHeight = isMobile ? 
-    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` : 
+  const maxContentHeight = isMobile ?
+    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` :
     `calc(90vh - ${headerHeight}px - ${paddingHeight}px)`;
 
   // Handle manual close to ensure it works on iOS
@@ -89,10 +90,10 @@ export const DetailedGameCard = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent 
+      <DialogContent
         className={`max-w-3xl bg-brand-darkGreen text-brand-light ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
-        style={{ 
-          position: 'fixed', 
+        style={{
+          position: 'fixed',
           top: isMobile ? '5%' : '10%',
           transform: 'translateX(-50%)',
           display: 'flex',
@@ -106,11 +107,11 @@ export const DetailedGameCard = ({
           <DialogTitle className="text-2xl font-bold text-brand-light">{name}</DialogTitle> {/* Further reduced title size */}
           <DialogDescription className="sr-only">Details about the game {name}</DialogDescription>
         </DialogHeader>
-        
+
         <div className="flex-grow overflow-hidden">
-          <div 
-            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-0.5" 
-            style={{ 
+          <div
+            className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-0.5"
+            style={{
               WebkitOverflowScrolling: 'touch',
               maxHeight: maxContentHeight,
               paddingBottom: '60px', // Add extra padding at the bottom to ensure content is visible

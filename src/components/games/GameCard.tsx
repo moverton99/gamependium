@@ -4,8 +4,8 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
-import { categoryDescriptionMap } from "./categoryDescriptions";
 import { PlayerCountOption } from "./PlayerCountFilter";
+import { useData } from "@/contexts/DataContext";
 
 interface GameCardProps {
   name: string;
@@ -43,7 +43,8 @@ export const GameCard = ({
   selectedPlayerCount,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
-  
+  const { categoryDescriptionMap } = useData();
+
   let showWarningTriangle = false;
 
   if (
@@ -59,7 +60,7 @@ export const GameCard = ({
 
   return (
     <>
-      <Card 
+      <Card
         className="p-6 bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))] hover:shadow-lg transition-shadow cursor-pointer"
         onClick={() => setIsDetailedViewOpen(true)}
       >
