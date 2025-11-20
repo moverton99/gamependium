@@ -59,7 +59,7 @@ export const fetchGoogleSheetData = async () => {
       strategic_depth_desc: row.strategic_depth_desc,
       replayability_rank: parseInt(row.replayability_rank) || row.replayability_rank, // Handle mixed types if needed, though interface says number | string
       replayability_desc: row.replayability_desc,
-      category: row.category ? row.category.split(',').map(c => c.trim()) : [],
+      category: row.category ? row.category.split(';').map(c => c.trim()) : [],
       playtime_minutes: parseInt(row.playtime_minutes) || 0,
       min_players: parseInt(row.min_players) || 0,
       max_players: parseInt(row.max_players) || 0,
