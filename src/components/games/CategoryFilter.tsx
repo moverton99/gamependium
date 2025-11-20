@@ -11,13 +11,12 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
-import { 
-  Tooltip, 
-  TooltipContent, 
+import {
+  Tooltip,
+  TooltipContent,
   TooltipProvider,
-  TooltipTrigger 
+  TooltipTrigger
 } from "@/components/ui/tooltip";
-import { categoryDescriptionMap } from "./categoryDescriptions";
 import {
   Dialog,
   DialogContent,
@@ -31,6 +30,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 interface CategoryFilterProps {
   categories: Array<{ name: string }>;
   selectedCategories: string[];
+  categoryDescriptionMap: Record<string, string>;
   onCategoryToggle: (category: string, checked: boolean) => void;
   onCategoryRemove: (category: string) => void;
   active?: boolean;
@@ -39,18 +39,19 @@ interface CategoryFilterProps {
 export const CategoryFilter = ({
   categories,
   selectedCategories,
+  categoryDescriptionMap,
   onCategoryToggle,
   onCategoryRemove,
   active = false,
 }: CategoryFilterProps) => {
   const isMobile = useIsMobile();
-  
+
   const buttonText = selectedCategories.length === 0
     ? "Category"
     : selectedCategories.length === 1
       ? selectedCategories[0]
-      : selectedCategories.slice(0, 2).join(", ") + 
-        (selectedCategories.length > 2 ? `, +${selectedCategories.length - 2}` : "");
+      : selectedCategories.slice(0, 2).join(", ") +
+      (selectedCategories.length > 2 ? `, +${selectedCategories.length - 2}` : "");
 
   useEffect(() => {
     console.log("CategoryFilter received selectedCategories:", selectedCategories);
@@ -65,11 +66,11 @@ export const CategoryFilter = ({
 
   return (
     <div className="flex flex-col w-full md:w-64 max-w-full">
-      
+
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className={cn(
               "overflow-hidden w-full flex items-center justify-start border border-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))]",
               active && "bg-[hsl(var(--brand-orange))] text-[hsl(var(--brand-darkGreen))]"
@@ -93,10 +94,10 @@ export const CategoryFilter = ({
               <div className="flex items-center justify-center w-10 h-10">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button 
-                      variant="ghost" 
+                    <Button
+                      variant="ghost"
                       size="icon"
-                      className="h-9 w-9 rounded-full p-0 flex items-center justify-center bg-[hsl(var(--brand-darkGreen))] hover:bg-[hsl(var(--brand-orange))]/20 border border-[hsl(var(--brand-orange))]" 
+                      className="h-9 w-9 rounded-full p-0 flex items-center justify-center bg-[hsl(var(--brand-darkGreen))] hover:bg-[hsl(var(--brand-orange))]/20 border border-[hsl(var(--brand-orange))]"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <Info className="h-5 w-5 text-[hsl(var(--brand-light))] block" />

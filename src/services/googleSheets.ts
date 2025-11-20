@@ -4,8 +4,8 @@ import { Game } from '@/types/game';
 
 // These URLs should be replaced with the actual published CSV links provided by the user.
 // For now, I'll use placeholders or empty strings, and the app should handle the empty case gracefully or use fallback data.
-const GAMES_CSV_URL = import.meta.env.VITE_GAMES_CSV_URL || '';
-const CATEGORIES_CSV_URL = import.meta.env.VITE_CATEGORIES_CSV_URL || '';
+const GAMES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9hOhKXdB6n_mEWhPC2mvegzy-bopr1vGp-_dyJ39tGEfVwyBPdrLNkx3p41K0NgnkqIviO-6o-N1f/pub?gid=0&single=true&output=csv';
+const CATEGORIES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9hOhKXdB6n_mEWhPC2mvegzy-bopr1vGp-_dyJ39tGEfVwyBPdrLNkx3p41K0NgnkqIviO-6o-N1f/pub?gid=708448874&single=true&output=csv';
 
 export interface Category {
   name: string;

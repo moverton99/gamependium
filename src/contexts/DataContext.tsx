@@ -2,9 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Game } from '@/types/game';
 import { fetchGoogleSheetData, Category } from '@/services/googleSheets';
-// Fallback data in case fetching fails or URLs aren't set
-import localGames from '../../data/games.json';
-import localCategories from '../../data/game_categories.json';
+
 
 interface DataContextType {
     games: Game[];
@@ -26,14 +24,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         const loadData = async () => {
             setIsLoading(true);
             try {
-                // Check if URLs are configured
-                if (!import.meta.env.VITE_GAMES_CSV_URL || !import.meta.env.VITE_CATEGORIES_CSV_URL) {
-                    console.log("Using local data fallback");
-                    setGames(localGames as Game[]);
-                    setCategories(localCategories);
-                    setIsLoading(false);
-                    return;
-                }
+
 
                 const { games: fetchedGames, categories: fetchedCategories } = await fetchGoogleSheetData();
 
@@ -42,16 +33,12 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
                     setCategories(fetchedCategories);
                 } else {
                     // Fallback if fetch returns empty (e.g. parsing error or network error handled in service)
-                    console.warn("Fetched data was empty, using local fallback.");
-                    setGames(localGames as Game[]);
-                    setCategories(localCategories);
+                    console.warn("Fetched data was empty.");
                 }
 
             } catch (err) {
                 console.error("Failed to load data:", err);
-                setError("Failed to load data. Using local backup.");
-                setGames(localGames as Game[]);
-                setCategories(localCategories);
+                setError("Failed to load data.");
             } finally {
                 setIsLoading(false);
             }

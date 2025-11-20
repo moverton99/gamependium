@@ -18,6 +18,7 @@ interface FilterBarProps {
   search: string;
   selectedPlayerCount: PlayerCountOption;
   categories: Array<{ name: string }>;
+  categoryDescriptionMap: Record<string, string>;
   onCategoryToggle: (category: string, checked: boolean) => void;
   onCategoryRemove: (categoryToRemove: string) => void;
   onSortChange: (value: SortOption) => void;
@@ -36,6 +37,7 @@ export const FilterBar = ({
   search,
   selectedPlayerCount,
   categories,
+  categoryDescriptionMap,
   onCategoryToggle,
   onCategoryRemove,
   onSortChange,
@@ -70,6 +72,7 @@ export const FilterBar = ({
             <CategoryFilter
               categories={categories}
               selectedCategories={selectedCategories}
+              categoryDescriptionMap={categoryDescriptionMap}
               onCategoryToggle={onCategoryToggle}
               onCategoryRemove={onCategoryRemove}
               active={hasCategoryFilter}
@@ -120,6 +123,7 @@ export const FilterBar = ({
               <CategoryFilter
                 categories={categories}
                 selectedCategories={selectedCategories}
+                categoryDescriptionMap={categoryDescriptionMap}
                 onCategoryToggle={onCategoryToggle}
                 onCategoryRemove={onCategoryRemove}
                 active={hasCategoryFilter}
