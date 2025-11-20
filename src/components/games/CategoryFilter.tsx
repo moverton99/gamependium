@@ -46,7 +46,15 @@ export const CategoryFilter = ({
 }: CategoryFilterProps) => {
   const isMobile = useIsMobile();
 
-  const buttonText = selectedCategories.length === 0
+  if (!categories || !Array.isArray(categories)) {
+    console.warn("CategoryFilter: categories is missing or not an array", categories);
+    return null;
+  }
+
+  const safeDescriptionMap = categoryDescriptionMap || {};
+  const safeSelectedCategories = Array.isArray(selectedCategories) ? selectedCategories : [];
+
+  const buttonText = safeSelectedCategories.length === 0
     ? "Category"
     : selectedCategories.length === 1
       ? selectedCategories[0]
@@ -54,12 +62,12 @@ export const CategoryFilter = ({
       (selectedCategories.length > 2 ? `, +${selectedCategories.length - 2}` : "");
 
   useEffect(() => {
-    console.log("CategoryFilter received selectedCategories:", selectedCategories);
-  }, [selectedCategories]);
+    console.log("CategoryFilter received selectedCategories:", safeSelectedCategories);
+  }, [safeSelectedCategories]);
 
   const clearAllSelections = () => {
     console.log("Clearing all category selections");
-    selectedCategories.forEach(category => {
+    safeSelectedCategories.forEach(category => {
       onCategoryRemove(category);
     });
   };
@@ -117,7 +125,7 @@ export const CategoryFilter = ({
                           <div key={category.name} className="border-b border-[hsl(var(--brand-orange))]/30 pb-1 last:border-0">
                             <p className="text-sm text-[hsl(var(--brand-light))]">
                               <span className="font-bold">{category.name}: </span>
-                              {categoryDescriptionMap[category.name] || "No description available"}
+                              {safeDescriptionMap[category.name] || "No description available"}
                             </p>
                           </div>
                         ))}
@@ -129,8 +137,8 @@ export const CategoryFilter = ({
             </div>
             <div className="grid grid-cols-2 gap-1 p-2">
               {categories.map((category) => {
-                const isSelected = selectedCategories.includes(category.name);
-                const description = categoryDescriptionMap[category.name] || "No description available";
+                const isSelected = safeSelectedCategories.includes(category.name);
+                const description = safeDescriptionMap[category.name] || "No description available";
                 return (
                   <Tooltip key={category.name} delayDuration={300}>
                     <TooltipTrigger asChild>
@@ -138,7 +146,7 @@ export const CategoryFilter = ({
                         checked={isSelected}
                         onSelect={(e) => {
                           e.preventDefault();
-                          const willBeChecked = !selectedCategories.includes(category.name);
+                          const willBeChecked = !safeSelectedCategories.includes(category.name);
                           onCategoryToggle(category.name, willBeChecked);
                         }}
                         className={cn(
@@ -160,7 +168,7 @@ export const CategoryFilter = ({
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="flex flex-wrap items-center gap-2 mt-2">
-        {selectedCategories.map((category) => (
+        {safeSelectedCategories.map((category) => (
           <div
             key={category}
             className="flex items-center gap-1 px-2 py-1 bg-[hsl(var(--brand-orange))]/20 text-[hsl(var(--brand-light))] border border-[hsl(var(--brand-orange))] rounded-full text-sm"

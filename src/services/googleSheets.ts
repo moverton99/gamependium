@@ -47,7 +47,10 @@ export const fetchGoogleSheetData = async () => {
     const gamesData = Papa.parse<RawGameRow>(gamesCsv, { header: true, skipEmptyLines: true }).data;
     const categoriesData = Papa.parse<Category>(categoriesCsv, { header: true, skipEmptyLines: true }).data;
 
-    const games: Game[] = gamesData.map(row => ({
+    const validGamesData = gamesData.filter(row => row.name && row.name.trim() !== '');
+    const validCategoriesData = categoriesData.filter(row => row.name && row.name.trim() !== '');
+
+    const games: Game[] = validGamesData.map(row => ({
       name: row.name,
       description: row.description,
       learning_curve_rank: parseInt(row.learning_curve_rank) || 0,
@@ -64,7 +67,7 @@ export const fetchGoogleSheetData = async () => {
       players_desc: row.players_desc
     }));
 
-    return { games, categories: categoriesData };
+    return { games, categories: validCategoriesData };
 
   } catch (error) {
     console.error("Error fetching data from Google Sheets:", error);
