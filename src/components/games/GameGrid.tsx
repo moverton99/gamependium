@@ -29,6 +29,7 @@ export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) 
             suggestedMinPlayers={game.suggested_min_players}
             playersDesc={game.players_desc}
             selectedPlayerCount={selectedPlayerCount}
+            soldByOKG={game.sold_by_okg}
           />
         ))}
       </div>

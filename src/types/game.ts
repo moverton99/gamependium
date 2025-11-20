@@ -15,4 +15,5 @@ export interface Game {
   max_players: number;
   suggested_min_players: number;
   players_desc: string;
+  sold_by_okg: boolean;
 }

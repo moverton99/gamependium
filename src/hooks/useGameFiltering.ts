@@ -11,6 +11,7 @@ export type GameFilterState = {
   selectedPlaytime: string;
   search: string;
   selectedPlayerCount: PlayerCountOption;
+  soldByOKG: boolean;
 };
 
 export const useGameFiltering = (allGames: Game[]) => {
@@ -20,15 +21,16 @@ export const useGameFiltering = (allGames: Game[]) => {
   const [selectedPlaytime, setSelectedPlaytime] = useState<string>("all");
   const [search, setSearch] = useState<string>("");
   const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
+  const [soldByOKG, setSoldByOKG] = useState<boolean>(false);
 
   const handleCategoryToggle = (category: string, checked: boolean) => {
     console.log("handleCategoryToggle called with:", category, "checked:", checked);
-    
+
     setSelectedCategories(prevCategories => {
-      const newCategories = checked 
-        ? [...prevCategories, category] 
+      const newCategories = checked
+        ? [...prevCategories, category]
         : prevCategories.filter(cat => cat !== category);
-      
+
       console.log("Setting selected categories:", newCategories);
       return newCategories;
     });
@@ -36,7 +38,7 @@ export const useGameFiltering = (allGames: Game[]) => {
 
   const removeCategory = (categoryToRemove: string) => {
     console.log("removeCategory called with:", categoryToRemove);
-    
+
     setSelectedCategories(prevCategories => {
       const newCategories = prevCategories.filter(cat => cat !== categoryToRemove);
       console.log("After removal, categories:", newCategories);
@@ -49,8 +51,9 @@ export const useGameFiltering = (allGames: Game[]) => {
     setSelectedPlaytime("all");
     setSearch("");
     setSelectedPlayerCount("any");
+    setSoldByOKG(false);
   };
-  
+
   function isInPlaytimeGroup(game: Game, group: string) {
     const pt = game.playtime_minutes ?? 0;
     if (group === "quick") return pt >= 0 && pt <= 30;
@@ -68,14 +71,19 @@ export const useGameFiltering = (allGames: Game[]) => {
   }
 
   const sortedAndFilteredGames = useMemo(() => {
-    console.log("Recomputing sorted games with:", { 
-      sortBy, 
-      sortDirection, 
-      selectedPlaytime, 
-      search, 
+    console.log("Recomputing sorted games with:", {
+      sortBy,
+      sortDirection,
+      selectedPlaytime,
+      search,
       selectedPlayerCount,
-      selectedCategories
+      selectedCategories,
+      soldByOKG
     });
+
+    if (allGames.length > 0) {
+      // console.log("First game sold_by_okg:", allGames[0].name, allGames[0].sold_by_okg);
+    }
 
     let filteredGames = [...allGames]
       .filter(game =>
@@ -85,6 +93,7 @@ export const useGameFiltering = (allGames: Game[]) => {
         && (search.trim() === "" ||
           game.name.toLowerCase().includes(search.toLowerCase()))
         && (selectedPlayerCount === "any" || meetsPlayerCount(game, selectedPlayerCount))
+        && (!soldByOKG || game.sold_by_okg)
       );
 
     if (sortBy !== "name") {
@@ -92,7 +101,7 @@ export const useGameFiltering = (allGames: Game[]) => {
     }
 
     console.log(`Filtered games count: ${filteredGames.length}`);
-    
+
     return filteredGames.sort((a, b) => {
       const multiplier = sortDirection === "asc" ? 1 : -1;
 
@@ -107,7 +116,7 @@ export const useGameFiltering = (allGames: Game[]) => {
         return multiplier * (valueA - valueB);
       }
     }) as Game[];
-  }, [allGames, selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount]);
+  }, [allGames, selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount, soldByOKG]);
 
   return {
     filterState: {
@@ -117,6 +126,7 @@ export const useGameFiltering = (allGames: Game[]) => {
       selectedPlaytime,
       search,
       selectedPlayerCount,
+      soldByOKG,
     },
     sortedAndFilteredGames,
     handlers: {
@@ -129,6 +139,7 @@ export const useGameFiltering = (allGames: Game[]) => {
       handleCategoryToggle,
       removeCategory,
       resetFilters,
+      setSoldByOKG,
     },
   };
 };

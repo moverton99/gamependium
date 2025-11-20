@@ -9,7 +9,7 @@ import { useCategorySelection } from "@/hooks/useCategorySelection";
 import { DataProvider, useData } from "@/contexts/DataContext";
 
 const GameExplorer = () => {
-  const { games, isLoading, error } = useData();
+  const { games, categoryDescriptionMap, isLoading, error } = useData();
 
   const {
     filterState,
@@ -51,7 +51,9 @@ const GameExplorer = () => {
           selectedPlaytime={filterState.selectedPlaytime}
           search={filterState.search}
           selectedPlayerCount={filterState.selectedPlayerCount}
+          soldByOKG={filterState.soldByOKG}
           categories={allCategories}
+          categoryDescriptionMap={categoryDescriptionMap}
           onCategoryToggle={handlers.handleCategoryToggle}
           onCategoryRemove={handlers.removeCategory}
           onSortChange={handlers.setSortBy}
@@ -59,6 +61,7 @@ const GameExplorer = () => {
           onPlaytimeChange={handlers.setSelectedPlaytime}
           onSearchChange={handlers.setSearch}
           onPlayerCountChange={handlers.setSelectedPlayerCount}
+          onSoldByOKGToggle={handlers.setSoldByOKG}
           onResetFilters={handlers.resetFilters}
         />
 

@@ -10,6 +10,10 @@ import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/Pl
 import { useIsMobile } from "@/hooks/use-mobile";
 import { FilterButton } from "@/components/games/FilterButton";
 
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { ShoppingBag } from "lucide-react";
+
 interface FilterBarProps {
   selectedCategories: string[];
   sortBy: SortOption;
@@ -17,6 +21,7 @@ interface FilterBarProps {
   selectedPlaytime: string;
   search: string;
   selectedPlayerCount: PlayerCountOption;
+  soldByOKG: boolean;
   categories: Array<{ name: string }>;
   categoryDescriptionMap: Record<string, string>;
   onCategoryToggle: (category: string, checked: boolean) => void;
@@ -26,6 +31,7 @@ interface FilterBarProps {
   onPlaytimeChange: (value: string) => void;
   onSearchChange: (value: string) => void;
   onPlayerCountChange: (value: PlayerCountOption) => void;
+  onSoldByOKGToggle: (checked: boolean) => void;
   onResetFilters: () => void;
 }
 
@@ -36,6 +42,7 @@ export const FilterBar = ({
   selectedPlaytime,
   search,
   selectedPlayerCount,
+  soldByOKG,
   categories,
   categoryDescriptionMap,
   onCategoryToggle,
@@ -45,6 +52,7 @@ export const FilterBar = ({
   onPlaytimeChange,
   onSearchChange,
   onPlayerCountChange,
+  onSoldByOKGToggle,
   onResetFilters,
 }: FilterBarProps) => {
   const isMobile = useIsMobile();
@@ -55,7 +63,8 @@ export const FilterBar = ({
   const hasPlaytimeFilter = selectedPlaytime !== "all";
   const hasPlayerCountFilter = selectedPlayerCount !== "any";
   const hasSortFilter = sortBy !== "name" || sortDirection !== "asc";
-  const hasAnyFilter = hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter || hasSortFilter;
+  const hasSoldByOKGFilter = soldByOKG;
+  const hasAnyFilter = hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter || hasSortFilter || hasSoldByOKGFilter;
 
   return (
     <>
@@ -87,6 +96,20 @@ export const FilterBar = ({
           {/* Player Count */}
           <div className="w-full">
             <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} active={hasPlayerCountFilter} />
+          </div>
+
+          {/* Sold by OKG Toggle */}
+          <div className="w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md p-2">
+            <Switch
+              id="sold-by-okg-mobile"
+              checked={soldByOKG}
+              onCheckedChange={onSoldByOKGToggle}
+              className="data-[state=checked]:bg-[hsl(var(--brand-orange))]"
+            />
+            <Label htmlFor="sold-by-okg-mobile" className="text-[hsl(var(--brand-light))] flex items-center gap-2 cursor-pointer">
+              <ShoppingBag className="w-4 h-4" />
+              Sold by OverKnight Games
+            </Label>
           </div>
 
           {/* Reset Filters */}
@@ -130,13 +153,25 @@ export const FilterBar = ({
               />
             </div>
           </div>
-          {/* Center column: Playtime and Player Count */}
+          {/* Center column: Playtime, Player Count, Sold by OKG */}
           <div className="flex flex-col gap-2 items-start">
             <div className="w-full md:w-64 max-w-full">
               <PlaytimeFilter selected={selectedPlaytime} onChange={onPlaytimeChange} active={hasPlaytimeFilter} />
             </div>
             <div className="w-full md:w-64 max-w-full">
               <PlayerCountFilter selected={selectedPlayerCount} onChange={onPlayerCountChange} active={hasPlayerCountFilter} />
+            </div>
+            <div className="w-full md:w-64 max-w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md p-2 h-10">
+              <Switch
+                id="sold-by-okg-desktop"
+                checked={soldByOKG}
+                onCheckedChange={onSoldByOKGToggle}
+                className="data-[state=checked]:bg-[hsl(var(--brand-orange))]"
+              />
+              <Label htmlFor="sold-by-okg-desktop" className="text-[hsl(var(--brand-light))] text-sm flex items-center gap-2 cursor-pointer whitespace-nowrap">
+                <ShoppingBag className="w-4 h-4" />
+                Sold by OKG
+              </Label>
             </div>
           </div>
           {/* Right column: Reset Filters + Sort */}

@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 import { PlayerCountOption } from "./PlayerCountFilter";
@@ -23,6 +23,7 @@ interface GameCardProps {
   suggestedMinPlayers: number;
   playersDesc: string;
   selectedPlayerCount: PlayerCountOption;
+  soldByOKG: boolean;
 }
 
 export const GameCard = ({
@@ -41,6 +42,7 @@ export const GameCard = ({
   suggestedMinPlayers,
   playersDesc,
   selectedPlayerCount,
+  soldByOKG,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
   const { categoryDescriptionMap } = useData();
@@ -61,10 +63,24 @@ export const GameCard = ({
   return (
     <>
       <Card
-        className="p-6 bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))] hover:shadow-lg transition-shadow cursor-pointer"
+        className="p-6 bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))] hover:shadow-lg transition-shadow cursor-pointer relative"
         onClick={() => setIsDetailedViewOpen(true)}
       >
-        <h2 className="text-xl font-semibold mb-2">{name}</h2>
+        <div className="flex justify-between items-start mb-2">
+          <h2 className="text-xl font-semibold pr-8">{name}</h2>
+          {soldByOKG && (
+            <Tooltip>
+              <TooltipTrigger>
+                <div className="bg-[hsl(var(--brand-orange))] text-[hsl(var(--brand-darkGreen))] p-1.5 rounded-full">
+                  <ShoppingBag className="w-4 h-4" />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="text-sm font-semibold">Sold by OverKnight Games</p>
+              </TooltipContent>
+            </Tooltip>
+          )}
+        </div>
         <div className="flex gap-4 mb-4 text-[hsl(var(--brand-light))]">
           <Tooltip>
             <TooltipTrigger className="flex items-center gap-1">

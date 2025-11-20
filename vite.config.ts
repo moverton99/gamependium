@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/game-voyage-explorer/" : "/", // 👈 Only set base for production
+  base: mode === "production" ? "/gamependium/" : "/", // 👈 Only set base for production
   server: {
     host: "::",
     port: 8080,
