@@ -16,4 +16,5 @@ export interface Game {
   suggested_min_players: number;
   players_desc: string;
   sold_by_okg: boolean;
+  coop: boolean;
 }

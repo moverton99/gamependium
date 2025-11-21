@@ -1,6 +1,6 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Brain, Repeat, GraduationCap, Clock, Users } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users, Handshake } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { useEffect } from "react";
@@ -23,6 +23,7 @@ interface DetailedGameCardProps {
   maxPlayers: number;
   suggestedMinPlayers: number;
   playersDesc: string;
+  coop: boolean;
 }
 
 export const DetailedGameCard = ({
@@ -42,6 +43,7 @@ export const DetailedGameCard = ({
   maxPlayers,
   suggestedMinPlayers,
   playersDesc,
+  coop,
 }: DetailedGameCardProps) => {
   const isMobile = useIsMobile();
   const { categoryDescriptionMap } = useData();
@@ -202,6 +204,19 @@ export const DetailedGameCard = ({
                   ))}
                 </div>
               </div>
+
+              {coop && (
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 font-semibold text-brand-light">
+                    <Handshake className="w-5 h-5" />
+                    <span>Cooperative</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-sm text-brand-light">Players work together as a team toward a shared goal</p>
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
         </div>

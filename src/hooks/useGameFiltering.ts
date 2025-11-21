@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { Game } from "@/types/game";
 import { SortOption } from "@/components/games/SortControls";
 import { PlayerCountOption } from "@/components/games/PlayerCountFilter";
+import { CoopFilterOption } from "@/components/games/CoopFilter";
 
 export type GameFilterState = {
   selectedCategories: string[];
@@ -12,6 +13,7 @@ export type GameFilterState = {
   search: string;
   selectedPlayerCount: PlayerCountOption;
   soldByOKG: boolean;
+  selectedCoop: CoopFilterOption;
 };
 
 export const useGameFiltering = (allGames: Game[]) => {
@@ -22,6 +24,7 @@ export const useGameFiltering = (allGames: Game[]) => {
   const [search, setSearch] = useState<string>("");
   const [selectedPlayerCount, setSelectedPlayerCount] = useState<PlayerCountOption>("any");
   const [soldByOKG, setSoldByOKG] = useState<boolean>(false);
+  const [selectedCoop, setSelectedCoop] = useState<CoopFilterOption>("all");
 
   const handleCategoryToggle = (category: string, checked: boolean) => {
     console.log("handleCategoryToggle called with:", category, "checked:", checked);
@@ -52,6 +55,7 @@ export const useGameFiltering = (allGames: Game[]) => {
     setSearch("");
     setSelectedPlayerCount("any");
     setSoldByOKG(false);
+    setSelectedCoop("all");
   };
 
   function isInPlaytimeGroup(game: Game, group: string) {
@@ -78,7 +82,8 @@ export const useGameFiltering = (allGames: Game[]) => {
       search,
       selectedPlayerCount,
       selectedCategories,
-      soldByOKG
+      soldByOKG,
+      selectedCoop
     });
 
     if (allGames.length > 0) {
@@ -94,6 +99,7 @@ export const useGameFiltering = (allGames: Game[]) => {
           game.name.toLowerCase().includes(search.toLowerCase()))
         && (selectedPlayerCount === "any" || meetsPlayerCount(game, selectedPlayerCount))
         && (!soldByOKG || game.sold_by_okg)
+        && (selectedCoop === "all" || (selectedCoop === "coop" ? game.coop : !game.coop))
       );
 
     if (sortBy !== "name") {
@@ -116,7 +122,7 @@ export const useGameFiltering = (allGames: Game[]) => {
         return multiplier * (valueA - valueB);
       }
     }) as Game[];
-  }, [allGames, selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount, soldByOKG]);
+  }, [allGames, selectedCategories, selectedPlaytime, sortBy, sortDirection, search, selectedPlayerCount, soldByOKG, selectedCoop]);
 
   return {
     filterState: {
@@ -127,6 +133,7 @@ export const useGameFiltering = (allGames: Game[]) => {
       search,
       selectedPlayerCount,
       soldByOKG,
+      selectedCoop,
     },
     sortedAndFilteredGames,
     handlers: {
@@ -140,6 +147,7 @@ export const useGameFiltering = (allGames: Game[]) => {
       removeCategory,
       resetFilters,
       setSoldByOKG,
+      setSelectedCoop,
     },
   };
 };

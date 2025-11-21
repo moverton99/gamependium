@@ -9,6 +9,7 @@ import { TextSearch } from "@/components/games/TextSearch";
 import { PlayerCountFilter, type PlayerCountOption } from "@/components/games/PlayerCountFilter";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { FilterButton } from "@/components/games/FilterButton";
+import { CoopFilter, type CoopFilterOption } from "@/components/games/CoopFilter";
 
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -22,6 +23,7 @@ interface FilterBarProps {
   search: string;
   selectedPlayerCount: PlayerCountOption;
   soldByOKG: boolean;
+  selectedCoop: CoopFilterOption;
   categories: Array<{ name: string }>;
   categoryDescriptionMap: Record<string, string>;
   onCategoryToggle: (category: string, checked: boolean) => void;
@@ -32,6 +34,7 @@ interface FilterBarProps {
   onSearchChange: (value: string) => void;
   onPlayerCountChange: (value: PlayerCountOption) => void;
   onSoldByOKGToggle: (checked: boolean) => void;
+  onCoopChange: (value: CoopFilterOption) => void;
   onResetFilters: () => void;
 }
 
@@ -43,6 +46,7 @@ export const FilterBar = ({
   search,
   selectedPlayerCount,
   soldByOKG,
+  selectedCoop,
   categories,
   categoryDescriptionMap,
   onCategoryToggle,
@@ -53,6 +57,7 @@ export const FilterBar = ({
   onSearchChange,
   onPlayerCountChange,
   onSoldByOKGToggle,
+  onCoopChange,
   onResetFilters,
 }: FilterBarProps) => {
   const isMobile = useIsMobile();
@@ -64,7 +69,8 @@ export const FilterBar = ({
   const hasPlayerCountFilter = selectedPlayerCount !== "any";
   const hasSortFilter = sortBy !== "name" || sortDirection !== "asc";
   const hasSoldByOKGFilter = soldByOKG;
-  const hasAnyFilter = hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter || hasSortFilter || hasSoldByOKGFilter;
+  const hasCoopFilter = selectedCoop !== "all";
+  const hasAnyFilter = hasCategoryFilter || hasSearchFilter || hasPlaytimeFilter || hasPlayerCountFilter || hasSortFilter || hasSoldByOKGFilter || hasCoopFilter;
 
   return (
     <>
@@ -86,6 +92,11 @@ export const FilterBar = ({
               onCategoryRemove={onCategoryRemove}
               active={hasCategoryFilter}
             />
+          </div>
+
+          {/* Coop */}
+          <div className="w-full">
+            <CoopFilter selected={selectedCoop} onChange={onCoopChange} active={hasCoopFilter} />
           </div>
 
           {/* Playtime */}
@@ -151,6 +162,9 @@ export const FilterBar = ({
                 onCategoryRemove={onCategoryRemove}
                 active={hasCategoryFilter}
               />
+            </div>
+            <div className="w-full md:w-64 max-w-full">
+              <CoopFilter selected={selectedCoop} onChange={onCoopChange} active={hasCoopFilter} />
             </div>
           </div>
           {/* Center column: Playtime, Player Count, Sold by OKG */}

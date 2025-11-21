@@ -28,6 +28,7 @@ interface RawGameRow {
   suggested_min_players: string;
   players_desc: string;
   sold_by_okg: string;
+  coop: string;
 }
 
 export const fetchGoogleSheetData = async () => {
@@ -66,7 +67,8 @@ export const fetchGoogleSheetData = async () => {
       max_players: parseInt(row.max_players) || 0,
       suggested_min_players: parseInt(row.suggested_min_players) || 0,
       players_desc: row.players_desc,
-      sold_by_okg: row.sold_by_okg?.trim().toUpperCase() === "TRUE"
+      sold_by_okg: row.sold_by_okg?.trim().toUpperCase() === "TRUE",
+      coop: row.coop?.trim().toUpperCase() === "TRUE"
     }));
 
     return { games, categories: validCategoriesData };

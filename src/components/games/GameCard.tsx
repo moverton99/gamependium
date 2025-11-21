@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle, ShoppingBag } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users, AlertTriangle, ShoppingBag, Handshake } from "lucide-react";
 import { useState } from "react";
 import { DetailedGameCard } from "./DetailedGameCard";
 import { PlayerCountOption } from "./PlayerCountFilter";
@@ -24,6 +24,7 @@ interface GameCardProps {
   playersDesc: string;
   selectedPlayerCount: PlayerCountOption;
   soldByOKG: boolean;
+  coop: boolean;
 }
 
 export const GameCard = ({
@@ -43,6 +44,7 @@ export const GameCard = ({
   playersDesc,
   selectedPlayerCount,
   soldByOKG,
+  coop,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
   const { categoryDescriptionMap } = useData();
@@ -142,6 +144,17 @@ export const GameCard = ({
               <p className="text-sm text-gray-500">{playersDesc}</p>
             </TooltipContent>
           </Tooltip>
+
+          {coop && (
+            <Tooltip>
+              <TooltipTrigger className="flex items-center gap-1">
+                <Handshake className="w-4 h-4" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="text-sm">Coop: a game where players work together as a team toward a shared goal,</p>
+              </TooltipContent>
+            </Tooltip>
+          )}
         </div>
         <p className="text-sm mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
@@ -177,6 +190,7 @@ export const GameCard = ({
         maxPlayers={maxPlayers}
         suggestedMinPlayers={suggestedMinPlayers}
         playersDesc={playersDesc}
+        coop={coop}
       />
     </>
   );
