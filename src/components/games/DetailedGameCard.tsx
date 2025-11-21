@@ -1,10 +1,13 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Brain, Repeat, GraduationCap, Clock, Users, Handshake } from "lucide-react";
+import { Brain, Repeat, GraduationCap, Clock, Users, Handshake, BookOpen } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useData } from "@/contexts/DataContext";
+import { CommentaryAndAlternatives } from "@/types/game";
+import { CommentaryDialog } from "./CommentaryDialog";
+import { Button } from "@/components/ui/button";
 
 interface DetailedGameCardProps {
   name: string;
@@ -24,6 +27,7 @@ interface DetailedGameCardProps {
   suggestedMinPlayers: number;
   playersDesc: string;
   coop: boolean;
+  commentaryAndAlternatives?: CommentaryAndAlternatives;
 }
 
 export const DetailedGameCard = ({
@@ -44,9 +48,11 @@ export const DetailedGameCard = ({
   suggestedMinPlayers,
   playersDesc,
   coop,
+  commentaryAndAlternatives,
 }: DetailedGameCardProps) => {
   const isMobile = useIsMobile();
   const { categoryDescriptionMap } = useData();
+  const [isCommentaryOpen, setIsCommentaryOpen] = useState(false);
 
   const handleCategoryClick = (category: string) => {
     onClose();
@@ -123,6 +129,15 @@ export const DetailedGameCard = ({
               <div className="flex flex-col gap-2">
                 <div className="text-lg font-semibold text-brand-light">Description</div>
                 <p className="text-brand-light">{description}</p>
+                {commentaryAndAlternatives && (
+                  <button
+                    onClick={() => setIsCommentaryOpen(true)}
+                    className="flex items-center gap-2 text-sm text-brand-light hover:underline bg-transparent border-none p-0 cursor-pointer mt-2"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    <span>Read Commentary & Alternatives</span>
+                  </button>
+                )}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -221,6 +236,18 @@ export const DetailedGameCard = ({
           </div>
         </div>
       </DialogContent>
-    </Dialog>
+
+
+      {
+        commentaryAndAlternatives && (
+          <CommentaryDialog
+            isOpen={isCommentaryOpen}
+            onClose={() => setIsCommentaryOpen(false)}
+            gameName={name}
+            data={commentaryAndAlternatives}
+          />
+        )
+      }
+    </Dialog >
   );
 };

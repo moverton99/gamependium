@@ -1,4 +1,16 @@
 
+export interface Alternative {
+  name: string;
+  tagline: string;
+  description: string;
+}
+
+export interface CommentaryAndAlternatives {
+  body: string;
+  alternatives: Alternative[];
+  verdict: string;
+}
+
 export interface Game {
   name: string;
   description: string;
@@ -17,4 +29,5 @@ export interface Game {
   players_desc: string;
   sold_by_okg: boolean;
   coop: boolean;
+  commentary_and_alternatives?: CommentaryAndAlternatives;
 }

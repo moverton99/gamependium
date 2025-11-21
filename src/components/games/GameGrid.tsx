@@ -1,4 +1,3 @@
-
 import { GameCard } from "./GameCard";
 import { GameGridProps } from "./GameGrid.d";
 import { PlayerCountOption } from "./PlayerCountFilter";
@@ -31,6 +30,7 @@ export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) 
             selectedPlayerCount={selectedPlayerCount}
             soldByOKG={game.sold_by_okg}
             coop={game.coop}
+            commentaryAndAlternatives={game.commentary_and_alternatives}
           />
         ))}
       </div>

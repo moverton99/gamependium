@@ -7,6 +7,8 @@ import { DetailedGameCard } from "./DetailedGameCard";
 import { PlayerCountOption } from "./PlayerCountFilter";
 import { useData } from "@/contexts/DataContext";
 
+import { CommentaryAndAlternatives } from "@/types/game";
+
 interface GameCardProps {
   name: string;
   learningCurveRank: number;
@@ -25,6 +27,7 @@ interface GameCardProps {
   selectedPlayerCount: PlayerCountOption;
   soldByOKG: boolean;
   coop: boolean;
+  commentaryAndAlternatives?: CommentaryAndAlternatives;
 }
 
 export const GameCard = ({
@@ -45,6 +48,7 @@ export const GameCard = ({
   selectedPlayerCount,
   soldByOKG,
   coop,
+  commentaryAndAlternatives,
 }: GameCardProps) => {
   const [isDetailedViewOpen, setIsDetailedViewOpen] = useState(false);
   const { categoryDescriptionMap } = useData();
@@ -191,6 +195,7 @@ export const GameCard = ({
         suggestedMinPlayers={suggestedMinPlayers}
         playersDesc={playersDesc}
         coop={coop}
+        commentaryAndAlternatives={commentaryAndAlternatives}
       />
     </>
   );

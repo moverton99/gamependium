@@ -1,6 +1,6 @@
 
 import Papa from 'papaparse';
-import { Game } from '@/types/game';
+import { Game, CommentaryAndAlternatives } from '@/types/game';
 
 // These URLs should be replaced with the actual published CSV links provided by the user.
 // For now, I'll use placeholders or empty strings, and the app should handle the empty case gracefully or use fallback data.
@@ -29,7 +29,25 @@ interface RawGameRow {
   players_desc: string;
   sold_by_okg: string;
   coop: string;
+  commentary_and_alternatives: string;
 }
+
+const parseCommentary = (jsonString: string): CommentaryAndAlternatives | undefined => {
+  if (!jsonString || jsonString.trim() === '') return undefined;
+  try {
+    // Handle potential double-escaped quotes if coming from CSV
+    const cleanJson = jsonString.replace(/^"|"$/g, '').replace(/""/g, '"');
+    return JSON.parse(cleanJson);
+  } catch (e) {
+    // Try parsing directly in case it wasn't double escaped
+    try {
+      return JSON.parse(jsonString);
+    } catch (e2) {
+      console.warn("Failed to parse commentary JSON:", e2);
+      return undefined;
+    }
+  }
+};
 
 export const fetchGoogleSheetData = async () => {
   if (!GAMES_CSV_URL || !CATEGORIES_CSV_URL) {
@@ -68,7 +86,8 @@ export const fetchGoogleSheetData = async () => {
       suggested_min_players: parseInt(row.suggested_min_players) || 0,
       players_desc: row.players_desc,
       sold_by_okg: row.sold_by_okg?.trim().toUpperCase() === "TRUE",
-      coop: row.coop?.trim().toUpperCase() === "TRUE"
+      coop: row.coop?.trim().toUpperCase() === "TRUE",
+      commentary_and_alternatives: parseCommentary(row.commentary_and_alternatives)
     }));
 
     return { games, categories: validCategoriesData };
