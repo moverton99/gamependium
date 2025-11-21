@@ -62,6 +62,8 @@ const GameExplorer = () => {
           onSearchChange={handlers.setSearch}
           onPlayerCountChange={handlers.setSelectedPlayerCount}
           onSoldByOKGToggle={handlers.setSoldByOKG}
+          selectedCoop={filterState.selectedCoop}
+          onCoopChange={handlers.setSelectedCoop}
           onResetFilters={handlers.resetFilters}
         />
 
