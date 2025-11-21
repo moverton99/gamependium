@@ -167,22 +167,24 @@ export const CategoryFilter = ({
           </ScrollArea>
         </DropdownMenuContent>
       </DropdownMenu>
-      <div className="flex flex-wrap items-center gap-2 mt-2">
-        {safeSelectedCategories.map((category) => (
-          <div
-            key={category}
-            className="flex items-center gap-1 px-2 py-1 bg-[hsl(var(--brand-orange))]/20 text-[hsl(var(--brand-light))] border border-[hsl(var(--brand-orange))] rounded-full text-sm"
-          >
-            {category}
-            <button
-              onClick={() => onCategoryRemove(category)}
-              className="hover:bg-[hsl(var(--brand-orange))]/30 rounded-full p-1"
+      {safeSelectedCategories.length > 0 && (
+        <div className="flex flex-wrap items-center gap-2 mt-2">
+          {safeSelectedCategories.map((category) => (
+            <div
+              key={category}
+              className="flex items-center gap-1 px-2 py-1 bg-[hsl(var(--brand-orange))]/20 text-[hsl(var(--brand-light))] border border-[hsl(var(--brand-orange))] rounded-full text-sm"
             >
-              <X className="w-3 h-3" />
-            </button>
-          </div>
-        ))}
-      </div>
+              {category}
+              <button
+                onClick={() => onCategoryRemove(category)}
+                className="hover:bg-[hsl(var(--brand-orange))]/30 rounded-full p-1"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
