@@ -35,7 +35,7 @@ export const CommentaryDialog = ({ isOpen, onClose, gameName, data }: Commentary
                         {/* Alternatives */}
                         {data.alternatives && data.alternatives.length > 0 && (
                             <div className="space-y-4">
-                                <h3 className="text-lg font-bold text-brand-orange">Better alternatives</h3>
+                                <h3 className="text-lg font-bold text-brand-orange">Alternatives</h3>
                                 <ul className="space-y-4">
                                     {data.alternatives.map((alt, index) => (
                                         <li key={index} className="bg-brand-orange/10 p-3 rounded-md border border-brand-orange/20">
