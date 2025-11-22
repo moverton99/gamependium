@@ -1,0 +1,47 @@
+Raw Agricola Line:
+Agricola,"Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",TRUE,FALSE,76,Complex worker placement and a multitude of rules make Agricola challenging to learn.,85,Deep strategic planning and engine-building elements result in very high strategic depth.,75,Deep strategic planning and varying family dynamics ensure a new experience with each play.,Worker Placement;Economic,120,1,5,2,"Agricola has a solid solo mode and scales well up to 5, but really shines with at least 2 players for interaction and competition.",{,,,,,,,,,,,,,,,,,,,,
+Full Row:
+{
+  "name": "Agricola",
+  "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
+  "sold_by_okg": "TRUE",
+  "coop": "FALSE",
+  "learning_curve_rank": "76",
+  "learning_curve_desc": "Complex worker placement and a multitude of rules make Agricola challenging to learn.",
+  "strategic_depth_rank": "85",
+  "strategic_depth_desc": "Deep strategic planning and engine-building elements result in very high strategic depth.",
+  "replayability_rank": "75",
+  "replayability_desc": "Deep strategic planning and varying family dynamics ensure a new experience with each play.",
+  "category": "Worker Placement;Economic",
+  "playtime_minutes": "120",
+  "min_players": "1",
+  "max_players": "5",
+  "suggested_min_players": "2",
+  "players_desc": "Agricola has a solid solo mode and scales well up to 5, but really shines with at least 2 players for interaction and competition.",
+  "commentary_and_alternatives": "{",
+  "": "",
+  "_1": "",
+  "_2": "",
+  "_3": "",
+  "_4": "",
+  "_5": "",
+  "_6": "",
+  "_7": "",
+  "_8": "",
+  "_9": "",
+  "_10": "",
+  "_11": "",
+  "_12": "",
+  "_13": "",
+  "_14": "",
+  "_15": "",
+  "_16": "",
+  "_17": "",
+  "_18": "",
+  "_19": ""
+}
+Raw string length: 1
+Raw string: {
+Cleaned string: {
+First parse attempt failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+Second parse attempt failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
