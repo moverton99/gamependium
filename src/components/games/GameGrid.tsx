@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { GameCard } from "./GameCard";
 import { GameGridProps } from "./GameGrid.d";
 import { PlayerCountOption } from "./PlayerCountFilter";
+import { DetailedGameCard } from "./DetailedGameCard";
+import { Game } from "@/types/game";
 
 interface ExtendedGameGridProps extends GameGridProps {
   selectedPlayerCount: PlayerCountOption;
@@ -8,8 +11,18 @@ interface ExtendedGameGridProps extends GameGridProps {
 
 /**
  * Renders a responsive grid of GameCards.
+ * Manages the state of the currently selected game for the detailed view.
  */
 export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) => {
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+
+  const handleGameSelect = (gameName: string) => {
+    const game = games.find((g) => g.name === gameName);
+    if (game) {
+      setSelectedGame(game);
+    }
+  };
+
   return (
     <div className="h-full w-full overflow-y-auto pb-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 pb-8">
@@ -34,9 +47,34 @@ export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) 
             soldByOKG={game.sold_by_okg}
             coop={game.coop}
             commentaryAndAlternatives={game.commentary_and_alternatives}
+            onOpen={() => setSelectedGame(game)}
           />
         ))}
       </div>
+
+      {selectedGame && (
+        <DetailedGameCard
+          isOpen={!!selectedGame}
+          onClose={() => setSelectedGame(null)}
+          name={selectedGame.name}
+          learningCurveRank={selectedGame.learning_curve_rank}
+          learningCurveDesc={selectedGame.learning_curve_desc}
+          strategicDepthRank={selectedGame.strategic_depth_rank}
+          strategicDepthDesc={selectedGame.strategic_depth_desc}
+          replayabilityRank={selectedGame.replayability_rank}
+          replayabilityDesc={selectedGame.replayability_desc}
+          description={selectedGame.description}
+          categories={selectedGame.category}
+          playtimeMinutes={selectedGame.playtime_minutes}
+          minPlayers={selectedGame.min_players}
+          maxPlayers={selectedGame.max_players}
+          suggestedMinPlayers={selectedGame.suggested_min_players}
+          playersDesc={selectedGame.players_desc}
+          coop={selectedGame.coop}
+          commentaryAndAlternatives={selectedGame.commentary_and_alternatives}
+          onGameSelect={handleGameSelect}
+        />
+      )}
     </div>
   );
 };

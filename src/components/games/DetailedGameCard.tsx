@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Brain, Repeat, GraduationCap, Clock, Users, Handshake, BookOpen } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -28,6 +27,7 @@ interface DetailedGameCardProps {
   playersDesc: string;
   coop: boolean;
   commentaryAndAlternatives?: CommentaryAndAlternatives;
+  onGameSelect: (gameName: string) => void;
 }
 
 /**
@@ -54,6 +54,7 @@ export const DetailedGameCard = ({
   playersDesc,
   coop,
   commentaryAndAlternatives,
+  onGameSelect,
 }: DetailedGameCardProps) => {
   const isMobile = useIsMobile();
   const { categoryDescriptionMap } = useData();
@@ -250,6 +251,7 @@ export const DetailedGameCard = ({
             onClose={() => setIsCommentaryOpen(false)}
             gameName={name}
             data={commentaryAndAlternatives}
+            onGameSelect={onGameSelect}
           />
         )
       }

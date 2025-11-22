@@ -2,16 +2,25 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CommentaryAndAlternatives } from "@/types/game";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useData } from "@/contexts/DataContext";
+import { Button } from "@/components/ui/button";
 
 interface CommentaryDialogProps {
     isOpen: boolean;
     onClose: () => void;
     gameName: string;
     data: CommentaryAndAlternatives;
+    onGameSelect: (gameName: string) => void;
 }
 
-export const CommentaryDialog = ({ isOpen, onClose, gameName, data }: CommentaryDialogProps) => {
+export const CommentaryDialog = ({ isOpen, onClose, gameName, data, onGameSelect }: CommentaryDialogProps) => {
     const isMobile = useIsMobile();
+    const { games } = useData();
+
+    const handleAlternativeClick = (altName: string) => {
+        onClose();
+        onGameSelect(altName);
+    };
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
@@ -37,15 +46,28 @@ export const CommentaryDialog = ({ isOpen, onClose, gameName, data }: Commentary
                             <div className="space-y-4">
                                 <h3 className="text-lg font-bold text-brand-orange">Alternatives</h3>
                                 <ul className="space-y-4">
-                                    {data.alternatives.map((alt, index) => (
-                                        <li key={index} className="bg-brand-orange/10 p-3 rounded-md border border-brand-orange/20">
-                                            <p>
-                                                <strong className="text-brand-mustard">{alt.name}</strong>
-                                                <span className="text-brand-light/70 italic"> ({alt.tagline})</span>
-                                                : {alt.description}
-                                            </p>
-                                        </li>
-                                    ))}
+                                    {data.alternatives.map((alt, index) => {
+                                        const isGameAvailable = games.some(g => g.name === alt.name);
+
+                                        return (
+                                            <li key={index} className="bg-brand-orange/10 p-3 rounded-md border border-brand-orange/20">
+                                                <p>
+                                                    {isGameAvailable ? (
+                                                        <button
+                                                            onClick={() => handleAlternativeClick(alt.name)}
+                                                            className="text-brand-mustard font-bold hover:underline focus:outline-none text-left"
+                                                        >
+                                                            {alt.name}
+                                                        </button>
+                                                    ) : (
+                                                        <strong className="text-brand-mustard">{alt.name}</strong>
+                                                    )}
+                                                    <span className="text-brand-light/70 italic"> ({alt.tagline})</span>
+                                                    : {alt.description}
+                                                </p>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
                         )}
