@@ -44,29 +44,29 @@ const fetchAndDebug = async () => {
         const response = await fetch(GAMES_CSV_URL);
         const csvText = await response.text();
 
-        // Find the raw line for Agricola
+        // Find the raw line for The Crew
         const lines = csvText.split('\n');
-        const agricolaLine = lines.find(line => line.toLowerCase().includes('agricola'));
+        const gameLine = lines.find(line => line.toLowerCase().includes('the crew'));
 
-        if (agricolaLine) {
-            console.log("Raw Agricola Line:", agricolaLine);
-            fs.appendFileSync('debug_output.txt', "Raw Agricola Line:\n" + agricolaLine + "\n");
+        if (gameLine) {
+            console.log("Raw Game Line:", gameLine);
+            fs.appendFileSync('debug_output.txt', "Raw Game Line:\n" + gameLine + "\n");
         }
 
         const gamesData = Papa.parse<RawGameRow>(csvText, { header: true, skipEmptyLines: true }).data;
 
-        const agricola = gamesData.find(g => g.name.toLowerCase().includes('agricola'));
+        const game = gamesData.find(g => g.name.toLowerCase().includes('the crew'));
 
-        if (agricola) {
-            console.log("Found Agricola:");
-            console.log("Full Row:", JSON.stringify(agricola, null, 2));
-            fs.appendFileSync('debug_output.txt', "Full Row:\n" + JSON.stringify(agricola, null, 2) + "\n");
+        if (game) {
+            console.log("Found Game:", game.name);
+            console.log("Full Row:", JSON.stringify(game, null, 2));
+            fs.appendFileSync('debug_output.txt', "Full Row:\n" + JSON.stringify(game, null, 2) + "\n");
 
             console.log("Parsing commentary...");
-            const result = parseCommentary(agricola.commentary_and_alternatives);
+            const result = parseCommentary(game.commentary_and_alternatives);
             console.log("Parse Result:", result);
         } else {
-            console.log("Agricola not found in CSV.");
+            console.log("Game not found in CSV.");
         }
 
     } catch (error) {

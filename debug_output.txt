@@ -1,47 +1,81 @@
-Raw Agricola Line:
-Agricola,"Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",TRUE,FALSE,76,Complex worker placement and a multitude of rules make Agricola challenging to learn.,85,Deep strategic planning and engine-building elements result in very high strategic depth.,75,Deep strategic planning and varying family dynamics ensure a new experience with each play.,Worker Placement;Economic,120,1,5,2,"Agricola has a solid solo mode and scales well up to 5, but really shines with at least 2 players for interaction and competition.",{,,,,,,,,,,,,,,,,,,,,
+Raw Game Line:
+      ""name"": ""The Crew"",
 Full Row:
 {
-  "name": "Agricola",
-  "description": "Run a struggling 17th-century farm by assigning workers to gather resources, expand your home, and feed your growing family. Carefully plan how to build fields, raise livestock, and avoid starvation in this tight worker placement game where every action counts.",
-  "sold_by_okg": "TRUE",
-  "coop": "FALSE",
-  "learning_curve_rank": "76",
-  "learning_curve_desc": "Complex worker placement and a multitude of rules make Agricola challenging to learn.",
-  "strategic_depth_rank": "85",
-  "strategic_depth_desc": "Deep strategic planning and engine-building elements result in very high strategic depth.",
-  "replayability_rank": "75",
-  "replayability_desc": "Deep strategic planning and varying family dynamics ensure a new experience with each play.",
-  "category": "Worker Placement;Economic",
-  "playtime_minutes": "120",
-  "min_players": "1",
+  "name": "The Crew",
+  "description": "Complete missions as a team by playing tricks and communicating with limited information. This cooperative twist on trick-taking challenges players to think together, not just outplay each other.",
+  "sold_by_okg": "FALSE",
+  "coop": "TRUE",
+  "learning_curve_rank": "35",
+  "learning_curve_desc": "Simple trick-taking rules are enhanced by cooperative mechanics, creating a low to moderate learning curve.",
+  "strategic_depth_rank": "55",
+  "strategic_depth_desc": "Timing, Deduction & Deception, and team coordination deliver moderate strategic depth.",
+  "replayability_rank": "80",
+  "replayability_desc": "Dozens of missions and varying difficulty levels ensure high replayability.",
+  "category": "Cooperative;Trick-Taking",
+  "playtime_minutes": "20",
+  "min_players": "2",
   "max_players": "5",
   "suggested_min_players": "2",
-  "players_desc": "Agricola has a solid solo mode and scales well up to 5, but really shines with at least 2 players for interaction and competition.",
-  "commentary_and_alternatives": "{",
-  "": "",
-  "_1": "",
-  "_2": "",
-  "_3": "",
-  "_4": "",
-  "_5": "",
-  "_6": "",
-  "_7": "",
-  "_8": "",
-  "_9": "",
-  "_10": "",
-  "_11": "",
-  "_12": "",
-  "_13": "",
-  "_14": "",
-  "_15": "",
-  "_16": "",
-  "_17": "",
-  "_18": "",
-  "_19": ""
+  "players_desc": "Family-friendly and flexible with a variety of maps; works well from 2â€“5 players.",
+  "commentary_and_alternatives": "{\n  \"body\": \"The Crew takes classic trick taking and turns it into a cooperative space mission where every hand is a tiny puzzle about timing, communication limits, and reading your teammates. Each mission gives the group one or more goals like \\\"Player A must win the yellow 7\\\" or \\\"this card must be taken last,\\\" and suddenly familiar mechanics become a shared logic challenge. \\n\\nThe pace is quick, the difficulty ramps smoothly, and the sense of collective triumph when a tough mission finally clicks is fantastic. The catch is that it absolutely requires focus and a steady group. If someone zones out or treats it like a casual card game, the whole thing collapses. It also works best with three or four players; at five it becomes more chaotic and less precise.\\n\\nThe Crew is ideal for groups who enjoy tight puzzles, cooperative planning, and the structure of trick taking. It is less appealing if your table prefers open discussion, party energy, or looser teamwork, but for thoughtful, puzzle loving groups, it is one of the best cooperatives around.\",\n  \"alternatives\": [\n    {\n      \"name\": \"Hanabi\",\n      \"tagline\": \"For pure deduction under pressure\",\n      \"description\": \"Hanabi is a good alternative for players who like structured, limited communication challenges, though it leans more on inference and subtle hinting than trick timing.\"\n    },\n    {\n      \"name\": \"The Mind\",\n      \"tagline\": \"For lighter silent teamwork\",\n      \"description\": \"The Mind is not necessarily better, but it offers a simpler, more intuitive version of limited communication teamwork where the challenge is timing rather than trick structure.\"\n    },\n    {\n      \"name\": \"Fox in the Forest\",\n      \"tagline\": \"For competitive trick takers\",\n      \"description\": \"Fox in the Forest is a better choice if you enjoy trick taking mechanics but prefer a thoughtful two player competitive duel instead of cooperative missions.\"\n    },\n    {\n      \"name\": \"Just One\",\n      \"tagline\": \"For word based cooperation\",\n      \"description\": \"Just One is a strong alternative if your group likes cooperation but prefers creative clue giving and laughs over the precision puzzle structure of The Crew.\"\n    },\n    {\n      \"name\": \"Obsession\",\n      \"tagline\": \"For thematic planning with cards\",\n      \"description\": \"Obs\n"
 }
-Raw string length: 1
+Raw string length: 2313
 Raw string: {
+  "body": "The Crew takes classic trick taking and turns it into a cooperative space mission where every hand is a tiny puzzle about timing, communication limits, and reading your teammates. Each mission gives the group one or more goals like \"Player A must win the yellow 7\" or \"this card must be taken last,\" and suddenly familiar mechanics become a shared logic challenge. \n\nThe pace is quick, the difficulty ramps smoothly, and the sense of collective triumph when a tough mission finally clicks is fantastic. The catch is that it absolutely requires focus and a steady group. If someone zones out or treats it like a casual card game, the whole thing collapses. It also works best with three or four players; at five it becomes more chaotic and less precise.\n\nThe Crew is ideal for groups who enjoy tight puzzles, cooperative planning, and the structure of trick taking. It is less appealing if your table prefers open discussion, party energy, or looser teamwork, but for thoughtful, puzzle loving groups, it is one of the best cooperatives around.",
+  "alternatives": [
+    {
+      "name": "Hanabi",
+      "tagline": "For pure deduction under pressure",
+      "description": "Hanabi is a good alternative for players who like structured, limited communication challenges, though it leans more on inference and subtle hinting than trick timing."
+    },
+    {
+      "name": "The Mind",
+      "tagline": "For lighter silent teamwork",
+      "description": "The Mind is not necessarily better, but it offers a simpler, more intuitive version of limited communication teamwork where the challenge is timing rather than trick structure."
+    },
+    {
+      "name": "Fox in the Forest",
+      "tagline": "For competitive trick takers",
+      "description": "Fox in the Forest is a better choice if you enjoy trick taking mechanics but prefer a thoughtful two player competitive duel instead of cooperative missions."
+    },
+    {
+      "name": "Just One",
+      "tagline": "For word based cooperation",
+      "description": "Just One is a strong alternative if your group likes cooperation but prefers creative clue giving and laughs over the precision puzzle structure of The Crew."
+    },
+    {
+      "name": "Obsession",
+      "tagline": "For thematic planning with cards",
+      "description": "Obs
+
 Cleaned string: {
-First parse attempt failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
-Second parse attempt failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+  "body": "The Crew takes classic trick taking and turns it into a cooperative space mission where every hand is a tiny puzzle about timing, communication limits, and reading your teammates. Each mission gives the group one or more goals like \"Player A must win the yellow 7\" or \"this card must be taken last,\" and suddenly familiar mechanics become a shared logic challenge. \n\nThe pace is quick, the difficulty ramps smoothly, and the sense of collective triumph when a tough mission finally clicks is fantastic. The catch is that it absolutely requires focus and a steady group. If someone zones out or treats it like a casual card game, the whole thing collapses. It also works best with three or four players; at five it becomes more chaotic and less precise.\n\nThe Crew is ideal for groups who enjoy tight puzzles, cooperative planning, and the structure of trick taking. It is less appealing if your table prefers open discussion, party energy, or looser teamwork, but for thoughtful, puzzle loving groups, it is one of the best cooperatives around.",
+  "alternatives": [
+    {
+      "name": "Hanabi",
+      "tagline": "For pure deduction under pressure",
+      "description": "Hanabi is a good alternative for players who like structured, limited communication challenges, though it leans more on inference and subtle hinting than trick timing."
+    },
+    {
+      "name": "The Mind",
+      "tagline": "For lighter silent teamwork",
+      "description": "The Mind is not necessarily better, but it offers a simpler, more intuitive version of limited communication teamwork where the challenge is timing rather than trick structure."
+    },
+    {
+      "name": "Fox in the Forest",
+      "tagline": "For competitive trick takers",
+      "description": "Fox in the Forest is a better choice if you enjoy trick taking mechanics but prefer a thoughtful two player competitive duel instead of cooperative missions."
+    },
+    {
+      "name": "Just One",
+      "tagline": "For word based cooperation",
+      "description": "Just One is a strong alternative if your group likes cooperation but prefers creative clue giving and laughs over the precision puzzle structure of The Crew."
+    },
+    {
+      "name": "Obsession",
+      "tagline": "For thematic planning with cards",
+      "description": "Obs
+
+First parse attempt failed: SyntaxError: Bad control character in string literal in JSON at position 2312 (line 27 column 26)
+Second parse attempt failed: SyntaxError: Bad control character in string literal in JSON at position 2312 (line 27 column 26)

@@ -1,0 +1,31 @@
+{
+    "body": "The Crew takes classic trick taking and turns it into a cooperative space mission where every hand is a tiny puzzle about timing, communication limits, and reading your teammates. Each mission gives the group one or more goals like \"Player A must win the yellow 7\" or \"this card must be taken last,\" and suddenly familiar mechanics become a shared logic challenge. \n\nThe pace is quick, the difficulty ramps smoothly, and the sense of collective triumph when a tough mission finally clicks is fantastic. The catch is that it absolutely requires focus and a steady group. If someone zones out or treats it like a casual card game, the whole thing collapses. It also works best with three or four players; at five it becomes more chaotic and less precise.\n\nThe Crew is ideal for groups who enjoy tight puzzles, cooperative planning, and the structure of trick taking. It is less appealing if your table prefers open discussion, party energy, or looser teamwork, but for thoughtful, puzzle loving groups, it is one of the best cooperatives around.",
+    "alternatives": [
+        {
+            "name": "Hanabi",
+            "tagline": "For pure deduction under pressure",
+            "description": "Hanabi is a good alternative for players who like structured, limited communication challenges, though it leans more on inference and subtle hinting than trick timing."
+        },
+        {
+            "name": "The Mind",
+            "tagline": "For lighter silent teamwork",
+            "description": "The Mind is not necessarily better, but it offers a simpler, more intuitive version of limited communication teamwork where the challenge is timing rather than trick structure."
+        },
+        {
+            "name": "Fox in the Forest",
+            "tagline": "For competitive trick takers",
+            "description": "Fox in the Forest is a better choice if you enjoy trick taking mechanics but prefer a thoughtful two player competitive duel instead of cooperative missions."
+        },
+        {
+            "name": "Just One",
+            "tagline": "For word based cooperation",
+            "description": "Just One is a strong alternative if your group likes cooperation but prefers creative clue giving and laughs over the precision puzzle structure of The Crew."
+        },
+        {
+            "name": "Obsession",
+            "tagline": "For thematic planning with cards",
+            "description": "Obsession is a very different experience, yet it can be a good alternative for groups that enjoy timing, planning, and clever card play but want a thematic, competitive Euro instead of a mission puzzle."
+        }
+    ],
+    "verdict": "A top tier cooperative puzzle for focused groups who enjoy trick taking and tight coordination, but not ideal for casual or chatty tables."
+}
