@@ -5,6 +5,9 @@ import { SortOption } from "@/components/games/SortControls";
 import { PlayerCountOption } from "@/components/games/PlayerCountFilter";
 import { CoopFilterOption } from "@/components/games/CoopFilter";
 
+/**
+ * Represents the state of all active filters and sort options.
+ */
 export type GameFilterState = {
   selectedCategories: string[];
   sortBy: SortOption;
@@ -16,6 +19,14 @@ export type GameFilterState = {
   selectedCoop: CoopFilterOption;
 };
 
+/**
+ * Custom hook to manage the filtering and sorting logic for the game list.
+ * Handles state for various filters (category, playtime, player count, etc.) and
+ * performs the actual filtering and sorting of the game data.
+ * 
+ * @param allGames - The complete list of games to filter and sort.
+ * @returns An object containing the current filter state, the filtered list of games, and state updater functions.
+ */
 export const useGameFiltering = (allGames: Game[]) => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>("name");
@@ -26,6 +37,9 @@ export const useGameFiltering = (allGames: Game[]) => {
   const [soldByOKG, setSoldByOKG] = useState<boolean>(false);
   const [selectedCoop, setSelectedCoop] = useState<CoopFilterOption>("all");
 
+  /**
+   * Toggles a category selection on or off.
+   */
   const handleCategoryToggle = (category: string, checked: boolean) => {
     console.log("handleCategoryToggle called with:", category, "checked:", checked);
 
@@ -39,6 +53,9 @@ export const useGameFiltering = (allGames: Game[]) => {
     });
   };
 
+  /**
+   * Removes a specific category from the selection.
+   */
   const removeCategory = (categoryToRemove: string) => {
     console.log("removeCategory called with:", categoryToRemove);
 
@@ -49,6 +66,9 @@ export const useGameFiltering = (allGames: Game[]) => {
     });
   };
 
+  /**
+   * Resets all filters to their default states.
+   */
   const resetFilters = () => {
     setSelectedCategories([]);
     setSelectedPlaytime("all");
@@ -58,6 +78,9 @@ export const useGameFiltering = (allGames: Game[]) => {
     setSelectedCoop("all");
   };
 
+  /**
+   * Checks if a game falls within a specific playtime group.
+   */
   function isInPlaytimeGroup(game: Game, group: string) {
     const pt = game.playtime_minutes ?? 0;
     if (group === "quick") return pt >= 0 && pt <= 30;
@@ -67,6 +90,9 @@ export const useGameFiltering = (allGames: Game[]) => {
     return true; // For "all"
   }
 
+  /**
+   * Checks if a game supports the selected player count.
+   */
   function meetsPlayerCount(game: Game, count: PlayerCountOption): boolean {
     if (count === "any") return true;
     if (count === "5+") return game.max_players >= 5;

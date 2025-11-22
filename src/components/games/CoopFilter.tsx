@@ -7,10 +7,13 @@ export type CoopFilterOption = "all" | "coop" | "competitive";
 interface CoopFilterProps {
     selected: CoopFilterOption;
     onChange: (value: CoopFilterOption) => void;
-    active?: boolean;
+    active: boolean;
 }
 
-export const CoopFilter = ({ selected, onChange, active = false }: CoopFilterProps) => {
+/**
+ * A dropdown filter for selecting cooperative vs competitive games.
+ */
+export const CoopFilter = ({ selected, onChange, active }: CoopFilterProps) => {
     const handleContainerClick = (e: React.MouseEvent) => {
         e.stopPropagation();
     };

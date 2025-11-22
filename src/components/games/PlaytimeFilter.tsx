@@ -1,4 +1,3 @@
-
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -34,10 +33,13 @@ const PLAYTIME_GROUPS = [
 interface PlaytimeFilterProps {
   selected: string;
   onChange: (value: string) => void;
-  active?: boolean;
+  active: boolean;
 }
 
-export const PlaytimeFilter = ({ selected, onChange, active = false }: PlaytimeFilterProps) => {
+/**
+ * A dropdown filter for selecting game duration (playtime).
+ */
+export const PlaytimeFilter = ({ selected, onChange, active }: PlaytimeFilterProps) => {
   // Handler to stop event propagation on any click within the component
   const handleContainerClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -48,8 +50,8 @@ export const PlaytimeFilter = ({ selected, onChange, active = false }: PlaytimeF
       <div className={cn(
         "flex items-center gap-2 rounded-md px-3 py-2 border border-brand-orange",
         active
-      ? "bg-[hsl(var(--brand-orange))]"
-      : "bg-[hsl(var(--brand-darkGreen))]"
+          ? "bg-[hsl(var(--brand-orange))]"
+          : "bg-[hsl(var(--brand-darkGreen))]"
       )}>
         <Clock className="w-4 h-4 text-brand-light" />
         <Select value={selected} onValueChange={(value) => {

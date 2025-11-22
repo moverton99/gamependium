@@ -5,7 +5,6 @@ import {
   DropdownMenuContent,
   DropdownMenuCheckboxItem,
   DropdownMenuTrigger,
-  DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -14,7 +13,6 @@ import { useEffect } from "react";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger
 } from "@/components/ui/tooltip";
 import {
@@ -32,17 +30,21 @@ interface CategoryFilterProps {
   selectedCategories: string[];
   categoryDescriptionMap: Record<string, string>;
   onCategoryToggle: (category: string, checked: boolean) => void;
-  onCategoryRemove: (category: string) => void;
-  active?: boolean;
+  onCategoryRemove: (categoryToRemove: string) => void;
+  active: boolean;
 }
 
+/**
+ * A dropdown filter for selecting game categories.
+ * Supports multiple selections and shows descriptions for each category.
+ */
 export const CategoryFilter = ({
   categories,
   selectedCategories,
   categoryDescriptionMap,
   onCategoryToggle,
   onCategoryRemove,
-  active = false,
+  active,
 }: CategoryFilterProps) => {
   const isMobile = useIsMobile();
 

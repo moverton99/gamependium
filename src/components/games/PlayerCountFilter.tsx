@@ -1,4 +1,3 @@
-
 import {
   Select,
   SelectContent,
@@ -15,10 +14,13 @@ export type PlayerCountOption = (typeof PLAYER_COUNT_OPTIONS)[number];
 interface PlayerCountFilterProps {
   selected: PlayerCountOption;
   onChange: (value: PlayerCountOption) => void;
-  active?: boolean;
+  active: boolean;
 }
 
-export const PlayerCountFilter = ({ selected, onChange, active = false }: PlayerCountFilterProps) => {
+/**
+ * A dropdown filter for selecting the number of players.
+ */
+export const PlayerCountFilter = ({ selected, onChange, active }: PlayerCountFilterProps) => {
   // Handler to stop event propagation on any click/touch within the component
   const handleContainerClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -26,26 +28,26 @@ export const PlayerCountFilter = ({ selected, onChange, active = false }: Player
   };
 
   return (
-    <div 
+    <div
       className="flex flex-col w-full md:w-64 max-w-full"
       onClick={handleContainerClick}
       onTouchStart={(e) => e.stopPropagation()}
       onTouchEnd={(e) => e.stopPropagation()}
     >
-      <div 
+      <div
         className={cn(
           "flex items-center gap-2 rounded-md px-3 py-2 border border-brand-orange",
           active
-      ? "bg-[hsl(var(--brand-orange))]"
-      : "bg-[hsl(var(--brand-darkGreen))]"
+            ? "bg-[hsl(var(--brand-orange))]"
+            : "bg-[hsl(var(--brand-darkGreen))]"
         )}
       >
         <Users className="w-4 h-4 text-brand-light" />
-        <Select 
-          value={selected} 
+        <Select
+          value={selected}
           onValueChange={onChange}
         >
-          <SelectTrigger 
+          <SelectTrigger
             className={cn("w-full md:w-auto border-0 bg-transparent p-0 h-auto shadow-none text-brand-light", "font-medium")}
             onClick={(e) => e.stopPropagation()}
           >

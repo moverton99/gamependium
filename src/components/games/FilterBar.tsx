@@ -39,6 +39,10 @@ interface FilterBarProps {
   onResetFilters: () => void;
 }
 
+/**
+ * A comprehensive toolbar containing all filter and sort controls.
+ * Adapts its layout for mobile and desktop views.
+ */
 export const FilterBar = ({
   selectedCategories,
   sortBy,

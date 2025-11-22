@@ -6,6 +6,9 @@ interface ExtendedGameGridProps extends GameGridProps {
   selectedPlayerCount: PlayerCountOption;
 }
 
+/**
+ * Renders a responsive grid of GameCards.
+ */
 export const GameGrid = ({ games, selectedPlayerCount }: ExtendedGameGridProps) => {
   return (
     <div className="h-full w-full overflow-y-auto pb-16">

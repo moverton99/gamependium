@@ -1,4 +1,3 @@
-
 import { ArrowUp, ArrowDown } from "lucide-react";
 import {
   Select,
@@ -16,15 +15,19 @@ interface SortControlsProps {
   sortDirection: "asc" | "desc";
   onSortChange: (value: SortOption) => void;
   onDirectionToggle: () => void;
-  active?: boolean;
+  active: boolean;
 }
 
+/**
+ * Controls for sorting the game list by various criteria.
+ * Includes a dropdown for the sort field and a button to toggle direction.
+ */
 export const SortControls = ({
   sortBy,
   sortDirection,
   onSortChange,
   onDirectionToggle,
-  active = false,
+  active,
 }: SortControlsProps) => {
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -35,8 +38,8 @@ export const SortControls = ({
       className={cn(
         "flex items-center w-full md:w-64 max-w-full border border-brand-orange rounded-md overflow-hidden",
         active
-      ? "bg-[hsl(var(--brand-orange))]"
-      : "bg-[hsl(var(--brand-darkGreen))]",
+          ? "bg-[hsl(var(--brand-orange))]"
+          : "bg-[hsl(var(--brand-darkGreen))]",
       )}
       onClick={handleClick}
     >

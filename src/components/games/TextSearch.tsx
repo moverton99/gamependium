@@ -5,10 +5,13 @@ import { cn } from "@/lib/utils";
 interface TextSearchProps {
   value: string;
   onChange: (value: string) => void;
-  active?: boolean;
+  active: boolean;
 }
 
-export const TextSearch = ({ value, onChange, active = false }: TextSearchProps) => (
+/**
+ * A simple text input for searching games by name.
+ */
+export const TextSearch = ({ value, onChange, active }: TextSearchProps) => (
   <div className="relative w-full md:w-64 max-w-full">
     <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center">
       <Search className="w-4 h-4 text-[hsl(var(--brand-light))]" />
@@ -17,8 +20,8 @@ export const TextSearch = ({ value, onChange, active = false }: TextSearchProps)
       className={cn(
         "w-full pl-10 pr-8 text-[hsl(var(--brand-light))] border-[hsl(var(--brand-orange))] placeholder:text-[hsl(var(--brand-light))]/70",
         active
-        ? "bg-[hsl(var(--brand-orange))]"
-        : "bg-[hsl(var(--brand-darkGreen))]"      
+          ? "bg-[hsl(var(--brand-orange))]"
+          : "bg-[hsl(var(--brand-darkGreen))]"
       )}
       type="text"
       placeholder="Search games..."

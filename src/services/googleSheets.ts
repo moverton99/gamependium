@@ -7,11 +7,20 @@ import { Game, CommentaryAndAlternatives } from '@/types/game';
 const GAMES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9hOhKXdB6n_mEWhPC2mvegzy-bopr1vGp-_dyJ39tGEfVwyBPdrLNkx3p41K0NgnkqIviO-6o-N1f/pub?gid=0&single=true&output=csv';
 const CATEGORIES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9hOhKXdB6n_mEWhPC2mvegzy-bopr1vGp-_dyJ39tGEfVwyBPdrLNkx3p41K0NgnkqIviO-6o-N1f/pub?gid=708448874&single=true&output=csv';
 
+/**
+ * Represents a category definition from the Google Sheet.
+ */
 export interface Category {
+  /** The name of the category. */
   name: string;
+  /** A description of what this category entails. */
   description: string;
 }
 
+/**
+ * Represents a raw row of game data from the CSV.
+ * All fields are strings as they come directly from the CSV parser.
+ */
 interface RawGameRow {
   name: string;
   description: string;
@@ -32,6 +41,13 @@ interface RawGameRow {
   commentary_and_alternatives: string;
 }
 
+/**
+ * Parses a JSON string containing commentary and alternatives.
+ * Handles potential double-escaped quotes common in CSV data.
+ * 
+ * @param jsonString - The JSON string to parse.
+ * @returns The parsed CommentaryAndAlternatives object or undefined if parsing fails.
+ */
 const parseCommentary = (jsonString: string): CommentaryAndAlternatives | undefined => {
   if (!jsonString || jsonString.trim() === '') return undefined;
   try {
@@ -49,6 +65,12 @@ const parseCommentary = (jsonString: string): CommentaryAndAlternatives | undefi
   }
 };
 
+/**
+ * Fetches game and category data from published Google Sheets CSVs.
+ * Parses the CSV data and transforms it into the application's internal Game and Category types.
+ * 
+ * @returns A promise resolving to an object containing arrays of games and categories.
+ */
 export const fetchGoogleSheetData = async () => {
   if (!GAMES_CSV_URL || !CATEGORIES_CSV_URL) {
     console.warn("Google Sheets URLs are not configured.");

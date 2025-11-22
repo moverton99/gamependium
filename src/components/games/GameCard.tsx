@@ -30,6 +30,10 @@ interface GameCardProps {
   commentaryAndAlternatives?: CommentaryAndAlternatives;
 }
 
+/**
+ * Displays a summary card for a single game.
+ * Shows key metrics (learning curve, depth, etc.) and allows opening a detailed view.
+ */
 export const GameCard = ({
   name,
   learningCurveRank,

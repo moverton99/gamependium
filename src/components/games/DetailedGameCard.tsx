@@ -30,6 +30,11 @@ interface DetailedGameCardProps {
   commentaryAndAlternatives?: CommentaryAndAlternatives;
 }
 
+/**
+ * Displays detailed information about a game in a modal dialog.
+ * Includes comprehensive stats, descriptions, and optional commentary.
+ * Handles mobile-specific layout adjustments and scroll locking.
+ */
 export const DetailedGameCard = ({
   name,
   learningCurveRank,
