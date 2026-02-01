@@ -1264,9 +1264,9 @@
 		],
 		"playtime_minutes": 45,
 		"min_players": 2,
-		"max_players": 10,
+		"max_players": 5,
 		"suggested_min_players": 3,
-		"players_desc": "Quick-paced and accessible, Uno plays well with all counts, though chaos rises with 5+."
+		"players_desc": "The game works with 3-5 players but 4 is the sweet spot."
 	},
 	{
 		"name": "Twilight Imperium",

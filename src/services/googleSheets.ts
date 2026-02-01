@@ -48,7 +48,7 @@ interface RawGameRow {
  * @param jsonString - The JSON string to parse.
  * @returns The parsed CommentaryAndAlternatives object or undefined if parsing fails.
  */
-const parseCommentary = (jsonString: string): CommentaryAndAlternatives | undefined => {
+const parseCommentary = (jsonString: string, gameName: string): CommentaryAndAlternatives | undefined => {
   if (!jsonString || jsonString.trim() === '') return undefined;
   try {
     // Handle potential double-escaped quotes if coming from CSV
@@ -59,7 +59,7 @@ const parseCommentary = (jsonString: string): CommentaryAndAlternatives | undefi
     try {
       return JSON.parse(jsonString);
     } catch (e2) {
-      console.warn("Failed to parse commentary JSON:", e2);
+      console.warn(`Failed to parse commentary JSON for game "${gameName}":`, e2);
       return undefined;
     }
   }
@@ -109,7 +109,7 @@ export const fetchGoogleSheetData = async () => {
       players_desc: row.players_desc,
       sold_by_okg: row.sold_by_okg?.trim().toUpperCase() === "TRUE",
       coop: row.coop?.trim().toUpperCase() === "TRUE",
-      commentary_and_alternatives: parseCommentary(row.commentary_and_alternatives)
+      commentary_and_alternatives: parseCommentary(row.commentary_and_alternatives, row.name)
     }));
 
     return { games, categories: validCategoriesData };
