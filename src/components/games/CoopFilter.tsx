@@ -21,7 +21,7 @@ export const CoopFilter = ({ selected, onChange, active }: CoopFilterProps) => {
     return (
         <div className="flex flex-col w-full md:w-64 max-w-full" onClick={handleContainerClick}>
             <div className={cn(
-                "flex items-center gap-2 rounded-md px-3 py-2 border border-brand-orange",
+                "flex items-center gap-2 rounded-md px-2 py-1 border border-brand-orange",
                 active
                     ? "bg-[hsl(var(--brand-orange))]"
                     : "bg-[hsl(var(--brand-darkGreen))]"

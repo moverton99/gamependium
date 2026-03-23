@@ -82,7 +82,7 @@ export const CategoryFilter = ({
           <Button
             variant="outline"
             className={cn(
-              "overflow-hidden w-full flex items-center justify-start border border-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))]",
+              "overflow-hidden w-full flex items-center justify-start border border-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-darkGreen))] text-[hsl(var(--brand-light))] h-8 px-2 py-0 text-sm",
               active && "bg-[hsl(var(--brand-orange))] text-[hsl(var(--brand-darkGreen))]"
             )}
           >

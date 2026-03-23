@@ -28,7 +28,7 @@ export const FilterButton: React.FC<FilterButtonProps> = ({
         variant="ghost"
         onClick={onClick}
         disabled={disabled}
-        className="gap-2 w-full justify-start font-medium text-[hsl(var(--brand-light))]  h-10 px-3"
+        className="gap-2 w-full justify-start font-medium text-[hsl(var(--brand-light))] h-8 px-2 text-sm"
       >
         {icon}
         {label}

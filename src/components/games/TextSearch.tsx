@@ -18,7 +18,7 @@ export const TextSearch = ({ value, onChange, active }: TextSearchProps) => (
     </span>
     <Input
       className={cn(
-        "w-full pl-10 pr-8 text-[hsl(var(--brand-light))] border-[hsl(var(--brand-orange))] placeholder:text-[hsl(var(--brand-light))]/70",
+        "w-full pl-10 pr-8 h-8 text-sm text-[hsl(var(--brand-light))] border-[hsl(var(--brand-orange))] placeholder:text-[hsl(var(--brand-light))]/70",
         active
           ? "bg-[hsl(var(--brand-orange))]"
           : "bg-[hsl(var(--brand-darkGreen))]"

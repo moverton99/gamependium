@@ -162,7 +162,7 @@ export const FilterBar = ({
           {/* Sold by OKG Toggle */}
           <Tooltip>
             <TooltipTrigger asChild>
-              <div className="w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md p-2">
+              <div className="w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md px-2 py-1 h-8">
                 <Switch
                   id="sold-by-okg-mobile"
                   checked={soldByOKG}
@@ -297,7 +297,7 @@ export const FilterBar = ({
             </div>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="w-full md:w-64 max-w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md p-2 h-10">
+                <div className="w-full md:w-64 max-w-full flex items-center space-x-2 bg-[hsl(var(--brand-darkGreen))] border border-[hsl(var(--brand-orange))] rounded-md px-2 py-1 h-8">
                   <Switch
                     id="sold-by-okg-desktop"
                     checked={soldByOKG}
