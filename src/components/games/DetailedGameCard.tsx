@@ -88,12 +88,6 @@ export const DetailedGameCard = ({
     };
   }, [isOpen]);
 
-  const headerHeight = isMobile ? 32 : 48;
-  const paddingHeight = 20; // Account for padding
-  const maxContentHeight = isMobile ?
-    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)` :
-    `calc(90vh - ${headerHeight}px - ${paddingHeight}px)`;
-
   // Handle manual close to ensure it works on iOS
   const handleClose = () => {
     // Ensure we call onClose directly
@@ -105,16 +99,19 @@ export const DetailedGameCard = ({
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent
-        className={`max-w-3xl bg-brand-darkGreen text-brand-light ${isMobile ? 'max-h-[90vh]' : 'max-h-[90vh]'}`}
+        className="bg-brand-darkGreen text-brand-light"
         style={{
           position: 'fixed',
-          top: isMobile ? '5%' : '10%',
-          transform: 'translateX(-50%)',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '90vw',
+          height: '90vh',
+          maxWidth: 'none',
+          maxHeight: 'none',
           display: 'flex',
           flexDirection: 'column',
-          height: 'auto',
-          maxHeight: isMobile ? '90vh' : '90vh',
-          WebkitTapHighlightColor: 'transparent', // Fix for iOS tap highlight issues
+          WebkitTapHighlightColor: 'transparent',
         }}
       >
         <DialogHeader className="pb-0.5"> {/* Further reduced padding */}
@@ -127,8 +124,7 @@ export const DetailedGameCard = ({
             className="scroll-container h-full overflow-y-auto overscroll-contain pb-4 px-4 pt-0.5"
             style={{
               WebkitOverflowScrolling: 'touch',
-              maxHeight: maxContentHeight,
-              paddingBottom: '60px', // Add extra padding at the bottom to ensure content is visible
+              paddingBottom: '60px',
             }}
           >
             <div className="space-y-4 pb-8">

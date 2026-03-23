@@ -35,10 +35,10 @@ const GameExplorer = () => {
 
   return (
     <div className={cn(
-      "min-h-screen p-2 md:p-4 bg-black",
+      "min-h-screen px-2 md:px-4 pb-2 md:pb-4 pt-0 bg-black",
       isInIframe ? "max-h-screen h-screen overflow-hidden" : ""
     )}>
-      <div className="mx-auto p-4 h-full flex flex-col">
+      <div className="mx-auto px-4 pb-4 pt-2 h-full flex flex-col">
         {error && (
           <div className="bg-red-900/50 text-red-200 p-2 mb-4 rounded text-center text-sm">
             {error}
