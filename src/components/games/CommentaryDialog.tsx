@@ -28,13 +28,12 @@ export const CommentaryDialog = ({ isOpen, onClose, gameName, data, onGameSelect
                 className="bg-brand-darkGreen text-brand-light border border-brand-orange flex flex-col overflow-hidden p-0"
                 style={{
                     position: 'fixed',
+                    top: '16px',
+                    bottom: '16px',
                     left: '50%',
-                    top: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    transform: 'translateX(-50%)',
                     width: 'calc(100vw - 32px)',
-                    height: 'calc(100vh - 32px)',
                     maxWidth: '900px',
-                    maxHeight: 'calc(100vh - 32px)',
                 }}
             >
                 <DialogHeader className="p-6 pb-2">

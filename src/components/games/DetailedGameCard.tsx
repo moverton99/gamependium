@@ -102,13 +102,12 @@ export const DetailedGameCard = ({
         className="bg-brand-darkGreen text-brand-light"
         style={{
           position: 'fixed',
+          top: '16px',
+          bottom: '16px',
           left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           width: 'calc(100vw - 32px)',
-          height: 'calc(100vh - 32px)',
           maxWidth: '1200px',
-          maxHeight: 'calc(100vh - 32px)',
           display: 'flex',
           flexDirection: 'column',
           WebkitTapHighlightColor: 'transparent',
