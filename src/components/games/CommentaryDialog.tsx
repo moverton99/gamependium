@@ -24,7 +24,19 @@ export const CommentaryDialog = ({ isOpen, onClose, gameName, data, onGameSelect
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-2xl bg-brand-darkGreen text-brand-light border border-brand-orange max-h-[90vh] h-[90vh] flex flex-col overflow-hidden p-0">
+            <DialogContent
+                className="bg-brand-darkGreen text-brand-light border border-brand-orange flex flex-col overflow-hidden p-0"
+                style={{
+                    position: 'fixed',
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '80vw',
+                    height: '80vh',
+                    maxWidth: 'none',
+                    maxHeight: 'none',
+                }}
+            >
                 <DialogHeader className="p-6 pb-2">
                     <DialogTitle className="text-xl font-bold text-brand-light">Commentary: {gameName}</DialogTitle>
                     <DialogDescription className="sr-only">

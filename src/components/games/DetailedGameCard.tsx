@@ -134,7 +134,7 @@ export const DetailedGameCard = ({
                 {commentaryAndAlternatives && (
                   <button
                     onClick={() => setIsCommentaryOpen(true)}
-                    className="flex items-center gap-2 text-sm text-brand-mustard hover:underline bg-transparent border-none p-0 cursor-pointer mt-2"
+                    className="flex items-center gap-2 text-base font-bold text-brand-mustard hover:underline bg-transparent border-none p-0 cursor-pointer mt-2"
                   >
                     <BookOpen className="w-4 h-4 text-brand-mustard" />
                     <span>Read Commentary & Alternatives</span>
