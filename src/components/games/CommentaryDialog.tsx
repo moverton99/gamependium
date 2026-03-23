@@ -31,10 +31,10 @@ export const CommentaryDialog = ({ isOpen, onClose, gameName, data, onGameSelect
                     left: '50%',
                     top: '50%',
                     transform: 'translate(-50%, -50%)',
-                    width: '80vw',
-                    height: '80vh',
-                    maxWidth: 'none',
-                    maxHeight: 'none',
+                    width: 'calc(100vw - 32px)',
+                    height: 'calc(100vh - 32px)',
+                    maxWidth: '900px',
+                    maxHeight: 'calc(100vh - 32px)',
                 }}
             >
                 <DialogHeader className="p-6 pb-2">
